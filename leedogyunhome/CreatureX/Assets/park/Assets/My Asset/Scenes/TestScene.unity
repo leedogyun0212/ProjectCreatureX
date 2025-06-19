@@ -848,7 +848,7 @@ GameObject:
   - component: {fileID: 1592985270}
   - component: {fileID: 1592985269}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Monster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1098,8 +1098,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.012298942}
-  m_Size: {x: 0.9999999, y: 2.2707846}
+  m_Offset: {x: 0, y: -0.6476918}
+  m_Size: {x: 0.9999999, y: 0.9999999}
   m_Direction: 0
 --- !u!114 &1831989443
 MonoBehaviour:
@@ -1119,7 +1119,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   animator: {fileID: 1831989444}
-  aniMove: 0
 --- !u!95 &1831989444
 Animator:
   serializedVersion: 7

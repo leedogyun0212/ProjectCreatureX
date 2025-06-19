@@ -15,11 +15,8 @@ public class TestPlayer : MonoBehaviour
 
     public Animator animator;
 
-    public int aniMove = 0;
-
     private void Update()
     {
-        
     }
 
 
@@ -27,7 +24,7 @@ public class TestPlayer : MonoBehaviour
     {
         if (direction == -1) transform.localScale = new Vector3(-1, 1, 1);
         if (direction == 1) transform.localScale = new Vector3(1, 1, 1);
-        animator.SetFloat("Walk",direction);
+        animator.SetFloat("Walk", Mathf.Abs(direction));
         Move(direction);
     }
     private void Move(float direction)
@@ -39,7 +36,6 @@ public class TestPlayer : MonoBehaviour
     {
         if (!isJump)
         {
-            animator.SetTrigger("Jump");
             Jump();
         }
     }
@@ -47,15 +43,16 @@ public class TestPlayer : MonoBehaviour
     private void Jump() 
     {
         isJump = true;
+        animator.SetBool("Jump", true);
         GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
             GroundCheck();
-            Debug.Log(isJump);
+
         }
     }
 
@@ -67,14 +64,10 @@ public class TestPlayer : MonoBehaviour
 
         RaycastHit2D hit = Physics2D.Raycast(Playertrans, Vector2.down, 0.5f, groundLayer); //선을 아래방향으로 0.3f만큼 쏘아 레이어를 구분
 
-        Debug.DrawRay(Playertrans, Vector2.down * 0.5f, Color.red);
-
         if (hit.collider != null) // 레이어가 groundLayer이라면 아래 의 것을 실행
         {
-            Debug.Log("On");
             isJump = false;
+            animator.SetBool("Jump", false);
         }
-        else
-            Debug.Log("Off");
     }
 }
