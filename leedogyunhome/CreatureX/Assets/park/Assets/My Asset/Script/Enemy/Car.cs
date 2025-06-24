@@ -9,7 +9,6 @@ public class Car : BaseEnemy
         animEnemy();
         if (monsterState == MonsterState.Move)
         {
-            Debug.Log("¿Ãµø");
             Move();
         }
     }
@@ -25,9 +24,10 @@ public class Car : BaseEnemy
         }
     }
 
-    protected void OnCollisionEnter2D(Collision2D collision)
+    protected override void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        base.OnCollisionEnter2D(collision);
+        if (collision.gameObject.CompareTag("Player"))
         {
             monsterState = MonsterState.idle;
             isMove = false;
@@ -35,3 +35,4 @@ public class Car : BaseEnemy
         }
     }
 }
+

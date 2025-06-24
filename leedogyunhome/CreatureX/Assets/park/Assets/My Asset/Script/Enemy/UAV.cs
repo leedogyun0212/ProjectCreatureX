@@ -40,9 +40,10 @@ public class UAV : BaseEnemy
         }
     }
 
-    protected void OnCollisionEnter2D(Collision2D collision)
+    protected override void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player")||collision.gameObject.CompareTag("Ground"))
+        base.OnCollisionEnter2D(collision);
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Ground"))
         {
             monsterState = MonsterState.Play;
             isMove = false;

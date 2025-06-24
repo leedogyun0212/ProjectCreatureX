@@ -12,6 +12,10 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         PlayerBasicControl();
+        if(Input.GetKey(KeyCode.X))
+            player.isAttack = true;
+        else
+            player.isAttack = false;
     }
 
 

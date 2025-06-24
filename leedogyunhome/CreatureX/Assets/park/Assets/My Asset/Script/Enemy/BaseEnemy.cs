@@ -1,10 +1,11 @@
+using System.Collections;
 using UnityEngine;
 
 public class BaseEnemy : MonoBehaviour
 {
     protected Animator animator;
 
-    protected GameObject player;
+    protected GameObject testplayer;
 
     protected new Rigidbody2D rigidbody;
 
@@ -14,11 +15,16 @@ public class BaseEnemy : MonoBehaviour
 
     protected float UAVPosY = 0;
 
+    [SerializeField]
+    protected TestPlayer player;
+
     protected enum MonsterState
     {
         idle = 0,
         Play = 1,
-        Move = 2
+        Move = 2,
+        Hit = 3,
+        Dead = 4
     }
 
     protected MonsterState monsterState = MonsterState.idle;
@@ -29,7 +35,7 @@ public class BaseEnemy : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody2D>();
-        player = GameObject.Find("Test Player");
+        testplayer = GameObject.Find("Test Player");
         UAVPosY = transform.position.y;
     }
 
@@ -41,6 +47,10 @@ public class BaseEnemy : MonoBehaviour
             Getdirection();
             Move();
         }
+        //else if (monsterState == MonsterState.Hit)
+        //{
+        //    HitMove();
+        //}
     }
 
     protected virtual void animEnemy()
@@ -75,7 +85,7 @@ public class BaseEnemy : MonoBehaviour
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        if(collision.CompareTag("Player") && !player.isAttack)
         {
             monsterState = MonsterState.Play;
             animWalk = 0;
@@ -88,5 +98,33 @@ public class BaseEnemy : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
         }
+    }
+
+    protected virtual void HitMove()
+    {
+        Vector2 knockbackDir = (transform.position - player.transform.position).normalized;
+        float knockbackPower = 30.0f;
+        Debug.Log("전" + transform.position);
+        transform.position += (Vector3)(knockbackDir * knockbackPower * Time.deltaTime);
+        Debug.Log("후" + transform.position);
+    }
+
+
+    protected virtual void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player") && player.isAttack)
+        {
+            monsterState = MonsterState.Hit;
+            animWalk = 0;
+            HitMove();
+            Debug.Log("Hit!");
+            StartCoroutine(HitRecover());
+        }
+    }
+
+    private IEnumerator HitRecover()
+    {
+        yield return new WaitForSeconds(0.5f);  // 0.5초간 피격 상태 유지
+        monsterState = MonsterState.idle;
     }
 }

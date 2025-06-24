@@ -15,8 +15,11 @@ public class TestPlayer : MonoBehaviour
 
     public Animator animator;
 
+    public bool isAttack = false;
+
     private void Update()
     {
+
     }
 
 

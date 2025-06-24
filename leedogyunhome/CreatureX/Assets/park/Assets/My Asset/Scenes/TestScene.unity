@@ -285,8 +285,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.036271572, y: 0}
-  m_Size: {x: 0.7281084, y: 2.2742858}
+  m_Offset: {x: 0.059559464, y: 0}
+  m_Size: {x: 0.7746842, y: 2.2742858}
   m_Direction: 0
 --- !u!95 &213635432
 Animator:
@@ -374,7 +374,7 @@ Transform:
   m_GameObject: {fileID: 213635428}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.96, y: -3.06, z: 0}
+  m_LocalPosition: {x: 2.21, y: -3.21, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -393,6 +393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6552d8551be2fc469455a33c6ecd647, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1831989443}
 --- !u!1 &320171564
 GameObject:
   m_ObjectHideFlags: 0
@@ -1272,6 +1273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aae4dfe260dc8d4f85c69b2ad20c7d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1831989443}
 --- !u!212 &1397858373
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1574,7 +1576,7 @@ Transform:
   m_GameObject: {fileID: 1592985268}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.91, y: 2.45, z: 0}
+  m_LocalPosition: {x: 3.55, y: 3.42, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1657,6 +1659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2717a4aa779d9134ebb7f58f774aeefa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1831989443}
 --- !u!1 &1831989438
 GameObject:
   m_ObjectHideFlags: 0
@@ -1809,8 +1812,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.6476918}
-  m_Size: {x: 0.9999999, y: 0.9999999}
+  m_Offset: {x: 0.03469634, y: -0.023155212}
+  m_Size: {x: 0.791821, y: 2.249073}
   m_Direction: 0
 --- !u!114 &1831989443
 MonoBehaviour:
@@ -1830,6 +1833,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   animator: {fileID: 1831989444}
+  isAttack: 0
 --- !u!95 &1831989444
 Animator:
   serializedVersion: 7
@@ -2321,6 +2325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 913c9109d93e10947a7c133b0d584d34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1831989443}
 --- !u!212 &2028058461
 SpriteRenderer:
   m_ObjectHideFlags: 0
