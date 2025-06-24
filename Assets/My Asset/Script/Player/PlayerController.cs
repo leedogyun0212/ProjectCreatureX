@@ -1,15 +1,10 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
     TestPlayer player;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
 
     private void Update()
     {
@@ -19,25 +14,42 @@ public class PlayerController : MonoBehaviour
 
     private void PlayerBasicControl()
     {
-        ControlJump();
         ControlMove();
+        if (player.curTrans is Player_Trans_Drone)
+        {
+            ControlFly();
+        }
+        else {             
+            ControlJump();
+        }
     }
 
     private void ControlMove() 
     {
         float dir = 0;
         if (Input.GetKey(KeyCode.LeftArrow)) dir = -1;
-        else if (Input.GetKey(KeyCode.RightArrow)) dir = 1;
+        if (Input.GetKey(KeyCode.RightArrow)) dir = 1;
 
-        player.OrderMove(dir);
+        // player.OrderMove(dir);
+        player.curTrans.Move(dir);
     }
 
     private void ControlJump() 
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            player.OrderJump();
+            // player.OrderJump();
+            player.curTrans.Jump(0);
         }
+    }
+
+    private void ControlFly()
+    {
+        float dir = 0;
+        if (Input.GetKey(KeyCode.UpArrow)) dir = 1;
+        if (Input.GetKey(KeyCode.DownArrow)) dir = -1;
+
+        player.curTrans.Jump(dir);
     }
 
 }
