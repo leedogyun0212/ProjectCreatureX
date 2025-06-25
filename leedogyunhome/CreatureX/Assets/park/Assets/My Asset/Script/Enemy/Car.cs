@@ -4,6 +4,9 @@ public class Car : BaseEnemy
 {
     protected bool isMove = true;
 
+    [SerializeField]
+    private CapsuleCollider2D capsule;
+
     protected override void Update()
     {
         animEnemy();
@@ -19,8 +22,18 @@ public class Car : BaseEnemy
         {
             Getdirection();
             MoveSpeed = 8.0f;
-            Debug.Log("작동s");
+            capsule.isTrigger = true;
+            Debug.Log("작동");
             monsterState = MonsterState.Move;
+        }
+    }
+
+    protected override void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Player")&&!isMove)
+        {
+            capsule.isTrigger = false;
+            isMove =true;
         }
     }
 
@@ -28,6 +41,11 @@ public class Car : BaseEnemy
     {
         base.OnCollisionEnter2D(collision);
         if (collision.gameObject.CompareTag("Player"))
+        {
+            capsule.isTrigger = true;
+            isMove = false;
+        }
+        else if(collision.gameObject.CompareTag("Wall"))
         {
             monsterState = MonsterState.idle;
             isMove = false;

@@ -14,6 +14,7 @@ public class BaseEnemy : MonoBehaviour
     protected float animWalk = 0.0f;
 
     protected float UAVPosY = 0;
+    protected Vector3 UAVPos;
 
     [SerializeField]
     protected TestPlayer player;
@@ -36,7 +37,7 @@ public class BaseEnemy : MonoBehaviour
         animator = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody2D>();
         testplayer = GameObject.Find("Test Player");
-        UAVPosY = transform.position.y;
+        UAVPos = transform.position;
     }
 
     protected virtual void Update()
@@ -62,6 +63,7 @@ public class BaseEnemy : MonoBehaviour
     {
         ScaleChange();
         transform.Translate(direction * MoveSpeed * Time.deltaTime);
+        Debug.Log("Move");
     }
 
     protected virtual void Getdirection()
@@ -104,9 +106,7 @@ public class BaseEnemy : MonoBehaviour
     {
         Vector2 knockbackDir = (transform.position - player.transform.position).normalized;
         float knockbackPower = 30.0f;
-        Debug.Log("Àü" + transform.position);
         transform.position += (Vector3)(knockbackDir * knockbackPower * Time.deltaTime);
-        Debug.Log("ÈÄ" + transform.position);
     }
 
 
