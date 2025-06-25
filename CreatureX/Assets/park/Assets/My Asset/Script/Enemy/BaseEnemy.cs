@@ -14,6 +14,7 @@ public class BaseEnemy : MonoBehaviour
     protected float animWalk = 0.0f;
 
     protected float UAVPosY = 0;
+    protected Vector3 UAVPos;
 
     [SerializeField]
     protected TestPlayer player;
@@ -36,7 +37,7 @@ public class BaseEnemy : MonoBehaviour
         animator = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody2D>();
         testplayer = GameObject.Find("Test Player");
-        UAVPosY = transform.position.y;
+        UAVPos = transform.position;
     }
 
     protected virtual void Update()
@@ -47,10 +48,10 @@ public class BaseEnemy : MonoBehaviour
             Getdirection();
             Move();
         }
-        else if (monsterState == MonsterState.Hit)
-        {
-            HitMove();
-        }
+        //else if (monsterState == MonsterState.Hit)
+        //{
+        //    HitMove();
+        //}
     }
 
     protected virtual void animEnemy()
@@ -102,23 +103,27 @@ public class BaseEnemy : MonoBehaviour
 
     protected virtual void HitMove()
     {
-        Vector2 Pl = player.transform.position;
-        Pl = -Pl;
-        Pl.y = transform.position.y;
-        transform.position = Vector2.Lerp(transform.position, Pl, 0.5f * Time.deltaTime);
+        Vector2 knockbackDir = (transform.position - player.transform.position).normalized;
+        float knockbackPower = 30.0f;
+        transform.position += (Vector3)(knockbackDir * knockbackPower * Time.deltaTime);
     }
 
-    protected virtual void OnCollisionStay2D(Collision2D collision)
+
+    protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player") && player.isAttack)
         {
             monsterState = MonsterState.Hit;
-            //HitMove();
-            Debug.Log("HitHit");
+            animWalk = 0;
+            HitMove();
+            Debug.Log("Hit!");
+            StartCoroutine(HitRecover());
         }
-        else if (!player.isAttack)
-        {
-            Debug.Log("NONOHit");
-        }
+    }
+
+    private IEnumerator HitRecover()
+    {
+        yield return new WaitForSeconds(0.5f);  // 0.5초간 피격 상태 유지
+        monsterState = MonsterState.idle;
     }
 }

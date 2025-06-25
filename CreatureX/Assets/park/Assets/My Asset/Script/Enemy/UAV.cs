@@ -14,6 +14,9 @@ public class UAV : BaseEnemy
         else if (monsterState == MonsterState.Move)
         {
             Move();
+            if(UAVPosY - transform.position.y < 0.1)
+                monsterState = MonsterState.idle;
+            Debug.Log("???");
         }
     }
 
@@ -25,9 +28,19 @@ public class UAV : BaseEnemy
 
     protected void SimpleMove()
     {
-        float yOffset = Mathf.Sin(Time.time * 2f) * 0.3f;
-        Vector2 Posmove = new Vector2(transform.position.x, UAVPosY + yOffset);
+        float xOffset = Mathf.Sin(Time.time * 2f) * 4.0f;
+        Vector2 Posmove = new Vector2(UAVPos.x + xOffset, UAVPos.y);
+        if (xOffset > 3.9f)
+            transform.localScale = new Vector3(-1, 1, 1);
+        else if (xOffset < -3.9f)
+            transform.localScale = new Vector3(1, 1, 1);
         rigidbody.MovePosition(Posmove);
+    }
+
+    private void FlyUAV()
+    {
+        direction = (UAVPos - transform.position).normalized;
+        
     }
 
     protected override void OnTriggerEnter2D(Collider2D collision)
@@ -40,14 +53,15 @@ public class UAV : BaseEnemy
         }
     }
 
-    protected void OnCollisionEnter2D(Collision2D collision)
+    protected override void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player")||collision.gameObject.CompareTag("Ground"))
+        base.OnCollisionEnter2D(collision);
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Ground"))
         {
-            monsterState = MonsterState.Play;
-            isMove = false;
-            animWalk = 0.0f;
-            animator.SetFloat("Walk", Mathf.Abs(direction.x));
+            FlyUAV();
+            MoveSpeed = 5.0f;
+            Debug.Log(direction);
+
         }
     }
 }
