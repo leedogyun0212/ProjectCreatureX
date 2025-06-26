@@ -122,7 +122,7 @@ public class BaseEnemy : MonoBehaviour
         }
     }
 
-    private IEnumerator HitRecover()
+    protected virtual IEnumerator HitRecover()
     {
         yield return new WaitForSeconds(0.5f);  // 0.5초간 피격 상태 유지
         monsterState = MonsterState.idle;
