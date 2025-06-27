@@ -21,11 +21,11 @@ public class BaseEnemy : MonoBehaviour
 
     protected enum MonsterState
     {
-        idle = 0,
-        Play = 1,
-        Move = 2,
-        Hit = 3,
-        Dead = 4
+        idle = 0, // 발견전에 움직이는 코드
+        Play = 1, // 발견후의 공격이나 무빙이외의 코드(추가 예정)
+        Move = 2, // 움직이는 코드
+        Hit = 3, // 맞았을 시 코드
+        Dead = 4 // 죽었을 시 코드
     }
 
     protected MonsterState monsterState = MonsterState.idle;
@@ -54,26 +54,26 @@ public class BaseEnemy : MonoBehaviour
         //}
     }
 
-    protected virtual void animEnemy()
+    protected virtual void animEnemy() // Enemy의 애니메이션 코드
     {
         animator.SetFloat("Walk", animWalk);
     }
 
-    protected virtual void Move()
+    protected virtual void Move() // 움직이는 코드
     {
         ScaleChange();
         transform.Translate(direction * MoveSpeed * Time.deltaTime);
         Debug.Log("Move");
     }
 
-    protected virtual void Getdirection()
+    protected virtual void Getdirection() // 플레이어를 추적하기위한 방향 지정
     {
         direction = (player.transform.position - transform.position).normalized;
         direction.y = 0;
         animWalk = 1.0f;
     }
 
-    protected virtual void ScaleChange()
+    protected virtual void ScaleChange() // 좌우반전
     {
         if (direction.x < 0)
         {
@@ -85,7 +85,7 @@ public class BaseEnemy : MonoBehaviour
         }
     }
 
-    protected virtual void OnTriggerEnter2D(Collider2D collision)
+    protected virtual void OnTriggerEnter2D(Collider2D collision) //isTrigger 켜진 콜라이더 감지, Enemy의 플레이어 포착하는 코드
     {
         if(collision.CompareTag("Player") && !player.isAttack)
         {
@@ -95,14 +95,14 @@ public class BaseEnemy : MonoBehaviour
         }
     }
 
-    protected virtual void OnTriggerExit2D(Collider2D collision)
+    protected virtual void OnTriggerExit2D(Collider2D collision) //isTrigger 켜진 콜라이더 감지, Enemy의 플레이어가 시야에서 벗어날시 나오는 코드
     {
         if (collision.CompareTag("Player"))
         {
         }
     }
 
-    protected virtual void HitMove()
+    protected virtual void HitMove() // 피격시 뒤로 밀리는 코드
     {
         Vector2 knockbackDir = (transform.position - player.transform.position).normalized;
         float knockbackPower = 30.0f;
@@ -110,7 +110,7 @@ public class BaseEnemy : MonoBehaviour
     }
 
 
-    protected virtual void OnCollisionEnter2D(Collision2D collision)
+    protected virtual void OnCollisionEnter2D(Collision2D collision) //isTrigger 꺼진 콜라이더 감지, 플레이어가 Enemy에게 닿았을시 나오는 코드
     {
         if (collision.gameObject.CompareTag("Player") && player.isAttack)
         {
@@ -122,7 +122,7 @@ public class BaseEnemy : MonoBehaviour
         }
     }
 
-    protected virtual IEnumerator HitRecover()
+    protected virtual IEnumerator HitRecover() // 피격 코드
     {
         yield return new WaitForSeconds(0.5f);  // 0.5초간 피격 상태 유지
         monsterState = MonsterState.idle;

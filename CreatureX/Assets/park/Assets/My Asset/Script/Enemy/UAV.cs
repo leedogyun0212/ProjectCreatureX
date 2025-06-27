@@ -44,29 +44,36 @@ public class UAV : BaseEnemy
 
     private void FlyUAV() // 플레이어 공격후 드론이 잠시 위로 올라 가고 다시 내려올때 쓰는코드
     {
-        if (Mathf.Abs(transform.position.y - player.transform.position.y) < 4.0f)
+        if (Mathf.Abs(transform.position.y - player.transform.position.y) < 3.8f)
             direction = (UAVPos - transform.position).normalized;
-        else if (Mathf.Abs(transform.position.y - player.transform.position.y) > 4.0f)
+        else if (Mathf.Abs(transform.position.y - player.transform.position.y) > 3.8f)
         {
-            isReturning = false;
-            Debug.Log("작동");
-            AttUAV();
-            Getdirection();
+            StartCoroutine(WaitUAV());
         }
 
     }
 
-    private void AttUAV()
+    private IEnumerator WaitUAV()
+    {
+        monsterState = MonsterState.Play;
+
+        yield return new WaitForSecondsRealtime(2.0f);
+        monsterState = MonsterState.Move;
+        isReturning = false;
+        Debug.Log("작동");
+        capsule.isTrigger = false;
+        Getdirection();
+    }
+
+    private void AttUAV() // 특정 지점 도착후 플레이어 공격후의 도착할 지점 지정하는 코드
     {
         if(capsule.transform.position.x-player.transform.position.x>0)
         {
-            SavePosX = Mathf.Abs(player.transform.position.x - capsule.bounds.center.x);
-            UAVPos = new Vector3(capsule.bounds.center.x - SavePosX * 2, capsule.bounds.center.y, 0);
+            UAVPos = new Vector3(player.transform.position.x - 5.0f, player.transform.position.y+4.0f, 0);
         }
         else if(capsule.transform.position.x - player.transform.position.x < 0)
         {
-            SavePosX = Mathf.Abs(player.transform.position.x - capsule.bounds.center.x);
-            UAVPos = new Vector3(capsule.bounds.center.x + SavePosX * 2, capsule.bounds.center.y, 0);
+            UAVPos = new Vector3(player.transform.position.x + 5.0f, player.transform.position.y + 4.0f, 0);
         }
     }
 
@@ -86,9 +93,9 @@ public class UAV : BaseEnemy
     protected override void Move() // 드론이 포착한후 움직이게 만드는 코드
     {
         ScaleChange();
-        if (Mathf.Abs(transform.position.y - player.transform.position.y) > 4.0f)
+        if (Mathf.Abs(transform.position.y - player.transform.position.y) > 3.8f)
             transform.Translate(Vector2.down * MoveSpeed * Time.deltaTime);
-        else if (Mathf.Abs(transform.position.y - player.transform.position.y) < 4.0f)
+        else if (Mathf.Abs(transform.position.y - player.transform.position.y) < 3.8f)
             transform.Translate(direction * MoveSpeed * Time.deltaTime);
 
     }
@@ -111,7 +118,7 @@ public class UAV : BaseEnemy
     {
         if (collision.CompareTag("Player"))
         {
-            capsule.isTrigger = false;
+            //capsule.isTrigger = false;
         }
     }
 
@@ -120,20 +127,21 @@ public class UAV : BaseEnemy
         base.OnCollisionEnter2D(collision);
         if (collision.gameObject.CompareTag("Player"))
         {
-            capsule.isTrigger = true;
             StartCoroutine(PlayerAttack());
+            capsule.isTrigger = true;
             MoveSpeed = 8.0f;
         }
     }
 
-    private IEnumerator PlayerAttack()
+    private IEnumerator PlayerAttack() // 플레이어에게 닿았을시 나오는 코드
     {
-        yield return new WaitForSeconds(0.5f);
         isReturning = true;
+        AttUAV();
+        yield return new WaitForSeconds(0.5f);
         FlyUAV();
     }
 
-    protected override IEnumerator HitRecover()
+    protected override IEnumerator HitRecover() // 피격시 발동하는 코드
     {
         yield return new WaitForSeconds(0.5f);  // 0.5초간 피격 상태 유지
         monsterState = MonsterState.Move;
