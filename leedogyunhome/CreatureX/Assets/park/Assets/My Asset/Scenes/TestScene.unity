@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 213635435}
   - component: {fileID: 213635430}
   - component: {fileID: 213635429}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Robot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -374,11 +374,12 @@ Transform:
   m_GameObject: {fileID: 213635428}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.02, y: -3.206, z: 0}
+  m_LocalPosition: {x: 11.74, y: -3.206, z: 0}
   m_LocalScale: {x: -1, y: 1.0043, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 320171566}
+  - {fileID: 980312849}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &213635435
@@ -394,6 +395,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1831989443}
+  BulletPrefab: {fileID: 175890127671815498, guid: eab2177a111967547a173aecc2b98233, type: 3}
+  BulletShotPoint: {fileID: 980312849}
 --- !u!1 &320171564
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,6 +951,37 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &980312848
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 980312849}
+  m_Layer: 0
+  m_Name: Test ShotPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &980312849
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980312848}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.67, y: -0.05, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 213635434}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1019030646
 GameObject:
   m_ObjectHideFlags: 0
@@ -1168,7 +1202,7 @@ GameObject:
   - component: {fileID: 1397858371}
   - component: {fileID: 1397858370}
   - component: {fileID: 1397858369}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: UAV
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1232,7 +1266,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -1275,6 +1309,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1831989443}
   capsule: {fileID: 1397858370}
+  EnemyLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!212 &1397858373
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1339,8 +1376,8 @@ Transform:
   m_GameObject: {fileID: 1397858368}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.18, y: 14.04, z: 0}
-  m_LocalScale: {x: -1, y: 1.0043, z: 1}
+  m_LocalPosition: {x: 17.35, y: 14.04, z: 0}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1863478581}
@@ -1484,9 +1521,9 @@ GameObject:
   - component: {fileID: 1592985274}
   - component: {fileID: 1592985273}
   - component: {fileID: 1592985272}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Researcher
-  m_TagString: Untagged
+  m_TagString: Researcher
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1577,7 +1614,7 @@ Transform:
   m_GameObject: {fileID: 1592985268}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.55, y: 3.3618, z: 0}
+  m_LocalPosition: {x: 3.73, y: -3.33, z: 0}
   m_LocalScale: {x: -1, y: 1.0043, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1661,6 +1698,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1831989443}
+  helpRange: 100
 --- !u!1 &1831989438
 GameObject:
   m_ObjectHideFlags: 0
@@ -1746,7 +1784,7 @@ Transform:
   m_GameObject: {fileID: 1831989438}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.54, y: 6.65, z: 0}
+  m_LocalPosition: {x: -7.27, y: -1.07, z: 0}
   m_LocalScale: {x: 0.9318, y: 1.0043, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1935,8 +1973,8 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.26929283, y: -8.795091}
-      - {x: -2.996894, y: 0.6172358}
+    - - {x: 0.8770046, y: -8.701597}
+      - {x: -0.659544, y: 0.6172358}
       - {x: -4.726676, y: 0.6172377}
       - {x: -4.941417, y: -8.873039}
   m_UseDelaunayMesh: 0
