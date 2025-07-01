@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class UAV : BaseEnemy
+public class UAV : BaseEnemy, IAllyResponder
 {
     protected bool isMove = true;
 
@@ -11,6 +11,9 @@ public class UAV : BaseEnemy
     private CapsuleCollider2D capsule;
 
     private float SavePosX;
+
+    [SerializeField]
+    private LayerMask EnemyLayer;
 
     protected override void Update()
     {
@@ -23,6 +26,13 @@ public class UAV : BaseEnemy
         {
             StateMove();
         }
+        else if (monsterState == MonsterState.Help)
+        {
+            Getdirection();
+            ResearcherMove();
+        }
+        else if (monsterState == MonsterState.Dead)
+            EnemyDead();
     }
 
     private void StateMove()// 포착시 드론이 가져갈 움직임
@@ -36,9 +46,20 @@ public class UAV : BaseEnemy
         Move();
     }
 
+    public void OnHelpRequested(Transform targetResearcher)
+    {
+        helpTarget = targetResearcher;
+        monsterState = MonsterState.Help;
+    }
+
     protected override void Getdirection()//드론이 플레이어 공격할때 드론이 움직일 방향
     {
-        direction = (player.transform.position - transform.position).normalized;
+        if (helpTarget != null)
+        {
+            direction = (helpTarget.position - transform.position).normalized;
+        }
+        else
+            direction = (player.transform.position - transform.position).normalized;
         animWalk = 1;
     }
 
@@ -60,7 +81,6 @@ public class UAV : BaseEnemy
         yield return new WaitForSecondsRealtime(2.0f);
         monsterState = MonsterState.Move;
         isReturning = false;
-        Debug.Log("작동");
         capsule.isTrigger = false;
         Getdirection();
     }
@@ -100,17 +120,28 @@ public class UAV : BaseEnemy
 
     }
 
+    private void ResearcherMove()
+    {
+        ScaleChange();
+        transform.Translate(direction * MoveSpeed * Time.deltaTime);
+    }
+
     protected override void OnTriggerEnter2D(Collider2D collision) // isTrigger 켜진 콜라이더 감지, 드론의 플레이어 포착하는 코드
     {
-        if (collision.CompareTag("Player") && isMove&& !isReturning)
+        if (collision.CompareTag("Player") && isMove && !isReturning)
         {
             isMove = false;
             Getdirection();
             MoveSpeed = 8.0f;
             SavePosX = Mathf.Abs(player.transform.position.x - capsule.bounds.center.x);
             UAVPos = new Vector3(capsule.bounds.center.x - SavePosX * 2, capsule.bounds.center.y, 0);
-            Debug.Log(UAVPos+"UAVPos");
             monsterState = MonsterState.Move;
+        }
+        else if (collision.gameObject.CompareTag("Researcher") && helpTarget != null)
+        {
+            monsterState = MonsterState.idle;
+            helpTarget = null;
+            UAVPos = transform.position;
         }
     }
 

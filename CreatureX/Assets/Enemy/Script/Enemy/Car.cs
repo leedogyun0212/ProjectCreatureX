@@ -14,6 +14,10 @@ public class Car : BaseEnemy
         {
             Move();
         }
+        else if (monsterState == MonsterState.Dead)
+        {
+            EnemyDead();
+        }
     }
 
     protected override void OnTriggerEnter2D(Collider2D collision)
@@ -23,7 +27,6 @@ public class Car : BaseEnemy
             Getdirection();
             MoveSpeed = 8.0f;
             capsule.isTrigger = true;
-            Debug.Log("¿€µø");
             monsterState = MonsterState.Move;
         }
     }

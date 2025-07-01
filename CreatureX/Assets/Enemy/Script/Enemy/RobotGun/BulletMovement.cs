@@ -12,7 +12,6 @@ public class BulletMovement : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(lookdirection + "look");
         Movement();
         if (!Mathf.Approximately(MySpeed, MaxSpeed))
             MySpeed = Mathf.Lerp(MySpeed, MaxSpeed, 0.2f * Time.deltaTime);
@@ -21,7 +20,6 @@ public class BulletMovement : MonoBehaviour
     public void Movement()
     {
         transform.position += (Vector3)lookdirection * MySpeed * Time.deltaTime;
-        Debug.Log(lookdirection+"look");
     }
 
     public void Initialize(Vector2 direction)

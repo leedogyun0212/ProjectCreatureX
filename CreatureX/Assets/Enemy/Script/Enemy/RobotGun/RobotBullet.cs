@@ -11,17 +11,20 @@ public class RobotBullet : MonoBehaviour, IRecyclableGameObject
 
     public Vector2 dir = Vector2.zero;
 
+    public bool isAttacking { get; set; } = false;
+
     private IEnumerator CheckBullet()
     {
         yield return new WaitUntil(() => (
         Vector3.Distance(Robot.transform.position, transform.position) >= 12.0f));
+        gameObject.SetActive(false);
     }
 
     private void Update()
     {
         StartCoroutine(CheckBullet());
+        //MoveBullet();
 
-        gameObject.SetActive(false);
     }
 
     private void MoveBullet()
@@ -34,10 +37,18 @@ public class RobotBullet : MonoBehaviour, IRecyclableGameObject
         isActive = false;
     }
 
-    public void SetBullet(Vector2 direction)
+    public void SetBullet()
     {
-        Debug.Log(Robot + "fsfds");
         BulletMove = BulletMove ?? GetComponent<BulletMovement>();
         Robot = GameObject.Find("Robot");
+        //dir = direction;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Player"))
+        {
+            gameObject.SetActive(false);
+        }
     }
 }
