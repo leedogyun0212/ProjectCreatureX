@@ -20,13 +20,18 @@ public class Researcher : BaseEnemy
         }
     }
 
+    public void AnimHelpStop()
+    {
+        animWalk = 0;
+    }
+
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player") && !player.isAttack&&isHelp)
         {
             monsterState = MonsterState.Play;
+            animWalk = 2;
             RequestHelp();
-            animWalk = 0;
             isHelp = false;
 
         }

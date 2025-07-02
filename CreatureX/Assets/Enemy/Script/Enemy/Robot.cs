@@ -118,7 +118,7 @@ public class Robot : BaseEnemy, IAllyResponder
         if (collision.CompareTag("Player") && !player.isAttack)
         {
             monsterState = MonsterState.Play;
-            animWalk = 0;
+            animWalk = 2;
         }
     }
 
@@ -127,6 +127,7 @@ public class Robot : BaseEnemy, IAllyResponder
         if (collision.CompareTag("Player"))
         {
             monsterState = MonsterState.Move;
+            animWalk = 1;
         }
     }
 

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Car : BaseEnemy
@@ -5,7 +6,7 @@ public class Car : BaseEnemy
     protected bool isMove = true;
 
     [SerializeField]
-    private CapsuleCollider2D capsule;
+    private PolygonCollider2D capsule;
 
     protected override void Update()
     {
@@ -33,11 +34,11 @@ public class Car : BaseEnemy
 
     protected override void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player")&&!isMove)
-        {
-            capsule.isTrigger = false;
-            isMove =true;
-        }
+        //if(collision.CompareTag("Player")&&!isMove)
+        //{
+        //    capsule.isTrigger = false;
+        //    isMove =true;
+        //}
     }
 
     protected override void OnCollisionEnter2D(Collision2D collision)
@@ -46,6 +47,7 @@ public class Car : BaseEnemy
         if (collision.gameObject.CompareTag("Player"))
         {
             capsule.isTrigger = true;
+            StartCoroutine(TriggerFalse());
             isMove = false;
         }
         else if(collision.gameObject.CompareTag("Wall"))
@@ -53,7 +55,22 @@ public class Car : BaseEnemy
             monsterState = MonsterState.idle;
             isMove = false;
             animWalk = 0;
+            animDead = 100;
         }
     }
+
+    private IEnumerator TriggerFalse()
+    {
+        yield return new WaitForSecondsRealtime(1.0f);
+
+        capsule.isTrigger = false;
+        isMove = true;
+    }
+
+    public void animDie()
+    {
+        animDead = 150;
+    }
+
 }
 

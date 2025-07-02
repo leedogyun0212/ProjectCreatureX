@@ -8,7 +8,7 @@ public class UAV : BaseEnemy, IAllyResponder
     protected bool isReturning = false;
 
     [SerializeField]
-    private CapsuleCollider2D capsule;
+    private BoxCollider2D capsule;
 
     private float SavePosX;
 
@@ -105,18 +105,24 @@ public class UAV : BaseEnemy, IAllyResponder
         Vector2 newPos = Vector2.Lerp(transform.position, targetPos, Time.deltaTime * MoveSpeed);
         rigidbody.MovePosition(newPos);
         if (xOffset > 3.9f)
-            transform.localScale = new Vector3(-1, 1, 1);
-        else if (xOffset < -3.9f)
             transform.localScale = new Vector3(1, 1, 1);
+        else if (xOffset < -3.9f)
+            transform.localScale = new Vector3(-1, 1, 1);
     }
 
     protected override void Move() // 드론이 포착한후 움직이게 만드는 코드
     {
         ScaleChange();
         if (Mathf.Abs(transform.position.y - player.transform.position.y) > 3.8f)
+        {
             transform.Translate(Vector2.down * MoveSpeed * Time.deltaTime);
+            animWalk = 1;
+        }
         else if (Mathf.Abs(transform.position.y - player.transform.position.y) < 3.8f)
+        {
             transform.Translate(direction * MoveSpeed * Time.deltaTime);
+            animWalk = 0;
+        }
 
     }
 

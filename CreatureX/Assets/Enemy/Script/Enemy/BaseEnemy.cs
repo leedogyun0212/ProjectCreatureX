@@ -11,8 +11,6 @@ public class BaseEnemy : MonoBehaviour
 
     protected float MoveSpeed = 3.0f;
 
-    protected float animWalk = 0.0f;
-
     protected float UAVPosY = 0;
     protected Vector3 UAVPos;
 
@@ -20,6 +18,12 @@ public class BaseEnemy : MonoBehaviour
     protected TestPlayer player;
 
     protected Transform helpTarget = null;
+    
+    protected float animWalk = 0.0f;
+    
+    protected bool animHit = false;
+
+    protected int animDead = 0;
 
     protected enum MonsterState
     {
@@ -59,6 +63,10 @@ public class BaseEnemy : MonoBehaviour
     protected virtual void animEnemy() // Enemy의 애니메이션 코드
     {
         animator.SetFloat("Walk", animWalk);
+        if (!player.isAttack && animHit)
+            animHit = false;
+        animator.SetBool("Hit", animHit);
+        animator.SetInteger("Dead", animDead);
     }
 
     protected virtual void Move() // 움직이는 코드
@@ -120,6 +128,7 @@ public class BaseEnemy : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") && player.isAttack)
         {
             monsterState = MonsterState.Hit;
+            animHit = true;
             animWalk = 0;
             HitMove();
             StartCoroutine(HitRecover());
