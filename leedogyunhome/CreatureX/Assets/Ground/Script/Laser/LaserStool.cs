@@ -19,10 +19,10 @@ public class LaserStool : MonoBehaviour
 
     private void Update()
     {
-        if (currentLaser != null && currentLaser.LaserDead && !isRestarting)
-        {
-            StartCoroutine(LaserReStart());
-        }
+        //if (currentLaser != null && currentLaser.LaserDead && !isRestarting)
+        //{
+        //    StartCoroutine(LaserReStart());
+        //}
     }
 
     private void Lasercreate()
@@ -36,6 +36,14 @@ public class LaserStool : MonoBehaviour
         {
             isCreate = false;
             StartCoroutine(CreateWarning());
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player") && !isCreate)
+        {
+            StartCoroutine(LaserReStart());
         }
     }
 

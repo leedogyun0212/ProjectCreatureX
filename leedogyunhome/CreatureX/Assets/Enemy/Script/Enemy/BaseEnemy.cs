@@ -25,6 +25,9 @@ public class BaseEnemy : MonoBehaviour
 
     protected int animDead = 0;
 
+    [SerializeField]
+    protected bool EnemyFailed = false;
+
     protected enum MonsterState
     {
         idle = 0, // 발견전에 움직이는 코드
@@ -32,8 +35,8 @@ public class BaseEnemy : MonoBehaviour
         Move = 2, // 움직이는 코드
         Hit = 3, // 맞았을 시 코드
         Dead = 4, // 죽었을 시 코드
-        Help = 5 // Researcher의 도움요청 코드
-
+        Help = 5,// Researcher의 도움요청 코드
+        failed = 6
     }
 
     protected MonsterState monsterState = MonsterState.idle;
@@ -137,7 +140,7 @@ public class BaseEnemy : MonoBehaviour
 
     protected virtual IEnumerator HitRecover() // 피격 코드
     {
-        yield return new WaitForSeconds(0.5f);  // 0.5초간 피격 상태 유지
+        yield return new WaitForSeconds(0.5f); // 0.5초간 피격 상태 유지
         monsterState = MonsterState.idle;
     }
 }
