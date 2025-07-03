@@ -27,6 +27,7 @@ public class Car : BaseEnemy
         {
             Getdirection();
             MoveSpeed = 8.0f;
+            isMove = false;
             capsule.isTrigger = true;
             monsterState = MonsterState.Move;
         }
@@ -44,7 +45,7 @@ public class Car : BaseEnemy
     protected override void OnCollisionEnter2D(Collision2D collision)
     {
         base.OnCollisionEnter2D(collision);
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player")&&!isMove)
         {
             capsule.isTrigger = true;
             StartCoroutine(TriggerFalse());
@@ -65,6 +66,12 @@ public class Car : BaseEnemy
 
         capsule.isTrigger = false;
         isMove = true;
+    }
+
+    protected override IEnumerator HitRecover()
+    {
+        yield return new WaitForSeconds(0.5f); // 0.5초간 피격 상태 유지
+        monsterState = MonsterState.Move;
     }
 
     public void animDie()

@@ -4,10 +4,12 @@ using UnityEngine;
 public class LaserStool : MonoBehaviour
 {
     public Laser LaserPrefab;
+    private Laser currentLaser;
 
     private Vector3 LaserPos;
 
-    private bool isCreate = true; 
+    private bool isCreate = true;
+    private bool isRestarting = false;
 
     private void Start()
     {
@@ -17,12 +19,15 @@ public class LaserStool : MonoBehaviour
 
     private void Update()
     {
-        StartCoroutine(LaserReStart());
+        //if (currentLaser != null && currentLaser.LaserDead && !isRestarting)
+        //{
+        //    StartCoroutine(LaserReStart());
+        //}
     }
 
     private void Lasercreate()
     {
-        Instantiate(LaserPrefab, LaserPos, Quaternion.identity);
+        currentLaser = Instantiate(LaserPrefab, LaserPos, Quaternion.identity);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -31,6 +36,14 @@ public class LaserStool : MonoBehaviour
         {
             isCreate = false;
             StartCoroutine(CreateWarning());
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player") && !isCreate)
+        {
+            StartCoroutine(LaserReStart());
         }
     }
 
@@ -45,12 +58,10 @@ public class LaserStool : MonoBehaviour
 
     private IEnumerator LaserReStart()
     {
-        Debug.Log("통과 X"+ LaserPrefab.LaserDead);
-        yield return new WaitUntil(() =>  LaserPrefab.LaserDead);
-        Debug.Log("통과 1");
-        yield return new WaitForSecondsRealtime(3.0f);
-        Debug.Log("모두 통과");
-        LaserPrefab.gameObject.SetActive(true);
+        isRestarting = true;
+        yield return new WaitForSecondsRealtime(2.0f); // 꺼진 후 2초 대기
+        currentLaser.gameObject.SetActive(true);
+        isRestarting = false;
     }
 
 }

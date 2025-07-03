@@ -17,8 +17,15 @@ public class UAV : BaseEnemy, IAllyResponder
 
     protected override void Update()
     {
+        Debug.Log("///" + gameObject.layer);
         animEnemy();
-        if (monsterState == MonsterState.idle)
+        if (EnemyFailed)
+        {
+            animDead = 100;
+            rigidbody.bodyType = RigidbodyType2D.Dynamic;
+            monsterState = MonsterState.failed;
+        }
+        else if (monsterState == MonsterState.idle)
         {
             SimpleMove();
         }
@@ -81,7 +88,7 @@ public class UAV : BaseEnemy, IAllyResponder
         yield return new WaitForSecondsRealtime(2.0f);
         monsterState = MonsterState.Move;
         isReturning = false;
-        capsule.isTrigger = false;
+        //capsule.isTrigger = false;
         Getdirection();
     }
 
@@ -134,7 +141,7 @@ public class UAV : BaseEnemy, IAllyResponder
 
     protected override void OnTriggerEnter2D(Collider2D collision) // isTrigger 켜진 콜라이더 감지, 드론의 플레이어 포착하는 코드
     {
-        if (collision.CompareTag("Player") && isMove && !isReturning)
+        if (collision.CompareTag("Player") && isMove && !isReturning && !EnemyFailed)
         {
             isMove = false;
             Getdirection();
@@ -143,7 +150,7 @@ public class UAV : BaseEnemy, IAllyResponder
             UAVPos = new Vector3(capsule.bounds.center.x - SavePosX * 2, capsule.bounds.center.y, 0);
             monsterState = MonsterState.Move;
         }
-        else if (collision.gameObject.CompareTag("Researcher") && helpTarget != null)
+        else if (collision.gameObject.CompareTag("Researcher") && helpTarget != null && !EnemyFailed)
         {
             monsterState = MonsterState.idle;
             helpTarget = null;
@@ -151,18 +158,10 @@ public class UAV : BaseEnemy, IAllyResponder
         }
     }
 
-    protected override void OnTriggerExit2D(Collider2D collision) // 플레이어와 닿고 나갈때 드론의 isTrigger 끄는 코드
-    {
-        if (collision.CompareTag("Player"))
-        {
-            //capsule.isTrigger = false;
-        }
-    }
-
     protected override void OnCollisionEnter2D(Collision2D collision) // isTrigger 꺼진 드론 본체와 닿을때 쓰는 코드
     {
         base.OnCollisionEnter2D(collision);
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && !EnemyFailed)
         {
             StartCoroutine(PlayerAttack());
             capsule.isTrigger = true;
@@ -174,7 +173,8 @@ public class UAV : BaseEnemy, IAllyResponder
     {
         isReturning = true;
         AttUAV();
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.2f);
+        capsule.isTrigger = false;
         FlyUAV();
     }
 

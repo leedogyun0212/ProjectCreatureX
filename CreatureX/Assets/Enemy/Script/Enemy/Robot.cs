@@ -27,7 +27,12 @@ public class Robot : BaseEnemy, IAllyResponder
     protected override void Update()
     {
         animEnemy();
-        if (monsterState == MonsterState.Move && helpTarget == null)
+        if (EnemyFailed)
+        {
+            animDead = 100;
+            monsterState = MonsterState.failed;
+        }
+        else if (monsterState == MonsterState.Move && helpTarget == null)
         {
             Getdirection();
             Move();
@@ -115,7 +120,7 @@ public class Robot : BaseEnemy, IAllyResponder
 
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && !player.isAttack)
+        if (collision.CompareTag("Player") && !player.isAttack&&!EnemyFailed)
         {
             monsterState = MonsterState.Play;
             animWalk = 2;
@@ -124,7 +129,7 @@ public class Robot : BaseEnemy, IAllyResponder
 
     protected override void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && !EnemyFailed)
         {
             monsterState = MonsterState.Move;
             animWalk = 1;
@@ -134,7 +139,7 @@ public class Robot : BaseEnemy, IAllyResponder
     protected override void OnCollisionEnter2D(Collision2D collision)
     {
         base.OnCollisionEnter2D(collision);
-        if(collision.gameObject.CompareTag("Researcher"))
+        if(collision.gameObject.CompareTag("Researcher") && !EnemyFailed)
         {
             monsterState = MonsterState.idle;
             helpTarget = null;
