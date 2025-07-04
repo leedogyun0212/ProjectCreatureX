@@ -23,7 +23,7 @@ public class Robot : BaseEnemy, IAllyResponder
         base.Start();
         BulletPool = new ObjectPool<RobotBullet>();
     }
-
+    // 해결해야할것 : HELP 상태에서 연구원 추격중에 플레이어를 마주치면 공격하고 추격을 못함 
     protected override void Update()
     {
         animEnemy();
@@ -35,6 +35,10 @@ public class Robot : BaseEnemy, IAllyResponder
         else if (monsterState == MonsterState.Move && helpTarget == null)
         {
             Getdirection();
+            if(Mathf.Abs(player.transform.position.x - transform.position.x)>10)
+                MoveSpeed +=6;
+            //else
+            //    MoveSpeed = 4;
             Move();
         }
         else if (monsterState == MonsterState.Play && isAttacking && !isCoolingDown)
@@ -58,6 +62,8 @@ public class Robot : BaseEnemy, IAllyResponder
             EnemyDead();
     }
 
+
+
     public void OnHelpRequested(Transform targetResearcher)
     {
         helpTarget = targetResearcher;
@@ -66,6 +72,7 @@ public class Robot : BaseEnemy, IAllyResponder
 
     protected override void Getdirection()
     {
+        Debug.Log(Mathf.Abs(player.transform.position.x - transform.position.x));
         if (helpTarget != null)
         {
             direction = (helpTarget.position - transform.position).normalized;
@@ -123,6 +130,8 @@ public class Robot : BaseEnemy, IAllyResponder
         if (collision.CompareTag("Player") && !player.isAttack&&!EnemyFailed)
         {
             monsterState = MonsterState.Play;
+            if(MoveSpeed>5)
+                MoveSpeed -= 6;
             animWalk = 2;
         }
     }

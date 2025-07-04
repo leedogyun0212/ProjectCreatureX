@@ -11,7 +11,11 @@ public class Car : BaseEnemy
     protected override void Update()
     {
         animEnemy();
-        if (monsterState == MonsterState.Move)
+        if(EnemyFailed)
+        {
+            monsterState = MonsterState.failed;
+        }
+        else if (monsterState == MonsterState.Move)
         {
             Move();
         }
@@ -76,6 +80,7 @@ public class Car : BaseEnemy
 
     public void animDie()
     {
+        EnemyFailed = true;
         animDead = 150;
     }
 

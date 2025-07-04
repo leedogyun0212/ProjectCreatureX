@@ -17,7 +17,6 @@ public class UAV : BaseEnemy, IAllyResponder
 
     protected override void Update()
     {
-        Debug.Log("///" + gameObject.layer);
         animEnemy();
         if (EnemyFailed)
         {
