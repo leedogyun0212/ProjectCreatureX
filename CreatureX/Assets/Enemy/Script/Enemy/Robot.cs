@@ -23,7 +23,7 @@ public class Robot : BaseEnemy, IAllyResponder
         base.Start();
         BulletPool = new ObjectPool<RobotBullet>();
     }
-    // 해결해야할것 : HELP 상태에서 연구원 추격중에 플레이어를 마주치면 공격하고 추격을 못함 
+
     protected override void Update()
     {
         animEnemy();
@@ -133,6 +133,10 @@ public class Robot : BaseEnemy, IAllyResponder
             if(MoveSpeed>5)
                 MoveSpeed -= 6;
             animWalk = 2;
+        }
+        else if(collision.CompareTag("Player")&&helpTarget != null)
+        {
+            helpTarget = null;
         }
     }
 
