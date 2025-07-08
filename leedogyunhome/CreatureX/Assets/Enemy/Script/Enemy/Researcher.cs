@@ -18,7 +18,18 @@ public class Researcher : BaseEnemy
 
     protected override void Update()
     {
-        base.Update();
+        animEnemy();
+        if(Mathf.Abs(player.transform.position.x - transform.position.x) > 10)
+        {
+            animWalk = 0;
+        }
+        else if (monsterState == MonsterState.Move&& Mathf.Abs(player.transform.position.x - transform.position.x) < 10)
+        {
+            Getdirection();
+            Move();
+        }
+        else if (monsterState == MonsterState.Dead)
+            EnemyDead();
         if (EnemyFailed)
         {
             capsule.size = new Vector2(capsule.size.x, 1.3f);

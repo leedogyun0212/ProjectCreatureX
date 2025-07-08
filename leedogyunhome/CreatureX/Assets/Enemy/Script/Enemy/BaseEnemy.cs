@@ -9,6 +9,7 @@ public class BaseEnemy : MonoBehaviour
 
     protected new Rigidbody2D rigidbody;
 
+    [SerializeField]
     protected float MoveSpeed = 3.0f;
 
     protected float UAVPosY = 0;
