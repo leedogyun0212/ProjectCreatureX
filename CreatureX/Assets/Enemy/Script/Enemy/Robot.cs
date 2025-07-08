@@ -26,27 +26,27 @@ public class Robot : BaseEnemy, IAllyResponder
 
     protected override void Update()
     {
-        animEnemy();
-        if (EnemyFailed)
+        animEnemy(); // 애니메이션
+        if (EnemyFailed) // 흡수 가능한 상태,
         {
             animDead = 100;
             monsterState = MonsterState.failed;
         }
-        else if (monsterState == MonsterState.Move && helpTarget == null)
+        else if (monsterState == MonsterState.Move && helpTarget == null) // 시야 벗어나면 플레이어 추격 
         {
             Getdirection();
-            if(Mathf.Abs(player.transform.position.x - transform.position.x)>10)
+            if(Mathf.Abs(player.transform.position.x - transform.position.x)>15)
                 MoveSpeed +=6;
             //else
             //    MoveSpeed = 4;
             Move();
         }
-        else if (monsterState == MonsterState.Play && isAttacking && !isCoolingDown)
+        else if (monsterState == MonsterState.Play && isAttacking && !isCoolingDown) // 시야 들어오면 공격
         {
             Attack();
             StartCoroutine(AttackCooldown());
         }
-        else if (monsterState == MonsterState.Help)
+        else if (monsterState == MonsterState.Help&& helpTarget != null) // 연구원이 도움 요청하면 연구원쪽으로 이동
         {
             Getdirection();
             Move();
@@ -58,21 +58,20 @@ public class Robot : BaseEnemy, IAllyResponder
                 animWalk = 0;
             }
         }
-        else if (monsterState == MonsterState.Dead)
+        else if (monsterState == MonsterState.Dead) // 완전한 죽음
             EnemyDead();
     }
 
 
 
-    public void OnHelpRequested(Transform targetResearcher)
+    public void OnHelpRequested(Transform targetResearcher) // 연구원을 추격하게 하는 스크립트
     {
         helpTarget = targetResearcher;
         monsterState = MonsterState.Help;
     }
 
-    protected override void Getdirection()
+    protected override void Getdirection() // 이동할려는 시야 설정
     {
-        Debug.Log(Mathf.Abs(player.transform.position.x - transform.position.x));
         if (helpTarget != null)
         {
             direction = (helpTarget.position - transform.position).normalized;
@@ -82,7 +81,7 @@ public class Robot : BaseEnemy, IAllyResponder
             base.Getdirection();
     }
 
-    public void Attack()
+    public void Attack() // 총알 생성, 총알 방향 설정
     {
         RobotBullet bullet = BulletPool.GetRecyclableObject() ??
             BulletPool.RegisterRecyclableObject(Instantiate(BulletPrefab));
@@ -99,7 +98,6 @@ public class Robot : BaseEnemy, IAllyResponder
         bullet.transform.position = BulletShotPoint.position;
 
         bullet.BulletMove.Initialize(lookdir);
-        Debug.Log(lookdir);
     }
     
     private void Test()
@@ -114,7 +112,7 @@ public class Robot : BaseEnemy, IAllyResponder
         }
     }
 
-    private IEnumerator AttackCooldown()
+    private IEnumerator AttackCooldown() // 공격 쿨다운
     {
         isAttacking = false;
         isCoolingDown = true;
@@ -125,22 +123,20 @@ public class Robot : BaseEnemy, IAllyResponder
         isCoolingDown = false;
     }
 
-    protected override void OnTriggerEnter2D(Collider2D collision)
+    protected override void OnTriggerEnter2D(Collider2D collision) //시야 콜라이더, 시야에 들어오면 공격
     {
         if (collision.CompareTag("Player") && !player.isAttack&&!EnemyFailed)
         {
+            helpTarget = null;
+
             monsterState = MonsterState.Play;
             if(MoveSpeed>5)
                 MoveSpeed -= 6;
             animWalk = 2;
         }
-        else if(collision.CompareTag("Player")&&helpTarget != null)
-        {
-            helpTarget = null;
-        }
     }
 
-    protected override void OnTriggerExit2D(Collider2D collision)
+    protected override void OnTriggerExit2D(Collider2D collision) // 시야 콜라이더, 벗어나면 추격
     {
         if (collision.CompareTag("Player") && !EnemyFailed)
         {
@@ -149,7 +145,7 @@ public class Robot : BaseEnemy, IAllyResponder
         }
     }
 
-    protected override void OnCollisionEnter2D(Collision2D collision)
+    protected override void OnCollisionEnter2D(Collision2D collision) // 로봇 몸에 닿으면 발생하는 콜라이더, 연구원 닿으면 대기로 돌입 
     {
         base.OnCollisionEnter2D(collision);
         if(collision.gameObject.CompareTag("Researcher") && !EnemyFailed)
