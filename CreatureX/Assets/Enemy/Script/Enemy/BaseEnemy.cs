@@ -37,7 +37,7 @@ public class BaseEnemy : MonoBehaviour
         Hit = 3, // 맞았을 시 코드
         Dead = 4, // 죽었을 시 코드
         Help = 5,// Researcher의 도움요청 코드
-        failed = 6
+        failed = 6 // 흡수 가능한 상태
     }
 
     protected MonsterState monsterState = MonsterState.idle;
@@ -98,7 +98,7 @@ public class BaseEnemy : MonoBehaviour
         }
     }
 
-    protected virtual void EnemyDead()
+    protected virtual void EnemyDead()  // 완전한 죽음
     {
         Destroy(gameObject);
     }

@@ -37,8 +37,6 @@ public class Robot : BaseEnemy, IAllyResponder
             Getdirection();
             if(Mathf.Abs(player.transform.position.x - transform.position.x)>15)
                 MoveSpeed +=6;
-            //else
-            //    MoveSpeed = 4;
             Move();
         }
         else if (monsterState == MonsterState.Play && isAttacking && !isCoolingDown) // 시야 들어오면 공격
