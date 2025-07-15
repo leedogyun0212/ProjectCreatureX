@@ -38,7 +38,7 @@ public class Researcher : BaseEnemy
         }
     }
 
-    protected override void Getdirection()
+    protected override void Getdirection() // 플레이어한테 벗어나는 시야를
     {
         direction = (transform.position - player.transform.position).normalized;
         direction.y = 0;

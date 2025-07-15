@@ -7,6 +7,8 @@ TagManager:
   - Ground
   - Wall
   - Researcher
+  - Door
+  - Key
   layers:
   - Default
   - TransparentFX
