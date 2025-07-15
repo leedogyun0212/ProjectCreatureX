@@ -31,6 +31,7 @@ public class Robot : BaseEnemy, IAllyResponder
         {
             animDead = 100;
             monsterState = MonsterState.failed;
+
         }
         else if (monsterState == MonsterState.Move && helpTarget == null) // 시야 벗어나면 플레이어 추격 
         {
@@ -56,7 +57,7 @@ public class Robot : BaseEnemy, IAllyResponder
                 animWalk = 0;
             }
         }
-        else if (monsterState == MonsterState.Dead) // 완전한 죽음
+        else if (monsterState == MonsterState.Dead || Input.GetKey(KeyCode.A)) // 완전한 죽음
             EnemyDead();
     }
 

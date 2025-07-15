@@ -28,7 +28,7 @@ public class Researcher : BaseEnemy
             Getdirection();
             Move();
         }
-        else if (monsterState == MonsterState.Dead)
+        else if (monsterState == MonsterState.Dead || Input.GetKey(KeyCode.A))
             EnemyDead();
         if (EnemyFailed)
         {

@@ -60,7 +60,7 @@ public class BaseEnemy : MonoBehaviour
             Getdirection();
             Move();
         }
-        else if (monsterState == MonsterState.Dead)
+        else if (monsterState == MonsterState.Dead||Input.GetKey(KeyCode.A))
             EnemyDead();
     }
 

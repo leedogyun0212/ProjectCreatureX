@@ -14,12 +14,14 @@ public class Car : BaseEnemy
         if(EnemyFailed) // 차의 흡수 가능한 상태
         {
             monsterState = MonsterState.failed;
+            if (monsterState == MonsterState.Dead || Input.GetKey(KeyCode.A)) // 완전한 죽음
+                EnemyDead();
         }
         else if (monsterState == MonsterState.Move) // 차가 플레이어를 추격하는 상태,
         {
             Move();
         }
-        else if (monsterState == MonsterState.Dead) // 차가 완전한 죽음
+        else if (monsterState == MonsterState.Dead || Input.GetKey(KeyCode.A)) // 차가 완전한 죽음
         {
             EnemyDead();
         }
