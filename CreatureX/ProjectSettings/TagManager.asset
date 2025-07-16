@@ -5,20 +5,21 @@ TagManager:
   serializedVersion: 3
   tags:
   - Ground
-  - Wall
-  - Researcher
   - Door
   - Key
+  - Researcher
+  - Enemy
+  - Wall
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Trab
+  - Player
   - Water
   - UI
   - Ground
   - Enemy
-  - Player
+  - Trab
   - 
   - 
   - 

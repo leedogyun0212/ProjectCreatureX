@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 28
-  productGUID: 9e20fe509e4b08943aa793b10441bfa0
+  productGUID: 93af60b576870d64893ac09bb3a2c60f
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -709,11 +709,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 4680e37a-342c-448b-ab55-7fac63b5541c
+  cloudProjectId: 9d99c053-7bbc-458c-9d50-f151f188e7a0
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: CreatureX 2025-06-17_16-51-23
-  organizationId: leedogyun030212
+  projectName: CreatureX
+  organizationId: twilightchicken4
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
