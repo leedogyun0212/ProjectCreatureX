@@ -5,8 +5,6 @@ public class BaseEnemy : MonoBehaviour
 {
     protected Animator animator;
 
-    protected GameObject testplayer;
-
     protected new Rigidbody2D rigidbody;
 
     [SerializeField]
@@ -48,7 +46,6 @@ public class BaseEnemy : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody2D>();
-        testplayer = GameObject.Find("Test Player");
         UAVPos = transform.position;
     }
 

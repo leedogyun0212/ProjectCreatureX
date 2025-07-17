@@ -1,13 +1,14 @@
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class Camera : MonoBehaviour, IDoor
 {
     [SerializeField]
     private BoxCollider2D CamCollider;
 
-    public BoxCollider2D PlayerCollider;
+    public CapsuleCollider2D PlayerCollider;
 
     [SerializeField]
     private float CameraSpeed = 4.0f;
@@ -16,6 +17,28 @@ public class Camera : MonoBehaviour, IDoor
 
     public bool DoorTouch { get; set; } = true;
 
+    private enum LockDirection
+    {
+        None = 0,
+        Right = 1,
+        Left = 2,
+        Up = 3,
+        Down = 4,
+    }
+
+    private LockDirection currentLock;
+
+    [SerializeField]
+    private float verticalDeadZoneHeight = 1.5f; // 데드존 높이
+    private float targetY;
+
+    private Vector3 velocity = Vector3.zero;
+
+    private void Start()
+    {
+        targetY = transform.position.y;
+    }
+
     private void Update()
     {
         MoveUpdate();
@@ -23,20 +46,82 @@ public class Camera : MonoBehaviour, IDoor
 
     private void MoveUpdate()
     {
-        if (!DoorTouch && PlayerCollider.bounds.center.x > transform.position.x)
+        Vector3 playerPos = PlayerCollider.bounds.center;
+        Vector3 camPos = transform.position;
+
+        if (!DoorTouch)
         {
-            return;
+            switch (currentLock)
+            {
+                case LockDirection.Right:
+                    if (playerPos.x > camPos.x) { MoveCamYOnly(); return; }
+                    break;
+                case LockDirection.Left:
+                    if (playerPos.x < camPos.x) { MoveCamYOnly(); return; }
+                    break;
+                case LockDirection.Up:
+                    if (playerPos.y > camPos.y) { MoveCamXOnly(); return; }
+                    break;
+                case LockDirection.Down:
+                    if (playerPos.y < camPos.y) { MoveCamXOnly(); return; }
+                    break;
+            }
+        }
+
+        MoveCam();
+    }
+
+    private void SetLockDirection(Vector3 doorPos)
+    {
+        Vector3 diff = PlayerCollider.bounds.center - doorPos;
+
+        if (Mathf.Abs(diff.x) > Mathf.Abs(diff.y))
+        {
+            currentLock = diff.x > 0 ? LockDirection.Left : LockDirection.Right;
         }
         else
-            MoveCam();
+        {
+            currentLock = diff.y > 0 ? LockDirection.Down : LockDirection.Up;
+        }
+
+        DoorTouch = false;
+
     }
 
     private void MoveCam()
     {
-        Vector3 Player = new Vector3(PlayerCollider.bounds.center.x, GetVerticalFollowY(), transform.position.z);
+        float playerY = PlayerCollider.bounds.center.y;
+        float camY = transform.position.y;
 
-        if (Mathf.Abs(PlayerCollider.bounds.center.x - transform.position.x) > 0.01)
-            transform.position = Vector3.Lerp(transform.position, Player, CameraSpeed * Time.deltaTime);
+        // Y축 데드존 검사
+        if (playerY > camY + verticalDeadZoneHeight)
+        {
+            targetY = playerY - verticalDeadZoneHeight;
+        }
+        else if (playerY < camY - verticalDeadZoneHeight)
+        {
+            targetY = playerY + verticalDeadZoneHeight;
+        }
+
+        Vector3 targetPos = new Vector3(
+            PlayerCollider.bounds.center.x,
+            targetY,
+            transform.position.z
+        );
+
+        transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, 0.15f); // velocity는 Vector3
+    }
+
+    private void MoveCamXOnly()
+    {
+        Vector3 xOnly = new Vector3(PlayerCollider.bounds.center.x, transform.position.y, transform.position.z);
+        transform.position = Vector3.Lerp(transform.position, xOnly, CameraSpeed * Time.deltaTime);
+    }
+
+    private void MoveCamYOnly()
+    {
+        Vector3 target = new Vector3(transform.position.x, GetVerticalFollowY(), transform.position.z);
+        transform.position = Vector3.SmoothDamp(transform.position, target, ref velocity, 0.15f);
     }
 
     private float GetVerticalFollowY()
@@ -87,8 +172,7 @@ public class Camera : MonoBehaviour, IDoor
     {
         if(collision.CompareTag("Door"))
         {
-            DoorTouch = false;
-            SavePos = CamCollider.bounds.max;
+            SetLockDirection(collision.bounds.center);
         }
     }
 
@@ -99,6 +183,7 @@ public class Camera : MonoBehaviour, IDoor
             Debug.Log(PlayerCollider.bounds.min.y + "sdas");
             Debug.Log(CamCollider.bounds.min.y - 0.3f);
             DoorTouch = true;
+            currentLock = LockDirection.None;
         }
     }
 

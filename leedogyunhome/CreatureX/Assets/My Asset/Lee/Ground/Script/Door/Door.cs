@@ -2,15 +2,9 @@ using UnityEngine;
 
 public class Door : MonoBehaviour, IDoor
 {
-
     public bool DoorTouch { get; set; }
 
     public Camera Camera;
-
-    private void Update()
-    {
-        Debug.Log(DoorTouch + "Door");
-    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -21,5 +15,4 @@ public class Door : MonoBehaviour, IDoor
             Destroy(gameObject);
         }
     }
-
 }

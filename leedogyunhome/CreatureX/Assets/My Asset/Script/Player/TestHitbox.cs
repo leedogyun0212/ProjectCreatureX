@@ -6,9 +6,19 @@ public class TestHitbox : MonoBehaviour
     private HashSet<GameObject> hitTargets = new HashSet<GameObject>();
     public float lifetime;
 
+    private TestPlayer player;
+
     private void Start()
     {
+        GameObject PlayerObj = GameObject.FindGameObjectWithTag("Player");
+        if (PlayerObj != null)
+            player = PlayerObj.GetComponent<TestPlayer>();
         Destroy(gameObject, lifetime);
+    }
+
+    private void OnDestroy()
+    {
+        player.isAttack = false;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -17,6 +27,7 @@ public class TestHitbox : MonoBehaviour
         {
             // Debug.Log($"{Time.deltaTime}: 몬스터 {name} 에게 데미지 입힘!");
             // 추후 TakeDamage 등 호출
+            player.isAttack = true;
         }
 
         if (other.CompareTag("Enemy") && !hitTargets.Contains(other.gameObject))

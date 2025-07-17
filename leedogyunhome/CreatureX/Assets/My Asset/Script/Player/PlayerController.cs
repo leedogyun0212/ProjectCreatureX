@@ -80,10 +80,7 @@ public class PlayerController : MonoBehaviour
             Debug.LogWarning($"{Time.deltaTime}: {player.curTrans.Name} 공격 시도!");
             // player.curTrans.Attack();
             player.OrderAttack();
-            player.isAttack = true;
         }
-        else
-            player.isAttack = false;
     }
 
 

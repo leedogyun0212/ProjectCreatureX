@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 3
-  player: {fileID: 1536494888586976789, guid: 6824e9ec2d8ac144896640d4397ce6d9, type: 3}
+  player: {fileID: 7082648529284794092, guid: 3cb9cbfd5c941b242b1fe09a2d1d3f2d, type: 3}
   EnemyFailed: 1
   helpRange: 100
   capsule: {fileID: 8911291790859680377}

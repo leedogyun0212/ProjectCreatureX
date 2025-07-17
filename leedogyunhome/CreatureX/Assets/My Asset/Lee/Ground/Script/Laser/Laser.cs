@@ -11,7 +11,7 @@ public class Laser : MonoBehaviour
 
     private float ColorA = 0f;
 
-    public SpriteRenderer Lasersprite;
+    private SpriteRenderer Lasersprite;
 
     private void Start()
     {
