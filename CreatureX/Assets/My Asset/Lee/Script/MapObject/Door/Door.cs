@@ -6,6 +6,8 @@ public class Door : MonoBehaviour, IDoor
 
     public Camera Camera;
 
+    public DoorDirection direction;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
