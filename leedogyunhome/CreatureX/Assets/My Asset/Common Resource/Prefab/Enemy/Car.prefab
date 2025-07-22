@@ -82,12 +82,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5119382043706598173, guid: 07458daf3d209f942b84996411772e09, type: 3}
+  m_Sprite: {fileID: -5119382043706598173, guid: 0face6b0a7b5b744e9716fca5a777732, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 4.855, y: 2.465}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -106,7 +106,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 3
-  player: {fileID: 7082648529284794092, guid: 3cb9cbfd5c941b242b1fe09a2d1d3f2d, type: 3}
   EnemyFailed: 0
   capsule: {fileID: 8934088298110955070}
 --- !u!95 &5210115719133171676
@@ -119,7 +118,7 @@ Animator:
   m_GameObject: {fileID: 4094375134416444885}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fab33564811e70e45a99037a945f51ab, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0a0d5826f6a61ec439110d7fbc488779, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -197,7 +196,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 4.855, y: 2.465}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 4.855, y: 2.465}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -243,7 +242,7 @@ PolygonCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 4.855, y: 2.465}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 4.855, y: 2.465}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0

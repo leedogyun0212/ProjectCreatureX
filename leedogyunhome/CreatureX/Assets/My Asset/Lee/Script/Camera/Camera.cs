@@ -22,7 +22,7 @@ public class Camera : MonoBehaviour, IDoor
         None = 0,
         Right = 1,
         Left = 2,
-        Up = 3, 
+        Up = 3,
         Down = 4,
     }
 
@@ -140,7 +140,7 @@ public class Camera : MonoBehaviour, IDoor
 
         if (PlayerY > CamY + 0.25f)
             return PlayerY;
-        else if (PlayerBottomY < CamBottomY-0.3f)
+        else if (PlayerBottomY < CamBottomY - 0.3f)
         {
             return PlayerY;
         }
@@ -161,7 +161,7 @@ public class Camera : MonoBehaviour, IDoor
         Vector3 start = transform.position;
         Vector3 end = new Vector3(PlayerCollider.bounds.center.x, GetVerticalFollowY(), transform.position.z);
 
-        
+
         while (elapsedTime < duration)
         {
             float t = elapsedTime / duration;

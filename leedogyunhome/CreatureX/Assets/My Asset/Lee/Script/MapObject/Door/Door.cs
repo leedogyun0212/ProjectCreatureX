@@ -10,7 +10,7 @@ public class Door : MonoBehaviour, IDoor
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("MainCamera"))
+        if (collision.CompareTag("MainCamera"))
         {
             Camera.SetLockDirection(direction);
         }

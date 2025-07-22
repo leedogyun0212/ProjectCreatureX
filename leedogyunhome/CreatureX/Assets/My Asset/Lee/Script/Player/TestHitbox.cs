@@ -23,11 +23,12 @@ public class TestHitbox : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        //if (other.CompareTag("Enemy")) // 몬스터는 Enemy 태그
-        //{
-        //    // Debug.Log($"{Time.deltaTime}: 몬스터 {name} 에게 데미지 입힘!");
-        //    // 추후 TakeDamage 등 호출
-        //}
+        if (other.CompareTag("Enemy")) // 몬스터는 Enemy 태그
+        {
+            // Debug.Log($"{Time.deltaTime}: 몬스터 {name} 에게 데미지 입힘!");
+            // 추후 TakeDamage 등 호출
+            player.isAttack = true;
+        }
 
         //if (other.CompareTag("Enemy") && !hitTargets.Contains(other.gameObject))
         //{
@@ -36,8 +37,6 @@ public class TestHitbox : MonoBehaviour
         //    // Debug.Log($"{Time.deltaTime}: 몬스터 {name} 에게 데미지 입힘!");
         //    // 추후 TakeDamage 등 호출
         //}
-
-        player.isAttack = true;
     }
 
 
