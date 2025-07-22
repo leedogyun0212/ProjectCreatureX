@@ -22,7 +22,7 @@ public class Camera : MonoBehaviour, IDoor
         None = 0,
         Right = 1,
         Left = 2,
-        Up = 3, 
+        Up = 3,
         Down = 4,
     }
 
@@ -71,21 +71,28 @@ public class Camera : MonoBehaviour, IDoor
         MoveCam();
     }
 
-    private void SetLockDirection(Vector3 doorPos)
+    public void SetLockDirection(DoorDirection doorDir)
     {
-        Vector3 diff =doorPos- transform.position;
-
-        if (Mathf.Abs(diff.x) > Mathf.Abs(diff.y))
         {
-            currentLock = diff.x > 0 ? LockDirection.Left : LockDirection.Right;
-        }
-        else
-        {
-            currentLock = diff.y > 0 ? LockDirection.Down : LockDirection.Up;
-        }
+            // DoorDirection -> LockDirection º¯È¯
+            switch (doorDir)
+            {
+                case DoorDirection.Left:
+                    currentLock = LockDirection.Left;
+                    break;
+                case DoorDirection.Right:
+                    currentLock = LockDirection.Right;
+                    break;
+                case DoorDirection.Up:
+                    currentLock = LockDirection.Up;
+                    break;
+                case DoorDirection.Down:
+                    currentLock = LockDirection.Down;
+                    break;
+            }
 
-        DoorTouch = false;
-
+            DoorTouch = false;
+        }
     }
 
     private void MoveCam()
@@ -133,7 +140,7 @@ public class Camera : MonoBehaviour, IDoor
 
         if (PlayerY > CamY + 0.25f)
             return PlayerY;
-        else if (PlayerBottomY < CamBottomY-0.3f)
+        else if (PlayerBottomY < CamBottomY - 0.3f)
         {
             return PlayerY;
         }
@@ -154,7 +161,7 @@ public class Camera : MonoBehaviour, IDoor
         Vector3 start = transform.position;
         Vector3 end = new Vector3(PlayerCollider.bounds.center.x, GetVerticalFollowY(), transform.position.z);
 
-        
+
         while (elapsedTime < duration)
         {
             float t = elapsedTime / duration;
@@ -166,14 +173,6 @@ public class Camera : MonoBehaviour, IDoor
             yield return null;
         }
 
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.CompareTag("Door"))
-        {
-            SetLockDirection(collision.bounds.center);
-        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)

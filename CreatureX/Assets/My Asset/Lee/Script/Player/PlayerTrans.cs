@@ -82,7 +82,7 @@ public class Player_Trans_Car : IPlayerTrans, IPlayerRelease
         Debug.Log($"{Time.deltaTime}: {Name}로 변신!");
         player.TransApply(16, 0, player.CarSprite, player.CarAnimController);
 
-        player.collider.size = new Vector2(3.25f, 1.5f);
+        player.collider.size = new Vector2(4.75f, 2.25f);
         player.collider.offset = new Vector2(0.02f, -0.05f);
         player.collider.direction = CapsuleDirection2D.Horizontal;
     }
@@ -113,7 +113,7 @@ public class Player_Trans_Car : IPlayerTrans, IPlayerRelease
     public void Attack() 
     {
         // 추후 자동차만의 공격 구현
-        player.CarDashAttack(25f, 0.25f);
+        player.TransForm_DashAttack(30f, 0.3f, new Vector3(2f, 0.5f, 0f), 2f);
     }
 }
 
@@ -165,7 +165,8 @@ public class Player_Trans_Drone : IPlayerTrans, IPlayerRelease
     }
 
     public void Attack() {
-        // 추후 드론만의 공격 필요
+        // 추후 드론만의 공격 필요        
+        player.TransForm_DashAttack(25f, 0.2f, new Vector3(2f, 0.5f, 0f), 1f);
     }
 }
 

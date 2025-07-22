@@ -164,7 +164,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 100
-  m_Sprite: {fileID: -4030210017698963475, guid: 0f2c3862751beea478e817f0c1c9ef85, type: 3}
+  m_Sprite: {fileID: -4030210017698963475, guid: 2fc87c467d49fe14faa2f7ca0aee83bb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -188,9 +188,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 3
-  player: {fileID: 7082648529284794092, guid: 3cb9cbfd5c941b242b1fe09a2d1d3f2d, type: 3}
+  player: {fileID: 8002419900664306903, guid: 3cb9cbfd5c941b242b1fe09a2d1d3f2d, type: 3}
   EnemyFailed: 0
-  BulletPrefab: {fileID: 175890127671815498, guid: eab2177a111967547a173aecc2b98233, type: 3}
+  BulletPrefab: {fileID: 175890127671815498, guid: 3cab453f045c9a4478a28a504571e662, type: 3}
   BulletShotPoint: {fileID: 2322002849654765551}
 --- !u!70 &3642267391479038505
 CapsuleCollider2D:

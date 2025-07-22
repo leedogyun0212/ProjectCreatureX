@@ -9,13 +9,19 @@ public class TestPlayer : MonoBehaviour
     public float curDirect { get; private set; }    // 현재 이동방향
 
     [Header("Player State")]
-    [SerializeField] private float moveSpeed = 8;
+    public string playerID = "player001";
+    public float playerHP = 100f;
+    private float playerCurHP;
+
+    public float playerMoveSpeed = 8;
+    private float playerCurMoveSpeed;
+
     [SerializeField] private float flySpeed = 5;
     [SerializeField] private float jumpForce;
     [NonSerialized] public bool isJump;
     private bool isJumpAttack;
-    public bool isAttack = false;
     private bool isDashing = false;
+    [NonSerialized] public bool isAttack = false;
     // private bool isMoving = false;
 
     [SerializeField] private LayerMask checkGroundLayer; // 레이어
@@ -40,13 +46,6 @@ public class TestPlayer : MonoBehaviour
     }
     public AssimilateForm curForm = AssimilateForm.None;
 
-    //public enum TransForm
-    //{ 
-    //    Basic,
-    //    Car,
-    //    Drone
-    //}
-    //public TransForm curTrans = TransForm.Basic;
 
     // 상태별 스프라이트 + 애니메이션 컨트롤러
     [Header("Basic State")]
@@ -102,6 +101,17 @@ public class TestPlayer : MonoBehaviour
 
         curTrans = playerTransBasic;
         curTrans.Enter();
+    }
+
+    private void Start()
+    {
+        InitPlayerState();
+    }
+
+    private void InitPlayerState()
+    {
+        playerCurHP = playerHP;
+        playerCurMoveSpeed = playerMoveSpeed;
     }
 
 
@@ -213,7 +223,7 @@ public class TestPlayer : MonoBehaviour
 
     private void Move(float direction)
     {
-        transform.Translate(Vector3.right * direction * moveSpeed * Time.deltaTime);
+        transform.Translate(Vector3.right * direction * playerCurMoveSpeed * Time.deltaTime);
         if (curTrans == playerTransBasic) 
             animator.SetFloat("TryMove", Mathf.Abs(direction));
         else if (curTrans == playerTransCar)
@@ -256,7 +266,7 @@ public class TestPlayer : MonoBehaviour
     // 변신
     public void TransApply(float speed, float jump, Sprite sprite, RuntimeAnimatorController animController)
     {
-        moveSpeed = speed;
+        playerCurMoveSpeed = speed;
         jumpForce = jump;
         CurSpriteRenderer.sprite = sprite;
         CurAnimator.runtimeAnimatorController = animController;
@@ -302,8 +312,7 @@ public class TestPlayer : MonoBehaviour
     {
         Vector3 spawnPos = firePoint.position;
         float direction = transform.localScale.x > 0 ? 1 : -1;
-        CreateHitBox(direction);
-
+        CreateHitBox(direction, new Vector3(2f, 0f, 0f), 1f);
 
         // 오른쪽 또는 왼쪽으로 히트박스 생성
         //spawnPos += new Vector3(direction * 1.0f, 0f, 0f);
@@ -324,7 +333,7 @@ public class TestPlayer : MonoBehaviour
 
     private void DoSlamAttack()
     {
-        rigid.gravityScale = 2.5f;
+        rigid.gravityScale = 8f;
 
         rigid.linearVelocity = Vector2.zero;
         rigid.AddForce(Vector2.down * 30f, ForceMode2D.Impulse);
@@ -332,8 +341,6 @@ public class TestPlayer : MonoBehaviour
         Vector3 spawnPos = firePoint.position + new Vector3(0f, -0.7f, 0f);
         GameObject atk = Instantiate(TestHitboxPrefab, spawnPos, Quaternion.identity);
         atk.transform.localScale = Vector3.one;
-
-        Debug.Log($"{Time.deltaTime} 낙하 공격!");
     }
 
     private void JumpAttack2()
@@ -368,38 +375,8 @@ public class TestPlayer : MonoBehaviour
         atk.transform.localScale = new Vector3(1, 1, 1);
     }
 
-    //public void CarDashAttack(float dashPower, float dashDuration)
-    //{
-    //    if (isDashing) return;
 
-    //    isDashing = true;
-    //    float direction = transform.localScale.x > 0 ? 1f : -1f;
-
-    //    rigid.linearVelocity = Vector2.zero;
-    //    rigid.gravityScale = 0; // 수평 유지
-    //    rigid.AddForce(Vector2.right * direction * dashPower, ForceMode2D.Impulse);
-
-    //    // 돌진 히트박스 생성
-    //    CreateHitBox(direction);
-    //    Invoke(nameof(EndDash), dashDuration);
-    //}
-
-    //private void CreateHitBox(float direction)
-    //{
-    //    Vector3 spawnPos = firePoint.position + new Vector3(direction * 1f, 0f, 0f);
-    //    GameObject atk = Instantiate(TestHitboxPrefab, spawnPos, Quaternion.identity, transform); // 플레이어에 붙여서 같이 이동
-    //    dashHitbox.transform.localScale = new Vector3(direction, 1, 1);
-    //}
-
-    //private void EndDash()
-    //{
-    //    isDashing = false;
-    //    rigid.linearVelocity = Vector2.zero;
-    //    rigid.gravityScale = 2.5f; // 원래대로
-    //}
-
-
-    public void CarDashAttack(float dashPower, float dashDuration)
+    public void TransForm_DashAttack(float dashPower, float dashDuration, Vector3 HitPos, float size)
     {
         if (isDashing) return;
 
@@ -410,15 +387,15 @@ public class TestPlayer : MonoBehaviour
         rigid.gravityScale = 0;
         rigid.AddForce(Vector2.right * direction * dashPower, ForceMode2D.Impulse);
 
-        CreateHitBox(direction);
+        CreateHitBox(direction, HitPos, size);
         Invoke(nameof(EndDash), dashDuration);
     }
 
-    private void CreateHitBox(float direction)
+    private void CreateHitBox(float direction, Vector3 customOffset, float size)
     {
-        Vector3 offset = new Vector3(direction * 1f, 0f, 0f);
+        Vector3 offset = new Vector3(customOffset.x * direction, customOffset.y, 0f);
         dashHitbox = Instantiate(TestHitboxPrefab, transform.position + offset, Quaternion.identity);
-        // dashHitbox.transform.localScale = new Vector3(direction, 1, 1); <- 크기 조절
+        dashHitbox.transform.localScale *= size;
 
         if (direction < 0)
             dashHitbox.transform.rotation = Quaternion.Euler(0f, 180f, 0f); // 좌우 반전
@@ -437,7 +414,8 @@ public class TestPlayer : MonoBehaviour
     private void EndDash()
     {
         isDashing = false;
-        rigid.gravityScale = 8f;
+        if (curTrans != playerTransDrone)
+            rigid.gravityScale = 8f;
         rigid.linearVelocity = Vector2.zero;       
     }
     

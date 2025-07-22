@@ -13,7 +13,7 @@ public class BaseEnemy : MonoBehaviour
     protected float UAVPosY = 0;
     protected Vector3 UAVPos;
 
-    [SerializeField]
+    //[SerializeField]
     protected TestPlayer player;
 
     protected Transform helpTarget = null;
@@ -44,6 +44,10 @@ public class BaseEnemy : MonoBehaviour
 
     protected virtual void Start()
     {
+
+        GameObject PlayerObj = GameObject.FindGameObjectWithTag("Player");
+        if (PlayerObj != null)
+            player = PlayerObj.GetComponent<TestPlayer>();
         animator = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody2D>();
         UAVPos = transform.position;
