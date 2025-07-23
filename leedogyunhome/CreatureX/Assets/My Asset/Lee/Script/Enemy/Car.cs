@@ -14,6 +14,10 @@ public class Car : BaseEnemy
         if(EnemyFailed) // 차의 흡수 가능한 상태
         {
             monsterState = MonsterState.failed;
+            if (Input.GetKey(KeyCode.X))
+            {
+                player.OrderAssmiliate(TestPlayer.AssimilateForm.Car);
+            }
             if (monsterState == MonsterState.Dead || Input.GetKey(KeyCode.A)) // 완전한 죽음
                 EnemyDead();
         }
@@ -29,20 +33,11 @@ public class Car : BaseEnemy
 
     protected override void OnTriggerEnter2D(Collider2D collision) // 차의 시야에 닿으면 발동되는 콜라이더
     {
-        if (collision.gameObject.CompareTag("Player") && player.isAttack)
-        {
-            monsterState = MonsterState.Hit;
-            animHit = true;
-            animWalk = 0;
-            HitMove();
-            StartCoroutine(HitRecover());
-        }
-        if (collision.CompareTag("Player")&&isMove)
+        if (collision.CompareTag("Player") && isMove)
         {
             Getdirection();
             MoveSpeed = 8.0f;
             isMove = false;
-            capsule.isTrigger = true;
             monsterState = MonsterState.Move;
         }
     }
@@ -50,10 +45,11 @@ public class Car : BaseEnemy
     protected override void OnCollisionEnter2D(Collision2D collision) // 차에 닿으면 발동되는 콜라이더
     {
         base.OnCollisionEnter2D(collision);
-        if (collision.gameObject.CompareTag("Player")&&!isMove) // 플레이어에 닿으면 통과되는 스크립트
+        if (collision.gameObject.CompareTag("Player")&&!isMove&&!player.isAttack) // 플레이어에 닿으면 통과되는 스크립트
         {
             capsule.isTrigger = true;
-            StartCoroutine(TriggerFalse());
+            if(capsule.isTrigger)
+                StartCoroutine(TriggerFalse());
             isMove = false;
         }
         else if(collision.gameObject.CompareTag("Wall")) // 벽에 닿으면 흡수 가능한 상태가 되는 콜라이더
