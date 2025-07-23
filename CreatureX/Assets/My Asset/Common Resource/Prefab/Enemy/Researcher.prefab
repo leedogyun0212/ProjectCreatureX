@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 50
-  m_Sprite: {fileID: -5722711516057696665, guid: 2b85e588edfb63b48bc85c59085edf5b, type: 3}
+  m_Sprite: {fileID: -5722711516057696665, guid: f8df2791be2dee54b9ba25b1c080e7ca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -105,7 +105,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 3
-  player: {fileID: 7082648529284794092, guid: 3cb9cbfd5c941b242b1fe09a2d1d3f2d, type: 3}
   EnemyFailed: 1
   helpRange: 100
   capsule: {fileID: 8911291790859680377}

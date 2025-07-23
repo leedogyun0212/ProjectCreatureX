@@ -1,8 +1,8 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Ladder : MonoBehaviour
 {
-    //private RaycastHit2D Hit;
 
     private Collider2D Hit;
 
@@ -18,6 +18,8 @@ public class Ladder : MonoBehaviour
     private Rigidbody2D playerRb;
 
     private bool isOnLadder = false;
+
+    private TestPlayer player;
 
     private void Start()
     {
@@ -41,7 +43,8 @@ public class Ladder : MonoBehaviour
         {
             if (playerRb == null)
                 playerRb = Hit.attachedRigidbody;
-
+            
+            player = Hit.gameObject.GetComponent<TestPlayer>();
             //isOnLadder = true;
             // Áß·Â ²ô±â
             playerRb.gravityScale = 0f;
