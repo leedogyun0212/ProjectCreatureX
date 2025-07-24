@@ -10,6 +10,7 @@ TagManager:
   - Researcher
   - Enemy
   - Wall
+  - Trigger
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - Ground
   - Enemy
   - Trab
-  - 
+  - Trigger
   - 
   - 
   - 

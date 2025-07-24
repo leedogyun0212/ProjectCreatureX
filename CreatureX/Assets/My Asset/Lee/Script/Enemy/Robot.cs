@@ -132,7 +132,7 @@ public class Robot : BaseEnemy, IAllyResponder
             HitMove();
             StartCoroutine(HitRecover());
         }
-        else if (collision.CompareTag("Player")&& !player.isAttack&&!EnemyFailed)
+        if (collision.CompareTag("Player")&& !player.isAttack&&!EnemyFailed)
         {
             helpTarget = null;
 

@@ -105,6 +105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   box: {fileID: 6982193357876803169}
   isTrab: 0
+  Player: {x: 0, y: 0, z: 0}
 --- !u!61 &6982193357876803169
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -30,6 +30,15 @@ public class Object_Trab_Stool : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player") && Create)
+        {
+            Create = false;
+            StartCoroutine(Warning());
+        }
+    }
+
     private IEnumerator Warning()
     {
         Debug.Log("Æ®·¦ ¹ßµ¿!!!!!!!!");

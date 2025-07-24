@@ -8,6 +8,8 @@ public class Object_Trab : MonoBehaviour
 
     public bool isTrab = false;
 
+    public Vector3 Player;
+
     private void OnDisable()
     {
         isTrab = true;
@@ -31,7 +33,7 @@ public class Object_Trab : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Trigger"))
         {
             StartCoroutine(Trab());
         }

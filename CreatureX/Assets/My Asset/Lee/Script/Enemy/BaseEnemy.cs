@@ -106,15 +106,7 @@ public class BaseEnemy : MonoBehaviour
 
     protected virtual void OnTriggerEnter2D(Collider2D collision) //isTrigger 켜진 콜라이더 감지, Enemy의 플레이어 포착하는 코드
     {
-        if (collision.gameObject.CompareTag("Player") && player.isAttack)
-        {
-            monsterState = MonsterState.Hit;
-            animHit = true;
-            animWalk = 0;
-            HitMove();
-            StartCoroutine(HitRecover());
-        }
-        else if(collision.CompareTag("Player")&& !player.isAttack)
+        if (collision.CompareTag("Player") && !player.isAttack)
         {
             monsterState = MonsterState.Play;
             animWalk = 0;
