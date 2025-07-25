@@ -21,7 +21,7 @@ public class Door : MonoBehaviour, IDoor
         if (collision.gameObject.CompareTag("Player"))
         {
             Camera.DoorTouch = true;
-            Camera.DoorCam();
+            //Camera.DoorCam();
             Destroy(gameObject);
         }
     }

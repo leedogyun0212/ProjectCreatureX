@@ -25,7 +25,6 @@ public class Ladder : MonoBehaviour
     {
         PlayerEnter();
         Climb();
-        LadderEnd();
     }
 
     private void PlayerEnter()
@@ -39,6 +38,8 @@ public class Ladder : MonoBehaviour
         {
             if (playerRb == null)
                 playerRb = Hit.attachedRigidbody;
+
+            LadderEnd();
 
             isOnLadder = true;
             // Áß·Â ²ô±â

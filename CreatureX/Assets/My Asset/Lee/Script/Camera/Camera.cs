@@ -1,6 +1,7 @@
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 using static UnityEngine.GraphicsBuffer;
 
 public class Camera : MonoBehaviour, IDoor
@@ -12,8 +13,6 @@ public class Camera : MonoBehaviour, IDoor
 
     [SerializeField]
     private float CameraSpeed = 4.0f;
-
-    private Vector3 SavePos;
 
     public bool DoorTouch { get; set; } = true;
 
@@ -30,13 +29,25 @@ public class Camera : MonoBehaviour, IDoor
 
     [SerializeField]
     private float verticalDeadZoneHeight = 1.5f; // 데드존 높이
+    [SerializeField] private float cameraStepHeight = 4.0f; // y축 움직임 단위
+    [SerializeField] private float climbYThreshold = 1.0f; // 사다리에서 이동할 최소 y 변화
+    private float cameraHeight;
+
     private float targetY;
 
+    private Vector3 Target;
+
     private Vector3 velocity = Vector3.zero;
+
+    private bool IsMoving = false;
+
+    private float moveDuration = 0.3f;
 
     private void Start()
     {
         targetY = transform.position.y;
+        Target = transform.position;
+        cameraHeight = CamCollider.bounds.size.y;
     }
 
     private void Update()
@@ -48,6 +59,8 @@ public class Camera : MonoBehaviour, IDoor
     {
         Vector3 playerPos = PlayerCollider.bounds.center;
         Vector3 camPos = transform.position;
+
+        GetCameraY();
 
         if (!DoorTouch)
         {
@@ -67,7 +80,8 @@ public class Camera : MonoBehaviour, IDoor
                     break;
             }
         }
-
+        if (!IsMoving)
+            CameraUp();
         MoveCam();
     }
 
@@ -94,25 +108,12 @@ public class Camera : MonoBehaviour, IDoor
             DoorTouch = false;
         }
     }
-
+    
     private void MoveCam()
     {
-        float playerY = PlayerCollider.bounds.center.y;
-        float camY = transform.position.y;
-
-        // Y축 데드존 검사
-        if (playerY > camY + verticalDeadZoneHeight)
-        {
-            targetY = playerY - verticalDeadZoneHeight;
-        }
-        else if (playerY < camY - verticalDeadZoneHeight)
-        {
-            targetY = playerY + verticalDeadZoneHeight;
-        }
-
         Vector3 targetPos = new Vector3(
             PlayerCollider.bounds.center.x,
-            targetY,
+            Target.y,
             transform.position.z
         );
 
@@ -127,25 +128,52 @@ public class Camera : MonoBehaviour, IDoor
 
     private void MoveCamYOnly()
     {
-        Vector3 target = new Vector3(transform.position.x, GetVerticalFollowY(), transform.position.z);
+        Vector3 target = new Vector3(transform.position.x, targetY, transform.position.z);
         transform.position = Vector3.SmoothDamp(transform.position, target, ref velocity, 0.15f);
     }
 
-    private float GetVerticalFollowY()
+    private void GetCameraY()
+    {
+        float playerY = PlayerCollider.bounds.center.y;
+        float camY = transform.position.y;
+
+        if (playerY > camY + verticalDeadZoneHeight)
+        {
+            // 위로 한 단계 카메라 이동
+            targetY = camY + cameraStepHeight;
+        }
+        else if (playerY < camY - verticalDeadZoneHeight)
+        {
+            // 아래로 한 단계 카메라 이동
+            targetY = camY - cameraStepHeight;
+        }
+    }
+
+    private void CameraUp()
     {
         float PlayerY = PlayerCollider.bounds.center.y;
-        float CamY = transform.position.y;
-        float PlayerBottomY = PlayerCollider.bounds.min.y;
-        float CamBottomY = CamCollider.bounds.min.y;
-
-        if (PlayerY > CamY + 0.25f)
-            return PlayerY;
-        else if (PlayerBottomY < CamBottomY - 0.3f)
+        float camMaxY = CamCollider.bounds.max.y;
+        float camMinY = CamCollider.bounds.min.y;
+        if (PlayerY > camMaxY + verticalDeadZoneHeight)
         {
-            return PlayerY;
-        }
+            Target += new Vector3(0, cameraHeight, 0);
+            IsMoving = true;
 
-        return CamY;
+            StartCoroutine(ReStartMoving());
+        }
+        else if(PlayerY < camMinY - verticalDeadZoneHeight)
+        {
+            Target -= new Vector3(0, cameraHeight, 0);
+            IsMoving = true;
+
+            StartCoroutine(ReStartMoving());
+        }
+    }
+
+    private IEnumerator ReStartMoving()
+    {
+        yield return new WaitForSeconds(moveDuration + 0.05f);
+        IsMoving = false;
     }
 
     public void DoorCam()
@@ -158,8 +186,10 @@ public class Camera : MonoBehaviour, IDoor
         float elapsedTime = 0f;
         float duration = 1.5f;
 
+        GetCameraY();
+
         Vector3 start = transform.position;
-        Vector3 end = new Vector3(PlayerCollider.bounds.center.x, GetVerticalFollowY(), transform.position.z);
+        Vector3 end = new Vector3(PlayerCollider.bounds.center.x, targetY, transform.position.z);
 
 
         while (elapsedTime < duration)
@@ -185,5 +215,4 @@ public class Camera : MonoBehaviour, IDoor
             currentLock = LockDirection.None;
         }
     }
-
 }
