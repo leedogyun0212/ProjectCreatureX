@@ -65,6 +65,14 @@ public class Researcher : BaseEnemy
 
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.CompareTag("Player") && player.isAttack)
+        {
+            monsterState = MonsterState.Hit;
+            animHit = true;
+            animWalk = 0;
+            HitMove();
+            StartCoroutine(HitRecover());
+        }
         if (collision.CompareTag("Player") && !player.isAttack&&isHelp && !EnemyFailed)
         {
             monsterState = MonsterState.Play;
@@ -85,11 +93,11 @@ public class Researcher : BaseEnemy
     {
         if (direction.x < 0)
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(-1, 1, 1);
         }
         else if (direction.x > 0)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(1, 1, 1);
         }
     }
 }

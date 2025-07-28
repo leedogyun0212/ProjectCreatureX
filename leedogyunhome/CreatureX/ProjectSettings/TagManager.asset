@@ -3,18 +3,25 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Ground
+  - Door
+  - Key
+  - Researcher
+  - Enemy
+  - Wall
+  - Trigger
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Enemy
+  - Trab
+  - Trigger
   - 
   - 
   - 

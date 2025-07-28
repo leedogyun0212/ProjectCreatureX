@@ -18,14 +18,14 @@ public class Car : BaseEnemy
             {
                 player.OrderAssmiliate(TestPlayer.AssimilateForm.Car);
             }
-            if (monsterState == MonsterState.Dead || Input.GetKey(KeyCode.A)) // 완전한 죽음
+            if (monsterState == MonsterState.Dead || Input.GetKey(KeyCode.H)) // 완전한 죽음
                 EnemyDead();
         }
         else if (monsterState == MonsterState.Move) // 차가 플레이어를 추격하는 상태,
         {
             Move();
         }
-        else if (monsterState == MonsterState.Dead || Input.GetKey(KeyCode.A)) // 차가 완전한 죽음
+        else if (monsterState == MonsterState.Dead || Input.GetKey(KeyCode.H)) // 차가 완전한 죽음
         {
             EnemyDead();
         }

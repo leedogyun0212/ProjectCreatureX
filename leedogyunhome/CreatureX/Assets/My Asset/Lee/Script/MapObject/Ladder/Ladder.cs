@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class Ladder : MonoBehaviour
 {
-
     private Collider2D Hit;
 
     private BoxCollider2D box;
@@ -13,13 +12,9 @@ public class Ladder : MonoBehaviour
 
     [SerializeField] private float climbSpeed = 3f;
 
-    private float Playergravity;
-
     private Rigidbody2D playerRb;
 
     private bool isOnLadder = false;
-
-    private TestPlayer player;
 
     private void Start()
     {
@@ -43,9 +38,10 @@ public class Ladder : MonoBehaviour
         {
             if (playerRb == null)
                 playerRb = Hit.attachedRigidbody;
-            
-            player = Hit.gameObject.GetComponent<TestPlayer>();
-            //isOnLadder = true;
+
+            LadderEnd();
+
+            isOnLadder = true;
             // 중력 끄기
             playerRb.gravityScale = 0f;
             // 속도 초기화 (중력에 의해 내려가지 않도록)
@@ -78,6 +74,14 @@ public class Ladder : MonoBehaviour
 
             // 위아래 움직임 적용
             playerRb.linearVelocity = new Vector2(playerRb.linearVelocity.x, verticalInput * climbSpeed);
+        }
+    }
+
+    private void LadderEnd()
+    {
+        if (Mathf.Abs(box.bounds.max.y - playerRb.position.y) < 0.1f)
+        {
+            Debug.Log("카메라 위로!!!!!!!!!!!!!!!!!!!!!!!!!!!");
         }
     }
 }
