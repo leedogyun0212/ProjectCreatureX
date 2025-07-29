@@ -7,16 +7,18 @@ using static UnityEngine.GraphicsBuffer;
 public class Camera : MonoBehaviour, IDoor
 {
     [SerializeField]
-    private BoxCollider2D CamCollider;
+    private BoxCollider2D CamCollider; // 카메라의 콜라이더
 
-    public CapsuleCollider2D PlayerCollider;
+    public CapsuleCollider2D PlayerCollider; // 플레이어 콜라이더
+
+    private UnityEngine.Camera MainCamera; // 카메라 
 
     [SerializeField]
-    private float CameraSpeed = 4.0f;
+    private float CameraSpeed = 4.0f; // 카메라 속도 
 
-    public bool DoorTouch { get; set; } = true;
+    public bool DoorTouch { get; set; } = true; // 문에 닿았나 안 닿았나 관련 bool
 
-    public enum LockDirection
+    public enum LockDirection // 문 방향 지정
     {
         None = 0,
         Right = 1,
@@ -31,21 +33,22 @@ public class Camera : MonoBehaviour, IDoor
     private float verticalDeadZoneHeight = 1.5f; // 데드존 높이
     [SerializeField] private float cameraStepHeight = 4.0f; // y축 움직임 단위
     [SerializeField] private float climbYThreshold = 1.0f; // 사다리에서 이동할 최소 y 변화
-    private float cameraHeight;
+    private float cameraHeight; // 카메라 사이즈
 
-    private float targetY;
+    private Vector3 Target; // y움직임 관련 벡터
 
-    private Vector3 Target;
+    private Vector3 velocity = Vector3.zero; // 카메라 이동 관련 벡터
 
-    private Vector3 velocity = Vector3.zero;
+    private bool IsMoving = false; // y 이동할때 쓰는 bool
 
-    private bool IsMoving = false;
+    private float moveDuration = 0.3f; // IsMoving 바뀔때 잠깐의 대기 시간
 
-    private float moveDuration = 0.3f;
+    [SerializeField]
+    private bool FollowYDirectly = false;
 
     private void Start()
     {
-        targetY = transform.position.y;
+        MainCamera = GetComponent<UnityEngine.Camera>();
         Target = transform.position;
         cameraHeight = CamCollider.bounds.size.y;
     }
@@ -60,9 +63,11 @@ public class Camera : MonoBehaviour, IDoor
         Vector3 playerPos = PlayerCollider.bounds.center;
         Vector3 camPos = transform.position;
 
-        GetCameraY();
+        YMovingUpdate();
 
-        if (!DoorTouch)
+        if (!IsMoving)
+            CameraUp();
+        if (!DoorTouch) // 이것으로 문의 이동이 제한
         {
             switch (currentLock)
             {
@@ -80,12 +85,22 @@ public class Camera : MonoBehaviour, IDoor
                     break;
             }
         }
-        if (!IsMoving)
-            CameraUp();
+
         MoveCam();
     }
 
-    public void SetLockDirection(DoorDirection doorDir)
+    private void YMovingUpdate()
+    {
+        if (!IsMoving)
+        {
+            if (FollowYDirectly)
+                FollowPlayerY(); // 새로 만들 함수
+            else
+                CameraUp(); // 기존대로 작동
+        }
+    }
+
+    public void SetLockDirection(DoorDirection doorDir) // 문에서 이동제한을 결정하는 코드
     {
         {
             // DoorDirection -> LockDirection 변환
@@ -109,7 +124,7 @@ public class Camera : MonoBehaviour, IDoor
         }
     }
     
-    private void MoveCam()
+    private void MoveCam() // 카메라의 이동을 담당하는 코드
     {
         Vector3 targetPos = new Vector3(
             PlayerCollider.bounds.center.x,
@@ -120,36 +135,19 @@ public class Camera : MonoBehaviour, IDoor
         transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, 0.15f); // velocity는 Vector3
     }
 
-    private void MoveCamXOnly()
+    private void MoveCamXOnly() // x밖에 못 움직일때 쓰는 코드
     {
         Vector3 xOnly = new Vector3(PlayerCollider.bounds.center.x, transform.position.y, transform.position.z);
         transform.position = Vector3.Lerp(transform.position, xOnly, CameraSpeed * Time.deltaTime);
     }
 
-    private void MoveCamYOnly()
+    private void MoveCamYOnly() // y밖에 못 움직일때 쓰는 코드
     {
-        Vector3 target = new Vector3(transform.position.x, targetY, transform.position.z);
+        Vector3 target = new Vector3(transform.position.x, Target.y, transform.position.z);
         transform.position = Vector3.SmoothDamp(transform.position, target, ref velocity, 0.15f);
     }
 
-    private void GetCameraY()
-    {
-        float playerY = PlayerCollider.bounds.center.y;
-        float camY = transform.position.y;
-
-        if (playerY > camY + verticalDeadZoneHeight)
-        {
-            // 위로 한 단계 카메라 이동
-            targetY = camY + cameraStepHeight;
-        }
-        else if (playerY < camY - verticalDeadZoneHeight)
-        {
-            // 아래로 한 단계 카메라 이동
-            targetY = camY - cameraStepHeight;
-        }
-    }
-
-    private void CameraUp()
+    private void CameraUp() // y 의 이동에 관여하는 Target의 벡터 설정
     {
         float PlayerY = PlayerCollider.bounds.center.y;
         float camMaxY = CamCollider.bounds.max.y;
@@ -170,39 +168,21 @@ public class Camera : MonoBehaviour, IDoor
         }
     }
 
-    private IEnumerator ReStartMoving()
+    private void FollowPlayerY()
+    {
+        // 제한된 범위 내에서만 따라감
+        float clampedY = PlayerCollider.bounds.center.y;
+
+        Vector3 PlayerPos = new Vector3(transform.position.x, clampedY, transform.position.z);
+
+        // 스무딩 버전
+        Target = Vector3.SmoothDamp(transform.position, PlayerPos, ref velocity, 0.15f);
+    }
+
+    private IEnumerator ReStartMoving() // IsMoving 풀릴때 잠깐의 대기시간
     {
         yield return new WaitForSeconds(moveDuration + 0.05f);
         IsMoving = false;
-    }
-
-    public void DoorCam()
-    {
-        StartCoroutine(SlowReturnToPlayer());
-    }
-
-    private IEnumerator SlowReturnToPlayer()
-    {
-        float elapsedTime = 0f;
-        float duration = 1.5f;
-
-        GetCameraY();
-
-        Vector3 start = transform.position;
-        Vector3 end = new Vector3(PlayerCollider.bounds.center.x, targetY, transform.position.z);
-
-
-        while (elapsedTime < duration)
-        {
-            float t = elapsedTime / duration;
-            float smoothT = Mathf.SmoothStep(0f, 1.5f, t); // 여기!
-
-            transform.position = Vector3.Lerp(start, end, smoothT);
-
-            elapsedTime += Time.deltaTime;
-            yield return null;
-        }
-
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -215,4 +195,15 @@ public class Camera : MonoBehaviour, IDoor
             currentLock = LockDirection.None;
         }
     }
+
+    public void EnableDirectYFollow()
+    {
+        FollowYDirectly = true;
+    }
+
+    public void DisableDirectYFollow()
+    {
+        FollowYDirectly = false;
+    }
+
 }
