@@ -10,6 +10,9 @@ public class BaseEnemy : MonoBehaviour
     [SerializeField]
     protected float MoveSpeed = 3.0f;
 
+    [SerializeField]
+    protected float EnemyHp = 40.0f;
+
     protected float UAVPosY = 0;
     protected Vector3 UAVPos;
 
@@ -135,6 +138,7 @@ public class BaseEnemy : MonoBehaviour
             monsterState = MonsterState.Hit;
             animHit = true;
             animWalk = 0;
+            HpCheck();
             HitMove();
             StartCoroutine(HitRecover());
         }
@@ -145,4 +149,17 @@ public class BaseEnemy : MonoBehaviour
         yield return new WaitForSeconds(0.5f); // 0.5초간 피격 상태 유지
         monsterState = MonsterState.idle;
     }
+
+    protected virtual void HpCheck()
+    {
+        Debug.Log("Enemy 다침ㅠㅠ" + this.gameObject);
+        EnemyHp -= 10;
+        if (EnemyHp <= 0) EnemyFailed = true;
+    }
+
+    protected IEnumerator FailTime()
+    {
+        yield return new WaitForSecondsRealtime(5.0f);
+    }
+
 }

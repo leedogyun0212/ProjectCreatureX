@@ -32,8 +32,12 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow)) dir = -1;
         if (Input.GetKey(KeyCode.RightArrow)) dir = 1;
 
+        //if (dir !=0 ) EffectManager.Play("Dust", player.collider.bounds.min);
+
         // player.OrderMove(dir);
         player.curTrans.Move(dir);
+
+        if (dir != 0) EffectManager.Play("Dust", player.collider.bounds.min);
     }
 
     private void ControlJump() 

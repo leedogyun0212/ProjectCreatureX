@@ -70,6 +70,7 @@ public class Researcher : BaseEnemy
             monsterState = MonsterState.Hit;
             animHit = true;
             animWalk = 0;
+            HpCheck();
             HitMove();
             StartCoroutine(HitRecover());
         }
@@ -81,6 +82,11 @@ public class Researcher : BaseEnemy
             isHelp = false;
 
         }
+    }
+
+    protected override void OnCollisionEnter2D(Collision2D collision)
+    {
+        //base.OnCollisionEnter2D(collision);
     }
 
     protected override IEnumerator HitRecover()

@@ -16,11 +16,10 @@ public static class EffectManager
             prefabMap[entry.effectName] = entry.prefab;
             var pool = new ObjectPool<IRecyclableGameObject>();
 
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < 3; i++)
             {
                 GameObject obj = GameObject.Instantiate(entry.prefab);
                 obj.SetActive(false);
-
                 var recyclable = obj.GetComponent<IRecyclableGameObject>();
                 pool.RegisterRecyclableObject(recyclable);
             }
@@ -40,13 +39,18 @@ public static class EffectManager
         }
 
         var pool = pools[effectName];
+
+        if (pool.HasActiveObject())
+        {
+            Debug.Log($"[EffectManager] '{effectName}' 이펙트는 이미 재생 중입니다.");
+            return;
+        }
+
         var recyclable = pool.GetRecyclableObject();
 
         if (recyclable == null)
         {
-            GameObject obj = GameObject.Instantiate(prefabMap[effectName]);
-            recyclable = obj.GetComponent<IRecyclableGameObject>();
-            pool.RegisterRecyclableObject(recyclable);
+            return;
         }
 
         if (recyclable is EffectObject effectObj)

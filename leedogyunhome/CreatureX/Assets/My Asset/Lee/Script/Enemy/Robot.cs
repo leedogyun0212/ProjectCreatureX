@@ -129,6 +129,7 @@ public class Robot : BaseEnemy, IAllyResponder
             monsterState = MonsterState.Hit;
             animHit = true;
             animWalk = 0;
+            HpCheck();
             HitMove();
             StartCoroutine(HitRecover());
         }
@@ -154,7 +155,7 @@ public class Robot : BaseEnemy, IAllyResponder
 
     protected override void OnCollisionEnter2D(Collision2D collision) // 로봇 몸에 닿으면 발생하는 콜라이더, 연구원 닿으면 대기로 돌입 
     {
-        base.OnCollisionEnter2D(collision);
+        //base.OnCollisionEnter2D(collision);
         if(collision.gameObject.CompareTag("Researcher") && !EnemyFailed)
         {
             monsterState = MonsterState.idle;

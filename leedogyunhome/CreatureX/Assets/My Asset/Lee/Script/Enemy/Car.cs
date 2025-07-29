@@ -38,13 +38,14 @@ public class Car : BaseEnemy
             Getdirection();
             MoveSpeed = 8.0f;
             isMove = false;
+            HpCheck();
             monsterState = MonsterState.Move;
         }
     }
 
     protected override void OnCollisionEnter2D(Collision2D collision) // 차에 닿으면 발동되는 콜라이더
     {
-        base.OnCollisionEnter2D(collision);
+        //base.OnCollisionEnter2D(collision);
         if (collision.gameObject.CompareTag("Player")&&!isMove&&!player.isAttack) // 플레이어에 닿으면 통과되는 스크립트
         {
             capsule.isTrigger = true;

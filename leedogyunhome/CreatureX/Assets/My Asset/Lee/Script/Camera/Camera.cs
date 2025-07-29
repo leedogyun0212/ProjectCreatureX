@@ -189,8 +189,6 @@ public class Camera : MonoBehaviour, IDoor
     {
         if (collision.CompareTag("Door"))
         {
-            Debug.Log(PlayerCollider.bounds.min.y + "sdas");
-            Debug.Log(CamCollider.bounds.min.y - 0.3f);
             DoorTouch = true;
             currentLock = LockDirection.None;
         }

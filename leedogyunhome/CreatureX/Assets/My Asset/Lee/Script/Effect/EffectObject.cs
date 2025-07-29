@@ -10,12 +10,19 @@ public class EffectObject : MonoBehaviour, IRecyclableGameObject
         transform.position = position;
         gameObject.SetActive(true);
 
-        StartCoroutine(AutoDisable());
+        //StartCoroutine(AutoDisable());
     }
 
-    private IEnumerator AutoDisable()
+    //private IEnumerator AutoDisable()
+    //{
+    //    yield return new WaitForSeconds(1f); // 이펙트 지속 시간
+    //    Debug.Log(isActive);
+    //    gameObject.SetActive(false);
+    //}
+
+    public void EffectEnd()
     {
-        yield return new WaitForSeconds(1f); // 이펙트 지속 시간
         gameObject.SetActive(false);
     }
+
 }
