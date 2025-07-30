@@ -23,8 +23,7 @@ public class UAV : BaseEnemy, IAllyResponder
             animDead = 100;
             rigidbody.bodyType = RigidbodyType2D.Dynamic;
             monsterState = MonsterState.failed;
-            if (monsterState == MonsterState.Dead || Input.GetKey(KeyCode.A)) // ¿ÏÀüÇÑ Á×À½
-                EnemyDead();
+            StartCoroutine(DeadOn());
         }
         else if (monsterState == MonsterState.idle)
         {
@@ -39,7 +38,7 @@ public class UAV : BaseEnemy, IAllyResponder
             Getdirection();
             ResearcherMove();
         }
-        else if (monsterState == MonsterState.Dead || Input.GetKey(KeyCode.A))
+        else if (monsterState == MonsterState.Dead)
             EnemyDead();
     }
 

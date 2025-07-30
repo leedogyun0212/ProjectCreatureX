@@ -31,8 +31,6 @@ public class Camera : MonoBehaviour, IDoor
 
     [SerializeField]
     private float verticalDeadZoneHeight = 1.5f; // 데드존 높이
-    [SerializeField] private float cameraStepHeight = 4.0f; // y축 움직임 단위
-    [SerializeField] private float climbYThreshold = 1.0f; // 사다리에서 이동할 최소 y 변화
     private float cameraHeight; // 카메라 사이즈
 
     private Vector3 Target; // y움직임 관련 벡터
@@ -189,8 +187,6 @@ public class Camera : MonoBehaviour, IDoor
     {
         if (collision.CompareTag("Door"))
         {
-            Debug.Log(PlayerCollider.bounds.min.y + "sdas");
-            Debug.Log(CamCollider.bounds.min.y - 0.3f);
             DoorTouch = true;
             currentLock = LockDirection.None;
         }

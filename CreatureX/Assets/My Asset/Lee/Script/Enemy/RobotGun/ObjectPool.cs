@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 //  > null 이 전달되었을 때 발생시킬 예외 클래스를 정의합니다.
 public class ParamIsNullException : System.Exception
@@ -44,4 +45,18 @@ public class ObjectPool<T> where T : IRecyclableGameObject
         return recyclableObj;
     }
 
+    public T GetInactiveObject()
+    {
+        return _ObjectPool.FirstOrDefault(p => !p.isActive);
+    }
+
+    public T GetActiveObject()
+    {
+        return _ObjectPool.FirstOrDefault(obj => obj.isActive);
+    }
+
+    public bool HasActiveObject()
+    {
+        return _ObjectPool.Exists(obj => obj.isActive);
+    }
 }

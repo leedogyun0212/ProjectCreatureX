@@ -14,18 +14,13 @@ public class Car : BaseEnemy
         if(EnemyFailed) // 차의 흡수 가능한 상태
         {
             monsterState = MonsterState.failed;
-            if (Input.GetKey(KeyCode.X))
-            {
-                player.OrderAssmiliate(TestPlayer.AssimilateForm.Car);
-            }
-            if (monsterState == MonsterState.Dead || Input.GetKey(KeyCode.H)) // 완전한 죽음
-                EnemyDead();
+            StartCoroutine(DeadOn());
         }
         else if (monsterState == MonsterState.Move) // 차가 플레이어를 추격하는 상태,
         {
             Move();
         }
-        else if (monsterState == MonsterState.Dead || Input.GetKey(KeyCode.H)) // 차가 완전한 죽음
+        else if (monsterState == MonsterState.Dead) // 차가 완전한 죽음
         {
             EnemyDead();
         }
@@ -38,13 +33,14 @@ public class Car : BaseEnemy
             Getdirection();
             MoveSpeed = 8.0f;
             isMove = false;
+            HpCheck();
             monsterState = MonsterState.Move;
         }
     }
 
     protected override void OnCollisionEnter2D(Collision2D collision) // 차에 닿으면 발동되는 콜라이더
     {
-        base.OnCollisionEnter2D(collision);
+        //base.OnCollisionEnter2D(collision);
         if (collision.gameObject.CompareTag("Player")&&!isMove&&!player.isAttack) // 플레이어에 닿으면 통과되는 스크립트
         {
             capsule.isTrigger = true;

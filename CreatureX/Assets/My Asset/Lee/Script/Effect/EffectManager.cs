@@ -16,11 +16,10 @@ public static class EffectManager
             prefabMap[entry.effectName] = entry.prefab;
             var pool = new ObjectPool<IRecyclableGameObject>();
 
-            for (int i = 0; i < 1; i++)
+            for (int i = 0; i < 3; i++)
             {
                 GameObject obj = GameObject.Instantiate(entry.prefab);
                 obj.SetActive(false);
-                Debug.Log(pool);
                 var recyclable = obj.GetComponent<IRecyclableGameObject>();
                 pool.RegisterRecyclableObject(recyclable);
             }
@@ -31,7 +30,7 @@ public static class EffectManager
         initialized = true;
     }
 
-    public static void Play(string effectName, Vector3 position)
+    public static void Play(string effectName, Vector3 position, bool ScaleLeft)
     {
         if (!pools.ContainsKey(effectName))
         {
@@ -40,19 +39,38 @@ public static class EffectManager
         }
 
         var pool = pools[effectName];
+
+        var effectObject = pool.GetInactiveObject() as EffectObject;
+
+        if (pool.HasActiveObject())
+        {
+            var activeEffect = pool.GetActiveObject() as EffectObject;
+            if (activeEffect != null)
+            {
+                activeEffect.UpdateEffect(position, ScaleLeft); // 위치만 갱신
+            }
+            return;
+        }
+
+        //if (effectObject != null)
+        //{
+        //    effectObject.PlayEffect(position,ScaleLeft);
+        //}
+        //else
+        //{
+        //    Debug.LogWarning($"{effectName} 이펙트가 전부 사용 중입니다.");
+        //}
+
         var recyclable = pool.GetRecyclableObject();
 
         if (recyclable == null)
         {
-            //GameObject obj = GameObject.Instantiate(prefabMap[effectName]);
-            //recyclable = obj.GetComponent<IRecyclableGameObject>();
-            //pool.RegisterRecyclableObject(recyclable);
             return;
         }
 
         if (recyclable is EffectObject effectObj)
         {
-            effectObj.PlayEffect(position);
+            effectObj.PlayEffect(position, ScaleLeft);
         }
         else
         {

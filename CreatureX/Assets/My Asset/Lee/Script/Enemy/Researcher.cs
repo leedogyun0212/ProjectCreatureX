@@ -26,15 +26,17 @@ public class Researcher : BaseEnemy
         else if (monsterState == MonsterState.Move&& Mathf.Abs(player.transform.position.x - transform.position.x) < 10)
         {
             Getdirection();
+            EffectManager.Play("Dust", capsule.bounds.min, direction.x<0);
             Move();
         }
-        else if (monsterState == MonsterState.Dead || Input.GetKey(KeyCode.A))
+        else if (monsterState == MonsterState.Dead)
             EnemyDead();
         if (EnemyFailed)
         {
             capsule.size = new Vector2(capsule.size.x, 1.3f);
             animDead = 100;
             monsterState = MonsterState.failed;
+            StartCoroutine(DeadOn());
         }
     }
 
@@ -70,6 +72,7 @@ public class Researcher : BaseEnemy
             monsterState = MonsterState.Hit;
             animHit = true;
             animWalk = 0;
+            HpCheck();
             HitMove();
             StartCoroutine(HitRecover());
         }
@@ -81,6 +84,11 @@ public class Researcher : BaseEnemy
             isHelp = false;
 
         }
+    }
+
+    protected override void OnCollisionEnter2D(Collision2D collision)
+    {
+        //base.OnCollisionEnter2D(collision);
     }
 
     protected override IEnumerator HitRecover()

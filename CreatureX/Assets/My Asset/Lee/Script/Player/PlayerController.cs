@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     TestPlayer player;
 
+    private bool EffectScale = false;
+
     private void Update()
     {
         PlayerBasicControl();
@@ -29,15 +31,15 @@ public class PlayerController : MonoBehaviour
     private void ControlMove() 
     {
         float dir = 0;
-        if (Input.GetKey(KeyCode.LeftArrow)) dir = -1;
-        if (Input.GetKey(KeyCode.RightArrow)) dir = 1;
+        if (Input.GetKey(KeyCode.LeftArrow)) { dir = -1;  EffectScale = true; }
+        if (Input.GetKey(KeyCode.RightArrow)) { dir = 1; EffectScale = true; }
 
         //if (dir !=0 ) EffectManager.Play("Dust", player.collider.bounds.min);
 
         // player.OrderMove(dir);
         player.curTrans.Move(dir);
 
-        if (dir != 0) EffectManager.Play("Dust", player.collider.bounds.min);
+        if (dir != 0) EffectManager.Play("Dust", player.collider.bounds.min,dir<0);
     }
 
     private void ControlJump() 
