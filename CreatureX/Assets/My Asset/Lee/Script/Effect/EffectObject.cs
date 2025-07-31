@@ -1,7 +1,7 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class EffectObject : MonoBehaviour, IRecyclableGameObject
 {
@@ -10,15 +10,18 @@ public class EffectObject : MonoBehaviour, IRecyclableGameObject
     [SerializeField]
     private float EffectMove = 3.0f;
 
-    private Vector3 MovePos;
+    private Transform followTarget = null;
+
+    private Vector3 followOffset;
 
     private float direction = 0;
 
-    public void PlayEffect(Vector3 position, bool faceLeft)
+    public void PlayEffect(Vector3 position, bool faceLeft, Transform Effectfollow = null, Vector3 offset = default)
     {
         transform.position = position;
         transform.position = Vector2.Lerp(transform.position, position, EffectMove*Time.deltaTime);
-        MovePos = position;
+        followTarget = Effectfollow;
+        followOffset = offset;
 
         direction = faceLeft ? -1 : 1;
         Vector3 scale = transform.localScale;
@@ -27,18 +30,20 @@ public class EffectObject : MonoBehaviour, IRecyclableGameObject
 
         gameObject.SetActive(true);
 
-        //StartCoroutine(AutoDisable());
     }
 
-    //private void Update()
-    //{
-    //    transform.position = Vector2.Lerp(transform.position,)
-    //}
-
-    public void UpdateEffect(Vector3 position, bool faceLeft)
+    private void Update()
     {
-        this.transform.position = position;
-        MovePos = position;
+        if (followTarget != null)
+        {
+            UpdateEffect(followTarget.position);
+        }
+    }
+
+    public void UpdateEffect(Vector3 position)
+    {
+        this.transform.position = position+followOffset;
+        transform.localScale = new Vector3(direction, 1, 1);
     }
 
     public void EffectEnd()

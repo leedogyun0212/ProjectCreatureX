@@ -26,7 +26,7 @@ public class Researcher : BaseEnemy
         else if (monsterState == MonsterState.Move&& Mathf.Abs(player.transform.position.x - transform.position.x) < 10)
         {
             Getdirection();
-            EffectManager.Play("Dust", capsule.bounds.min, direction.x<0);
+            EffectManager.Play("Dust",gameObject, direction.x<0, new Vector3(-0.4f, -0.6f, 0f));
             Move();
         }
         else if (monsterState == MonsterState.Dead)

@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
         // player.OrderMove(dir);
         player.curTrans.Move(dir);
 
-        if (dir != 0) EffectManager.Play("Dust", player.collider.bounds.min,dir<0);
+        if (dir != 0) EffectManager.Play("Dust",player.gameObject, dir < 0,new Vector3(-0.4f,-0.6f,0f),0.5f);
     }
 
     private void ControlJump() 

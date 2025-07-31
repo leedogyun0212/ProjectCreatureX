@@ -5,6 +5,7 @@ public static class EffectManager
 {
     private static Dictionary<string, ObjectPool<IRecyclableGameObject>> pools = new();
     private static Dictionary<string, GameObject> prefabMap = new();
+    private static Dictionary<(GameObject, string), float> effectCooldowns = new();
     private static bool initialized = false;
 
     public static void Initialize(List<EffectEntry> entries)
@@ -30,51 +31,35 @@ public static class EffectManager
         initialized = true;
     }
 
-    public static void Play(string effectName, Vector3 position, bool ScaleLeft)
+    public static void Play(string key, GameObject caller, bool scaleLeft = false, Vector3 offset = default, float cooldown = 0.5f)
     {
-        if (!pools.ContainsKey(effectName))
+        // 1. key + caller 조합이 이미 썼는지 체크
+        var effectKey = (caller, key);
+        if (cooldown > 0&& effectCooldowns.TryGetValue(effectKey, out float nextAvailableTime))
         {
-            Debug.LogWarning($"Effect '{effectName}' not found.");
+            if (Time.time < nextAvailableTime)
+                return; // 쿨타임 중이면 무시
+        }
+
+        // 2. 다음 호출 가능 시간 저장
+        if (cooldown > 0)
+            effectCooldowns[effectKey] = Time.time + cooldown;
+        // 3. 이펙트 실행
+        if (!pools.TryGetValue(key, out var pool))
+        {
+            Debug.LogWarning($"Effect {key} not found in pool.");
             return;
         }
 
-        var pool = pools[effectName];
+        Vector3 finalOffset = offset;
+        if (scaleLeft)
+            finalOffset.x *= -1f;
+
 
         var effectObject = pool.GetInactiveObject() as EffectObject;
-
-        if (pool.HasActiveObject())
+        if (effectObject != null)
         {
-            var activeEffect = pool.GetActiveObject() as EffectObject;
-            if (activeEffect != null)
-            {
-                activeEffect.UpdateEffect(position, ScaleLeft); // 위치만 갱신
-            }
-            return;
-        }
-
-        //if (effectObject != null)
-        //{
-        //    effectObject.PlayEffect(position,ScaleLeft);
-        //}
-        //else
-        //{
-        //    Debug.LogWarning($"{effectName} 이펙트가 전부 사용 중입니다.");
-        //}
-
-        var recyclable = pool.GetRecyclableObject();
-
-        if (recyclable == null)
-        {
-            return;
-        }
-
-        if (recyclable is EffectObject effectObj)
-        {
-            effectObj.PlayEffect(position, ScaleLeft);
-        }
-        else
-        {
-            Debug.LogWarning("Recyclable is not an EffectObject!");
+            effectObject.PlayEffect(caller.transform.position+ finalOffset, scaleLeft,caller.transform, finalOffset);
         }
     }
 }
