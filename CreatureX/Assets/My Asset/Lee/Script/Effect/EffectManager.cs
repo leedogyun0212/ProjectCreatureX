@@ -55,11 +55,10 @@ public static class EffectManager
         if (scaleLeft)
             finalOffset.x *= -1f;
 
-
         var effectObject = pool.GetInactiveObject() as EffectObject;
         if (effectObject != null)
         {
-            effectObject.PlayEffect(caller.transform.position+ finalOffset, scaleLeft,caller.transform, finalOffset);
+            effectObject.PlayEffect(caller.transform.position+ offset, scaleLeft,caller.transform, offset);
         }
     }
 }

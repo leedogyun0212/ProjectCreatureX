@@ -21,9 +21,12 @@ public class EffectObject : MonoBehaviour, IRecyclableGameObject
         transform.position = position;
         transform.position = Vector2.Lerp(transform.position, position, EffectMove*Time.deltaTime);
         followTarget = Effectfollow;
+
         followOffset = offset;
 
         direction = faceLeft ? -1 : 1;
+        if (direction == -1)
+            followOffset.x *= -1;
         Vector3 scale = transform.localScale;
         scale.x = Mathf.Abs(scale.x) * (direction);
         transform.localScale = scale;
@@ -32,7 +35,7 @@ public class EffectObject : MonoBehaviour, IRecyclableGameObject
 
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         if (followTarget != null)
         {
@@ -42,6 +45,7 @@ public class EffectObject : MonoBehaviour, IRecyclableGameObject
 
     public void UpdateEffect(Vector3 position)
     {
+        
         this.transform.position = position+followOffset;
         transform.localScale = new Vector3(direction, 1, 1);
     }
