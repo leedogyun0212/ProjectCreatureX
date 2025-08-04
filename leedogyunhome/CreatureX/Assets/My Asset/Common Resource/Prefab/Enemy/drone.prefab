@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1396402328824722211}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.88, y: 14.38, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -101,11 +101,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1396402328824722211}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5aae4dfe260dc8d4f85c69b2ad20c7d9, type: 3}
+  m_Script: {fileID: 11500000, guid: f655cfde9d3821a40832a525353a9173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyID: 2
   MoveSpeed: 3
-  EnemyFailed: 1
+  EnemyMaxHP: 40
+  EnemyFailed: 0
   capsule: {fileID: 4552352027793351971}
   EnemyLayer:
     serializedVersion: 2

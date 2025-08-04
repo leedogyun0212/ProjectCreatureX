@@ -98,12 +98,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5747113258716775384}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfb0886c9749748469fe291ddc92b91c, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c31ee867b53fa84bad6eabb051ae1ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isLaser: 0
   LaserDead: 0
-  Lasersprite: {fileID: 9097034381214513678}
 --- !u!61 &3465128986200003635
 BoxCollider2D:
   m_ObjectHideFlags: 0

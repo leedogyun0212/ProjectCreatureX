@@ -112,7 +112,7 @@ Transform:
   m_GameObject: {fileID: 6575763362860445046}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.26, y: -3.42, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -184,13 +184,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 6575763362860445046}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6552d8551be2fc469455a33c6ecd647, type: 3}
+  m_Script: {fileID: 11500000, guid: 6c610a6eecb1288419b5769cb5cb87d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyID: 3
   MoveSpeed: 3
-  player: {fileID: 8002419900664306903, guid: 3cb9cbfd5c941b242b1fe09a2d1d3f2d, type: 3}
+  EnemyMaxHP: 40
   EnemyFailed: 0
-  BulletPrefab: {fileID: 175890127671815498, guid: 3cab453f045c9a4478a28a504571e662, type: 3}
+  BulletPrefab: {fileID: 8713319157893725796, guid: 3cab453f045c9a4478a28a504571e662, type: 3}
   BulletShotPoint: {fileID: 2322002849654765551}
 --- !u!70 &3642267391479038505
 CapsuleCollider2D:
