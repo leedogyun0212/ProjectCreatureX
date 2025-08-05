@@ -1,4 +1,6 @@
+using NUnit.Framework;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class LaserStool : MonoBehaviour
@@ -6,46 +8,77 @@ public class LaserStool : MonoBehaviour
     public Laser LaserPrefab;
     private Laser currentLaser;
 
-    private Vector3 LaserPos;
+    [SerializeField]
+    private Transform LaserPos;
+
+    private Vector3 Offset;
+
+    [SerializeField]
+    private float LaserFloat;
+
+    [SerializeField]
+    private float LaserNum; 
 
     private bool isCreate = true;
     private bool isRestarting = false;
 
+    private List<Laser> lasers = new List<Laser>();
+
     private void Start()
     {
-        LaserPos = transform.position;
-        LaserPos.y += 0.6f;
+        Offset = Vector3.zero;
+        //LaserPos.y += 0.6f;
     }
 
     private void Update()
     {
-        //if (currentLaser != null && currentLaser.LaserDead && !isRestarting)
-        //{
-        //    StartCoroutine(LaserReStart());
-        //}
+        if ( lasers.Count>0 && !isRestarting)
+        {
+            bool allDead = true;
+            foreach (var laser in lasers)
+            {
+                if (laser != null && !laser.LaserDead)
+                {
+                    allDead = false;
+                    break;
+                }
+            }
+
+            if (allDead)
+            {
+                StartCoroutine(LaserReStart());
+            }
+
+        }
     }
 
     private void Lasercreate()
     {
-        currentLaser = Instantiate(LaserPrefab, LaserPos, Quaternion.identity);
+        Offset = Vector3.zero;
+        for (int i = 0; i < LaserNum; i++)
+        {
+            Laser newlaser = Instantiate(LaserPrefab, LaserPos.position + Offset, Quaternion.Euler(0,0,90));
+            lasers.Add(newlaser);
+            Offset.x += LaserFloat; 
+        }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Player")&&isCreate)
+        if (collision.gameObject.CompareTag("Player") && isCreate)
         {
             isCreate = false;
             StartCoroutine(CreateWarning());
         }
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player") && !isCreate)
-        {
-            StartCoroutine(LaserReStart());
-        }
-    }
+    //private void OnCollisionStay2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Player") && !isCreate)
+    //    {
+    //        StartCoroutine(LaserReStart());
+    //    }
+    //}
 
     private IEnumerator CreateWarning()
     {
@@ -60,7 +93,11 @@ public class LaserStool : MonoBehaviour
     {
         isRestarting = true;
         yield return new WaitForSecondsRealtime(2.0f); // 꺼진 후 2초 대기
-        currentLaser.gameObject.SetActive(true);
+        foreach (var laser in lasers)
+        {
+            if (laser != null)
+                laser.gameObject.SetActive(true);
+        }
         isRestarting = false;
     }
 
