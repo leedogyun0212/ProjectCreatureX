@@ -88,8 +88,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6996487276968763963}
   - component: {fileID: 7224258783500156615}
-  - component: {fileID: 6420142124751261341}
   - component: {fileID: 2932554365515396863}
+  - component: {fileID: 6169307068637849098}
   m_Layer: 0
   m_Name: KeyDoor
   m_TagString: Door
@@ -106,7 +106,7 @@ Transform:
   m_GameObject: {fileID: 8381875085675603726}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40.68, y: 0.0102, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 9.623425, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -168,19 +168,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6420142124751261341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8381875085675603726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fd941732dd078242a77a295482423a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Camera: {fileID: 0}
 --- !u!61 &2932554365515396863
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -227,3 +214,16 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &6169307068637849098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8381875085675603726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb157fa95b35b5949b9b4f9092ff1b39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Camera: {fileID: 0}
