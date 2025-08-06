@@ -57,7 +57,7 @@ public class LaserStool : MonoBehaviour
         Offset = Vector3.zero;
         for (int i = 0; i < LaserNum; i++)
         {
-            Laser newlaser = Instantiate(LaserPrefab, LaserPos.position + Offset, Quaternion.Euler(0,0,90));
+            Laser newlaser = Instantiate(LaserPrefab, LaserPos.position + Offset, Quaternion.Euler(0,0,-90));
             lasers.Add(newlaser);
             Offset.x += LaserFloat; 
         }
