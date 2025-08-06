@@ -174,7 +174,7 @@ GameObject:
   - component: {fileID: 3642267391479038505}
   - component: {fileID: 1940287070778030967}
   - component: {fileID: 9047964009743077189}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Robot
   m_TagString: Enemy
   m_Icon: {fileID: 0}

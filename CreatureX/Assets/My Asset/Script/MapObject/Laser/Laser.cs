@@ -7,20 +7,18 @@ public class Laser : MonoBehaviour
 
     public bool LaserDead = false;
 
-    private float LaserTime = 3.0f;
+    private float LaserTime = 6.0f;
 
-    private float ColorA = 0f;
+    private Animator animator;
 
-    private SpriteRenderer Lasersprite;
 
     private void Start()
     {
-        Lasersprite = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
-        Lasersprite.color = new Color(1f, 0, 0, ColorA);
     }
 
     private void OnEnable()
@@ -38,24 +36,17 @@ public class Laser : MonoBehaviour
     private IEnumerator LaserOn()
     {
 
-        while (ColorA < 1f)
-        {
-            ColorA += Time.deltaTime * 2f;
-            ColorA = Mathf.Clamp01(ColorA);
-            yield return null;
-        }
-
         yield return new WaitForSecondsRealtime(LaserTime);
 
-        while (ColorA > 0f)
-        {
-            ColorA -= Time.deltaTime * 2f;
-            ColorA = Mathf.Clamp01(ColorA);
-            yield return null;
-        }
 
-        isLaser = false;
         LaserDead = true;
+        animator.SetBool("LaserDead", LaserDead);
+    }
+
+    public void LaserEnd()
+    {
+        isLaser = false;
         gameObject.SetActive(false);
     }
+
 }
