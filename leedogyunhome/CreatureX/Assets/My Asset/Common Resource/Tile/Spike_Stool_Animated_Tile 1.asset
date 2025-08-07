@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: Spike_Stool_Animated_Tile 1
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: 21300000, guid: d01911a2cbc9b73408d2558a9f1c73f4, type: 3}
+  - {fileID: 21300000, guid: 4f34bfb9165812d49ae325cee1a760a7, type: 3}
+  - {fileID: 21300000, guid: 9b6ac3091fc7e674a9381c15e0c2fcf2, type: 3}
+  - {fileID: 21300000, guid: caacaa46a9dcbfc47ab26be06412d5e7, type: 3}
+  - {fileID: 21300000, guid: ecaaf4df86b997f4c9c1e8fc1f7405c1, type: 3}
+  - {fileID: 21300000, guid: 3d58aec2a70c14a4698eda9c45c8e442, type: 3}
+  m_MinSpeed: 6
+  m_MaxSpeed: 6
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 1
+  m_TileAnimationFlags: 0

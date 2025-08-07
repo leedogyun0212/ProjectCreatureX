@@ -2169,7 +2169,7 @@ MonoBehaviour:
   ClearStageIndex: 10
   curMainStage: 1
   runMaintStage: 1
-  curSubStage: 1
+  curSubStage: 4
   runSubStage: 1
 --- !u!4 &909376507
 Transform:
@@ -7228,11 +7228,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 314700092286940904, guid: c6a529cea16aed445b63a3f08d69fe62, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.6167097
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 314700092286940904, guid: c6a529cea16aed445b63a3f08d69fe62, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.9721892
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 314700092286940904, guid: c6a529cea16aed445b63a3f08d69fe62, type: 3}
       propertyPath: m_LocalPosition.x

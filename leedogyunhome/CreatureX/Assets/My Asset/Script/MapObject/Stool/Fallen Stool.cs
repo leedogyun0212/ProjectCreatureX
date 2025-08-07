@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class FallenStool : MonoBehaviour
@@ -9,6 +10,9 @@ public class FallenStool : MonoBehaviour
 
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip breakSFX;
+
+    [SerializeField]
+    private Animator animator;
 
     private SpriteRenderer spriteRenderer;
     private Color originColor;
@@ -45,9 +49,10 @@ public class FallenStool : MonoBehaviour
                 {
                     curCnt--;
                     Debug.LogWarning($"{Time.deltaTime}: 플레이어가 발판에 올라감. 남은횟수: {curCnt}");
+                    animator.SetInteger("Cnt", curCnt);
                     if (curCnt == 1 && spriteRenderer != null)
                     {
-                        spriteRenderer.color = Color.red;
+                        //animator.SetInteger("Cnt", curCnt);
                     }
                     if (curCnt <= 0)
                         BreakStool();
@@ -60,18 +65,24 @@ public class FallenStool : MonoBehaviour
         }
     }
 
+    private IEnumerator BreakEnd()
+    {
+        yield return new WaitForSecondsRealtime(0.8f);
+        Debug.LogWarning($"{Time.deltaTime}: 발판 부서짐");
+        isBroken = true;
+        visual.SetActive(false);
+        col.enabled = false;
+        Invoke(nameof(RespawnGround), respawnTime);
+    }
 
     private void BreakStool()
     {
         if (breakSFX != null)
             audioSource.PlayOneShot(breakSFX);
 
-        Debug.LogWarning($"{Time.deltaTime}: 발판 부서짐");
-        isBroken = true;
-        visual.SetActive(false);
-        col.enabled = false;
+        animator.SetInteger("Cnt", curCnt);
 
-        Invoke(nameof(RespawnGround), respawnTime);
+        StartCoroutine(BreakEnd());
     }
 
     private void RespawnGround()
