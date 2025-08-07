@@ -1,0 +1,455 @@
+fileFormatVersion: 2
+guid: 9d8a3d9e09cca814995afbe6b09c9dd1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3921119681873857835
+    second: Map_Object_Fallen_Stool_8_0
+  - first:
+      213: -6156110495898406695
+    second: Map_Object_Fallen_Stool_8_1
+  - first:
+      213: -6616293104218874803
+    second: Map_Object_Fallen_Stool_8_2
+  - first:
+      213: 8677079635730376912
+    second: Map_Object_Fallen_Stool_8_3
+  - first:
+      213: 2302649435364022990
+    second: Map_Object_Fallen_Stool_8_4
+  - first:
+      213: -2586164254113121069
+    second: Map_Object_Fallen_Stool_8_5
+  - first:
+      213: 1207747370702187036
+    second: Map_Object_Fallen_Stool_8_6
+  - first:
+      213: -146014331565549045
+    second: Map_Object_Fallen_Stool_8_7
+  - first:
+      213: -4556077026999147634
+    second: Map_Object_Fallen_Stool_8_8
+  - first:
+      213: -471394107011108279
+    second: Map_Object_Fallen_Stool_8_9
+  - first:
+      213: -3354502580365969949
+    second: Map_Object_Fallen_Stool_8_10
+  - first:
+      213: 5161470625420345479
+    second: Map_Object_Fallen_Stool_8_11
+  - first:
+      213: 5580945982125302435
+    second: Map_Object_Fallen_Stool_8_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Map_Object_Fallen_Stool_8_0
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 242
+        width: 88
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d2bd10ac626599c0800000000000000
+      internalID: -3921119681873857835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Object_Fallen_Stool_8_1
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 210
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d0fbe5de1a119aa0800000000000000
+      internalID: -6156110495898406695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Object_Fallen_Stool_8_2
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 242
+        width: 90
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4cda21f9743e24a0800000000000000
+      internalID: -6616293104218874803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Object_Fallen_Stool_8_3
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 134
+        width: 45
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d82c7f94fd2b6870800000000000000
+      internalID: 8677079635730376912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Object_Fallen_Stool_8_4
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 173
+        width: 46
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eca50252677a4ff10800000000000000
+      internalID: 2302649435364022990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Object_Fallen_Stool_8_5
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 142
+        width: 25
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dc36ce10591c1cd0800000000000000
+      internalID: -2586164254113121069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Object_Fallen_Stool_8_6
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 129
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1aad11b5d7c2c010800000000000000
+      internalID: 1207747370702187036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Object_Fallen_Stool_8_7
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 124
+        width: 31
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0a5be23db049fdf0800000000000000
+      internalID: -146014331565549045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Object_Fallen_Stool_8_8
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 119
+        width: 68
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e83e564451095c0c0800000000000000
+      internalID: -4556077026999147634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Object_Fallen_Stool_8_9
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 94
+        width: 34
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 942f366ae854579f0800000000000000
+      internalID: -471394107011108279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Object_Fallen_Stool_8_10
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 85
+        width: 58
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e5b7231da96271d0800000000000000
+      internalID: -3354502580365969949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Object_Fallen_Stool_8_11
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 94
+        width: 27
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7800bcaef2a31a740800000000000000
+      internalID: 5161470625420345479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Object_Fallen_Stool_8_12
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 32
+        width: 36
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a2e8373dc0837d40800000000000000
+      internalID: 5580945982125302435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Map_Object_Fallen_Stool_8_0: -3921119681873857835
+      Map_Object_Fallen_Stool_8_1: -6156110495898406695
+      Map_Object_Fallen_Stool_8_10: -3354502580365969949
+      Map_Object_Fallen_Stool_8_11: 5161470625420345479
+      Map_Object_Fallen_Stool_8_12: 5580945982125302435
+      Map_Object_Fallen_Stool_8_2: -6616293104218874803
+      Map_Object_Fallen_Stool_8_3: 8677079635730376912
+      Map_Object_Fallen_Stool_8_4: 2302649435364022990
+      Map_Object_Fallen_Stool_8_5: -2586164254113121069
+      Map_Object_Fallen_Stool_8_6: 1207747370702187036
+      Map_Object_Fallen_Stool_8_7: -146014331565549045
+      Map_Object_Fallen_Stool_8_8: -4556077026999147634
+      Map_Object_Fallen_Stool_8_9: -471394107011108279
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
