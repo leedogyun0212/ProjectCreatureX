@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7361842621319328106}
   - component: {fileID: 6807660628002516539}
-  - component: {fileID: 8736666566011759455}
+  - component: {fileID: 5929238058913246579}
   - component: {fileID: 7428992271018004146}
   m_Layer: 0
   m_Name: Key
@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10.77, y: -3.42, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 3877197878353993800, guid: be469ff65bb205f47bbfcac55dcd4476, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -89,7 +89,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8736666566011759455
+--- !u!114 &5929238058913246579
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,10 +98,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5445595777206250051}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae02eb69fd8d8c84682d137df4eb059f, type: 3}
+  m_Script: {fileID: 11500000, guid: 6bc4f0df1cf85ef4aaf7d55232e9ca5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorsToUnlock: {fileID: 0}
+  doorsToUnlock: {fileID: 6169307068637849098, guid: d8cb81e2f514a3c458231aa1c080833c, type: 3}
 --- !u!61 &7428992271018004146
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -136,15 +136,15 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.38298416, y: -0.44296944}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2.54, y: 3.46}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.7659683, y: 2.5503938}
   m_EdgeRadius: 0

@@ -103,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Playerlayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   climbSpeed: 3
 --- !u!61 &7067532630063057207
 BoxCollider2D:

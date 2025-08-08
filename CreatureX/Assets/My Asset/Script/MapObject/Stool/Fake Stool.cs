@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class FakeStool : MonoBehaviour
@@ -10,6 +11,7 @@ public class FakeStool : MonoBehaviour
     // [SerializeField] private GameObject breakParticle;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip breakSFX;
+    [SerializeField] private Animator animator;
 
     private Vector3 originalVisualPos;
     private float curShakeTime;
@@ -34,6 +36,8 @@ public class FakeStool : MonoBehaviour
         // Èçµé¸®´Â È¿°ú
         float shakeAmount = 0.03f;
         visual.transform.localPosition = originalVisualPos + (Vector3)UnityEngine.Random.insideUnitCircle * shakeAmount;
+
+        animator.SetBool("PlayerOn", isPlayerOn);
 
         if (curShakeTime <= 0f)
         {
@@ -66,6 +70,16 @@ public class FakeStool : MonoBehaviour
         }
     }
 
+    private IEnumerator BreakEnd()
+    {
+        yield return new WaitForSecondsRealtime(0.8f);
+
+        Debug.LogWarning($"{Time.deltaTime}: ¹ßÆÇ ºÎ¼­Áü");
+        visual.SetActive(false);
+        col.enabled = false;
+
+        Invoke(nameof(RespawnStool), respawnTime);
+    }
 
     private void BreakStool()
     {
@@ -74,14 +88,12 @@ public class FakeStool : MonoBehaviour
 
         //if (breakParticle != null)
         //    Instantiate(breakParticle, transform.position, Quaternion.identity);
-
-        Debug.LogWarning($"{Time.deltaTime}: ¹ßÆÇ ºÎ¼­Áü");
         isBroken = true;
         isPlayerOn = false;
-        visual.SetActive(false);
-        col.enabled = false;
 
-        Invoke(nameof(RespawnStool), respawnTime);
+        animator.SetBool("PlayerOn", isPlayerOn);
+
+        StartCoroutine(BreakEnd());
     }
 
     private void RespawnStool()
