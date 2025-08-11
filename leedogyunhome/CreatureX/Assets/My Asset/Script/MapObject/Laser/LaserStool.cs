@@ -13,10 +13,13 @@ public class LaserStool : MonoBehaviour
 
     private Vector3 Offset;
 
-    [SerializeField]
+    [SerializeField] // 레이져 간격
     private float LaserFloat;
 
-    [SerializeField]
+    //[SerializeField] // 레이져 방향
+    public float LaserRo = -90f;
+
+    [SerializeField] // 레이져 개수
     private float LaserNum; 
 
     private bool isCreate = true;
@@ -57,9 +60,12 @@ public class LaserStool : MonoBehaviour
         Offset = Vector3.zero;
         for (int i = 0; i < LaserNum; i++)
         {
-            Laser newlaser = Instantiate(LaserPrefab, LaserPos.position + Offset, Quaternion.Euler(0,0,-90));
+            Laser newlaser = Instantiate(LaserPrefab, LaserPos.position + Offset, Quaternion.Euler(0,0, LaserRo));
             lasers.Add(newlaser);
-            Offset.x += LaserFloat; 
+            if (LaserRo < 0)
+                Offset.x += LaserFloat;
+            else if (LaserRo >= 0)
+                Offset.y -= LaserFloat;
         }
     }
 

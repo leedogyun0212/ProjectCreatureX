@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class KeyItem : MonoBehaviour, IDoorKey
 {
-    public bool Key { get; set; }
+    [SerializeField] private KeyData keyDataAsset;
+    public KeyData KeyData { get => keyDataAsset; set => keyDataAsset = value; }
 
     private GameObject Player;
 
@@ -14,15 +15,18 @@ public class KeyItem : MonoBehaviour, IDoorKey
 
     private BoxCollider2D Keycollider;
 
+
     private void Start()
     {
         Player = GameObject.Find("Test Player");
         Keycollider = GetComponent<BoxCollider2D>();
+        keyDataAsset.Key = false;
     }
 
     private void Update()
     {
-        if (Key)
+        EffectManager.Play("Key_Effect", this.gameObject, false, new Vector3(-0.35f, -0.4f, 0f),1.0f);
+        if (keyDataAsset.Key)
             MoveKey();
     }
 
@@ -38,10 +42,10 @@ public class KeyItem : MonoBehaviour, IDoorKey
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("≈∞ æ∆¿Ã≈€ »πµÊ!!!!!!!!!!!!!!!");
-            Key = true;
+            Debug.Log("ÌÇ§ ÏïÑÏù¥ÌÖúÏùÑ ÌöçÎìù!!!!!!!!!!!!!!!");
+            keyDataAsset.Key = true;
 
-            doorsToUnlock.Key = true;
+            //doorsToUnlock.Key = true;
 
             Keycollider.isTrigger = true;
         }

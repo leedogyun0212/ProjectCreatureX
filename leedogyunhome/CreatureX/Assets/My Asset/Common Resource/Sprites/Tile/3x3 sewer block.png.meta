@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 105
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,20 +103,262 @@ TextureImporter:
       name: 3x3 sewer block_0
       rect:
         serializedVersion: 2
-        x: 22
-        y: 136
-        width: 335
-        height: 335
+        x: 24
+        y: 359
+        width: 110
+        height: 110
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 7852ae13de1daa7c0800000000000000
       internalID: -4059201297446197881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x3 sewer block_1
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 359
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebb082aa313e40b4aa04d4a14806e5a0
+      internalID: 1643317083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x3 sewer block_2
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 390
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.55198085, y: 0.55192566}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f6654d331710974295c5c7071027805
+      internalID: -438955595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x3 sewer block_3
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 359
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eadef631a620aa45a32e2142b4fdfb8
+      internalID: -901638889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x3 sewer block_4
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 249
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69b9b55158e44c149b2cb823463c4166
+      internalID: -246544054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x3 sewer block_5
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 249
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae80d25915bb1fc46831821320700aad
+      internalID: 568342623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x3 sewer block_6
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 249
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3371aa3454e72343bad8c9cc2d9ea76
+      internalID: 845682366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x3 sewer block_7
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 249
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde36f5e60dd2a44eabaf3cf275a4f82
+      internalID: 1580530699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x3 sewer block_8
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 139
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 697c8fffdd195d34ea02fbdbf0cce096
+      internalID: -1089445318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x3 sewer block_9
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 139
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19ac4b0562a14204a8b6e9520f111533
+      internalID: -1945516223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x3 sewer block_10
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 104
+        width: 110
+        height: 110
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0eb4b7a28f9eea4f89fa54c1cb7e47f
+      internalID: 602957364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x3 sewer block_11
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 139
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6b6dc584c58e0c44af6b7d94d5042df
+      internalID: 901978183
       vertices: []
       indices: 
       edges: []
@@ -125,7 +367,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f15a8d483e947a9489010a3cf644ea9c
     internalID: 0
     vertices: []
     indices: 
@@ -136,6 +378,17 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       3x3 sewer block_0: -4059201297446197881
+      3x3 sewer block_1: 1643317083
+      3x3 sewer block_10: 602957364
+      3x3 sewer block_11: 901978183
+      3x3 sewer block_2: -438955595
+      3x3 sewer block_3: -901638889
+      3x3 sewer block_4: -246544054
+      3x3 sewer block_5: 568342623
+      3x3 sewer block_6: 845682366
+      3x3 sewer block_7: 1580530699
+      3x3 sewer block_8: -1089445318
+      3x3 sewer block_9: -1945516223
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,0 +1,372 @@
+fileFormatVersion: 2
+guid: 826c7bbd68c1df94c802e717386b623d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6699987225855432892
+    second: 3x3 city road_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 105
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 3x3 city road_0
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 359
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 55, y: -9}
+        - {x: 9, y: -9}
+        - {x: 9, y: -55}
+        - {x: -51, y: -55}
+        - {x: -51, y: 53}
+        - {x: 55, y: 54}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb894c442e22bfc50800000000000000
+      internalID: 6699987225855432892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x3 city road_1
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 359
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: -53, y: -9}
+        - {x: 52, y: -9}
+        - {x: 52, y: 54}
+        - {x: -53, y: 54}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 591ca9ea0dd14f24d82964b243646a5d
+      internalID: 1334973940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x3 city road_2
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 359
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bcdf8a0a1775254aa81c3bfb59bbbb7
+      internalID: 329819635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x3 city road_3
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 249
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c411d4570db4094aa993f43cecacad4
+      internalID: -390439432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x3 city road_4
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 249
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 080a43e05e6b55a4e80fa14801e48031
+      internalID: -1221215501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x3 city road_5
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 249
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: -9, y: -55}
+        - {x: 53, y: -55}
+        - {x: 53, y: 54}
+        - {x: -9, y: 54}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 092049304939cd84a9642b38ca923801
+      internalID: -1026606022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x3 city road_6
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 139
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24207890a0bd7bd4a9f203541da4402f
+      internalID: -1379553069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x3 city road_7
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 139
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: -53, y: -52}
+        - {x: 52, y: -52}
+        - {x: 52, y: 10}
+        - {x: -53, y: 10}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 061fac12bec335c4f9468b7fd92ff6c5
+      internalID: 999012301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x3 city road_8
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 139
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: -8, y: 10}
+        - {x: -55, y: 10}
+        - {x: -55, y: -51}
+        - {x: 53, y: -51}
+        - {x: 53, y: 55}
+        - {x: -8, y: 55}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f67d0b060c0f3b74eaa204429c3d502a
+      internalID: 807817436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: -226, y: -110}
+      - {x: 38, y: -108}
+      - {x: 103, y: -108}
+      - {x: 102, y: 109}
+      - {x: 38, y: 109}
+      - {x: 40, y: -43}
+      - {x: -161, y: -43}
+      - {x: -161, y: 109}
+      - {x: -226, y: 109}
+    - - {x: 100, y: -109}
+      - {x: 102, y: -109}
+      - {x: 102, y: -109}
+      - {x: 100, y: -109}
+    - - {x: -226, y: 109}
+      - {x: -161, y: 109}
+      - {x: -161, y: 152}
+      - {x: 38, y: 152}
+      - {x: 38, y: 109}
+      - {x: 102, y: 109}
+      - {x: 103, y: 218}
+      - {x: -226, y: 217}
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 26a9821ffba264b4cb8a1dca3330dc2b
+    internalID: -1696213974
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      3x3 city road_0: 6699987225855432892
+      3x3 city road_1: 1334973940
+      3x3 city road_2: 329819635
+      3x3 city road_3: -390439432
+      3x3 city road_4: -1221215501
+      3x3 city road_5: -1026606022
+      3x3 city road_6: -1379553069
+      3x3 city road_7: 999012301
+      3x3 city road_8: 807817436
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

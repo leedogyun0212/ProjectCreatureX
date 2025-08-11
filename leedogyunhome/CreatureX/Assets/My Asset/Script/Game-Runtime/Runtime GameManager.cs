@@ -15,7 +15,7 @@ public class RuntimeGameManager : MonoBehaviour
     [SerializeField] private GamePauseUI pauseUI;
     [SerializeField] private GameOverUI overUI;
 
-    // Find »ç¿ë ¾ÈÇÏ¸é¼­ Àçµî·Ï ÇÏ´Â ¹æ¹ý (°ÔÀÓ ¿ä¼ÒµéÀÌ »ý¼ºµÉ¶§ µî·ÏÇÏ±â)
+    // Find ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¸é¼­ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Òµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½É¶ï¿½ ï¿½ï¿½ï¿½ï¿½Ï±ï¿½)
     public void Regist_Player(TestPlayer p) => player = p;
     public void Regist_Door(ClearDoor d) => door = d;
     public void Regist_PauseUI(GamePauseUI ui) => pauseUI = ui;
@@ -39,27 +39,27 @@ public class RuntimeGameManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // ¾ÀÀÌ ·ÎµåµÉ ¶§¸¶´Ù Player, Door, UI ´Ù½Ã µî·Ï
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Player, Door, UI ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½
         //player = FindObjectOfType<TestPlayer>();
         //door = FindObjectOfType<ClearDoor>();
         //pauseUI = FindObjectOfType<GamePauseUI>();
         //overUI = FindObjectOfType<GameOverUI>();
 
-        // ¾ÀÀÌ ·ÎµåµÇ¸é ÇÑ ÇÁ·¹ÀÓ ±â´Ù·È´Ù°¡ µî·Ï È®ÀÎ
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½Ç¸ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ù·È´Ù°ï¿½ ï¿½ï¿½ï¿½ È®ï¿½ï¿½
         StartCoroutine(WaitAndInitialize());
     }
 
     private IEnumerator WaitAndInitialize()
     {
-        // ÇÑ ÇÁ·¹ÀÓ ´ë±â (¸ðµç Awake/Start°¡ ½ÇÇàµÉ ½Ã°£ È®º¸)
+        // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½ Awake/Startï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ È®ï¿½ï¿½)
         yield return null;
 
         if (player == null)
-            Debug.LogWarning("ÇÃ·¹ÀÌ¾î°¡ µî·Ï X");
+            Debug.LogWarning("ï¿½Ã·ï¿½ï¿½Ì¾î°¡ ï¿½ï¿½ï¿½ X");
         if (pauseUI == null)
-            Debug.LogWarning("Pause UI°¡ µî·Ï X");
+            Debug.LogWarning("Pause UIï¿½ï¿½ ï¿½ï¿½ï¿½ X");
         if (overUI == null)
-            Debug.LogWarning("Over UI°¡ µî·Ï X");
+            Debug.LogWarning("Over UIï¿½ï¿½ ï¿½ï¿½ï¿½ X");
     }
 
     // Update is called once per frame
@@ -77,14 +77,14 @@ public class RuntimeGameManager : MonoBehaviour
 
     private void GameSave() 
     {
-        // ¿¹½Ã¿ë ÀúÀå
+        // Ã¿
         if (Input.GetKeyDown(KeyCode.P))
         {
             SaveManager.Instance.Save_PlayerData(player);
             SaveManager.Instance.Save_StageData(StageManager.Instance.curMainStage, StageManager.Instance.curSubStage);
             SaveManager.Instance.SaveToFile();
         }
-        // ¿¹½Ã¿ë ºÒ·¯¿À±â
+        // Ã¿ Ò·
         if (Input.GetKeyUp(KeyCode.O))
         {
             SaveManager.Instance.Load_PlayerData(player);
@@ -97,7 +97,7 @@ public class RuntimeGameManager : MonoBehaviour
     {
         if (player == null || door == null)
         {
-            // Debug.LogError("°ÔÀÓ¸Å´ÏÀú¿¡ ¹«¾ð°¡°¡ ¼³Á¤µÇÁö x");
+            // Debug.LogError("ï¿½ï¿½ï¿½Ó¸Å´ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ð°¡°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ x");
             return false;
         }
         else { 
@@ -113,14 +113,14 @@ public class RuntimeGameManager : MonoBehaviour
         {
             StageGameClear();
             isGameCleared = true;
-            // ÀÌ ÈÄ Á¶°Ç ÆÇ´ÜÀº ³ªÁß¿¡ ´õ Ãß°¡ °¡´É
+            // ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ç´ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ß¿ï¿½ ï¿½ï¿½ ï¿½ß°ï¿½ ï¿½ï¿½ï¿½ï¿½
         }
     }
 
     private void StageGameClear()
     {
-        Debug.Log($"{Time.deltaTime}: ÃàÇÏÇÕ´Ï´Ù ½ºÅ×ÀÌÁö Å¬¸®¾î! \n ´ÙÀ½ ½ºÅ×ÀÌÁö·Î ÀÌµ¿");
-        // stageManager.StageClear();       // ÀÌ·±½ÄÀ¸·Î ³ªÁß¿¡ ½ºÅ×ÀÌÁö ¸Å´ÏÀú°¡ °ü¸®
+        Debug.Log($"{Time.deltaTime}: ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½! \n ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½");
+        // stageManager.StageClear();       // ï¿½Ì·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ß¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å´ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         // StageManager.Instance.CurStageClear();
         // StageManager.Instance.CurMainStageClear();
         StageManager.Instance.CurSubStageClear();
@@ -137,7 +137,7 @@ public class RuntimeGameManager : MonoBehaviour
 
     //private void GameReset()
     //{
-    //    Debug.Log($"{Time.deltaTime}: ÇöÀç °ÔÀÓ ÃÊ±âÈ­ ½Ãµµ");
+    //    Debug.Log($"{Time.deltaTime}: ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê±ï¿½È­ ï¿½Ãµï¿½");
     //    if (player != null)
     //        player.PlayerRevive();
     //    if (overUI != null)
@@ -170,7 +170,7 @@ public class RuntimeGameManager : MonoBehaviour
         isGamePaused = false;
     }
 
-    // ¾ê´Â ÃßÈÄ UI³ª ¹öÆ°À¸·Î ±¸Çö
+    // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ UIï¿½ï¿½ ï¿½ï¿½Æ°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     public void NewGameStart()
     {
         GameReset();
@@ -189,7 +189,7 @@ public class RuntimeGameManager : MonoBehaviour
         if (isGameOvered || isGamePaused) return;
         if (!player.isPlayerLive)
         {
-            Debug.LogWarning("ÇÃ·¹ÀÌ¾î°¡ Á×¾ú½À´Ï´Ù!!");
+            Debug.LogWarning("ï¿½Ã·ï¿½ï¿½Ì¾î°¡ ï¿½×¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½!!");
             isGameOvered = true;
             RunGameOver();
         }
@@ -213,7 +213,7 @@ public class RuntimeGameManager : MonoBehaviour
         if (player != null)
             player.PlayerDie();
 
-        Debug.LogError($"{Time.deltaTime}: ÇöÀç Ã¼·Â: {player.playerCurHP} °ÔÀÓ¿À¹ö!!");
+        Debug.LogError($"{Time.deltaTime}: ï¿½ï¿½ï¿½ï¿½ Ã¼ï¿½ï¿½: {player.playerCurHP} ï¿½ï¿½ï¿½Ó¿ï¿½ï¿½ï¿½!!");
     }
 
     public void Check_GamePause()

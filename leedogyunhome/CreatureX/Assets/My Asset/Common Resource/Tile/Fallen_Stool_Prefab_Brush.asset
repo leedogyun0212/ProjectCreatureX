@@ -41,5 +41,5 @@ MonoBehaviour:
   m_LastPickedCellSwizzle: 0
   m_LastPickedCellSize: {x: 1, y: 1, z: 1}
   m_LastPickedCellGap: {x: 0, y: 0, z: 0}
-  m_Anchor: {x: 0.5, y: 0.5, z: 0.5}
+  m_Anchor: {x: 0.5, y: 0.25, z: 0.5}
   m_Prefab: {fileID: 937812267223802167, guid: 956d0f532aba62342aba04a5d0467af7, type: 3}

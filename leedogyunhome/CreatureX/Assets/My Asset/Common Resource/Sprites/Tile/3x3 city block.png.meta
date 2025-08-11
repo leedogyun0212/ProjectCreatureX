@@ -103,10 +103,10 @@ TextureImporter:
       name: 3x3 city block_0
       rect:
         serializedVersion: 2
-        x: 22
-        y: 138
-        width: 334
-        height: 333
+        x: 24
+        y: 359
+        width: 110
+        height: 110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,11 +121,209 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: 3x3 city block_1
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 359
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e533528446b60474d9ae8d8ec4825280
+      internalID: -385105225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x3 city block_2
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 359
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 089cb53a0cd4dcf46b0459b402e08d0d
+      internalID: 1224139870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x3 city block_3
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 249
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6d92d58ebebb3d47b54c2bf47db92e0
+      internalID: 1629705986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x3 city block_4
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 249
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3327ba00754518d45b9c4ac459a32601
+      internalID: -517274012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x3 city block_5
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 249
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec65cf051d056214f8945d0188edced2
+      internalID: -1964362900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x3 city block_6
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 139
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 105ddd7ae7a45954aa3bab2e4527ba27
+      internalID: 633346701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x3 city block_7
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 139
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 647a2f0fab359dc4a90e2db834600b8c
+      internalID: -1679990171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x3 city block_8
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 139
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c311a47b3a581804f9149a1f212f041c
+      internalID: -954834978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x3 city block_9
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 139
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2181699b6c9b6b842a9577063d695355
+      internalID: 1640070869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d9787266740662b44abbd8843ed164d6
     internalID: 0
     vertices: []
     indices: 
@@ -136,6 +334,15 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       3x3 city block_0: 5163750135205202604
+      3x3 city block_1: -385105225
+      3x3 city block_2: 1224139870
+      3x3 city block_3: 1629705986
+      3x3 city block_4: -517274012
+      3x3 city block_5: -1964362900
+      3x3 city block_6: 633346701
+      3x3 city block_7: -1679990171
+      3x3 city block_8: -954834978
+      3x3 city block_9: 1640070869
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
