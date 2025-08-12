@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.IO;
 
-// ³ªÁß¿¡ Vector3°°Àº Unity Å¸ÀÔ ÀúÀåÇÏ´Â ¹æ¹ı
+// ë‚˜ì¤‘ì— Vector3ê°™ì€ Unity íƒ€ì… ì €ì¥í•˜ëŠ” ë°©ë²•
 //[System.Serializable]
 //public struct Vector3Data
 //{
@@ -18,23 +18,23 @@ using System.IO;
 [System.Serializable]
 public class SaveData
 {
-    [Header("½ºÅ×ÀÌÁö Data")]
+    [Header("ìŠ¤í…Œì´ì§€ Data")]
     public int saveCurMainStageIndex;
     public int saveCurSubStageIndex;
 
-    [Header("ÇÃ·¹ÀÌ¾î Data")]
+    [Header("í”Œë ˆì´ì–´ Data")]
     public string savePlayerID;
     public float savePlayerHP;
     public float savePlayerSPD;
     // public Vector3 playerPosition;
-    // public int playerATK;    // ÀÌ·±½ÄÀ¸·Î ³ªÁß¿¡ Ãß°¡
+    // public int playerATK;    // ì´ëŸ°ì‹ìœ¼ë¡œ ë‚˜ì¤‘ì— ì¶”ê°€
 }
 
 
 public class SaveManager : MonoBehaviour
 {
     public static SaveManager Instance { get; private set; }
-    private SaveData currentData = new SaveData();      // ÇöÀç ¼¼ÀÌºê µ¥ÀÌÅÍ
+    private SaveData currentData = new SaveData();      // í˜„ì¬ ì„¸ì´ë¸Œ ë°ì´í„°
 
     private void Awake()
     {
@@ -53,7 +53,7 @@ public class SaveManager : MonoBehaviour
     {
         string json = JsonUtility.ToJson(currentData, true);
         File.WriteAllText(Application.persistentDataPath + "/Gamesave.json", json);
-        Debug.LogWarning($"{Time.deltaTime}: °ÔÀÓ ÀúÀå: {Application.persistentDataPath} ¼º°øÀûÀ¸·Î ¼º°ø!");
+        Debug.LogWarning($"{Time.deltaTime}: ê²Œì„ ì €ì¥: {Application.persistentDataPath} ì„±ê³µì ìœ¼ë¡œ ì„±ê³µ!");
     }
 
     public void Save_PlayerData(TestPlayer player)
@@ -78,7 +78,7 @@ public class SaveManager : MonoBehaviour
 
         string json = File.ReadAllText(path);
         currentData = JsonUtility.FromJson<SaveData>(json);
-        Debug.LogWarning($"{Time.deltaTime}: °ÔÀÓ ·Îµå: {Application.persistentDataPath} ¼º°øÀûÀ¸·Î ¼º°ø!");
+        Debug.LogWarning($"{Time.deltaTime}: ê²Œì„ ë¡œë“œ: {Application.persistentDataPath} ì„±ê³µì ìœ¼ë¡œ ì„±ê³µ!");
     }
 
 

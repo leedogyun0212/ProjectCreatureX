@@ -2,5 +2,5 @@ using UnityEngine;
 
 public interface IDoorKey
 {
-    bool Key { get; set; }
+    KeyData KeyData { get; set; }
 }

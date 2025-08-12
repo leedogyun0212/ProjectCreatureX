@@ -8,10 +8,21 @@ public class Door : MonoBehaviour, IDoor
 
     public DoorDirection direction;
 
+    private bool Check = false;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("MainCamera"))
         {
+            Camera.SetLockDirection(direction);
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("MainCamera")&&!Check)
+        {
+            Check = true;
             Camera.SetLockDirection(direction);
         }
     }

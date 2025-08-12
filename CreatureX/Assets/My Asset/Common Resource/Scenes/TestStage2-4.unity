@@ -2934,9 +2934,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClearStageIndex: 10
-  curMainStage: 1
+  curMainStage: 2
   runMaintStage: 1
-  curSubStage: 1
+  curSubStage: 5
   runSubStage: 1
 --- !u!4 &909376507
 Transform:
@@ -3249,7 +3249,7 @@ MonoBehaviour:
   CamCollider: {fileID: 1019030651}
   PlayerCollider: {fileID: 1831989446}
   CameraSpeed: 4
-  verticalDeadZoneHeight: 3.2
+  verticalDeadZoneHeight: 1.5
   FollowYDirectly: 0
 --- !u!1 &1055235948
 GameObject:

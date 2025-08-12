@@ -40,7 +40,7 @@ public class RobotBullet : MonoBehaviour, IRecyclableGameObject
     public void SetBullet()
     {
         BulletMove = BulletMove ?? GetComponent<BulletMovement>();
-        Robot = GameObject.Find("Robot");
+        Robot = Robot??GameObject.Find("Robot");
         //dir = direction;
     }
 

@@ -1468,7 +1468,7 @@ Tilemap:
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
-      m_AllTileFlags: 0
+      m_AllTileFlags: 1073741824
   m_AnimatedTiles:
   - first: {x: 1, y: 23, z: 0}
     second:
@@ -7090,6 +7090,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1425885534}
     m_Modifications:
+    - target: {fileID: 184642465541184705, guid: 306525144ce00dc4d880ae04a8ea3b7d, type: 3}
+      propertyPath: LaserRo
+      value: -90
+      objectReference: {fileID: 0}
     - target: {fileID: 3265558773951057863, guid: 306525144ce00dc4d880ae04a8ea3b7d, type: 3}
       propertyPath: m_Name
       value: LaserStool

@@ -12,6 +12,15 @@ EditorBuildSettings:
     path: Assets/My Asset/Common Resource/Scenes/TestTitle.unity
     guid: b045142fc33388b47985d7471f5c9e47
   - enabled: 1
+    path: Assets/My Asset/Common Resource/Scenes/TestStage2-4.unity
+    guid: e497f5244c1b41f469f306db55aadc84
+  - enabled: 1
+    path: Assets/My Asset/Common Resource/Scenes/TestStage3-2.unity
+    guid: 764285a54a27e5d43b43b819fdd9b0ae
+  - enabled: 1
+    path: Assets/My Asset/Common Resource/Scenes/TestStage2-7.unity
+    guid: 82f987a3ec1785844a6238e2f5c7abdf
+  - enabled: 1
     path: Assets/My Asset/Common Resource/Scenes/TestStage1-1.unity
     guid: 3d728e8b502644b40a93c7f4318f07e5
   - enabled: 1

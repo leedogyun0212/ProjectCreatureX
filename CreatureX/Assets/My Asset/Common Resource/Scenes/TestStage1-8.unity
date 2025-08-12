@@ -7142,6 +7142,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1425885534}
     m_Modifications:
     - target: {fileID: 184642465541184705, guid: 306525144ce00dc4d880ae04a8ea3b7d, type: 3}
+      propertyPath: LaserRo
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 184642465541184705, guid: 306525144ce00dc4d880ae04a8ea3b7d, type: 3}
       propertyPath: LaserNum
       value: 4
       objectReference: {fileID: 0}
