@@ -18,6 +18,9 @@ public class Robot : BaseEnemy, IAllyResponder
 
     private bool isCoolingDown = false;
 
+    private Transform currentMovingStool = null; // [ë³€ê²½] ì´ë™ì‹ ë°œíŒ ì¶”ì ìš© ì°¸ì¡°(ë¶€ëª¨ ë¯¸ì‚¬ìš©)
+    private Vector3 lastMovingStoolPos = Vector3.zero; // [ë³€ê²½] ë°œíŒ ì´ë™ëŸ‰ ê³„ì‚°ìš©
+
     protected override void Start()
     {
         base.Start();
@@ -26,26 +29,26 @@ public class Robot : BaseEnemy, IAllyResponder
 
     protected override void Update()
     {
-        animEnemy(); // ¾Ö´Ï¸ŞÀÌ¼Ç
-        if (EnemyFailed) // Èí¼ö °¡´ÉÇÑ »óÅÂ,
+        animEnemy(); // ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½
+        if (EnemyFailed) // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½,
         {
             animDead = 100;
             monsterState = MonsterState.failed;
             StartCoroutine(DeadOn());
         }
-        else if (monsterState == MonsterState.Move && helpTarget == null) // ½Ã¾ß ¹ş¾î³ª¸é ÇÃ·¹ÀÌ¾î Ãß°İ 
+        else if (monsterState == MonsterState.Move && helpTarget == null) // ï¿½Ã¾ï¿½ ï¿½ï¿½ï¿½î³ªï¿½ï¿½ ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ß°ï¿½ 
         {
             Getdirection();
             if(Mathf.Abs(player.transform.position.x - transform.position.x)>15)
                 MoveSpeed +=6;
             Move();
         }
-        else if (monsterState == MonsterState.Play && isAttacking && !isCoolingDown) // ½Ã¾ß µé¾î¿À¸é °ø°İ
+        else if (monsterState == MonsterState.Play && isAttacking && !isCoolingDown) // ï¿½Ã¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         {
             Attack();
             StartCoroutine(AttackCooldown());
         }
-        else if (monsterState == MonsterState.Help&& helpTarget != null) // ¿¬±¸¿øÀÌ µµ¿ò ¿äÃ»ÇÏ¸é ¿¬±¸¿øÂÊÀ¸·Î ÀÌµ¿
+        else if (monsterState == MonsterState.Help&& helpTarget != null) // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½
         {
             Getdirection();
             Move();
@@ -57,19 +60,19 @@ public class Robot : BaseEnemy, IAllyResponder
                 animWalk = 0;
             }
         }
-        else if (monsterState == MonsterState.Dead || Input.GetKey(KeyCode.A)) // ¿ÏÀüÇÑ Á×À½
+        else if (monsterState == MonsterState.Dead || Input.GetKey(KeyCode.A)) // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             EnemyDead();
     }
 
 
 
-    public void OnHelpRequested(Transform targetResearcher) // ¿¬±¸¿øÀ» Ãß°İÇÏ°Ô ÇÏ´Â ½ºÅ©¸³Æ®
+    public void OnHelpRequested(Transform targetResearcher) // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ï¿½Ï°ï¿½ ï¿½Ï´ï¿½ ï¿½ï¿½Å©ï¿½ï¿½Æ®
     {
         helpTarget = targetResearcher;
         monsterState = MonsterState.Help;
     }
 
-    protected override void Getdirection() // ÀÌµ¿ÇÒ·Á´Â ½Ã¾ß ¼³Á¤
+    protected override void Getdirection() // ï¿½Ìµï¿½ï¿½Ò·ï¿½ï¿½ï¿½ ï¿½Ã¾ï¿½ ï¿½ï¿½ï¿½ï¿½
     {
         if (helpTarget != null)
         {
@@ -80,7 +83,7 @@ public class Robot : BaseEnemy, IAllyResponder
             base.Getdirection();
     }
 
-    public void Attack() // ÃÑ¾Ë »ı¼º, ÃÑ¾Ë ¹æÇâ ¼³Á¤
+    public void Attack() // ï¿½Ñ¾ï¿½ ï¿½ï¿½ï¿½ï¿½, ï¿½Ñ¾ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     {
         RobotBullet bullet = BulletPool.GetRecyclableObject() ??
             BulletPool.RegisterRecyclableObject(Instantiate(BulletPrefab));
@@ -92,7 +95,7 @@ public class Robot : BaseEnemy, IAllyResponder
         //Test();
         bullet.SetBullet();
 
-        // ¹ß»ç À§Ä¡
+        // ï¿½ß»ï¿½ ï¿½ï¿½Ä¡
         lookdir = ((Vector2)player.transform.position - (Vector2)transform.position).normalized;
         bullet.transform.position = BulletShotPoint.position;
 
@@ -111,18 +114,18 @@ public class Robot : BaseEnemy, IAllyResponder
         }
     }
 
-    private IEnumerator AttackCooldown() // °ø°İ Äğ´Ù¿î
+    private IEnumerator AttackCooldown() // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ù¿ï¿½
     {
         isAttacking = false;
         isCoolingDown = true;
 
-        yield return new WaitForSeconds(0.5f); // ¹ß»ç °£°İÀ» 0.5ÃÊ·Î Á¶Àı
+        yield return new WaitForSeconds(0.5f); // ï¿½ß»ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 0.5ï¿½Ê·ï¿½ ï¿½ï¿½ï¿½ï¿½
 
         isAttacking = true;
         isCoolingDown = false;
     }
 
-    protected override void OnTriggerEnter2D(Collider2D collision) //½Ã¾ß Äİ¶óÀÌ´õ, ½Ã¾ß¿¡ µé¾î¿À¸é °ø°İ
+    protected override void OnTriggerEnter2D(Collider2D collision) //ï¿½Ã¾ï¿½ ï¿½İ¶ï¿½ï¿½Ì´ï¿½, ï¿½Ã¾ß¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     {
         if (collision.gameObject.CompareTag("Player") && player.isAttack)
         {
@@ -144,7 +147,7 @@ public class Robot : BaseEnemy, IAllyResponder
         }
     }
 
-    protected override void OnTriggerExit2D(Collider2D collision) // ½Ã¾ß Äİ¶óÀÌ´õ, ¹ş¾î³ª¸é Ãß°İ
+    protected override void OnTriggerExit2D(Collider2D collision) // ï¿½Ã¾ï¿½ ï¿½İ¶ï¿½ï¿½Ì´ï¿½, ï¿½ï¿½ï¿½î³ªï¿½ï¿½ ï¿½ß°ï¿½
     {
         if (collision.CompareTag("Player") && !EnemyFailed)
         {
@@ -153,7 +156,7 @@ public class Robot : BaseEnemy, IAllyResponder
         }
     }
 
-    protected override void OnCollisionEnter2D(Collision2D collision) // ·Îº¿ ¸ö¿¡ ´êÀ¸¸é ¹ß»ıÇÏ´Â Äİ¶óÀÌ´õ, ¿¬±¸¿ø ´êÀ¸¸é ´ë±â·Î µ¹ÀÔ 
+    protected override void OnCollisionEnter2D(Collision2D collision) // ï¿½Îºï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß»ï¿½ï¿½Ï´ï¿½ ï¿½İ¶ï¿½ï¿½Ì´ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 
     {
         //base.OnCollisionEnter2D(collision);
         if(collision.gameObject.CompareTag("Researcher") && !EnemyFailed)
@@ -162,5 +165,59 @@ public class Robot : BaseEnemy, IAllyResponder
             helpTarget = null;
             animWalk = 0;
         }
+
+        // [ë³€ê²½] MovingStool ìœ„ì— ìˆì„ ë•Œ ë°œíŒ ì´ë™ëŸ‰ì„ ì ìš©í•˜ê¸° ìœ„í•œ ì°¸ì¡° ì„¤ì •
+        var movingStool = collision.gameObject.GetComponent<MovingStool>();
+        if (movingStool != null)
+        {
+            // ï¿½ÜºÎ¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ó¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Æ´Ï¶ï¿½ï¿½ï¿½ È®ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ y ï¿½ï¿½ï¿½è°¡ ï¿½ï¿½ï¿½ï¿½)
+            bool onTop = false;
+            foreach (var contact in collision.contacts)
+            {
+                if (contact.normal.y > 0.5f)
+                {
+                    onTop = true;
+                    break;
+                }
+            }
+
+            if (onTop)
+            {
+                currentMovingStool = movingStool.transform;
+                lastMovingStoolPos = currentMovingStool.position;
+            }
+        }
+    }
+
+    // [ë³€ê²½] MovingStoolì—ì„œ ë–¨ì–´ì§€ë©´ ì°¸ì¡° í•´ì œ
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (currentMovingStool != null && collision.transform == currentMovingStool)
+        {
+            currentMovingStool = null;
+            lastMovingStoolPos = Vector3.zero;
+        }
+    }
+
+    // [ë³€ê²½] ë°œíŒì´ ì´ë™í•œ ë§Œí¼ ë¡œë´‡ë„ ì´ë™ì‹œí‚¤ê¸°(ë¶€ëª¨ ì„¤ì • ì—†ì´ ë™ê¸°í™”)
+    private void LateUpdate()
+    {
+        if (currentMovingStool == null)
+            return;
+
+        // ë°œíŒì´ ë¹„í™œì„±í™”ë˜ì—ˆìœ¼ë©´ ì•ˆì „í•˜ê²Œ ì°¸ì¡° í•´ì œ
+        if (!currentMovingStool.gameObject.activeInHierarchy)
+        {
+            currentMovingStool = null;
+            lastMovingStoolPos = Vector3.zero;
+            return;
+        }
+
+        Vector3 stoolDelta = currentMovingStool.position - lastMovingStoolPos;
+        if (stoolDelta.sqrMagnitude > 0f)
+        {
+            transform.position += stoolDelta;
+        }
+        lastMovingStoolPos = currentMovingStool.position;
     }
 }

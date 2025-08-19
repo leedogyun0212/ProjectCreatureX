@@ -15,14 +15,13 @@ public class RobotBullet : MonoBehaviour, IRecyclableGameObject
 
     private IEnumerator CheckBullet()
     {
-        yield return new WaitUntil(() => (
-        Vector3.Distance(Robot.transform.position, transform.position) >= 12.0f));
+        yield return new WaitUntil(() => 
+        Robot != null && Vector3.Distance(Robot.transform.position, transform.position) >= 12.0f);
         gameObject.SetActive(false);
     }
 
     private void Update()
     {
-        StartCoroutine(CheckBullet());
         //MoveBullet();
 
     }
@@ -42,6 +41,9 @@ public class RobotBullet : MonoBehaviour, IRecyclableGameObject
         BulletMove = BulletMove ?? GetComponent<BulletMovement>();
         Robot = Robot??GameObject.Find("Robot");
         //dir = direction;
+
+        StopAllCoroutines(); // 혹시 남아있는 코루틴 방지
+        StartCoroutine(CheckBullet());
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
