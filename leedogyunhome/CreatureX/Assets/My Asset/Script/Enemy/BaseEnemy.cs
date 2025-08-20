@@ -89,7 +89,6 @@ public class BaseEnemy : MonoBehaviour
     protected virtual void Move() // 움직이는 코드
     {
         ScaleChange();
-        Debug.Log("????");
         transform.Translate(direction * MoveSpeed * Time.deltaTime);
     }
 
