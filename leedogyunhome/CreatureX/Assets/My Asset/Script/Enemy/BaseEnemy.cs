@@ -166,7 +166,7 @@ public class BaseEnemy : MonoBehaviour
         if (EnemyCurHP <= 0) EnemyFailed = true;
     }
 
-    protected IEnumerator DeadOn()
+    protected virtual IEnumerator DeadOn()
     {
         yield return new WaitForSecondsRealtime(FailTime);
         EnemyFailed = false;

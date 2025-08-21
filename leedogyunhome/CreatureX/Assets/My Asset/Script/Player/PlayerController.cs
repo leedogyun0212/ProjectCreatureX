@@ -69,7 +69,6 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKey(moveLeftKey)) dir = -1;
         if (Input.GetKey(moveRightKey)) dir = 1;
-
         // player.OrderMove(dir);
         player.curTrans.Move(dir);
     }

@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyID: 1
-  MoveSpeed: 3
+  MoveSpeed: 8
   EnemyMaxHP: 40
   EnemyFailed: 0
   capsule: {fileID: 8934088298110955070}
@@ -448,8 +448,8 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 12.805318, y: 1.3591044}
-      - {x: 10.684915, y: 1.365627}
-      - {x: 10.706624, y: -1.2350023}
-      - {x: 12.819922, y: -1.2042229}
+    - - {x: -2.762698, y: 1.0140212}
+      - {x: -3.2265477, y: 0.98626524}
+      - {x: -3.206641, y: -1.0126128}
+      - {x: -2.7790828, y: -1.0175539}
   m_UseDelaunayMesh: 0

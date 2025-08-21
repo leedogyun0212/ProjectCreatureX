@@ -28,8 +28,6 @@ public class CarObject : BaseEnemy
 
     protected override void Update()
     {
-        Debug.Log(monsterState + "adsda" + EnemyCurHP);
-        Debug.Log(EnemyMaxHP);
         animEnemy();
         if (EnemyFailed)  // 차의 흡수 가능한 상태
         {
@@ -37,6 +35,8 @@ public class CarObject : BaseEnemy
             isMove = false;
             animWalk = 0;
             animDead = 100;
+            Debug.Log(monsterState + "죽음");
+            EnemyFailed = false;
             StartCoroutine(DeadOn());
         }
         else if (monsterState == MonsterState.Move) //항상 전진
@@ -45,7 +45,6 @@ public class CarObject : BaseEnemy
         }
         else if (monsterState == MonsterState.Dead) // 차가 완전한 죽음
         {
-            CarDead();
         }
     }
 
@@ -60,6 +59,14 @@ public class CarObject : BaseEnemy
             HitMove();
             StartCoroutine(HitRecover());
         }
+        //벽/박스 충돌 시 리스폰
+        else if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Box")|| collision.gameObject.CompareTag("Ground"))
+        {
+            monsterState = MonsterState.idle;
+            isMove = false;
+            animWalk = 0;
+            animDead = 100;
+        }
     }
 
     protected override void OnCollisionEnter2D(Collision2D collision)  // 차에 닿으면 발동되는 콜라이더
@@ -72,33 +79,13 @@ public class CarObject : BaseEnemy
                 StartCoroutine(TriggerFalse());
         }
         //벽/박스 충돌 시 리스폰
-        else if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Box"))
-        {
-            monsterState = MonsterState.idle;
-            isMove = false;
-            animWalk = 0;
-            animDead = 100;
-
-        }
-    }
-
-    private void CarDead()
-    {
-        // 시작 위치로 즉시 복귀합니다. (화면 밖으로 밀려나거나 멈추는 것을 방지) 멈추는 원인 가능성 높음
-        transform.position = startPosition;
-        if (rigidbody != null)
-        {
-            // 물리 속도를 초기화
-            rigidbody.linearVelocity = Vector2.zero;
-            rigidbody.angularVelocity = 0f;
-        }
-
-        // 전진 상태를 유지
-        monsterState = MonsterState.Move;
-        Getdirection();
-        isMove = true;
-        animWalk = 1;
-        animDead = 0;
+        //else if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Box"))
+        //{
+        //    monsterState = MonsterState.idle;
+        //    isMove = false;
+        //    animWalk = 0;
+        //    animDead = 100;
+        //}
     }
 
     private IEnumerator TriggerFalse() // 플레이어에 닿은후 is Trigger가 꺼지게 만드는 스크립트
@@ -119,6 +106,28 @@ public class CarObject : BaseEnemy
     {
         EnemyFailed = true;
         animDead = 150;
+        FailTime = 5.0f;
+    }
+
+    protected override IEnumerator DeadOn()
+    {
+        yield return new WaitForSecondsRealtime(FailTime);
+        Debug.Log(isMove+"실행");
+        // 시작 위치로 즉시 복귀합니다. (화면 밖으로 밀려나거나 멈추는 것을 방지) 멈추는 원인 가능성 높음
+        transform.position = startPosition;
+        if (rigidbody != null)
+        {
+            // 물리 속도를 초기화
+            rigidbody.linearVelocity = Vector2.zero;
+            rigidbody.angularVelocity = 0f;
+        }
+
+        // 전진 상태를 유지
+        monsterState = MonsterState.Move;
+        Getdirection();
+        isMove = true;
+        animWalk = 1;
+        animDead = 0;
     }
 
     // [변경] 항상 전진하도록 방향 고정

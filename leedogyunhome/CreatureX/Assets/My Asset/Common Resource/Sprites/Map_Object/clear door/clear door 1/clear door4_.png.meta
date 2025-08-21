@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 68c2af955e50f9d4f92aab647e37056b
+guid: 551cb430dd25de04396a778cbafacf46
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3739838402027063663
-    second: clear door1_0
+      213: 7369461932797862792
+    second: clear door4__0
+  - first:
+      213: 2821026426728430966
+    second: clear door4__1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: clear door1_0
+      name: clear door4__0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 321
         width: 384
-        height: 500
+        height: 179
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 196ffc1b9cc691cc0800000000000000
-      internalID: -3739838402027063663
+      spriteID: 8832e223596954660800000000000000
+      internalID: 7369461932797862792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clear door4__1
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 0
+        width: 379
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67d3323b69c462720800000000000000
+      internalID: 2821026426728430966
       vertices: []
       indices: 
       edges: []
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      clear door1_0: -3739838402027063663
+      clear door4__0: 7369461932797862792
+      clear door4__1: 2821026426728430966
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

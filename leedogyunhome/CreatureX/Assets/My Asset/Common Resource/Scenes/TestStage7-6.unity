@@ -6564,6 +6564,26 @@ Tilemap:
   m_GameObject: {fileID: 1334169635}
   m_Enabled: 1
   m_Tiles:
+  - first: {x: -31, y: -18, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 12
+      m_TileSpriteIndex: 10
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -30, y: -18, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 12
+      m_TileSpriteIndex: 10
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: -36, y: -17, z: 0}
     second:
       serializedVersion: 2
@@ -15460,7 +15480,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: f8c62af0a70150c4ea7cd2ba8c9f52f2, type: 2}
   - m_RefCount: 13
     m_Data: {fileID: 11400000, guid: 041128fa74ddaec42bf0efb6cc52b2d2, type: 2}
-  - m_RefCount: 539
+  - m_RefCount: 541
     m_Data: {fileID: 11400000, guid: 04d2d9950f49e894d912087db146d991, type: 2}
   - m_RefCount: 16
     m_Data: {fileID: 11400000, guid: f64d4555e98ec5e4f9b2392a59f4299f, type: 2}
@@ -15489,7 +15509,7 @@ Tilemap:
     m_Data: {fileID: 845682366, guid: 6b41e171de40a4a49af551fa3cfb2534, type: 3}
   - m_RefCount: 43
     m_Data: {fileID: 639814751, guid: 5bbb49aea430bf14892894e8ede6b81b, type: 3}
-  - m_RefCount: 539
+  - m_RefCount: 541
     m_Data: {fileID: 568342623, guid: 6b41e171de40a4a49af551fa3cfb2534, type: 3}
   - m_RefCount: 13
     m_Data: {fileID: -1493139659, guid: 5bbb49aea430bf14892894e8ede6b81b, type: 3}
@@ -15502,7 +15522,7 @@ Tilemap:
   - m_RefCount: 2
     m_Data: {fileID: 1480766471, guid: 5bbb49aea430bf14892894e8ede6b81b, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 864
+  - m_RefCount: 866
     m_Data:
       e00: 1
       e01: 0
@@ -15557,7 +15577,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 887
+  - m_RefCount: 889
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   - m_RefCount: 0
     m_Data: {r: 4.5e-44, g: 4.5e-44, b: 4.5e-44, a: 4.5e-44}
