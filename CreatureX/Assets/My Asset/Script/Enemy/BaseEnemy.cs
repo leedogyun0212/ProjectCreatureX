@@ -89,7 +89,6 @@ public class BaseEnemy : MonoBehaviour
     protected virtual void Move() // 움직이는 코드
     {
         ScaleChange();
-        Debug.Log("????");
         transform.Translate(direction * MoveSpeed * Time.deltaTime);
     }
 
@@ -167,7 +166,7 @@ public class BaseEnemy : MonoBehaviour
         if (EnemyCurHP <= 0) EnemyFailed = true;
     }
 
-    protected IEnumerator DeadOn()
+    protected virtual IEnumerator DeadOn()
     {
         yield return new WaitForSecondsRealtime(FailTime);
         EnemyFailed = false;

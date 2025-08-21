@@ -11,10 +11,10 @@ public class Car : BaseEnemy
 
     protected override void Update()
     {
-        Debug.Log(monsterState + "adsda"+EnemyCurHP);
+        Debug.Log(monsterState + "adsda" + EnemyCurHP);
         Debug.Log(EnemyMaxHP);
         animEnemy();
-        if(EnemyFailed) // Â÷ÀÇ Èí¼ö °¡´ÉÇÑ »óÅÂ
+        if (EnemyFailed) // ì°¨ì˜ í¡ìˆ˜ ê°€ëŠ¥í•œ ìƒíƒœ
         {
             monsterState = MonsterState.failed;
             isMove = false;
@@ -22,18 +22,18 @@ public class Car : BaseEnemy
             animDead = 100;
             StartCoroutine(DeadOn());
         }
-        else if (monsterState == MonsterState.Move) // Â÷°¡ ÇÃ·¹ÀÌ¾î¸¦ Ãß°İÇÏ´Â »óÅÂ,
+        else if (monsterState == MonsterState.Move) // ì°¨ê°€ í”Œë ˆì´ì–´ë¥¼ ì¶”ê²©í•˜ëŠ” ìƒíƒœ,
         {
-            Debug.Log("ÀÌµ¿Áß");
+            Debug.Log("ì´ë™ì¤‘");
             Move();
         }
-        else if (monsterState == MonsterState.Dead) // Â÷°¡ ¿ÏÀüÇÑ Á×À½
+        else if (monsterState == MonsterState.Dead) // ì°¨ê°€ ì™„ì „í•œ ì£½ìŒ
         {
             EnemyDead();
         }
     }
 
-    protected override void OnTriggerEnter2D(Collider2D collision) // Â÷ÀÇ ½Ã¾ß¿¡ ´êÀ¸¸é ¹ßµ¿µÇ´Â Äİ¶óÀÌ´õ
+    protected override void OnTriggerEnter2D(Collider2D collision) // ì°¨ì˜ ì‹œì•¼ì— ë‹¿ìœ¼ë©´ ë°œë™ë˜ëŠ” ì½œë¼ì´ë”
     {
         if (collision.gameObject.CompareTag("Player") && player.isAttack)
         {
@@ -53,17 +53,17 @@ public class Car : BaseEnemy
         }
     }
 
-    protected override void OnCollisionEnter2D(Collision2D collision) // Â÷¿¡ ´êÀ¸¸é ¹ßµ¿µÇ´Â Äİ¶óÀÌ´õ
+    protected override void OnCollisionEnter2D(Collision2D collision) // ì°¨ì— ë‹¿ìœ¼ë©´ ë°œë™ë˜ëŠ” ì½œë¼ì´ë”
     {
         //base.OnCollisionEnter2D(collision);
-        if (collision.gameObject.CompareTag("Player")&&!isMove&&!player.isAttack) // ÇÃ·¹ÀÌ¾î¿¡ ´êÀ¸¸é Åë°úµÇ´Â ½ºÅ©¸³Æ®
+        if (collision.gameObject.CompareTag("Player") && !isMove && !player.isAttack) // í”Œë ˆì´ì–´ì— ë‹¿ìœ¼ë©´ í†µê³¼ë˜ëŠ” ìŠ¤í¬ë¦½íŠ¸
         {
             capsule.isTrigger = true;
-            if(capsule.isTrigger)
+            if (capsule.isTrigger)
                 StartCoroutine(TriggerFalse());
             isMove = false;
         }
-        else if(collision.gameObject.CompareTag("Wall")||collision.gameObject.CompareTag("Box")) // º®¿¡ ´êÀ¸¸é Èí¼ö °¡´ÉÇÑ »óÅÂ°¡ µÇ´Â Äİ¶óÀÌ´õ
+        else if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Box")) // ë²½ì— ë‹¿ìœ¼ë©´ í¡ìˆ˜ ê°€ëŠ¥í•œ ìƒíƒœê°€ ë˜ëŠ” ì½œë¼ì´ë”
         {
             monsterState = MonsterState.idle;
             isMove = false;
@@ -73,7 +73,7 @@ public class Car : BaseEnemy
     }
 
 
-    private IEnumerator TriggerFalse() // ÇÃ·¹ÀÌ¾î¿¡ ´êÀºÈÄ is Trigger°¡ ²¨Áö°Ô ¸¸µå´Â ½ºÅ©¸³Æ®
+    private IEnumerator TriggerFalse() // í”Œë ˆì´ì–´ì— ë‹¿ì€í›„ is Triggerê°€ êº¼ì§€ê²Œ ë§Œë“œëŠ” ìŠ¤í¬ë¦½íŠ¸
     {
         yield return new WaitForSecondsRealtime(1.0f);
 
@@ -81,13 +81,13 @@ public class Car : BaseEnemy
         isMove = true;
     }
 
-    protected override IEnumerator HitRecover() // ÇÇ°İ½Ã ³ª¿À´Â ½ºÅ©¸³Æ®
+    protected override IEnumerator HitRecover() // í”¼ê²©ì‹œ ë‚˜ì˜¤ëŠ” ìŠ¤í¬ë¦½íŠ¸
     {
-        yield return new WaitForSeconds(0.5f); // 0.5ÃÊ°£ ÇÇ°İ »óÅÂ À¯Áö
+        yield return new WaitForSeconds(0.5f); // 0.5ì´ˆê°„ í”¼ê²© ìƒíƒœ ìœ ì§€
         monsterState = MonsterState.Move;
     }
 
-    public void animDie() // Èí¼ö °¡´ÉÇÑ »óÅÂ·Î ¾Ö´Ï¸ŞÀÌ¼ÇÀ» ¹Ù²Ù´Â ½ºÅ©¸³Æ®
+    public void animDie() // í¡ìˆ˜ ê°€ëŠ¥í•œ ìƒíƒœë¡œ ì• ë‹ˆë©”ì´ì…˜ì„ ë°”ê¾¸ëŠ” ìŠ¤í¬ë¦½íŠ¸
     {
         EnemyFailed = true;
         animDead = 150;
