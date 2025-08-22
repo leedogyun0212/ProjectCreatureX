@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class Researcher : BaseEnemy
@@ -67,11 +68,12 @@ public class Researcher : BaseEnemy
 
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && player.isAttack)
+        if (collision.gameObject.CompareTag("Player") && player.isAttack&&!HitOn)
         {
             monsterState = MonsterState.Hit;
             animHit = true;
             animWalk = 0;
+            HitOn = true;
             HpCheck();
             HitMove();
             StartCoroutine(HitRecover());
@@ -94,6 +96,7 @@ public class Researcher : BaseEnemy
     protected override IEnumerator HitRecover()
     {
         yield return new WaitForSeconds(0.5f); // 0.5초간 피격 상태 유지
+        HitOn = false;
         monsterState = MonsterState.Move;
     }
 

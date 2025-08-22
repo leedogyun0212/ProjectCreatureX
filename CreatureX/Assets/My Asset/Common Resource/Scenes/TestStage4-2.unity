@@ -14243,13 +14243,49 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2326903962507274840, guid: edee170d15bafce419441a7f9de0947e, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
+      value: -6.4921303
+      objectReference: {fileID: 0}
+    - target: {fileID: 2326903962507274840, guid: edee170d15bafce419441a7f9de0947e, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].y
+      value: -0.83821523
+      objectReference: {fileID: 0}
+    - target: {fileID: 2326903962507274840, guid: edee170d15bafce419441a7f9de0947e, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].x
+      value: -5.369345
+      objectReference: {fileID: 0}
+    - target: {fileID: 2326903962507274840, guid: edee170d15bafce419441a7f9de0947e, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].y
+      value: -0.8372987
+      objectReference: {fileID: 0}
+    - target: {fileID: 2326903962507274840, guid: edee170d15bafce419441a7f9de0947e, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].x
+      value: -5.502437
+      objectReference: {fileID: 0}
+    - target: {fileID: 2326903962507274840, guid: edee170d15bafce419441a7f9de0947e, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].y
+      value: -0.92325604
+      objectReference: {fileID: 0}
+    - target: {fileID: 2326903962507274840, guid: edee170d15bafce419441a7f9de0947e, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].x
+      value: -6.38131
+      objectReference: {fileID: 0}
+    - target: {fileID: 2326903962507274840, guid: edee170d15bafce419441a7f9de0947e, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].y
+      value: -0.9132914
+      objectReference: {fileID: 0}
     - target: {fileID: 3021851361063378184, guid: edee170d15bafce419441a7f9de0947e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.19
+      value: -5.35
       objectReference: {fileID: 0}
     - target: {fileID: 3021851361063378184, guid: edee170d15bafce419441a7f9de0947e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.34
+      value: 2.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 3984124873744447530, guid: edee170d15bafce419441a7f9de0947e, type: 3}
+      propertyPath: spawnCount
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7641318924507297225, guid: edee170d15bafce419441a7f9de0947e, type: 3}
       propertyPath: m_Name

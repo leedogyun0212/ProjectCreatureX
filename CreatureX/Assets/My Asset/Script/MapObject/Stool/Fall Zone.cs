@@ -11,7 +11,7 @@ public class FallZone : MonoBehaviour
             RuntimeGameManager.Instance.Check_FallDeath();
         }
         //if (baseEnemy != null)
-        //{ 
+        //{
         //    baseEnemy.FallDie();
         //}
 

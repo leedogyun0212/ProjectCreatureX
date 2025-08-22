@@ -17,6 +17,8 @@ public class Camera : MonoBehaviour, IDoor
 
     public bool DoorTouch { get; set; } = true; // 문에 닿았나 안 닿았나 관련 bool
 
+    public int BackNum = 1;
+
     public enum LockDirection // 문 방향 지정
     {
         None = 0,
@@ -153,14 +155,14 @@ public class Camera : MonoBehaviour, IDoor
         {
             Target += new Vector3(0, cameraHeight, 0);
             IsMoving = true;
-
+            BackNum += 1;
             StartCoroutine(ReStartMoving());
         }
         else if (PlayerY < camMinY - verticalDeadZoneHeight)
         {
             Target -= new Vector3(0, cameraHeight, 0);
             IsMoving = true;
-
+            BackNum -= 1;
             StartCoroutine(ReStartMoving());
         }
     }

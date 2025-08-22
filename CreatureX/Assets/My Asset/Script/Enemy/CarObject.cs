@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class CarObject : BaseEnemy
@@ -50,17 +51,18 @@ public class CarObject : BaseEnemy
 
     protected override void OnTriggerEnter2D(Collider2D collision) // 데미지를 입으면 발동됨
     {
-        if (collision.gameObject.CompareTag("Player") && player.isAttack)
+        if (collision.gameObject.CompareTag("Player") && player.isAttack&& !HitOn)
         {
             monsterState = MonsterState.Hit;
             animHit = true;
             animWalk = 0;
+            HitOn = true;
             HpCheck();
             HitMove();
             StartCoroutine(HitRecover());
         }
         //벽/박스 충돌 시 리스폰
-        else if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Box")|| collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Box")|| collision.gameObject.CompareTag("Ground"))
         {
             monsterState = MonsterState.idle;
             isMove = false;
@@ -78,14 +80,6 @@ public class CarObject : BaseEnemy
             if (capsule.isTrigger)
                 StartCoroutine(TriggerFalse());
         }
-        //벽/박스 충돌 시 리스폰
-        //else if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Box"))
-        //{
-        //    monsterState = MonsterState.idle;
-        //    isMove = false;
-        //    animWalk = 0;
-        //    animDead = 100;
-        //}
     }
 
     private IEnumerator TriggerFalse() // 플레이어에 닿은후 is Trigger가 꺼지게 만드는 스크립트
@@ -99,6 +93,7 @@ public class CarObject : BaseEnemy
     protected override IEnumerator HitRecover() // 피격시 나오는 스크립트
     {
         yield return new WaitForSeconds(0.5f); // 0.5초간 피격 상태 유지
+        HitOn = false;
         monsterState = MonsterState.Move;
     }
 
