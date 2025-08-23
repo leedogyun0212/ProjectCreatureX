@@ -18331,6 +18331,18 @@ PrefabInstance:
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].y
       value: 0.32591787
       objectReference: {fileID: 0}
+    - target: {fileID: 3021851361063378184, guid: edee170d15bafce419441a7f9de0947e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 3021851361063378184, guid: edee170d15bafce419441a7f9de0947e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3984124873744447530, guid: edee170d15bafce419441a7f9de0947e, type: 3}
+      propertyPath: spawnCount
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7641318924507297225, guid: edee170d15bafce419441a7f9de0947e, type: 3}
       propertyPath: m_Name
       value: Trab_Stool (2)
@@ -18911,6 +18923,18 @@ PrefabInstance:
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].y
       value: 0.32591787
       objectReference: {fileID: 0}
+    - target: {fileID: 3021851361063378184, guid: edee170d15bafce419441a7f9de0947e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 3021851361063378184, guid: edee170d15bafce419441a7f9de0947e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3984124873744447530, guid: edee170d15bafce419441a7f9de0947e, type: 3}
+      propertyPath: spawnCount
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7641318924507297225, guid: edee170d15bafce419441a7f9de0947e, type: 3}
       propertyPath: m_Name
       value: Trab_Stool (1)
@@ -19490,6 +19514,18 @@ PrefabInstance:
     - target: {fileID: 2326903962507274840, guid: edee170d15bafce419441a7f9de0947e, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].y
       value: 0.5399741
+      objectReference: {fileID: 0}
+    - target: {fileID: 3021851361063378184, guid: edee170d15bafce419441a7f9de0947e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 3021851361063378184, guid: edee170d15bafce419441a7f9de0947e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3984124873744447530, guid: edee170d15bafce419441a7f9de0947e, type: 3}
+      propertyPath: spawnCount
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7641318924507297225, guid: edee170d15bafce419441a7f9de0947e, type: 3}
       propertyPath: m_Name

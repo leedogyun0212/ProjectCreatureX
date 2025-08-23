@@ -12,6 +12,7 @@ TagManager:
   - Key
   - Box
   - Trigger
+  - Enemy Dead
   layers:
   - Default
   - TransparentFX

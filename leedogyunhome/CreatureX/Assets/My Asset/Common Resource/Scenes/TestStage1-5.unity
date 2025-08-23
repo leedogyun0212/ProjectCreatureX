@@ -1899,6 +1899,10 @@ PrefabInstance:
       propertyPath: Camera
       value: 
       objectReference: {fileID: 1019030652}
+    - target: {fileID: 6169307068637849098, guid: d8cb81e2f514a3c458231aa1c080833c, type: 3}
+      propertyPath: direction
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6996487276968763963, guid: d8cb81e2f514a3c458231aa1c080833c, type: 3}
       propertyPath: m_LocalScale.y
       value: 1.1

@@ -1,18 +1,17 @@
 using System.Collections;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class Car : BaseEnemy
 {
-    protected bool isMove = true;
+    protected bool isMove = true; // 이동 관련 
 
     [SerializeField]
-    private PolygonCollider2D capsule;
+    private PolygonCollider2D capsule; // 차 겉의 콜라이더 플레이어 통과를 위함
 
 
     protected override void Update()
     {
-        Debug.Log(monsterState + "adsda" + EnemyCurHP);
-        Debug.Log(EnemyMaxHP);
         animEnemy();
         if (EnemyFailed) // 차의 흡수 가능한 상태
         {
@@ -35,11 +34,12 @@ public class Car : BaseEnemy
 
     protected override void OnTriggerEnter2D(Collider2D collision) // 차의 시야에 닿으면 발동되는 콜라이더
     {
-        if (collision.gameObject.CompareTag("Player") && player.isAttack)
+        if (collision.gameObject.CompareTag("Player") && player.isAttack&&!HitOn)
         {
             monsterState = MonsterState.Hit;
             animHit = true;
             animWalk = 0;
+            HitOn = true;
             HpCheck();
             HitMove();
             StartCoroutine(HitRecover());
@@ -84,6 +84,7 @@ public class Car : BaseEnemy
     protected override IEnumerator HitRecover() // 피격시 나오는 스크립트
     {
         yield return new WaitForSeconds(0.5f); // 0.5초간 피격 상태 유지
+        HitOn = false;
         monsterState = MonsterState.Move;
     }
 

@@ -36,7 +36,7 @@ public class TestAssBox : MonoBehaviour
             BaseEnemy enemy = other.GetComponent<BaseEnemy>();
             if (enemy != null)
             {
-                Debug.Log($"{Time.time}: ∏ÛΩ∫≈Õ ≈ª√‚");
+                //Debug.Log($"{Time.time}: ∏ÛΩ∫≈Õ ≈ª√‚");
                 EnemyManager.Instance.UnregisterEnemy(enemy);
             }
         }

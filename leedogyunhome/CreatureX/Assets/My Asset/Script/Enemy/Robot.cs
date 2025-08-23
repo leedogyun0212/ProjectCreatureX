@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.Burst.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -127,11 +128,12 @@ public class Robot : BaseEnemy, IAllyResponder
 
     protected override void OnTriggerEnter2D(Collider2D collision) //�þ� �ݶ��̴�, �þ߿� ������ ����
     {
-        if (collision.gameObject.CompareTag("Player") && player.isAttack)
+        if (collision.gameObject.CompareTag("Player") && player.isAttack&& !HitOn)
         {
             monsterState = MonsterState.Hit;
             animHit = true;
             animWalk = 0;
+            HitOn = true;
             HpCheck();
             HitMove();
             StartCoroutine(HitRecover());
@@ -170,7 +172,6 @@ public class Robot : BaseEnemy, IAllyResponder
         var movingStool = collision.gameObject.GetComponent<MovingStool>();
         if (movingStool != null)
         {
-            // �ܺο��� ���� �ӿ��� ���� �������� �ƴ϶��� Ȯ�� (������ ���� y ���谡 ����)
             bool onTop = false;
             foreach (var contact in collision.contacts)
             {

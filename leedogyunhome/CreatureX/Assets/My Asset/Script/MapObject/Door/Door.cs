@@ -9,7 +9,7 @@ public class Door : MonoBehaviour, IDoor
 
     public DoorDirection direction;
 
-    
+    private float CameraTime = 3.0f;
 
     private Animator animator;
 
@@ -33,7 +33,7 @@ public class Door : MonoBehaviour, IDoor
     private void OnTriggerStay2D(Collider2D collision)
     {
         // [변경] 트리거 내부에 있는 동안 프레임마다 보정하여 문 너머로 튀지 않도록 함
-        if (collision.CompareTag("MainCamera"))
+        if (collision.CompareTag("MainCamera")&&CameraTime>Time.deltaTime)
         {
             ClampCameraImmediately(collision);
         }

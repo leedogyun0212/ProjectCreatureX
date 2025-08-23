@@ -3263,11 +3263,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3021851361063378184, guid: edee170d15bafce419441a7f9de0947e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.76
+      value: 2.18
       objectReference: {fileID: 0}
     - target: {fileID: 3021851361063378184, guid: edee170d15bafce419441a7f9de0947e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.51
+      value: 5.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 3984124873744447530, guid: edee170d15bafce419441a7f9de0947e, type: 3}
+      propertyPath: spawnCount
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7641318924507297225, guid: edee170d15bafce419441a7f9de0947e, type: 3}
       propertyPath: m_Name

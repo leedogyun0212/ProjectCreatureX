@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class BaseEnemy : MonoBehaviour
@@ -10,31 +11,33 @@ public class BaseEnemy : MonoBehaviour
 
     protected new Rigidbody2D rigidbody;
 
-    [SerializeField]
+    [SerializeField] // 이동속도
     protected float MoveSpeed = 3.0f;
 
-    [SerializeField]
+    [SerializeField] // 체력
     protected float EnemyMaxHP = 40.0f;
     protected float EnemyCurHP;
 
-    protected float UAVPosY = 0;
+    protected float UAVPosY = 0; // UAV 전용
     protected Vector3 UAVPos;
 
     //[SerializeField]
-    protected TestPlayer player;
+    protected TestPlayer player;  // 플레이어 상호작용을 위해
 
-    protected Transform helpTarget = null;
+    protected Transform helpTarget = null; // Researcher 도움 요청 관련
     
-    protected float animWalk = 0.0f;
+    protected float animWalk = 0.0f; // 애니메이션 전용
     
-    protected bool animHit = false;
+    protected bool animHit = false; // 애니메이션 전용
 
-    protected int animDead = 0;
+    protected int animDead = 0; // 애니메이션 전용
 
     [SerializeField]
-    protected bool EnemyFailed = false;
+    protected bool EnemyFailed = false; // 체력이 일정이하로 떨어져서 흡수가능한 상태
 
-    protected float FailTime = 5.0f;
+    protected float FailTime = 5.0f; // 완전히 죽기전 흡수 가능상태 유지시간 
+
+    protected bool HitOn = false; // 피격 상태중 데미지 안받게 하기 위함
 
     protected enum MonsterState
     {
@@ -142,11 +145,12 @@ public class BaseEnemy : MonoBehaviour
 
     protected virtual void OnCollisionEnter2D(Collision2D collision) //isTrigger 꺼진 콜라이더 감지, 플레이어가 Enemy에게 닿았을시 나오는 코드
     {
-        if (collision.gameObject.CompareTag("Player")&& player.isAttack)
+        if (collision.gameObject.CompareTag("Player")&& player.isAttack&&!HitOn)
         {
             monsterState = MonsterState.Hit;
             animHit = true;
             animWalk = 0;
+            HitOn = true;
             HpCheck();
             HitMove();
             StartCoroutine(HitRecover());
@@ -156,6 +160,7 @@ public class BaseEnemy : MonoBehaviour
     protected virtual IEnumerator HitRecover() // 피격 코드
     {
         yield return new WaitForSeconds(0.5f); // 0.5초간 피격 상태 유지
+        HitOn = false;
         monsterState = MonsterState.idle;
     }
 

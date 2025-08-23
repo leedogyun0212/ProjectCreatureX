@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class UAV : BaseEnemy, IAllyResponder
@@ -181,6 +182,7 @@ public class UAV : BaseEnemy, IAllyResponder
     protected override IEnumerator HitRecover() // 피격시 발동하는 코드
     {
         yield return new WaitForSeconds(0.5f);  // 0.5초간 피격 상태 유지
+        HitOn = false;
         monsterState = MonsterState.Move;
     }
 }

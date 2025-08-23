@@ -2352,6 +2352,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 4.97
       objectReference: {fileID: 0}
+    - target: {fileID: 3984124873744447530, guid: edee170d15bafce419441a7f9de0947e, type: 3}
+      propertyPath: spawnCount
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7641318924507297225, guid: edee170d15bafce419441a7f9de0947e, type: 3}
       propertyPath: m_Name
       value: Trab_Stool
@@ -2442,7 +2446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 314700092286940904, guid: daca98250c021814eaf3d2cbd31b5635, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 314700092286940904, guid: daca98250c021814eaf3d2cbd31b5635, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4642,6 +4646,10 @@ PrefabInstance:
     - target: {fileID: 3021851361063378184, guid: edee170d15bafce419441a7f9de0947e, type: 3}
       propertyPath: m_LocalPosition.y
       value: 3.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 3984124873744447530, guid: edee170d15bafce419441a7f9de0947e, type: 3}
+      propertyPath: spawnCount
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7641318924507297225, guid: edee170d15bafce419441a7f9de0947e, type: 3}
       propertyPath: m_Name

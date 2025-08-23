@@ -3565,6 +3565,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 3.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3984124873744447530, guid: edee170d15bafce419441a7f9de0947e, type: 3}
+      propertyPath: spawnCount
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7641318924507297225, guid: edee170d15bafce419441a7f9de0947e, type: 3}
       propertyPath: m_Name
       value: Trab_Stool (1)
