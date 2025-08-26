@@ -111,4 +111,10 @@ public class Researcher : BaseEnemy
             transform.localScale = new Vector3(1, 1, 1);
         }
     }
+
+    protected override IEnumerator DeadOn()
+    {
+        EffectManager.Play("E_Asl", this.gameObject, transform.localScale.x != -1, new Vector3(0.13f, 0.76f));
+        return base.DeadOn();
+    }
 }

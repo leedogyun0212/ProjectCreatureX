@@ -17,7 +17,7 @@ public static class EffectManager
             prefabMap[entry.effectName] = entry.prefab;
             var pool = new ObjectPool<IRecyclableGameObject>();
 
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < entry.effectCount; i++)
             {
                 GameObject obj = GameObject.Instantiate(entry.prefab);
                 obj.SetActive(false);

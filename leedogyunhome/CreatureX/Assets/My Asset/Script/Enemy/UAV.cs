@@ -185,4 +185,10 @@ public class UAV : BaseEnemy, IAllyResponder
         HitOn = false;
         monsterState = MonsterState.Move;
     }
+
+    protected override IEnumerator DeadOn()
+    {
+        EffectManager.Play("E_Asl", this.gameObject, transform.localScale.x != -1, new Vector3(0.042f, 0.87f));
+        return base.DeadOn();
+    }
 }

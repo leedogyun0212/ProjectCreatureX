@@ -94,5 +94,11 @@ public class Car : BaseEnemy
         animDead = 150;
     }
 
+    protected override IEnumerator DeadOn()
+    {
+        EffectManager.Play("E_Asl", this.gameObject, transform.localScale.x != -1, new Vector3(0.05f, 0.7f));
+        return base.DeadOn();
+    }
+
 }
 
