@@ -200,6 +200,20 @@ public class Robot : BaseEnemy, IAllyResponder
         }
     }
 
+    protected override IEnumerator HitRecover()
+    {
+        EffectManager.Play("E_Hit", this.gameObject, transform.localScale.x != -1, new Vector3(1.03f, 0.78f));
+        yield return new WaitForSeconds(0.5f); // 0.5초간 피격 상태 유지
+        HitOn = false;
+        monsterState = MonsterState.idle;
+    }
+
+    protected override IEnumerator DeadOn()
+    {
+        EffectManager.Play("E_Asl", this.gameObject, transform.localScale.x != -1, new Vector3(0.2f, 0.5f));
+        return base.DeadOn();
+    }
+
     // [변경] 발판이 이동한 만큼 로봇도 이동시키기(부모 설정 없이 동기화)
     private void LateUpdate()
     {

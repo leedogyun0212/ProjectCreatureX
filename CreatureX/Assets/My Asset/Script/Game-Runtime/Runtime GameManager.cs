@@ -14,12 +14,16 @@ public class RuntimeGameManager : MonoBehaviour
 
     [SerializeField] private GamePauseUI pauseUI;
     [SerializeField] private GameOverUI overUI;
+    [SerializeField] private UI_GoTitle goToTitleUI;
+    [SerializeField] private UI_GameRestart restartUI;
 
-    // Find ì‚¬ìš© ì•ˆí•˜ë©´ì„œ ì¬ë“±ë¡ í•˜ëŠ” ë°©ë²• (ê²Œì„ ìš”ì†Œë“¤ì´ ìƒì„±ë ë•Œ ë“±ë¡í•˜ê¸°)
+    // Find »ç¿ë ¾ÈÇÏ¸é¼­ Àçµî·Ï ÇÏ´Â ¹æ¹ı (°ÔÀÓ ¿ä¼ÒµéÀÌ »ı¼ºµÉ¶§ µî·ÏÇÏ±â)
     public void Regist_Player(TestPlayer p) => player = p;
     public void Regist_Door(ClearDoor d) => door = d;
     public void Regist_PauseUI(GamePauseUI ui) => pauseUI = ui;
     public void Regist_OverUI(GameOverUI ui) => overUI = ui;
+    public void Regist_TitleUI(UI_GoTitle ui) => goToTitleUI = ui;
+    public void Regist_ReStartUI(UI_GameRestart ui) => restartUI = ui;
 
 
     void Awake()
@@ -37,29 +41,35 @@ public class RuntimeGameManager : MonoBehaviour
     }
 
 
+    private void Start()
+    {
+        StartCoroutine(Delayed_GameReset());
+    }
+
+
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // ì”¬ì´ ë¡œë“œë  ë•Œë§ˆë‹¤ Player, Door, UI ë‹¤ì‹œ ë“±ë¡
+        // ¾ÀÀÌ ·ÎµåµÉ ¶§¸¶´Ù Player, Door, UI ´Ù½Ã µî·Ï
         //player = FindObjectOfType<TestPlayer>();
         //door = FindObjectOfType<ClearDoor>();
         //pauseUI = FindObjectOfType<GamePauseUI>();
         //overUI = FindObjectOfType<GameOverUI>();
 
-        // ì”¬ì´ ë¡œë“œë˜ë©´ í•œ í”„ë ˆì„ ê¸°ë‹¤ë ¸ë‹¤ê°€ ë“±ë¡ í™•ì¸
+        // ¾ÀÀÌ ·ÎµåµÇ¸é ÇÑ ÇÁ·¹ÀÓ ±â´Ù·È´Ù°¡ µî·Ï È®ÀÎ
         StartCoroutine(WaitAndInitialize());
     }
 
     private IEnumerator WaitAndInitialize()
     {
-        // í•œ í”„ë ˆì„ ëŒ€ê¸° (ëª¨ë“  Awake/Startê°€ ì‹¤í–‰ë  ì‹œê°„ í™•ë³´)
+        // ÇÑ ÇÁ·¹ÀÓ ´ë±â (¸ğµç Awake/Start°¡ ½ÇÇàµÉ ½Ã°£ È®º¸)
         yield return null;
 
         if (player == null)
-            Debug.LogWarning("í”Œë ˆì´ì–´ê°€ ë“±ë¡ X");
+            Debug.LogWarning("ÇÃ·¹ÀÌ¾î°¡ µî·Ï X");
         if (pauseUI == null)
-            Debug.LogWarning("Pause UIê°€ ë“±ë¡ X");
+            Debug.LogWarning("Pause UI°¡ µî·Ï X");
         if (overUI == null)
-            Debug.LogWarning("Over UIê°€ ë“±ë¡ X");
+            Debug.LogWarning("Over UI°¡ µî·Ï X");
     }
 
     // Update is called once per frame
@@ -75,16 +85,16 @@ public class RuntimeGameManager : MonoBehaviour
             return;
     }
 
-    private void GameSave()
+    private void GameSave() 
     {
-        // ì˜ˆì‹œìš© ì €ì¥
+        // ¿¹½Ã¿ë ÀúÀå
         if (Input.GetKeyDown(KeyCode.P))
         {
             SaveManager.Instance.Save_PlayerData(player);
             SaveManager.Instance.Save_StageData(StageManager.Instance.curMainStage, StageManager.Instance.curSubStage);
             SaveManager.Instance.SaveToFile();
         }
-        // ì˜ˆì‹œìš© ë¶ˆëŸ¬ì˜¤ê¸°
+        // ¿¹½Ã¿ë ºÒ·¯¿À±â
         if (Input.GetKeyUp(KeyCode.O))
         {
             SaveManager.Instance.Load_PlayerData(player);
@@ -97,31 +107,30 @@ public class RuntimeGameManager : MonoBehaviour
     {
         if (player == null || door == null)
         {
-            // Debug.LogError("ê²Œì„ë§¤ë‹ˆì €ì— ë¬´ì–¸ê°€ê°€ ì„¤ì •ë˜ì§€ x");
+            // Debug.LogError("°ÔÀÓ¸Å´ÏÀú¿¡ ¹«¾ğ°¡°¡ ¼³Á¤µÇÁö x");
             return false;
         }
-        else
-        {
+        else { 
             return true;
         }
     }
 
 
-    private void Check_StageGameClear()
+    private void Check_StageGameClear() 
     {
         if (isGameCleared || isGamePaused) return;
         if (door.isInPlayer)
         {
             StageGameClear();
             isGameCleared = true;
-            // ì´ í›„ ì¡°ê±´ íŒë‹¨ì€ ë‚˜ì¤‘ì— ë” ì¶”ê°€ ê°€ëŠ¥
+            // ÀÌ ÈÄ Á¶°Ç ÆÇ´ÜÀº ³ªÁß¿¡ ´õ Ãß°¡ °¡´É
         }
     }
 
     private void StageGameClear()
     {
-        Debug.Log($"{Time.deltaTime}: ì¶•í•˜í•©ë‹ˆë‹¤ ìŠ¤í…Œì´ì§€ í´ë¦¬ì–´! \n ë‹¤ìŒ ìŠ¤í…Œì´ì§€ë¡œ ì´ë™");
-        // stageManager.StageClear();       // ì´ëŸ°ì‹ìœ¼ë¡œ ë‚˜ì¤‘ì— ìŠ¤í…Œì´ì§€ ë§¤ë‹ˆì €ê°€ ê´€ë¦¬
+        // Debug.Log($"{Time.deltaTime}: ÃàÇÏÇÕ´Ï´Ù ½ºÅ×ÀÌÁö Å¬¸®¾î! \n ´ÙÀ½ ½ºÅ×ÀÌÁö·Î ÀÌµ¿");
+        // stageManager.StageClear();       // ÀÌ·±½ÄÀ¸·Î ³ªÁß¿¡ ½ºÅ×ÀÌÁö ¸Å´ÏÀú°¡ °ü¸®
         // StageManager.Instance.CurStageClear();
         // StageManager.Instance.CurMainStageClear();
         StageManager.Instance.CurSubStageClear();
@@ -130,53 +139,79 @@ public class RuntimeGameManager : MonoBehaviour
 
     private void ToggleChildren(GameObject parent, bool state)
     {
+        Debug.Log($"{Time.deltaTime}: UI ½Ãµµ!");
         foreach (Transform child in parent.transform)
         {
             child.gameObject.SetActive(state);
+            Debug.Log($"{Time.deltaTime}: UI È£Ãâ!");
+        }
+    }   
+
+    public void Check_GameRestart()
+    {
+        if (restartUI != null)
+        {
+            ToggleChildren(restartUI.gameObject, true);
         }
     }
 
-    //private void GameReset()
-    //{
-    //    Debug.Log($"{Time.deltaTime}: í˜„ì¬ ê²Œì„ ì´ˆê¸°í™” ì‹œë„");
-    //    if (player != null)
-    //        player.PlayerRevive();
-    //    if (overUI != null)
-    //    {
-    //        ToggleChildren(overUI.gameObject, false);
-    //    }
-    //    isGameCleared = false;
-    //    isGameOvered = false;
-    //    isGamePaused = false;
-    //}
-
-
-    private void GameReset()
+    public void Cancel_Restart()
     {
-        StartCoroutine(DelayedReset());
+        if (goToTitleUI != null)
+        {
+            ToggleChildren(restartUI.gameObject, false);
+        }
     }
 
-    private IEnumerator DelayedReset()
+
+    public void NewGameStart()
+    {
+        GameReset();
+        StageManager.Instance.ReStartStage();
+    }
+
+    public void GameReset()
+    {
+        StartCoroutine(Delayed_GameReset());
+    }
+
+    private IEnumerator Delayed_GameReset()
     {
         yield return null;
 
-        if (player != null)
-            player.PlayerRevive();
+        if (player != null) player.PlayerRevive();
 
-        if (overUI != null)
-            ToggleChildren(overUI.gameObject, false);
+        if (pauseUI != null) ToggleChildren(pauseUI.gameObject, false);
+        if (overUI != null) ToggleChildren(overUI.gameObject, false);
+        if (goToTitleUI != null) ToggleChildren(goToTitleUI.gameObject, false);
+        if (restartUI != null) ToggleChildren(restartUI.gameObject, false);
+
+
+        Time.timeScale = 1f;
+        player.PlayerContinue();
 
         isGameCleared = false;
         isGameOvered = false;
         isGamePaused = false;
     }
 
-    // ì–˜ëŠ” ì¶”í›„ UIë‚˜ ë²„íŠ¼ìœ¼ë¡œ êµ¬í˜„
-    public void NewGameStart()
+
+    public void Check_GoTitle()
     {
-        GameReset();
-        StageManager.Instance.ReStartStage();
+        if (goToTitleUI != null)
+        {
+            ToggleChildren(goToTitleUI.gameObject, true);
+        }
     }
+
+    public void Cancel_GoTitle()
+    {
+        if (goToTitleUI != null)
+        {
+            ToggleChildren(goToTitleUI.gameObject, false);
+        }
+    }
+
 
     public void GotoTitle()
     {
@@ -190,7 +225,7 @@ public class RuntimeGameManager : MonoBehaviour
         if (isGameOvered || isGamePaused) return;
         if (!player.isPlayerLive)
         {
-            Debug.LogWarning("í”Œë ˆì´ì–´ê°€ ì£½ì—ˆìŠµë‹ˆë‹¤!!");
+            // Debug.LogWarning("ÇÃ·¹ÀÌ¾î°¡ Á×¾ú½À´Ï´Ù!!");
             isGameOvered = true;
             RunGameOver();
         }
@@ -208,21 +243,19 @@ public class RuntimeGameManager : MonoBehaviour
     {
         if (overUI != null)
         {
-            // overUI.gameObject.SetActive(true);
             ToggleChildren(overUI.gameObject, true);
         }
-        if (player != null)
-            player.PlayerDie();
-
-        Debug.LogError($"{Time.deltaTime}: í˜„ì¬ ì²´ë ¥: {player.playerCurHP} ê²Œì„ì˜¤ë²„!!");
+        //if (player != null)
+        //    player.PlayerDie();
     }
 
     public void Check_GamePause()
     {
+        Debug.Log($"{Time.deltaTime}: °ÔÀÓ ÁßÁö!");
         isGamePaused = !isGamePaused;
         if (pauseUI != null)
         {
-            // pauseUI.gameObject.SetActive(isGamePaused);
+            Debug.Log($"{Time.deltaTime}: °ÔÀÓ Á¾·á ½Ãµµ!");            
             ToggleChildren(pauseUI.gameObject, isGamePaused);
         }
         if (isGamePaused)

@@ -95,6 +95,7 @@ public class Researcher : BaseEnemy
 
     protected override IEnumerator HitRecover()
     {
+        EffectManager.Play("E_Hit", this.gameObject, transform.localScale.x == -1, new Vector3(1.0f, 0.63f));
         yield return new WaitForSeconds(0.5f); // 0.5초간 피격 상태 유지
         HitOn = false;
         monsterState = MonsterState.Move;
@@ -110,5 +111,11 @@ public class Researcher : BaseEnemy
         {
             transform.localScale = new Vector3(1, 1, 1);
         }
+    }
+
+    protected override IEnumerator DeadOn()
+    {
+        EffectManager.Play("E_Asl", this.gameObject, transform.localScale.x != -1, new Vector3(0.13f, 0.76f));
+        return base.DeadOn();
     }
 }

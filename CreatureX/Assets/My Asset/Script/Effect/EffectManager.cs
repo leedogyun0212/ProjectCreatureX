@@ -17,7 +17,7 @@ public static class EffectManager
             prefabMap[entry.effectName] = entry.prefab;
             var pool = new ObjectPool<IRecyclableGameObject>();
 
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < entry.effectCount; i++)
             {
                 GameObject obj = GameObject.Instantiate(entry.prefab);
                 obj.SetActive(false);
@@ -35,7 +35,7 @@ public static class EffectManager
     {
         // 1. key + caller 조합이 이미 썼는지 체크
         var effectKey = (caller, key);
-        if (cooldown > 0&& effectCooldowns.TryGetValue(effectKey, out float nextAvailableTime))
+        if (cooldown > 0 && effectCooldowns.TryGetValue(effectKey, out float nextAvailableTime))
         {
             if (Time.time < nextAvailableTime)
                 return; // 쿨타임 중이면 무시
@@ -58,7 +58,7 @@ public static class EffectManager
         var effectObject = pool.GetInactiveObject() as EffectObject;
         if (effectObject != null)
         {
-            effectObject.PlayEffect(caller.transform.position+ offset, scaleLeft,caller.transform, offset);
+            effectObject.PlayEffect(caller.transform.position + offset, scaleLeft, caller.transform, offset);
         }
     }
 }

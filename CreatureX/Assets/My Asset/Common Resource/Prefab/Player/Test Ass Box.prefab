@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5829732535226265150}
   - component: {fileID: 1467061758016122759}
-  - component: {fileID: 929988996311953580}
+  - component: {fileID: 8208003221184204182}
   - component: {fileID: 4773711309429781242}
   m_Layer: 0
   m_Name: Test Ass Box
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,9 +28,9 @@ Transform:
   m_GameObject: {fileID: 3797706447931544362}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.6, y: 1.8, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.5, y: 1.75, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
   m_Color: {r: 1, g: 0.47358483, b: 0.826025, a: 0.6117647}
   m_FlipX: 0
   m_FlipY: 0
@@ -89,8 +89,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &929988996311953580
-BoxCollider2D:
+--- !u!58 &8208003221184204182
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -124,17 +124,7 @@ BoxCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 0.5
 --- !u!114 &4773711309429781242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,3 +137,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4960d3b38321f534885ac73c5305af4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 8002419900664306903, guid: 3cb9cbfd5c941b242b1fe09a2d1d3f2d, type: 3}

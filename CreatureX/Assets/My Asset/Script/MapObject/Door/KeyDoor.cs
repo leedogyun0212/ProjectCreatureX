@@ -11,8 +11,6 @@ public class KeyDoor : MonoBehaviour, IDoor
 
     public DoorDirection direction;
 
-    private float CameraTime = 3.0f;
-
     [SerializeField] private KeyData keyDataAsset;
 
     private Animator animator;

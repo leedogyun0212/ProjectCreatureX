@@ -83,6 +83,7 @@ public class Car : BaseEnemy
 
     protected override IEnumerator HitRecover() // 피격시 나오는 스크립트
     {
+        EffectManager.Play("E_Hit", this.gameObject, transform.localScale.x != -1, new Vector3(2.275f, 1.18f));
         yield return new WaitForSeconds(0.5f); // 0.5초간 피격 상태 유지
         HitOn = false;
         monsterState = MonsterState.Move;
@@ -92,6 +93,12 @@ public class Car : BaseEnemy
     {
         EnemyFailed = true;
         animDead = 150;
+    }
+
+    protected override IEnumerator DeadOn()
+    {
+        EffectManager.Play("E_Asl", this.gameObject, transform.localScale.x != -1, new Vector3(0.05f, 0.7f));
+        return base.DeadOn();
     }
 
 }

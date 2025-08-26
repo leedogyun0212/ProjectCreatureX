@@ -1,7 +1,8 @@
 using UnityEngine;
 using System.IO;
+using System.Collections.Generic;
 
-// ë‚˜ì¤‘ì— Vector3ê°™ì€ Unity íƒ€ì… ì €ì¥í•˜ëŠ” ë°©ë²•
+// ³ªÁß¿¡ Vector3°°Àº Unity Å¸ÀÔ ÀúÀåÇÏ´Â ¹æ¹ı
 //[System.Serializable]
 //public struct Vector3Data
 //{
@@ -18,23 +19,27 @@ using System.IO;
 [System.Serializable]
 public class SaveData
 {
-    [Header("ìŠ¤í…Œì´ì§€ Data")]
+    [Header("½ºÅ×ÀÌÁö Data")]
     public int saveCurMainStageIndex;
     public int saveCurSubStageIndex;
 
-    [Header("í”Œë ˆì´ì–´ Data")]
+    // Å¬¸®¾îÇÑ ½ºÅ×ÀÌÁö ¸ñ·Ï (¿¹: "1-1", "1-2" µî)
+    public List<string> clearedStages = new List<string>();
+    public List<string> unlockedStages = new List<string>();
+
+    [Header("ÇÃ·¹ÀÌ¾î Data")]
     public string savePlayerID;
     public float savePlayerHP;
     public float savePlayerSPD;
     // public Vector3 playerPosition;
-    // public int playerATK;    // ì´ëŸ°ì‹ìœ¼ë¡œ ë‚˜ì¤‘ì— ì¶”ê°€
+    // public int playerATK;    // ÀÌ·±½ÄÀ¸·Î ³ªÁß¿¡ Ãß°¡
 }
 
 
 public class SaveManager : MonoBehaviour
 {
     public static SaveManager Instance { get; private set; }
-    private SaveData currentData = new SaveData();      // í˜„ì¬ ì„¸ì´ë¸Œ ë°ì´í„°
+    private SaveData currentData = new SaveData();
 
     private void Awake()
     {
@@ -53,7 +58,7 @@ public class SaveManager : MonoBehaviour
     {
         string json = JsonUtility.ToJson(currentData, true);
         File.WriteAllText(Application.persistentDataPath + "/Gamesave.json", json);
-        Debug.LogWarning($"{Time.deltaTime}: ê²Œì„ ì €ì¥: {Application.persistentDataPath} ì„±ê³µì ìœ¼ë¡œ ì„±ê³µ!");
+        Debug.Log($"°ÔÀÓ ÀúÀå: {Application.persistentDataPath} ¼º°ø!");
     }
 
     public void Save_PlayerData(TestPlayer player)
@@ -69,7 +74,33 @@ public class SaveManager : MonoBehaviour
         currentData.saveCurSubStageIndex = stageSub;
     }
 
+    public void AddClearedStage(string stageKey)
+    {
+        if (!currentData.clearedStages.Contains(stageKey))
+        {
+            currentData.clearedStages.Add(stageKey);
+            SaveToFile();
+        }
+    }
 
+    public bool IsStageCleared(string stageKey)
+    {
+        return currentData.clearedStages.Contains(stageKey);
+    }
+
+    public void AddUnlockedStage(string stageKey)
+    {
+        if (!currentData.unlockedStages.Contains(stageKey))
+        {
+            currentData.unlockedStages.Add(stageKey);
+            SaveToFile();
+        }
+    }
+
+    public bool IsStageUnlocked(string stageKey)
+    {
+        return currentData.unlockedStages.Contains(stageKey);
+    }
 
     public void LoadFromFile()
     {
@@ -78,9 +109,8 @@ public class SaveManager : MonoBehaviour
 
         string json = File.ReadAllText(path);
         currentData = JsonUtility.FromJson<SaveData>(json);
-        Debug.LogWarning($"{Time.deltaTime}: ê²Œì„ ë¡œë“œ: {Application.persistentDataPath} ì„±ê³µì ìœ¼ë¡œ ì„±ê³µ!");
+        Debug.Log($"°ÔÀÓ ·Îµå: {Application.persistentDataPath} ¼º°ø!");
     }
-
 
     public void Load_PlayerData(TestPlayer player)
     {
@@ -91,7 +121,6 @@ public class SaveManager : MonoBehaviour
 
     public void Load_StageData()
     {
-        // stage.curStage = currentData.saveCurStage;
         StageManager.Instance.curMainStage = currentData.saveCurMainStageIndex;
         StageManager.Instance.curSubStage = currentData.saveCurSubStageIndex;
     }

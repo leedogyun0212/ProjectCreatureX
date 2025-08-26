@@ -12,6 +12,7 @@ public class CarObject : BaseEnemy
     private Vector3 startPosition; // [변경] 시작 위치 저장
     private int moveDirX = 1; // [변경] 전진 방향(+1: 오른쪽, -1: 왼쪽)
 
+    private bool IsDead = true;
 
     protected override void Start()
     {
@@ -36,9 +37,12 @@ public class CarObject : BaseEnemy
             isMove = false;
             animWalk = 0;
             animDead = 100;
-            Debug.Log(monsterState + "죽음");
+            Debug.Log("죽음");
             EnemyFailed = false;
-            StartCoroutine(DeadOn());
+            if (IsDead)
+            {
+                StartCoroutine(DeadOn());
+            }
         }
         else if (monsterState == MonsterState.Move) //항상 전진
         {
@@ -61,7 +65,7 @@ public class CarObject : BaseEnemy
             HitMove();
             StartCoroutine(HitRecover());
         }
-        //벽/박스 충돌 시 리스폰
+        //벽/박스 충돌 시 리스폰 (충돌 무시 시간이 아닐 때만)
         if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Box")|| collision.gameObject.CompareTag("Ground"))
         {
             monsterState = MonsterState.idle;
@@ -80,6 +84,7 @@ public class CarObject : BaseEnemy
             if (capsule.isTrigger)
                 StartCoroutine(TriggerFalse());
         }
+
     }
 
     private IEnumerator TriggerFalse() // 플레이어에 닿은후 is Trigger가 꺼지게 만드는 스크립트
@@ -92,6 +97,7 @@ public class CarObject : BaseEnemy
 
     protected override IEnumerator HitRecover() // 피격시 나오는 스크립트
     {
+        EffectManager.Play("E_Hit", this.gameObject, transform.localScale.x != -1, new Vector3(2.275f, 1.18f));
         yield return new WaitForSeconds(0.5f); // 0.5초간 피격 상태 유지
         HitOn = false;
         monsterState = MonsterState.Move;
@@ -106,21 +112,26 @@ public class CarObject : BaseEnemy
 
     protected override IEnumerator DeadOn()
     {
+        EffectManager.Play("E_Asl", this.gameObject, transform.localScale.x != -1, new Vector3(0.05f, 0.7f));
+        IsDead = false;
+        Debug.Log("실행"+ FailTime);
         yield return new WaitForSecondsRealtime(FailTime);
-        Debug.Log(isMove+"실행");
         // 시작 위치로 즉시 복귀합니다. (화면 밖으로 밀려나거나 멈추는 것을 방지) 멈추는 원인 가능성 높음
         transform.position = startPosition;
         if (rigidbody != null)
         {
-            // 물리 속도를 초기화
+            // 물리 속도를 확실히 초기화
             rigidbody.linearVelocity = Vector2.zero;
             rigidbody.angularVelocity = 0f;
+            rigidbody.Sleep(); // 물리 시뮬레이션 일시 중지
+            rigidbody.WakeUp(); // 물리 시뮬레이션 재시작
         }
 
-        // 전진 상태를 유지
+        // 전진 상태로 복귀
         monsterState = MonsterState.Move;
         Getdirection();
         isMove = true;
+        IsDead = true;
         animWalk = 1;
         animDead = 0;
     }
@@ -132,6 +143,5 @@ public class CarObject : BaseEnemy
         direction = new Vector3(moveDirX, 0, 0);
         animWalk = 1.0f;
     }
-
 }
 
