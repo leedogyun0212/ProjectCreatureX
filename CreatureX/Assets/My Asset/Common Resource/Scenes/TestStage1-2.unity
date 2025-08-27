@@ -1903,6 +1903,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Test Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7940254447759318619, guid: 3cb9cbfd5c941b242b1fe09a2d1d3f2d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2657,7 +2661,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5118192856831131851, guid: a7630183ef5153e41b55bad8077ef9ea, type: 3}
       propertyPath: effectList.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5118192856831131851, guid: a7630183ef5153e41b55bad8077ef9ea, type: 3}
       propertyPath: effectList.Array.data[0].prefab
@@ -2668,6 +2672,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4651784707411027452, guid: 5d3b2b7970b690340a3b68c41093fb53, type: 3}
     - target: {fileID: 5118192856831131851, guid: a7630183ef5153e41b55bad8077ef9ea, type: 3}
+      propertyPath: effectList.Array.data[2].prefab
+      value: 
+      objectReference: {fileID: 1121913419755668848, guid: 50523077c7a22e34e92aceddf7aea6a2, type: 3}
+    - target: {fileID: 5118192856831131851, guid: a7630183ef5153e41b55bad8077ef9ea, type: 3}
+      propertyPath: effectList.Array.data[3].prefab
+      value: 
+      objectReference: {fileID: 3321387938942147793, guid: 2b534ec597ece78408617a1c64d01d61, type: 3}
+    - target: {fileID: 5118192856831131851, guid: a7630183ef5153e41b55bad8077ef9ea, type: 3}
       propertyPath: effectList.Array.data[0].effectName
       value: E_Hit
       objectReference: {fileID: 0}
@@ -2676,12 +2688,28 @@ PrefabInstance:
       value: E_Asl
       objectReference: {fileID: 0}
     - target: {fileID: 5118192856831131851, guid: a7630183ef5153e41b55bad8077ef9ea, type: 3}
+      propertyPath: effectList.Array.data[2].effectName
+      value: E_Dirt
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118192856831131851, guid: a7630183ef5153e41b55bad8077ef9ea, type: 3}
+      propertyPath: effectList.Array.data[3].effectName
+      value: E_Car_Dirt
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118192856831131851, guid: a7630183ef5153e41b55bad8077ef9ea, type: 3}
       propertyPath: effectList.Array.data[0].effectCount
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5118192856831131851, guid: a7630183ef5153e41b55bad8077ef9ea, type: 3}
       propertyPath: effectList.Array.data[1].effectCount
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118192856831131851, guid: a7630183ef5153e41b55bad8077ef9ea, type: 3}
+      propertyPath: effectList.Array.data[2].effectCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118192856831131851, guid: a7630183ef5153e41b55bad8077ef9ea, type: 3}
+      propertyPath: effectList.Array.data[3].effectCount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7810875974519242428, guid: a7630183ef5153e41b55bad8077ef9ea, type: 3}
       propertyPath: m_Name

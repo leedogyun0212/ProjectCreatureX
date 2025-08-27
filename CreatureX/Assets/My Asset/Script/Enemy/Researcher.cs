@@ -20,18 +20,6 @@ public class Researcher : BaseEnemy
     protected override void Update()
     {
         animEnemy();
-        if(Mathf.Abs(player.transform.position.x - transform.position.x) > 10)
-        {
-            animWalk = 0;
-        }
-        else if (monsterState == MonsterState.Move&& Mathf.Abs(player.transform.position.x - transform.position.x) < 10)
-        {
-            Getdirection();
-            EffectManager.Play("Dust",gameObject, direction.x<0, new Vector3(-0.4f, -0.6f, 0f));
-            Move();
-        }
-        else if (monsterState == MonsterState.Dead)
-            EnemyDead();
         if (EnemyFailed)
         {
             capsule.size = new Vector2(capsule.size.x, 1.3f);
@@ -39,6 +27,18 @@ public class Researcher : BaseEnemy
             monsterState = MonsterState.failed;
             StartCoroutine(DeadOn());
         }
+        if (Mathf.Abs(player.transform.position.x - transform.position.x) > 10)
+        {
+            animWalk = 0;
+        }
+        else if (monsterState == MonsterState.Move&& Mathf.Abs(player.transform.position.x - transform.position.x) < 10)
+        {
+            Getdirection();
+            EffectManager.Play("E_Dirt", this.gameObject, transform.localScale.x == -1, new Vector3(0.7f, -0.35f));
+            Move();
+        }
+        else if (monsterState == MonsterState.Dead)
+            EnemyDead();
     }
 
     protected override void Getdirection() // 플레이어한테 벗어나는 시야를

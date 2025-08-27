@@ -42,6 +42,7 @@ public class Robot : BaseEnemy, IAllyResponder
             Getdirection();
             if(Mathf.Abs(player.transform.position.x - transform.position.x)>15)
                 MoveSpeed +=6;
+            EffectManager.Play("E_Dirt", this.gameObject, transform.localScale.x != -1, new Vector3(1.0f, -0.375f));
             Move();
         }
         else if (monsterState == MonsterState.Play && isAttacking && !isCoolingDown) // �þ� ������ ����
@@ -52,6 +53,7 @@ public class Robot : BaseEnemy, IAllyResponder
         else if (monsterState == MonsterState.Help&& helpTarget != null) // �������� ���� ��û�ϸ� ������������ �̵�
         {
             Getdirection();
+            EffectManager.Play("E_Dirt", this.gameObject, transform.localScale.x != -1, new Vector3(1.0f, -0.375f));
             Move();
 
             if (Vector2.Distance(transform.position, helpTarget.position) < 0.3f)

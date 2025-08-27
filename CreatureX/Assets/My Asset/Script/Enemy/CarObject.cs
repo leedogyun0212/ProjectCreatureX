@@ -46,6 +46,7 @@ public class CarObject : BaseEnemy
         }
         else if (monsterState == MonsterState.Move) //항상 전진
         {
+            EffectManager.Play("E_Car_Dirt", this.gameObject, transform.localScale.x == -1, new Vector3(-3.0f, 0.0f));
             Move();
         }
         else if (monsterState == MonsterState.Dead) // 차가 완전한 죽음
