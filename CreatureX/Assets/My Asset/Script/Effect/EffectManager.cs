@@ -10,7 +10,7 @@ public static class EffectManager
 
     public static void Initialize(List<EffectEntry> entries)
     {
-        if (initialized) return;
+        //if (initialized) return;
 
         foreach (var entry in entries)
         {

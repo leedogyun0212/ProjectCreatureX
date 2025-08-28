@@ -34,7 +34,7 @@ public class Researcher : BaseEnemy
         else if (monsterState == MonsterState.Move&& Mathf.Abs(player.transform.position.x - transform.position.x) < 10)
         {
             Getdirection();
-            EffectManager.Play("E_Dirt", this.gameObject, transform.localScale.x == -1, new Vector3(0.7f, -0.35f));
+            EffectManager.Play("E_Dirt", this.gameObject, transform.localScale.x == -1, new Vector3(0.45f, -0.78f));
             Move();
         }
         else if (monsterState == MonsterState.Dead)
@@ -105,11 +105,11 @@ public class Researcher : BaseEnemy
     {
         if (direction.x < 0)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(1, 1, 1);
         }
         else if (direction.x > 0)
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(-1, 1, 1);
         }
     }
 

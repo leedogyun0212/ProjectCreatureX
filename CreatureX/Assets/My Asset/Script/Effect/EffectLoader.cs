@@ -1,9 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EffectLoader : MonoBehaviour
 {
-    public List<EffectEntry> effectList;  // À¯´ÏÆ¼ ¿¡µðÅÍ¿¡¼­ µî·ÏÇÒ ¸®½ºÆ®
+    public List<EffectEntry> effectList;  // ï¿½ï¿½ï¿½ï¿½Æ¼ ï¿½ï¿½ï¿½ï¿½ï¿½Í¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®
 
     void Awake()
     {

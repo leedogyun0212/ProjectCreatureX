@@ -23,7 +23,7 @@ public class Car : BaseEnemy
         }
         else if (monsterState == MonsterState.Move) // 차가 플레이어를 추격하는 상태,
         {
-            EffectManager.Play("E_Car_Dirt", this.gameObject, transform.localScale.x == -1, new Vector3(-3.0f, 0.0f));
+            EffectManager.Play("E_Car_Dirt", this.gameObject, transform.localScale.x == -1, new Vector3(-2.067f,-0.675f));
             Move();
         }
         else if (monsterState == MonsterState.Dead) // 차가 완전한 죽음

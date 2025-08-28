@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Ladder : MonoBehaviour
@@ -15,6 +14,8 @@ public class Ladder : MonoBehaviour
     private Rigidbody2D playerRb;
 
     private bool isOnLadder = false;
+
+    TestPlayer testPlayer;
 
     private void Start()
     {
@@ -37,7 +38,10 @@ public class Ladder : MonoBehaviour
         else if (Hit != null && isOnLadder)
         {
             if (playerRb == null)
+            {
                 playerRb = Hit.attachedRigidbody;
+                testPlayer = playerRb.gameObject.GetComponent<TestPlayer>();
+            }
 
             LadderEnd();
 
@@ -61,6 +65,7 @@ public class Ladder : MonoBehaviour
 
     private void Climb()
     {
+        Debug.Log(testPlayer);
         if (isOnLadder && playerRb != null)
         {
             float verticalInput = 0f;
