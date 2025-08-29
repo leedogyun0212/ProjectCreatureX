@@ -3,7 +3,55 @@
   "WorkspaceRootPath": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\assets\\my asset\\script\\camera\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|c:\\users\\sbs\\desktop\\github\\projectcreaturex\\creaturex\\assets\\my asset\\script\\mapobject\\ladder\\ladder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|solutionrelative:assets\\my asset\\script\\mapobject\\ladder\\ladder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\assets\\my asset\\script\\mapobject\\laser\\laser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|solutionrelative:assets\\my asset\\script\\mapobject\\laser\\laser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Player\\Test Player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|solutionrelative:Assets\\My Asset\\Script\\Player\\Test Player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\assets\\my asset\\script\\enemy\\baseenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|solutionrelative:assets\\my asset\\script\\enemy\\baseenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\assets\\my asset\\script\\player\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|solutionrelative:assets\\my asset\\script\\player\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\assets\\my asset\\script\\enemy\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|solutionrelative:assets\\my asset\\script\\enemy\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\assets\\my asset\\script\\enemy\\carobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|solutionrelative:assets\\my asset\\script\\enemy\\carobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\assets\\my asset\\script\\enemy\\researcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|solutionrelative:assets\\my asset\\script\\enemy\\researcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\assets\\my asset\\script\\mapobject\\door\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|solutionrelative:assets\\my asset\\script\\mapobject\\door\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|c:\\users\\sbs\\desktop\\github\\projectcreaturex\\creaturex\\assets\\my asset\\script\\effect\\effectloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|solutionrelative:assets\\my asset\\script\\effect\\effectloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\assets\\my asset\\script\\effect\\effectmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|solutionrelative:assets\\my asset\\script\\effect\\effectmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|c:\\users\\sbs\\desktop\\github\\projectcreaturex\\creaturex\\assets\\my asset\\script\\game-runtime\\ui_player_attack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|solutionrelative:assets\\my asset\\script\\game-runtime\\ui_player_attack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|c:\\users\\sbs\\desktop\\github\\projectcreaturex\\creaturex\\assets\\my asset\\script\\camera\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|solutionrelative:assets\\my asset\\script\\camera\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -14,28 +62,12 @@
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sbs\\Desktop\\CreatureXLee\\Assets\\My Asset\\Script\\Camera\\Camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|c:\\users\\sbs\\desktop\\github\\projectcreaturex\\creaturex\\assets\\my asset\\script\\enemy\\baseenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|solutionrelative:assets\\my asset\\script\\enemy\\baseenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\assets\\my asset\\script\\enemy\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|solutionrelative:assets\\my asset\\script\\enemy\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\assets\\my asset\\script\\enemy\\robot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|solutionrelative:assets\\my asset\\script\\enemy\\robot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\assets\\my asset\\script\\enemy\\researcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|solutionrelative:assets\\my asset\\script\\enemy\\researcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\assets\\my asset\\script\\enemy\\uav.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|solutionrelative:assets\\my asset\\script\\enemy\\uav.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\assets\\my asset\\script\\enemy\\carobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|solutionrelative:assets\\my asset\\script\\enemy\\carobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\assets\\my asset\\script\\mapobject\\object_trab\\object_trab_stool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -65,24 +97,8 @@
       "RelativeMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|solutionrelative:assets\\my asset\\script\\mapobject\\stool\\moving stool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Player\\Test Player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|solutionrelative:Assets\\My Asset\\Script\\Player\\Test Player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\assets\\my asset\\script\\player\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|solutionrelative:assets\\my asset\\script\\player\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\assets\\my asset\\script\\mapobject\\laser\\laserstool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|solutionrelative:assets\\my asset\\script\\mapobject\\laser\\laserstool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\assets\\my asset\\script\\mapobject\\laser\\laser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|solutionrelative:assets\\my asset\\script\\mapobject\\laser\\laser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\assets\\my asset\\script\\effect\\effectmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|solutionrelative:assets\\my asset\\script\\effect\\effectmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\assets\\my asset\\script\\mapobject\\stool\\fallen stool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -143,10 +159,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\assets\\my asset\\script\\mapobject\\door\\keydoor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|solutionrelative:assets\\my asset\\script\\mapobject\\door\\keydoor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\assets\\my asset\\script\\mapobject\\door\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|solutionrelative:assets\\my asset\\script\\mapobject\\door\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\assets\\my asset\\script\\game-runtime\\savemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -513,84 +525,166 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Camera.cs",
-              "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\CreatureXLee\\Assets\\My Asset\\Script\\Camera\\Camera.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\CreatureXLee\\Assets\\My Asset\\Script\\Camera\\Camera.cs",
-              "ToolTip": "C:\\Users\\sbs\\Desktop\\CreatureXLee\\Assets\\My Asset\\Script\\Camera\\Camera.cs",
-              "RelativeToolTip": "..\\..\\..\\CreatureXLee\\Assets\\My Asset\\Script\\Camera\\Camera.cs",
-              "ViewState": "AgIAAIcAAAAAAAAAAAAAAJ0AAAAZAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Ladder.cs",
+              "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Ladder\\Ladder.cs",
+              "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\MapObject\\Ladder\\Ladder.cs",
+              "ToolTip": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Ladder\\Ladder.cs",
+              "RelativeToolTip": "Assets\\My Asset\\Script\\MapObject\\Ladder\\Ladder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEEAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T06:24:21.369Z",
+              "WhenOpened": "2025-08-28T07:20:32.266Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 11,
+              "Title": "UI_Player_Attack.cs",
+              "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Game-Runtime\\UI_Player_Attack.cs",
+              "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Game-Runtime\\UI_Player_Attack.cs",
+              "ToolTip": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Game-Runtime\\UI_Player_Attack.cs",
+              "RelativeToolTip": "Assets\\My Asset\\Script\\Game-Runtime\\UI_Player_Attack.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJMAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T06:56:50.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EffectLoader.cs",
+              "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Effect\\EffectLoader.cs",
+              "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Effect\\EffectLoader.cs",
+              "ToolTip": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Effect\\EffectLoader.cs",
+              "RelativeToolTip": "Assets\\My Asset\\Script\\Effect\\EffectLoader.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T06:31:44.039Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Test Player.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Player\\Test Player.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Player\\Test Player.cs",
               "ToolTip": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Player\\Test Player.cs",
               "RelativeToolTip": "Assets\\My Asset\\Script\\Player\\Test Player.cs",
-              "ViewState": "AgIAALQAAAAAAAAAAADwv8AAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAEEAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T06:25:49.633Z"
+              "WhenOpened": "2025-07-16T06:25:49.633Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "CarObject.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Enemy\\CarObject.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Enemy\\CarObject.cs",
               "ToolTip": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Enemy\\CarObject.cs",
               "RelativeToolTip": "Assets\\My Asset\\Script\\Enemy\\CarObject.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAADAAAAB2AAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAADAAAAB2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T06:00:22.847Z"
+              "WhenOpened": "2025-08-21T06:00:22.847Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UAV.cs",
-              "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Enemy\\UAV.cs",
-              "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Enemy\\UAV.cs",
-              "ToolTip": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Enemy\\UAV.cs",
-              "RelativeToolTip": "Assets\\My Asset\\Script\\Enemy\\UAV.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAABtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T07:22:25.125Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 10,
               "Title": "EffectManager.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Effect\\EffectManager.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Effect\\EffectManager.cs",
               "ToolTip": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Effect\\EffectManager.cs",
               "RelativeToolTip": "Assets\\My Asset\\Script\\Effect\\EffectManager.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T06:23:58.343Z"
+              "WhenOpened": "2025-08-05T06:23:58.343Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Fallen Stool.cs",
-              "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Stool\\Fallen Stool.cs",
-              "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\MapObject\\Stool\\Fallen Stool.cs",
-              "ToolTip": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Stool\\Fallen Stool.cs",
-              "RelativeToolTip": "Assets\\My Asset\\Script\\MapObject\\Stool\\Fallen Stool.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 23,
+              "Title": "Robot.cs",
+              "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\Assets\\My Asset\\Script\\Enemy\\Robot.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\Assets\\My Asset\\Script\\Enemy\\Robot.cs",
+              "ToolTip": "C:\\Users\\sbs\\Desktop\\Assets\\My Asset\\Script\\Enemy\\Robot.cs",
+              "RelativeToolTip": "..\\..\\..\\Assets\\My Asset\\Script\\Enemy\\Robot.cs",
+              "ViewState": "AgIAAMYAAAAAAAAAAADwv8oAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-07T07:26:43.626Z"
+              "WhenOpened": "2025-08-26T07:45:20.224Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
+              "Title": "BaseEnemy.cs",
+              "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Enemy\\BaseEnemy.cs",
+              "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Enemy\\BaseEnemy.cs",
+              "ToolTip": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Enemy\\BaseEnemy.cs",
+              "RelativeToolTip": "Assets\\My Asset\\Script\\Enemy\\BaseEnemy.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAD4AAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T06:37:43.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Car.cs",
+              "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Enemy\\Car.cs",
+              "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Enemy\\Car.cs",
+              "ToolTip": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Enemy\\Car.cs",
+              "RelativeToolTip": "Assets\\My Asset\\Script\\Enemy\\Car.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAABwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T06:14:27.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Researcher.cs",
+              "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Enemy\\Researcher.cs",
+              "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Enemy\\Researcher.cs",
+              "ToolTip": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Enemy\\Researcher.cs",
+              "RelativeToolTip": "Assets\\My Asset\\Script\\Enemy\\Researcher.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACQAAABoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T07:23:03.275Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PlayerController.cs",
+              "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Player\\PlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Player\\PlayerController.cs",
+              "ToolTip": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Player\\PlayerController.cs",
+              "RelativeToolTip": "Assets\\My Asset\\Script\\Player\\PlayerController.cs",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAAAIMAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T06:26:38.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Laser.cs",
+              "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Laser\\Laser.cs",
+              "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\MapObject\\Laser\\Laser.cs",
+              "ToolTip": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Laser\\Laser.cs",
+              "RelativeToolTip": "Assets\\My Asset\\Script\\MapObject\\Laser\\Laser.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACoAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T06:21:30.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "Object_Trab_Stool.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Object_Trab\\Object_Trab_Stool.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\MapObject\\Object_Trab\\Object_Trab_Stool.cs",
@@ -602,33 +696,56 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Robot.cs",
-              "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\Assets\\My Asset\\Script\\Enemy\\Robot.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\Assets\\My Asset\\Script\\Enemy\\Robot.cs",
-              "ToolTip": "C:\\Users\\sbs\\Desktop\\Assets\\My Asset\\Script\\Enemy\\Robot.cs",
-              "RelativeToolTip": "..\\..\\..\\Assets\\My Asset\\Script\\Enemy\\Robot.cs",
-              "ViewState": "AgIAAMYAAAAAAAAAAADwv8oAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 26,
+              "Title": "Fallen Stool.cs",
+              "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Stool\\Fallen Stool.cs",
+              "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\MapObject\\Stool\\Fallen Stool.cs",
+              "ToolTip": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Stool\\Fallen Stool.cs",
+              "RelativeToolTip": "Assets\\My Asset\\Script\\MapObject\\Stool\\Fallen Stool.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T07:45:20.224Z",
+              "WhenOpened": "2025-08-07T07:26:43.626Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UAV.cs",
+              "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Enemy\\UAV.cs",
+              "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Enemy\\UAV.cs",
+              "ToolTip": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Enemy\\UAV.cs",
+              "RelativeToolTip": "Assets\\My Asset\\Script\\Enemy\\UAV.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAABtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T07:22:25.125Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Camera.cs",
+              "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\CreatureXLee\\Assets\\My Asset\\Script\\Camera\\Camera.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\CreatureXLee\\Assets\\My Asset\\Script\\Camera\\Camera.cs",
+              "ToolTip": "C:\\Users\\sbs\\Desktop\\CreatureXLee\\Assets\\My Asset\\Script\\Camera\\Camera.cs",
+              "RelativeToolTip": "..\\..\\..\\CreatureXLee\\Assets\\My Asset\\Script\\Camera\\Camera.cs",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAAAJ0AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T06:24:21.369Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Door.cs",
+              "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Door\\Door.cs",
+              "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\MapObject\\Door\\Door.cs",
+              "ToolTip": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Door\\Door.cs",
+              "RelativeToolTip": "Assets\\My Asset\\Script\\MapObject\\Door\\Door.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T06:01:38.358Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BaseEnemy.cs",
-              "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Enemy\\BaseEnemy.cs",
-              "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Enemy\\BaseEnemy.cs",
-              "ToolTip": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Enemy\\BaseEnemy.cs",
-              "RelativeToolTip": "Assets\\My Asset\\Script\\Enemy\\BaseEnemy.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAAEAAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T06:37:43.999Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 13,
               "Title": "CameraBackground.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Camera\\CameraBackground.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Camera\\CameraBackground.cs",
@@ -636,61 +753,24 @@
               "RelativeToolTip": "Assets\\My Asset\\Script\\Camera\\CameraBackground.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T06:47:28.34Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-22T06:47:28.34Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 12,
               "Title": "Camera.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Camera\\Camera.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Camera\\Camera.cs",
               "ToolTip": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Camera\\Camera.cs",
               "RelativeToolTip": "Assets\\My Asset\\Script\\Camera\\Camera.cs",
-              "ViewState": "AgIAAJMAAAAAAAAAAAAAAKQAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAJEAAAAAAAAAAABAwKQAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-22T06:56:51.027Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "PlayerController.cs",
-              "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Player\\PlayerController.cs",
-              "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Player\\PlayerController.cs",
-              "ToolTip": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Player\\PlayerController.cs",
-              "RelativeToolTip": "Assets\\My Asset\\Script\\Player\\PlayerController.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAAAEYAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T06:26:38.214Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Car.cs",
-              "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Enemy\\Car.cs",
-              "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Enemy\\Car.cs",
-              "ToolTip": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Enemy\\Car.cs",
-              "RelativeToolTip": "Assets\\My Asset\\Script\\Enemy\\Car.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAABwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T06:14:27.342Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Researcher.cs",
-              "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Enemy\\Researcher.cs",
-              "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Enemy\\Researcher.cs",
-              "ToolTip": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Enemy\\Researcher.cs",
-              "RelativeToolTip": "Assets\\My Asset\\Script\\Enemy\\Researcher.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACQAAABoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T07:23:03.275Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 15,
               "Title": "Robot.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Enemy\\Robot.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Enemy\\Robot.cs",
@@ -702,7 +782,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 25,
               "Title": "LaserStool.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Laser\\LaserStool.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\MapObject\\Laser\\LaserStool.cs",
@@ -714,19 +794,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Laser.cs",
-              "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Laser\\Laser.cs",
-              "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\MapObject\\Laser\\Laser.cs",
-              "ToolTip": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Laser\\Laser.cs",
-              "RelativeToolTip": "Assets\\My Asset\\Script\\MapObject\\Laser\\Laser.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACoAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T06:21:30.986Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 22,
               "Title": "Car.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\Assets\\My Asset\\Script\\Enemy\\Car.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Assets\\My Asset\\Script\\Enemy\\Car.cs",
@@ -734,12 +802,11 @@
               "RelativeToolTip": "..\\..\\..\\Assets\\My Asset\\Script\\Enemy\\Car.cs",
               "ViewState": "AgIAAEgAAAAAAAAAAADwv1wAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T07:46:03.308Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-26T07:46:03.308Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 21,
               "Title": "CarObject.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\Assets\\My Asset\\Script\\Enemy\\CarObject.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Assets\\My Asset\\Script\\Enemy\\CarObject.cs",
@@ -747,12 +814,11 @@
               "RelativeToolTip": "..\\..\\..\\Assets\\My Asset\\Script\\Enemy\\CarObject.cs",
               "ViewState": "AgIAAF0AAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T07:46:32.025Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-26T07:46:32.025Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 20,
               "Title": "Researcher.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\Assets\\My Asset\\Script\\Enemy\\Researcher.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Assets\\My Asset\\Script\\Enemy\\Researcher.cs",
@@ -760,12 +826,11 @@
               "RelativeToolTip": "..\\..\\..\\Assets\\My Asset\\Script\\Enemy\\Researcher.cs",
               "ViewState": "AgIAAFoAAAAAAAAAAADwv3kAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T07:46:45.899Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-26T07:46:45.899Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 19,
               "Title": "UAV.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\Assets\\My Asset\\Script\\Enemy\\UAV.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Assets\\My Asset\\Script\\Enemy\\UAV.cs",
@@ -773,12 +838,11 @@
               "RelativeToolTip": "..\\..\\..\\Assets\\My Asset\\Script\\Enemy\\UAV.cs",
               "ViewState": "AgIAAKsAAAAAAAAAAADwv8IAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T07:47:31.353Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-26T07:47:31.353Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 18,
               "Title": "UI_Player Trans.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Game-Runtime\\UI_Player Trans.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Game-Runtime\\UI_Player Trans.cs",
@@ -790,7 +854,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 24,
               "Title": "Moving Stool.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Stool\\Moving Stool.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\MapObject\\Stool\\Moving Stool.cs",
@@ -802,7 +866,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 27,
               "Title": "Fake Stool.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Stool\\Fake Stool.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\MapObject\\Stool\\Fake Stool.cs",
@@ -814,7 +878,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 28,
               "Title": "Fall Zone.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Stool\\Fall Zone.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\MapObject\\Stool\\Fall Zone.cs",
@@ -826,7 +890,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 29,
               "Title": "KeyItem.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Door\\KeyItem.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\MapObject\\Door\\KeyItem.cs",
@@ -838,7 +902,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 30,
               "Title": "StageManager.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Game-Runtime\\StageManager.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Game-Runtime\\StageManager.cs",
@@ -850,7 +914,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 34,
               "Title": "BulletMovement.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Enemy\\RobotGun\\BulletMovement.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Enemy\\RobotGun\\BulletMovement.cs",
@@ -862,7 +926,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 33,
               "Title": "EffectEntry.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Effect\\EffectEntry.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Effect\\EffectEntry.cs",
@@ -874,7 +938,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 32,
               "Title": "EnemyManager.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Game-Runtime\\EnemyManager.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Game-Runtime\\EnemyManager.cs",
@@ -886,7 +950,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 31,
               "Title": "Runtime GameManager.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Game-Runtime\\Runtime GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Game-Runtime\\Runtime GameManager.cs",
@@ -898,7 +962,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 35,
               "Title": "IRecyclableGameObject.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Enemy\\RobotGun\\IRecyclableGameObject.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Enemy\\RobotGun\\IRecyclableGameObject.cs",
@@ -910,7 +974,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 36,
               "Title": "ObjectPool.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Enemy\\RobotGun\\ObjectPool.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Enemy\\RobotGun\\ObjectPool.cs",
@@ -922,7 +986,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 38,
               "Title": "RobotTouch.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Enemy\\RobotGun\\RobotTouch.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Enemy\\RobotGun\\RobotTouch.cs",
@@ -934,7 +998,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 39,
               "Title": "Runtime UI Manager.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Game-Runtime\\Runtime UI Manager.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Game-Runtime\\Runtime UI Manager.cs",
@@ -946,7 +1010,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 44,
               "Title": "BasePrefabBrush.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\2d-extras-master\\Editor\\Brushes\\PrefabBrushes\\BasePrefabBrush.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\2d-extras-master\\Editor\\Brushes\\PrefabBrushes\\BasePrefabBrush.cs",
@@ -958,7 +1022,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 43,
               "Title": "PrefabBrush.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\2d-extras-master\\Editor\\Brushes\\PrefabBrushes\\PrefabBrush\\PrefabBrush.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\2d-extras-master\\Editor\\Brushes\\PrefabBrushes\\PrefabBrush\\PrefabBrush.cs",
@@ -969,7 +1033,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 37,
               "Title": "RobotBullet.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Enemy\\RobotGun\\RobotBullet.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Enemy\\RobotGun\\RobotBullet.cs",
@@ -981,7 +1045,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 129,
+              "DocumentIndex": 132,
               "Title": "PrefabBrush.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\Editor\\PrefabBrushes\\PrefabBrush.cs",
               "RelativeDocumentMoniker": "Assets\\Editor\\PrefabBrushes\\PrefabBrush.cs",
@@ -993,19 +1057,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "Door.cs",
-              "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Door\\Door.cs",
-              "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\MapObject\\Door\\Door.cs",
-              "ToolTip": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Door\\Door.cs",
-              "RelativeToolTip": "Assets\\My Asset\\Script\\MapObject\\Door\\Door.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAAC0AAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T06:01:38.358Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 40,
               "Title": "KeyDoor.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Door\\KeyDoor.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\MapObject\\Door\\KeyDoor.cs",
@@ -1017,7 +1069,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 42,
               "Title": "EffectObject.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Effect\\EffectObject.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Effect\\EffectObject.cs",
@@ -1029,7 +1081,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 41,
               "Title": "SaveManager.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Game-Runtime\\SaveManager.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Game-Runtime\\SaveManager.cs",
@@ -1041,7 +1093,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 45,
               "Title": "Clear Door.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Door\\Clear Door.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\MapObject\\Door\\Clear Door.cs",
@@ -1053,7 +1105,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 99,
+              "DocumentIndex": 102,
               "Title": "EffectManager.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Script\\Effect\\EffectManager.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Script\\Effect\\EffectManager.cs",
@@ -1065,7 +1117,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 100,
+              "DocumentIndex": 103,
               "Title": "EffectObject.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Script\\Effect\\EffectObject.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Script\\Effect\\EffectObject.cs",
@@ -1077,7 +1129,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 101,
+              "DocumentIndex": 104,
               "Title": "ObjectPool.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Script\\Enemy\\RobotGun\\ObjectPool.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Script\\Enemy\\RobotGun\\ObjectPool.cs",
@@ -1089,7 +1141,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 102,
+              "DocumentIndex": 105,
               "Title": "Car.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Script\\Enemy\\Car.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Script\\Enemy\\Car.cs",
@@ -1101,7 +1153,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 103,
+              "DocumentIndex": 106,
               "Title": "TestHitbox.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Script\\Player\\TestHitbox.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Script\\Player\\TestHitbox.cs",
@@ -1113,7 +1165,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 104,
+              "DocumentIndex": 107,
               "Title": "Door.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Script\\MapObject\\Door\\Door.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Script\\MapObject\\Door\\Door.cs",
@@ -1125,7 +1177,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 105,
+              "DocumentIndex": 108,
               "Title": "DoorDirection.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Script\\MapObject\\Door\\DoorDirection.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Script\\MapObject\\Door\\DoorDirection.cs",
@@ -1137,7 +1189,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 46,
               "Title": "Object_Trab.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Object_Trab\\Object_Trab.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\MapObject\\Object_Trab\\Object_Trab.cs",
@@ -1149,7 +1201,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 106,
+              "DocumentIndex": 109,
               "Title": "KeyDoor.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Script\\MapObject\\Door\\KeyDoor.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Script\\MapObject\\Door\\KeyDoor.cs",
@@ -1161,7 +1213,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 107,
+              "DocumentIndex": 110,
               "Title": "KeyItem.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Script\\MapObject\\Door\\KeyItem.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Script\\MapObject\\Door\\KeyItem.cs",
@@ -1173,7 +1225,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 108,
+              "DocumentIndex": 111,
               "Title": "Camera.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Script\\Camera\\Camera.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Script\\Camera\\Camera.cs",
@@ -1185,7 +1237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 109,
+              "DocumentIndex": 112,
               "Title": "BaseEnemy.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Script\\Enemy\\BaseEnemy.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Script\\Enemy\\BaseEnemy.cs",
@@ -1197,7 +1249,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 47,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Script\\Player\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Script\\Player\\PlayerController.cs",
@@ -1208,7 +1260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 110,
+              "DocumentIndex": 113,
               "Title": "Researcher.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Script\\Enemy\\Researcher.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Script\\Enemy\\Researcher.cs",
@@ -1220,7 +1272,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 111,
+              "DocumentIndex": 114,
               "Title": "IRecyclableGameObject.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Script\\Enemy\\RobotGun\\IRecyclableGameObject.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Script\\Enemy\\RobotGun\\IRecyclableGameObject.cs",
@@ -1232,7 +1284,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 48,
               "Title": "CameraChange.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Script\\Camera\\CameraChange.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Script\\Camera\\CameraChange.cs",
@@ -1243,7 +1295,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 112,
+              "DocumentIndex": 115,
               "Title": "Robot.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Script\\Enemy\\Robot.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Script\\Enemy\\Robot.cs",
@@ -1255,7 +1307,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 113,
+              "DocumentIndex": 116,
               "Title": "RobotBullet.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Script\\Enemy\\RobotGun\\RobotBullet.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Script\\Enemy\\RobotGun\\RobotBullet.cs",
@@ -1267,7 +1319,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 114,
+              "DocumentIndex": 117,
               "Title": "PlayerTrans.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Script\\Player\\PlayerTrans.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Script\\Player\\PlayerTrans.cs",
@@ -1279,7 +1331,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 115,
+              "DocumentIndex": 118,
               "Title": "Test Player.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Script\\Player\\Test Player.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Script\\Player\\Test Player.cs",
@@ -1291,7 +1343,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 116,
+              "DocumentIndex": 119,
               "Title": "EffectLoader.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Script\\Effect\\EffectLoader.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Script\\Effect\\EffectLoader.cs",
@@ -1303,7 +1355,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 117,
+              "DocumentIndex": 120,
               "Title": "BulletMovement.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Script\\Enemy\\RobotGun\\BulletMovement.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Script\\Enemy\\RobotGun\\BulletMovement.cs",
@@ -1315,7 +1367,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 98,
+              "DocumentIndex": 101,
               "Title": "CameraSpawner.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Script\\Camera\\CameraSpawner.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Script\\Camera\\CameraSpawner.cs",
@@ -1327,7 +1379,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 118,
+              "DocumentIndex": 121,
               "Title": "EffectEntry.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Script\\Effect\\EffectEntry.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Script\\Effect\\EffectEntry.cs",
@@ -1339,7 +1391,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 119,
+              "DocumentIndex": 122,
               "Title": "Ladder.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Script\\MapObject\\Ladder\\Ladder.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Script\\MapObject\\Ladder\\Ladder.cs",
@@ -1351,7 +1403,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 120,
+              "DocumentIndex": 123,
               "Title": "Fake Stool.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Script\\MapObject\\Stool\\Fake Stool.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Script\\MapObject\\Stool\\Fake Stool.cs",
@@ -1363,7 +1415,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 121,
+              "DocumentIndex": 124,
               "Title": "Object_Trab_Stool.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Script\\MapObject\\Object_Trab\\Object_Trab_Stool.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Script\\MapObject\\Object_Trab\\Object_Trab_Stool.cs",
@@ -1375,7 +1427,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 122,
+              "DocumentIndex": 125,
               "Title": "Strike Stool.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Script\\MapObject\\Stool\\Strike Stool.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Script\\MapObject\\Stool\\Strike Stool.cs",
@@ -1387,7 +1439,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 123,
+              "DocumentIndex": 126,
               "Title": "Object_Trab.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Script\\MapObject\\Object_Trab\\Object_Trab.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Script\\MapObject\\Object_Trab\\Object_Trab.cs",
@@ -1399,7 +1451,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 124,
+              "DocumentIndex": 127,
               "Title": "FollowCamera.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Script\\Game-Runtime\\FollowCamera.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Script\\Game-Runtime\\FollowCamera.cs",
@@ -1411,7 +1463,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 125,
+              "DocumentIndex": 128,
               "Title": "StageManager.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Script\\Game-Runtime\\StageManager.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Script\\Game-Runtime\\StageManager.cs",
@@ -1423,7 +1475,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 126,
+              "DocumentIndex": 129,
               "Title": "UAV.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Script\\Enemy\\UAV.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Script\\Enemy\\UAV.cs",
@@ -1435,7 +1487,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 127,
+              "DocumentIndex": 130,
               "Title": "Runtime GameManager.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Script\\Game-Runtime\\Runtime GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Script\\Game-Runtime\\Runtime GameManager.cs",
@@ -1447,7 +1499,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 50,
               "Title": "MoveStool.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Enemy\\Script\\MapObject\\Stool\\MoveStool.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Enemy\\Script\\MapObject\\Stool\\MoveStool.cs",
@@ -1458,7 +1510,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 95,
+              "DocumentIndex": 98,
               "Title": "UAV.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Enemy\\Script\\Enemy\\UAV.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Enemy\\Script\\Enemy\\UAV.cs",
@@ -1470,7 +1522,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 93,
               "Title": "KeyDoor.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Ground\\Script\\Door\\KeyDoor.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Ground\\Script\\Door\\KeyDoor.cs",
@@ -1482,7 +1534,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 49,
               "Title": "Camera.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Camera\\Script\\Camera.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Camera\\Script\\Camera.cs",
@@ -1493,7 +1545,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 94,
               "Title": "Door.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Ground\\Script\\Door\\Door.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Ground\\Script\\Door\\Door.cs",
@@ -1505,7 +1557,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 95,
               "Title": "Object_Trab.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Ground\\Script\\Object_Trab\\Object_Trab.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Ground\\Script\\Object_Trab\\Object_Trab.cs",
@@ -1517,7 +1569,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
+              "DocumentIndex": 96,
               "Title": "Laser.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Ground\\Script\\Laser\\Laser.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Ground\\Script\\Laser\\Laser.cs",
@@ -1529,7 +1581,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 94,
+              "DocumentIndex": 97,
               "Title": "LaserStool.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Ground\\Script\\Laser\\LaserStool.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Ground\\Script\\Laser\\LaserStool.cs",
@@ -1541,7 +1593,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 96,
+              "DocumentIndex": 99,
               "Title": "Car.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Enemy\\Script\\Enemy\\Car.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Enemy\\Script\\Enemy\\Car.cs",
@@ -1553,7 +1605,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 128,
+              "DocumentIndex": 131,
               "Title": "TestHitbox.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Player\\TestHitbox.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Player\\TestHitbox.cs",
@@ -1565,7 +1617,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 97,
+              "DocumentIndex": 100,
               "Title": "BaseEnemy.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Lee\\Enemy\\Script\\Enemy\\BaseEnemy.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Lee\\Enemy\\Script\\Enemy\\BaseEnemy.cs",
@@ -1577,7 +1629,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 51,
               "Title": "Camera.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\Lee\\Camera\\Script\\Camera.cs",
               "RelativeDocumentMoniker": "Assets\\Lee\\Camera\\Script\\Camera.cs",
@@ -1588,7 +1640,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 90,
               "Title": "KeyDoor.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\Lee\\Ground\\Script\\Door\\KeyDoor.cs",
               "RelativeDocumentMoniker": "Assets\\Lee\\Ground\\Script\\Door\\KeyDoor.cs",
@@ -1600,7 +1652,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 76,
               "Title": "CameraFollow.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\Camera\\Script\\CameraFollow.cs",
               "RelativeDocumentMoniker": "Assets\\Camera\\Script\\CameraFollow.cs",
@@ -1612,7 +1664,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 77,
               "Title": "IDoorKey.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\Ground\\Script\\Interface\\IDoorKey.cs",
               "RelativeDocumentMoniker": "Assets\\Ground\\Script\\Interface\\IDoorKey.cs",
@@ -1624,7 +1676,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 78,
               "Title": "KeyDoor.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\Ground\\Script\\Door\\KeyDoor.cs",
               "RelativeDocumentMoniker": "Assets\\Ground\\Script\\Door\\KeyDoor.cs",
@@ -1636,7 +1688,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 79,
               "Title": "KeyItem.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\Ground\\Script\\Door\\KeyItem.cs",
               "RelativeDocumentMoniker": "Assets\\Ground\\Script\\Door\\KeyItem.cs",
@@ -1648,7 +1700,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 52,
               "Title": "Camera.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\Camera\\Script\\Camera.cs",
               "RelativeDocumentMoniker": "Assets\\Camera\\Script\\Camera.cs",
@@ -1659,7 +1711,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 80,
               "Title": "Door.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\Ground\\Script\\Door\\Door.cs",
               "RelativeDocumentMoniker": "Assets\\Ground\\Script\\Door\\Door.cs",
@@ -1671,7 +1723,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 74,
               "Title": "DeadResearcher.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\Enemy\\Script\\Enemy\\DeadResearcher.cs",
               "RelativeDocumentMoniker": "Assets\\Enemy\\Script\\Enemy\\DeadResearcher.cs",
@@ -1683,7 +1735,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 81,
               "Title": "Laser.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\Ground\\Script\\Laser\\Laser.cs",
               "RelativeDocumentMoniker": "Assets\\Ground\\Script\\Laser\\Laser.cs",
@@ -1695,7 +1747,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 82,
               "Title": "LaserStool.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\Ground\\Script\\Laser\\LaserStool.cs",
               "RelativeDocumentMoniker": "Assets\\Ground\\Script\\Laser\\LaserStool.cs",
@@ -1707,7 +1759,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 83,
               "Title": "UAV.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\Enemy\\Script\\Enemy\\UAV.cs",
               "RelativeDocumentMoniker": "Assets\\Enemy\\Script\\Enemy\\UAV.cs",
@@ -1719,7 +1771,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 84,
               "Title": "Robot.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\Enemy\\Script\\Enemy\\Robot.cs",
               "RelativeDocumentMoniker": "Assets\\Enemy\\Script\\Enemy\\Robot.cs",
@@ -1731,7 +1783,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 85,
               "Title": "BaseEnemy.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\Enemy\\Script\\Enemy\\BaseEnemy.cs",
               "RelativeDocumentMoniker": "Assets\\Enemy\\Script\\Enemy\\BaseEnemy.cs",
@@ -1743,7 +1795,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 86,
               "Title": "Researcher.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\Enemy\\Script\\Enemy\\Researcher.cs",
               "RelativeDocumentMoniker": "Assets\\Enemy\\Script\\Enemy\\Researcher.cs",
@@ -1755,7 +1807,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 87,
               "Title": "Car.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\Enemy\\Script\\Enemy\\Car.cs",
               "RelativeDocumentMoniker": "Assets\\Enemy\\Script\\Enemy\\Car.cs",
@@ -1767,7 +1819,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 88,
               "Title": "RobotBullet.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\Enemy\\Script\\Enemy\\RobotGun\\RobotBullet.cs",
               "RelativeDocumentMoniker": "Assets\\Enemy\\Script\\Enemy\\RobotGun\\RobotBullet.cs",
@@ -1779,7 +1831,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 89,
               "Title": "Object_Trab.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\Ground\\Script\\Object_Trab\\Object_Trab.cs",
               "RelativeDocumentMoniker": "Assets\\Ground\\Script\\Object_Trab\\Object_Trab.cs",
@@ -1791,7 +1843,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 75,
               "Title": "Key.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\Ground\\Script\\Door\\Key.cs",
               "RelativeDocumentMoniker": "Assets\\Ground\\Script\\Door\\Key.cs",
@@ -1803,7 +1855,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 54,
               "Title": "IRecyclableGameObject.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\LeeDogyun\\2024leedogyunproject (1)\\2024leedogyunproject\\202409leedogyunproject\\Assets\\Scripts\\Interface\\IRecyclableGameObject.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\LeeDogyun\\2024leedogyunproject (1)\\2024leedogyunproject\\202409leedogyunproject\\Assets\\Scripts\\Interface\\IRecyclableGameObject.cs",
@@ -1811,12 +1863,11 @@
               "RelativeToolTip": "..\\..\\..\\LeeDogyun\\2024leedogyunproject (1)\\2024leedogyunproject\\202409leedogyunproject\\Assets\\Scripts\\Interface\\IRecyclableGameObject.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T06:57:48.035Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-27T06:57:48.035Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 69,
               "Title": "ObjectPool.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\park\\Assets\\My Asset\\Script\\Enemy\\RobotGun\\ObjectPool.cs",
               "RelativeDocumentMoniker": "Assets\\park\\Assets\\My Asset\\Script\\Enemy\\RobotGun\\ObjectPool.cs",
@@ -1828,7 +1879,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 55,
               "Title": "ObjectPool.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\LeeDogyun\\2024leedogyunproject (1)\\2024leedogyunproject\\202409leedogyunproject\\Assets\\Scripts\\Utils\\ObjectPool.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\LeeDogyun\\2024leedogyunproject (1)\\2024leedogyunproject\\202409leedogyunproject\\Assets\\Scripts\\Utils\\ObjectPool.cs",
@@ -1836,12 +1887,11 @@
               "RelativeToolTip": "..\\..\\..\\LeeDogyun\\2024leedogyunproject (1)\\2024leedogyunproject\\202409leedogyunproject\\Assets\\Scripts\\Utils\\ObjectPool.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAAAADIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T06:26:46.089Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-25T06:26:46.089Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 56,
               "Title": "ProjectileMovement.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\LeeDogyun\\2024leedogyunproject (1)\\2024leedogyunproject\\202409leedogyunproject\\Assets\\Scripts\\Props\\ProjectileMovement.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\LeeDogyun\\2024leedogyunproject (1)\\2024leedogyunproject\\202409leedogyunproject\\Assets\\Scripts\\Props\\ProjectileMovement.cs",
@@ -1849,12 +1899,11 @@
               "RelativeToolTip": "..\\..\\..\\LeeDogyun\\2024leedogyunproject (1)\\2024leedogyunproject\\202409leedogyunproject\\Assets\\Scripts\\Props\\ProjectileMovement.cs",
               "ViewState": "AgIAACEAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T06:14:55.103Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-25T06:14:55.103Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 57,
               "Title": "PlayerAttack.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\LeeDogyun\\2024leedogyunproject (1)\\2024leedogyunproject\\202409leedogyunproject\\Assets\\Scripts\\Player\\Weapon\\CrossBow\\PlayerAttack.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\LeeDogyun\\2024leedogyunproject (1)\\2024leedogyunproject\\202409leedogyunproject\\Assets\\Scripts\\Player\\Weapon\\CrossBow\\PlayerAttack.cs",
@@ -1862,12 +1911,11 @@
               "RelativeToolTip": "..\\..\\..\\LeeDogyun\\2024leedogyunproject (1)\\2024leedogyunproject\\202409leedogyunproject\\Assets\\Scripts\\Player\\Weapon\\CrossBow\\PlayerAttack.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T06:01:03.359Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-24T06:01:03.359Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 70,
               "Title": "Robot.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\park\\Assets\\My Asset\\Script\\Enemy\\Robot.cs",
               "RelativeDocumentMoniker": "Assets\\park\\Assets\\My Asset\\Script\\Enemy\\Robot.cs",
@@ -1879,7 +1927,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 71,
               "Title": "Researcher.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\park\\Assets\\My Asset\\Script\\Enemy\\Researcher.cs",
               "RelativeDocumentMoniker": "Assets\\park\\Assets\\My Asset\\Script\\Enemy\\Researcher.cs",
@@ -1891,7 +1939,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 72,
               "Title": "UAV.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\park\\Assets\\My Asset\\Script\\Enemy\\UAV.cs",
               "RelativeDocumentMoniker": "Assets\\park\\Assets\\My Asset\\Script\\Enemy\\UAV.cs",
@@ -1903,7 +1951,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 58,
               "Title": "PlayerThrow.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\LeeDogyun\\2024leedogyunproject (1)\\2024leedogyunproject\\202409leedogyunproject\\Assets\\Scripts\\Player\\Weapon\\CrossBow\\PlayerThrow.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\LeeDogyun\\2024leedogyunproject (1)\\2024leedogyunproject\\202409leedogyunproject\\Assets\\Scripts\\Player\\Weapon\\CrossBow\\PlayerThrow.cs",
@@ -1911,12 +1959,11 @@
               "RelativeToolTip": "..\\..\\..\\LeeDogyun\\2024leedogyunproject (1)\\2024leedogyunproject\\202409leedogyunproject\\Assets\\Scripts\\Player\\Weapon\\CrossBow\\PlayerThrow.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAAADYAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T05:59:09.831Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-24T05:59:09.831Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 53,
               "Title": "BaseEnemy.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\park\\Assets\\My Asset\\Script\\Enemy\\BaseEnemy.cs",
               "RelativeDocumentMoniker": "Assets\\park\\Assets\\My Asset\\Script\\Enemy\\BaseEnemy.cs",
@@ -1927,7 +1974,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 73,
               "Title": "Car.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\park\\Assets\\My Asset\\Script\\Enemy\\Car.cs",
               "RelativeDocumentMoniker": "Assets\\park\\Assets\\My Asset\\Script\\Enemy\\Car.cs",
@@ -1939,7 +1986,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 59,
               "Title": "BaseMonster.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\park\\Assets\\My Asset\\Script\\Monster\\BaseMonster.cs",
               "RelativeDocumentMoniker": "Assets\\park\\Assets\\My Asset\\Script\\Monster\\BaseMonster.cs",
@@ -1950,7 +1997,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 91,
               "Title": "Test Player.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\park\\Assets\\My Asset\\Script\\Player\\Test Player.cs",
               "RelativeDocumentMoniker": "Assets\\park\\Assets\\My Asset\\Script\\Player\\Test Player.cs",
@@ -1962,7 +2009,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 92,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\park\\Assets\\My Asset\\Script\\Player\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\park\\Assets\\My Asset\\Script\\Player\\PlayerController.cs",
@@ -1974,7 +2021,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 60,
               "Title": "MoveCamera.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\LeeDogyun\\2024leedogyunproject (1)\\2024leedogyunproject\\202409leedogyunproject\\Assets\\Scripts\\Props\\MoveCamera.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\LeeDogyun\\2024leedogyunproject (1)\\2024leedogyunproject\\202409leedogyunproject\\Assets\\Scripts\\Props\\MoveCamera.cs",
@@ -1982,12 +2029,11 @@
               "RelativeToolTip": "..\\..\\..\\LeeDogyun\\2024leedogyunproject (1)\\2024leedogyunproject\\202409leedogyunproject\\Assets\\Scripts\\Props\\MoveCamera.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T06:44:49.477Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-20T06:44:49.477Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 66,
               "Title": "MoveCamera.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\park\\Assets\\My Asset\\Script\\Camera\\MoveCamera.cs",
               "RelativeDocumentMoniker": "Assets\\park\\Assets\\My Asset\\Script\\Camera\\MoveCamera.cs",
@@ -1999,7 +2045,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 65,
               "Title": "Researcher.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\park\\Assets\\My Asset\\Script\\Monster\\Researcher.cs",
               "RelativeDocumentMoniker": "Assets\\park\\Assets\\My Asset\\Script\\Monster\\Researcher.cs",
@@ -2011,7 +2057,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 61,
               "Title": "BaseMonster.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\Scripts\\Monster\\BaseMonster.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Monster\\BaseMonster.cs",
@@ -2022,7 +2068,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 62,
               "Title": "WeaponFollow.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\LeeDogyun\\2024leedogyunproject (1)\\2024leedogyunproject\\202409leedogyunproject\\Assets\\Scripts\\Player\\Weapon\\WeaponFollow.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\LeeDogyun\\2024leedogyunproject (1)\\2024leedogyunproject\\202409leedogyunproject\\Assets\\Scripts\\Player\\Weapon\\WeaponFollow.cs",
@@ -2030,12 +2076,11 @@
               "RelativeToolTip": "..\\..\\..\\LeeDogyun\\2024leedogyunproject (1)\\2024leedogyunproject\\202409leedogyunproject\\Assets\\Scripts\\Player\\Weapon\\WeaponFollow.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAADwvyIAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T06:18:53.681Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-20T06:18:53.681Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 63,
               "Title": "PlayerAnim.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\LeeDogyun\\2024leedogyunproject (1)\\2024leedogyunproject\\202409leedogyunproject\\Assets\\Scripts\\Player\\PlayerAnim.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\LeeDogyun\\2024leedogyunproject (1)\\2024leedogyunproject\\202409leedogyunproject\\Assets\\Scripts\\Player\\PlayerAnim.cs",
@@ -2043,12 +2088,11 @@
               "RelativeToolTip": "..\\..\\..\\LeeDogyun\\2024leedogyunproject (1)\\2024leedogyunproject\\202409leedogyunproject\\Assets\\Scripts\\Player\\PlayerAnim.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAAACkAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T07:42:17.296Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-19T07:42:17.296Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 67,
               "Title": "testGround.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\Scripts\\Ground\\testGround.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Ground\\testGround.cs",
@@ -2060,7 +2104,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 64,
               "Title": "test.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\TeamCreatureX\\CreatureX\\Assets\\Scripts\\test.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\TeamCreatureX\\CreatureX\\Assets\\Scripts\\test.cs",
@@ -2072,7 +2116,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 68,
               "Title": "test.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\Scripts\\test.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\test.cs",

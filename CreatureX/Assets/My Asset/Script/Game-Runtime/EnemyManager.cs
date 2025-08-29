@@ -21,7 +21,7 @@ public class EnemyManager : MonoBehaviour
     {
         if (!enemyList.Contains(enemy))
         {
-            Debug.Log($"{Time.deltaTime}: {enemy.enemyID}: 몬스터 등록 성공!");
+            //Debug.Log($"{Time.deltaTime}: {enemy.enemyID}: 몬스터 등록 성공!");
             enemyList.Add(enemy);
         }
     }
@@ -30,7 +30,7 @@ public class EnemyManager : MonoBehaviour
     {
         if (enemyList.Contains(enemy))
         {
-            Debug.Log($"{Time.deltaTime}: {enemy.enemyID}: 몬스터 삭제 성공!");
+            //Debug.Log($"{Time.deltaTime}: {enemy.enemyID}: 몬스터 삭제 성공!");
             enemyList.Remove(enemy);
         }
     }

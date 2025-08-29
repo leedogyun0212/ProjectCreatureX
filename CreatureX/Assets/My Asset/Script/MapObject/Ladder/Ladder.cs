@@ -17,6 +17,8 @@ public class Ladder : MonoBehaviour
 
     TestPlayer testPlayer;
 
+    private bool ClimbOn;
+
     private void Start()
     {
         box = GetComponent<BoxCollider2D>();
@@ -33,29 +35,41 @@ public class Ladder : MonoBehaviour
         Vector2 ladderPos = transform.position;
         Hit = Physics2D.OverlapBox(ladderPos, box.bounds.size, 0f, Playerlayer);
 
-        if (Hit != null && Input.GetKey(KeyCode.UpArrow) && !isOnLadder)
-            isOnLadder = true;
-        else if (Hit != null && isOnLadder)
+        if (Hit != null)
         {
+            // 첫 진입 시 null 방어: playerRb/testPlayer 캐싱
             if (playerRb == null)
             {
                 playerRb = Hit.attachedRigidbody;
-                testPlayer = playerRb.gameObject.GetComponent<TestPlayer>();
+                testPlayer = playerRb != null ? playerRb.gameObject.GetComponent<TestPlayer>() : null;
             }
 
-            LadderEnd();
+            // Robot/Drone이면 ClimbOn=true (사다리 금지)
+            ClimbOn = (testPlayer != null) && (testPlayer.curForm == TestPlayer.AssimilateForm.Robot || testPlayer.curForm == TestPlayer.AssimilateForm.Drone);
 
-            isOnLadder = true;
-            // �߷� ����
-            playerRb.gravityScale = 0f;
-            // �ӵ� �ʱ�ȭ (�߷¿� ���� �������� �ʵ���)
-            playerRb.linearVelocity = new Vector2(playerRb.linearVelocity.x, 0);
+            // 로봇/드론 상태에선 아무것도 하지 않음(중력/상태 불변)
+            if (ClimbOn) return;
+
+            // 일반 상태에서만 사다리 진입 허용
+            if (!isOnLadder && Input.GetKey(KeyCode.UpArrow))
+            {
+                isOnLadder = true;
+            }
+
+            // 일반 상태에서만 중력 0/속도 초기화
+            if (isOnLadder && playerRb != null)
+            {
+                // 중력 해제
+                playerRb.gravityScale = 0f;
+                // 수직 속도 초기화
+                playerRb.linearVelocity = new Vector2(playerRb.linearVelocity.x, 0);
+            }
         }
         else
         {
-            if (isOnLadder && playerRb != null)
+            // 사다리를 벗어나면 일반 상태일 때만 중력 복구(ClimbOn=true면 건드리지 않음)
+            if (isOnLadder && playerRb != null && !ClimbOn)
             {
-                // ��ٸ����� �������� �߷� ����
                 playerRb.gravityScale = 8f;
                 playerRb = null;
             }
@@ -65,7 +79,10 @@ public class Ladder : MonoBehaviour
 
     private void Climb()
     {
-        Debug.Log(testPlayer);
+        // 로봇/드론 상태에선 사다리 입력 처리 안 함
+        if (ClimbOn) return;
+
+        // 일반 상태에서만 등반 입력 처리
         if (isOnLadder && playerRb != null)
         {
             float verticalInput = 0f;
@@ -77,16 +94,8 @@ public class Ladder : MonoBehaviour
             else
                 verticalInput = 0f;
 
-            // ���Ʒ� ������ ����
+            // 위 아래 움직임 적용  
             playerRb.linearVelocity = new Vector2(playerRb.linearVelocity.x, verticalInput * climbSpeed);
-        }
-    }
-
-    private void LadderEnd()
-    {
-        if (Mathf.Abs(box.bounds.max.y - playerRb.position.y) < 0.1f)
-        {
-            Debug.Log("ī�޶� ����!!!!!!!!!!!!!!!!!!!!!!!!!!!");
         }
     }
 }

@@ -45,19 +45,20 @@ public class Object_Trab_Stool : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.CompareTag("Player")&&Create)
-        {
-            Create = false;
-            StartCoroutine(Warning());
-        }
-    }
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if(collision.gameObject.CompareTag("Player")&&Create)
+    //    {
+    //        Create = false;
+    //        StartCoroutine(Warning());
+    //    }
+    //}
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player") && Create)
         {
+            Debug.Log("발동 성공!!!!");
             Create = false;
             StartCoroutine(Warning());
         }

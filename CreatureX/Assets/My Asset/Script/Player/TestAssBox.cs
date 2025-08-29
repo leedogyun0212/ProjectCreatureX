@@ -49,7 +49,7 @@ public class TestAssBox : MonoBehaviour
             if (enemy != null && !enemyList.Contains(enemy))
             {
                 enemyList.Add(enemy);
-                Debug.Log($"{Time.time}: 몬스터 진입");
+                //Debug.Log($"{Time.time}: 몬스터 진입");
             }
         }
     }
@@ -63,7 +63,7 @@ public class TestAssBox : MonoBehaviour
             {
                 enemyList.Remove(enemy);
                 EnemyManager.Instance.UnregisterEnemy(enemy);
-                Debug.Log($"{Time.time}: 몬스터 탈출");
+                //Debug.Log($"{Time.time}: 몬스터 탈출");
             }
         }
     }
