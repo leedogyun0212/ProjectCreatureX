@@ -9,14 +9,21 @@ public class CameraBackground : MonoBehaviour
     public Sprite BackGround3;
     public Sprite BackGround4;
 
-    [SerializeField]
     private SpriteRenderer backgroundRenderer;
+
+    public AudioClip roopfopClip;
+
+    private AudioClip buildingClip;
+
+    private AudioSource audioSource = null;
 
     private int lastBackNum = int.MinValue;
 
     private void Awake()
     {
         Camera = GetComponentInParent<Camera>();
+        audioSource = GetComponent<AudioSource>();
+        buildingClip = audioSource.clip;
         if (backgroundRenderer == null)
             backgroundRenderer = GetComponent<SpriteRenderer>();
     }
@@ -65,9 +72,20 @@ public class CameraBackground : MonoBehaviour
         }
 
         if (target != BackGround4)
+        {
             transform.localScale = new Vector3(1.42f, 0.88f, 1f);
+            if(audioSource.clip != buildingClip)
+            {
+                audioSource.clip = buildingClip;
+                audioSource.Play();
+            }
+        }
         else
+        {
             transform.localScale = new Vector3(1.42f, 1.5f, 1f);
+            audioSource.clip = roopfopClip;
+            audioSource.Play();
+        }
 
         if (target != null && backgroundRenderer.sprite != target)
         {

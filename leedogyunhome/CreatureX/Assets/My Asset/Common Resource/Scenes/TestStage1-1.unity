@@ -594,7 +594,7 @@ Transform:
   m_GameObject: {fileID: 1019030646}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -39.1}
+  m_LocalPosition: {x: 0, y: -0.5, z: -39.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -688,6 +688,7 @@ MonoBehaviour:
   CamCollider: {fileID: 1019030651}
   PlayerCollider: {fileID: 1831989446}
   CameraSpeed: 4
+  BackNum: 1
   verticalDeadZoneHeight: 3.2
   FollowYDirectly: 0
 --- !u!114 &1028356201 stripped
