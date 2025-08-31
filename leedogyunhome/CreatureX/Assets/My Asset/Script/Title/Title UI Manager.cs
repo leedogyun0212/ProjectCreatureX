@@ -5,34 +5,58 @@ using UnityEngine.UI;
 public class TitleUIManager : MonoBehaviour
 {
 
-    [SerializeField] Button startButton;
-
+    public static TitleUIManager Instance { get; private set; }
     private void Awake()
     {
-
-    }
-
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        if (startButton != null)
+        if (Instance == null)
         {
-            startButton.onClick.AddListener(OnClickStartGame);
+            Instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else
+        {
+            Destroy(this.gameObject);
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
+    [SerializeField] private UI_GameEnd gameEndUI;
+    [SerializeField] private UI_TitleButton gameTitleUI;
+
+    public void Regist_GameEndUI(UI_GameEnd ui) => gameEndUI = ui;
+    public void Regist_TitleButtonUI(UI_TitleButton ui) => gameTitleUI = ui;
+
+
+    private void ToggleChildren(GameObject parent, bool state)
+    {
+        foreach (Transform child in parent.transform)
+        {
+            child.gameObject.SetActive(state);
+        }
     }
 
-    private void OnClickStartGame()
+
+    public void OnClickStartGame()
     {
-        // 예: 첫 스테이지로 이동
         // SceneManager.LoadScene("TestStage1-1");  // 씬 이름 정확히 입력!
-        StageManager.Instance.LoadStage(StageManager.Instance.curMainStage, StageManager.Instance.curSubStage);
+        // StageManager.Instance.LoadStage(StageManager.Instance.curMainStage, StageManager.Instance.curSubStage);
+        SceneManager.LoadScene("TestSelectScene");
+    }
+
+    public void Check_GameEnd()
+    {
+        ToggleChildren(gameEndUI.gameObject, true);
+    }
+
+    public void Cancel_GameEnd()
+    {
+        ToggleChildren(gameEndUI.gameObject, false);
+    }
+
+    public void GameEnd()
+    {
+        Debug.Log($"{Time.deltaTime}: 게임을 종료합니다");
+        Application.Quit();
     }
 
 }

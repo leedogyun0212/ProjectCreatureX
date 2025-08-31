@@ -18,6 +18,7 @@ public class UAV : BaseEnemy, IAllyResponder
 
     protected override void Update()
     {
+        EffectManager.Play("E_Thunder", this.gameObject, transform.localScale.x != -1, new Vector3(0.0f, -0.0f));
         animEnemy();
         if (EnemyFailed)
         {

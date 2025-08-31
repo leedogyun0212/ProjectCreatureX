@@ -5,14 +5,13 @@ TagManager:
   serializedVersion: 3
   tags:
   - Ground
-  - Door
-  - Enemy
-  - Researcher
   - Wall
-  - Key
   - Box
+  - Enemy
+  - Door
+  - Researcher
+  - Key
   - Trigger
-  - Enemy Dead
   layers:
   - Default
   - TransparentFX

@@ -17,20 +17,22 @@ public class GameOverUI : MonoBehaviour
         // 버튼 이벤트 동적으로 등록
         if (restartButton != null)
         {
-            // restartButton.onClick.RemoveAllListeners();
             restartButton.onClick.AddListener(() =>
             {
                 if (RuntimeGameManager.Instance != null)
+                {
                     RuntimeGameManager.Instance.NewGameStart();
+                }
             });
         }
         if (titleButton != null)
         {
-            // titleButton.onClick.RemoveAllListeners();
             titleButton.onClick.AddListener(() =>
             {
                 if (RuntimeGameManager.Instance != null)
-                    RuntimeGameManager.Instance.GotoTitle();
+                {
+                    RuntimeGameManager.Instance.Check_GoTitle();
+                }
             });
         }
     }

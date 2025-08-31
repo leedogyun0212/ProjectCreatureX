@@ -23,7 +23,7 @@ public class Car : BaseEnemy
         }
         else if (monsterState == MonsterState.Move) // 차가 플레이어를 추격하는 상태,
         {
-            Debug.Log("이동중");
+            EffectManager.Play("E_Car_Dirt", this.gameObject, transform.localScale.x == -1, new Vector3(-2.067f,-0.675f));
             Move();
         }
         else if (monsterState == MonsterState.Dead) // 차가 완전한 죽음
@@ -83,6 +83,7 @@ public class Car : BaseEnemy
 
     protected override IEnumerator HitRecover() // 피격시 나오는 스크립트
     {
+        EffectManager.Play("E_Hit", this.gameObject, transform.localScale.x != -1, new Vector3(2.275f, 1.18f));
         yield return new WaitForSeconds(0.5f); // 0.5초간 피격 상태 유지
         HitOn = false;
         monsterState = MonsterState.Move;

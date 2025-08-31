@@ -25,9 +25,40 @@ Transform:
   m_GameObject: {fileID: 367596973882842689}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.35, y: -0.35, z: 0}
+  m_LocalPosition: {x: 0.45, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6254227845650781901}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5065725213357898090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5109482170350075994}
+  m_Layer: 3
+  m_Name: Ass Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &5109482170350075994
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5065725213357898090}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6254227845650781901}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -61,12 +92,13 @@ Transform:
   m_GameObject: {fileID: 6633180192394413979}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 2.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2377987418974680519}
   - {fileID: 3143246783913901490}
+  - {fileID: 5109482170350075994}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7940254447759318619
@@ -113,12 +145,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2839044083103380311, guid: 7207345ecf9e4bc46933c272805d0088, type: 3}
+  m_Sprite: {fileID: -7164028333803484172, guid: 789f11f66623e254da80c1fb964158ae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.1714286, y: 2.2742858}
+  m_Size: {x: 2.9047618, y: 2.795238}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -185,8 +217,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2.3}
+  m_Offset: {x: 0.03, y: -0.4}
+  m_Size: {x: 1, y: 2.2}
   m_Direction: 0
 --- !u!114 &8002419900664306903
 MonoBehaviour:
@@ -201,7 +233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerID: player001
-  playerHP: 100
+  playerMaxHP: 100
   playerMoveSpeed: 8
   flySpeed: 5
   jumpForce: 25
@@ -211,15 +243,18 @@ MonoBehaviour:
   spriteRenderer: {fileID: 7940254447759318619}
   animator: {fileID: 8837141991697432325}
   curForm: 0
-  basicSprite: {fileID: -4030210017698963475, guid: 2fc87c467d49fe14faa2f7ca0aee83bb, type: 3}
   basicAnimController: {fileID: 9100000, guid: 68d961ed0d60844479215185b77684f9, type: 2}
-  carSprite: {fileID: -5119382043706598173, guid: 0face6b0a7b5b744e9716fca5a777732, type: 3}
   carAnimController: {fileID: 9100000, guid: a9f4712c5145dd54fa0f2e71c1f214d5, type: 2}
-  droneSprite: {fileID: 683547822763632645, guid: 210924aa61afe26419ed8a72db8b86a6, type: 3}
   droneAnimController: {fileID: 9100000, guid: a0bf73bef99156e44a0f68c9be134949, type: 2}
+  robotAnimController: {fileID: 9100000, guid: 380d18132c2f5d34484b10c816bd944c, type: 2}
+  resAnimController: {fileID: 9100000, guid: 75bfdb17c3e74f14880f1fb24855465c, type: 2}
   blackOrbPrefab: {fileID: 3849108582457103211, guid: 045cfc764db6b2840b0628639a1a2757, type: 3}
   firePoint: {fileID: 3143246783913901490}
   TestHitboxPrefab: {fileID: 3797706447931544362, guid: cbafcb1d3947ffa4d9cf465cdeea2c94, type: 3}
+  testAssboxPre: {fileID: 3797706447931544362, guid: 737ea5ed6c256d847b7c6aa22d1fa0e2, type: 3}
+  testCarSkill: {fileID: 604765467006651229, guid: 9123791ecff921f409357f5241a5236e, type: 3}
+  testDroneSkill: {fileID: 6114834163115956123, guid: b034519ff59903147912e4679bc6b9b2, type: 3}
+  testRobotSkill: {fileID: 5428959740539217792, guid: d298f157339a28a42b1a522e14fbc220, type: 3}
 --- !u!95 &8837141991697432325
 Animator:
   serializedVersion: 7

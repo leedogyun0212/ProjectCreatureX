@@ -6,46 +6,43 @@ using UnityEngine;
 public class Robot : BaseEnemy, IAllyResponder
 {
     [SerializeField]
-    private RobotBullet BulletPrefab; // 총알 프리펩
+    private RobotBullet BulletPrefab;
 
     [SerializeField] 
-    private Transform BulletShotPoint = null; // 총알 조준 지점
+    private Transform BulletShotPoint = null;
 
-    private ObjectPool<RobotBullet> BulletPool = null; // 총알 재활용을 위해
+    private ObjectPool<RobotBullet> BulletPool = null;
 
-    private Vector2 lookdir = Vector2.zero;  // 좌우로만 발사할때 쓸 벡터
+    private Vector2 lookdir = Vector2.zero;
 
-    public bool isAttacking { get; set; } = true; // 어택 관련 불
+    public bool isAttacking { get; set; } = true;
 
-    private bool isCoolingDown = false; // 총 발사후 쿨타임
+    private bool isCoolingDown = false;
 
     private Transform currentMovingStool = null; // [변경] 이동식 발판 추적용 참조(부모 미사용)
     private Vector3 lastMovingStoolPos = Vector3.zero; // [변경] 발판 이동량 계산용
-
-    private CapsuleCollider2D Capcollider;
 
     protected override void Start()
     {
         base.Start();
         BulletPool = new ObjectPool<RobotBullet>();
-        Capcollider = GetComponent<CapsuleCollider2D>();
     }
 
     protected override void Update()
     {
-        animEnemy(); // 애니메이션
-        if (EnemyFailed) // 로봇의 흡수 가능상태
+        animEnemy(); // �ִϸ��̼�
+        if (EnemyFailed) // ���� ������ ����,
         {
             animDead = 100;
             monsterState = MonsterState.failed;
-            Capcollider.size = new Vector2(Capcollider.size.x,1.8f);
             StartCoroutine(DeadOn());
         }
         else if (monsterState == MonsterState.Move && helpTarget == null) // �þ� ����� �÷��̾� �߰� 
         {
             Getdirection();
-            if(Mathf.Abs(player.transform.position.x - transform.position.x)>15)
-                MoveSpeed +=6;
+            //if(Mathf.Abs(player.transform.position.x - transform.position.x)>15)
+            //    MoveSpeed +=6;
+            EffectManager.Play("E_Dirt", this.gameObject, transform.localScale.x != -1, new Vector3(0.7f, -0.83f));
             Move();
         }
         else if (monsterState == MonsterState.Play && isAttacking && !isCoolingDown) // �þ� ������ ����
@@ -56,6 +53,7 @@ public class Robot : BaseEnemy, IAllyResponder
         else if (monsterState == MonsterState.Help&& helpTarget != null) // �������� ���� ��û�ϸ� ������������ �̵�
         {
             Getdirection();
+            EffectManager.Play("E_Dirt", this.gameObject, transform.localScale.x != -1, new Vector3(0.7f, -0.83f));
             Move();
 
             if (Vector2.Distance(transform.position, helpTarget.position) < 0.3f)
@@ -194,6 +192,16 @@ public class Robot : BaseEnemy, IAllyResponder
         }
     }
 
+    // [변경] MovingStool에서 떨어지면 참조 해제
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (currentMovingStool != null && collision.transform == currentMovingStool)
+        {
+            currentMovingStool = null;
+            lastMovingStoolPos = Vector3.zero;
+        }
+    }
+
     protected override IEnumerator HitRecover()
     {
         EffectManager.Play("E_Hit", this.gameObject, transform.localScale.x != -1, new Vector3(1.03f, 0.78f));
@@ -206,16 +214,6 @@ public class Robot : BaseEnemy, IAllyResponder
     {
         EffectManager.Play("E_Asl", this.gameObject, transform.localScale.x != -1, new Vector3(0.2f, 0.5f));
         return base.DeadOn();
-    }
-
-    // [변경] MovingStool에서 떨어지면 참조 해제
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (currentMovingStool != null && collision.transform == currentMovingStool)
-        {
-            currentMovingStool = null;
-            lastMovingStoolPos = Vector3.zero;
-        }
     }
 
     // [변경] 발판이 이동한 만큼 로봇도 이동시키기(부모 설정 없이 동기화)

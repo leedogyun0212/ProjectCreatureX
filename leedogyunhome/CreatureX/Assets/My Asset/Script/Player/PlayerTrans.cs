@@ -10,6 +10,9 @@ public interface IPlayerTrans
         // 이런식으로 나중에 피격 판정 바꿔줘야 할듯?     
 
         );   // 변신 할 때
+
+    void TransValueApply();
+
     void Exit();    // 변신 해제
 
     void Move(float direction);    // 이동
@@ -39,16 +42,21 @@ public class Player_Trans_Basic : IPlayerTrans
 
     public void Enter()
     {
-        Debug.Log($"{Time.deltaTime}: 기본 상태 돌입");
-        // player.TransApply(8, 25, player.BasicSprite, player.BasicAnimController);
+        // Debug.Log($"{Time.deltaTime}: 기본 상태 돌입");
         player.TransApply(8, 25, player.BasicAnimController);
+        player.collider.size = new Vector2(1f, 2.2f);
+        player.collider.offset = new Vector2(0.03f, -0.4f);
+    }
 
-        player.collider.size = new Vector2(1.0f, 2.25f);    
+    // 변신이 모두 끝난 뒤에 적용
+    public void TransValueApply()
+    { 
+    
     }
 
     public void Exit()
     {
-        Debug.Log($"{Time.deltaTime}: 기본 상태 해제!");
+        // Debug.Log($"{Time.deltaTime}: 기본 상태 해제!");
     }
 
     public void Jump(float vertical)
@@ -65,7 +73,7 @@ public class Player_Trans_Basic : IPlayerTrans
     {
         // player.OrderAttack();  
         if (!player.isJump)
-            player.BasicAttack();
+            player.BasicAttack_anim();
         else
             player.JumpAttack();
     }
@@ -88,10 +96,13 @@ public class Player_Trans_Car : IPlayerTrans, IPlayerRelease
 
     public void Enter()
     {
-        Debug.Log($"{Time.deltaTime}: {Name}로 변신!");
-        // player.TransApply(16, 0, player.CarSprite, player.CarAnimController);
-        player.TransApply(16, 0, player.CarAnimController);
+        if (player.isJump || player.isAttack) { return; }
 
+        player.TransApply(16, 0, player.CarAnimController);
+    }
+
+    public void TransValueApply()
+    {
         player.collider.size = new Vector2(4.75f, 2.25f);
         player.collider.offset = new Vector2(0.02f, -0.05f);
         player.collider.direction = CapsuleDirection2D.Horizontal;
@@ -99,7 +110,7 @@ public class Player_Trans_Car : IPlayerTrans, IPlayerRelease
 
     public void Exit()
     {
-        Debug.Log($"{Time.deltaTime}: {Name} 변신 해제!");
+        // Debug.Log($"{Time.deltaTime}: {Name} 변신 해제!");
         player.collider.offset = new Vector2(0, 0);
         player.collider.direction = CapsuleDirection2D.Vertical;
     }
@@ -145,10 +156,11 @@ public class Player_Trans_Drone : IPlayerTrans, IPlayerRelease
 
     public void Enter()
     {
-        Debug.Log($"{Time.deltaTime}: {Name}으로 변신!");
-        // player.TransApply(6, 0, player.DroneSprite, player.DroneAnimController);
+        if (player.isJump || player.isAttack) { return; }
         player.TransApply(6, 0, player.DroneAnimController);
-
+    }
+    public void TransValueApply()
+    {
         player.rigid.gravityScale = 0;  // 중력 해제    
         player.collider.size = new Vector2(2.15f, 0.75f);
         player.collider.offset = new Vector2(0, -0.01f);
@@ -157,7 +169,7 @@ public class Player_Trans_Drone : IPlayerTrans, IPlayerRelease
 
     public void Exit()
     {
-        Debug.Log($"{Time.deltaTime}: {Name}  변신 해제!");
+        //Debug.Log($"{Time.deltaTime}: {Name}  변신 해제!");
 
         player.rigid.gravityScale = 8f;  // 중력 적용
         player.collider.direction = CapsuleDirection2D.Vertical;
@@ -204,9 +216,13 @@ public class Player_Trans_Robot : IPlayerTrans, IPlayerRelease
 
     public void Enter()
     {
-        Debug.Log($"{Time.deltaTime}: {Name}로 변신!");
+        if (player.isJump || player.isAttack) { return; }
+        //Debug.Log($"{Time.deltaTime}: {Name}로 변신!");
         player.TransApply(8, 0, player.RobotAnimController);
+    }
 
+    public void TransValueApply()
+    {
         player.collider.size = new Vector2(1f, 2.25f);
         player.collider.offset = new Vector2(-0.2f, 0);
         player.collider.direction = CapsuleDirection2D.Vertical;
@@ -214,7 +230,7 @@ public class Player_Trans_Robot : IPlayerTrans, IPlayerRelease
 
     public void Exit()
     {
-        Debug.Log($"{Time.deltaTime}: {Name} 변신 해제!");
+        //Debug.Log($"{Time.deltaTime}: {Name} 변신 해제!");
         player.collider.offset = new Vector2(0, 0);
         player.collider.direction = CapsuleDirection2D.Vertical;
     }
@@ -231,7 +247,7 @@ public class Player_Trans_Robot : IPlayerTrans, IPlayerRelease
 
     public void Realese()
     {
-        Debug.Log($"{Time.deltaTime}: {Name} 능력 방출!");
+        //Debug.Log($"{Time.deltaTime}: {Name} 능력 방출!");
         player.OrderRealese();
     }
 
@@ -260,27 +276,23 @@ public class Player_Trans_Res : IPlayerTrans, IPlayerRelease
 
     public void Enter()
     {
-        Debug.Log($"{Time.deltaTime}: {Name}으로 변신!");
+        if (player.isJump || player.isAttack) { return; }
         player.TransApply(6, 0, player.ResAnimController);
+    }
+
+    public void TransValueApply()
+    {
         player.collider.size = new Vector2(1f, 2.05f);
-
-        // 캐릭터 좌우 반전
-        //Vector3 scale = player.transform.localScale;
-        //scale.x = Mathf.Abs(scale.x) * -1f;
-        //player.transform.localScale = scale;
-
         player.collider.offset = new Vector2(0.08f, 0);
         player.collider.size = new Vector2(0.85f, 2.15f);
     }
 
+
     public void Exit()
     {
-        Debug.Log($"{Time.deltaTime}: {Name}  변신 해제!");
-
         Vector3 scale = player.transform.localScale;
         scale.x = Mathf.Abs(scale.x) * 1f;
         player.transform.localScale = scale;
-
         // player.rigid.gravityScale = 8f;  // 중력 적용
         player.collider.direction = CapsuleDirection2D.Vertical;
     }

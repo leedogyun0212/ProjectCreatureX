@@ -15,13 +15,13 @@ public class EnemyManager : MonoBehaviour
         else Destroy(gameObject);
     }
 
+
     // 몬스터 등록
     public void RegisterEnemy(BaseEnemy enemy)
     {
-        Debug.Log($"{Time.deltaTime}: {enemy.enemyID}: 몬스터 등록 시도!");
         if (!enemyList.Contains(enemy))
         {
-            Debug.Log($"{Time.deltaTime}: {enemy.enemyID}: 몬스터 등록 성공!");
+            //Debug.Log($"{Time.deltaTime}: {enemy.enemyID}: 몬스터 등록 성공!");
             enemyList.Add(enemy);
         }
     }
@@ -30,27 +30,28 @@ public class EnemyManager : MonoBehaviour
     {
         if (enemyList.Contains(enemy))
         {
-            Debug.Log($"{Time.deltaTime}: {enemy.enemyID}: 몬스터 삭제 성공!");
+            //Debug.Log($"{Time.deltaTime}: {enemy.enemyID}: 몬스터 삭제 성공!");
             enemyList.Remove(enemy);
         }
     }
 
-    public BaseEnemy GetAssimilateEnemy(Vector3 playerPos, float range)
-    {
-        BaseEnemy closest = null;
-        float minDist = Mathf.Infinity;
 
-        foreach (var enemy in enemyList)
-        {
-            if (!enemy.Able_Assimilated()) continue;
+    //public BaseEnemy GetAssimilateEnemy(Vector3 playerPos, float range)
+    //{
+    //    BaseEnemy closest = null;
+    //    float minDist = Mathf.Infinity;
 
-            float dist = Vector3.Distance(playerPos, enemy.transform.position);
-            if (dist < range && dist < minDist)
-            {
-                minDist = dist;
-                closest = enemy;
-            }
-        }
-        return closest;
-    }
+    //    foreach (var enemy in enemyList)
+    //    {
+    //        if (!enemy.Able_Assimilated()) continue;
+
+    //        float dist = Vector3.Distance(playerPos, enemy.transform.position);
+    //        if (dist < range && dist < minDist)
+    //        {
+    //            minDist = dist;
+    //            closest = enemy;
+    //        }
+    //    }
+    //    return closest;
+    //}
 }

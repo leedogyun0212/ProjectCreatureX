@@ -66,7 +66,7 @@ public class BaseEnemy : MonoBehaviour
         UAVPos = transform.position;
 
         // EnemyCurHP = EnemyMaxHP;
-        EnemyCurHP = EnemyMaxHP * 0.1f;
+        EnemyCurHP = EnemyMaxHP * 0.5f;
     }
 
     protected virtual void Update()
