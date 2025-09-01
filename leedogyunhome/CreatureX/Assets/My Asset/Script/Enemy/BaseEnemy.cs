@@ -39,6 +39,8 @@ public class BaseEnemy : MonoBehaviour
 
     protected bool HitOn = false; // 피격 상태중 데미지 안받게 하기 위함
 
+    protected AudioSource audioSource;
+
     protected enum MonsterState
     {
         idle = 0, // 발견전에 움직이는 코드
@@ -63,6 +65,7 @@ public class BaseEnemy : MonoBehaviour
             player = PlayerObj.GetComponent<TestPlayer>();
         animator = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
         UAVPos = transform.position;
 
         // EnemyCurHP = EnemyMaxHP;

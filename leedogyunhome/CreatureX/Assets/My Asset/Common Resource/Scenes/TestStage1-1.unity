@@ -173,9 +173,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4392998505314213539, guid: 0b9f8d116bed67d44b4993f2971e79b8, type: 3}
+      propertyPath: GunClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 63ef23c536912a54197f8177ff6c33b4, type: 3}
+    - target: {fileID: 4392998505314213539, guid: 0b9f8d116bed67d44b4993f2971e79b8, type: 3}
       propertyPath: enemyID
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4392998505314213539, guid: 0b9f8d116bed67d44b4993f2971e79b8, type: 3}
+      propertyPath: MoveClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 63ef23c536912a54197f8177ff6c33b4, type: 3}
     - target: {fileID: 4392998505314213539, guid: 0b9f8d116bed67d44b4993f2971e79b8, type: 3}
       propertyPath: monsterHP
       value: 10
@@ -1045,11 +1053,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5372707313548305262, guid: ea2d211d04292344d8694629f320fc09, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.36
+      value: -21.72
       objectReference: {fileID: 0}
     - target: {fileID: 5372707313548305262, guid: ea2d211d04292344d8694629f320fc09, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.48
+      value: -2.64
       objectReference: {fileID: 0}
     - target: {fileID: 5372707313548305262, guid: ea2d211d04292344d8694629f320fc09, type: 3}
       propertyPath: m_LocalPosition.z

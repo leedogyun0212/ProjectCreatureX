@@ -22,6 +22,10 @@ public class Robot : BaseEnemy, IAllyResponder
     private Transform currentMovingStool = null; // [변경] 이동식 발판 추적용 참조(부모 미사용)
     private Vector3 lastMovingStoolPos = Vector3.zero; // [변경] 발판 이동량 계산용
 
+    public AudioClip MoveClip;
+
+    public AudioClip GunClip;
+
     protected override void Start()
     {
         base.Start();
@@ -39,14 +43,14 @@ public class Robot : BaseEnemy, IAllyResponder
         }
         else if (monsterState == MonsterState.Move && helpTarget == null) // �þ� ����� �÷��̾� �߰� 
         {
+            if (audioSource.clip == GunClip&& audioSource.clip != MoveClip) audioSource.Stop();
             Getdirection();
-            //if(Mathf.Abs(player.transform.position.x - transform.position.x)>15)
-            //    MoveSpeed +=6;
             EffectManager.Play("E_Dirt", this.gameObject, transform.localScale.x != -1, new Vector3(0.7f, -0.83f));
             Move();
         }
         else if (monsterState == MonsterState.Play && isAttacking && !isCoolingDown) // �þ� ������ ����
         {
+            if(audioSource.clip == MoveClip&& audioSource.clip != GunClip) audioSource.Stop();
             Attack();
             StartCoroutine(AttackCooldown());
         }
@@ -67,7 +71,28 @@ public class Robot : BaseEnemy, IAllyResponder
             EnemyDead();
     }
 
+    public void MovieAudio()
+    {
+        if (monsterState == MonsterState.Move)
+        {
+            audioSource.clip = MoveClip;
+            audioSource.Play();
+        }
+    }
 
+    public void GunAudio()
+    {
+        //Debug.Log($"GunAudio 호출됨 - monsterState: {monsterState}");
+        //Debug.Log($"현재 audioSource.clip: {(audioSource.clip != null ? audioSource.clip.name : "null")}");
+        //Debug.Log($"GunClip: {(GunClip != null ? GunClip.name : "null")}");
+        //Debug.Log($"audioSource.isPlaying: {audioSource.isPlaying}");
+        //if (monsterState == MonsterState.Play)
+        //{
+        //    audioSource.clip = GunClip;
+        //    audioSource.Play();
+        //    Debug.Log(monsterState);
+        //}
+    }
 
     public void OnHelpRequested(Transform targetResearcher) // �������� �߰��ϰ� �ϴ� ��ũ��Ʈ
     {
@@ -97,6 +122,9 @@ public class Robot : BaseEnemy, IAllyResponder
             bullet.gameObject.SetActive(bullet.isActive = true);
         //Test();
         bullet.SetBullet();
+
+        audioSource.clip = GunClip;
+        audioSource.Play();
 
         // �߻� ��ġ
         lookdir = ((Vector2)player.transform.position - (Vector2)transform.position).normalized;
@@ -145,8 +173,6 @@ public class Robot : BaseEnemy, IAllyResponder
             helpTarget = null;
 
             monsterState = MonsterState.Play;
-            if(MoveSpeed>5)
-                MoveSpeed -= 6;
             animWalk = 2;
         }
     }
