@@ -1,0 +1,1287 @@
+fileFormatVersion: 2
+guid: 1c750dba3e4dd764fa713adfe7bfd408
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1389537752484784986
+    second: Hp_up_potion_2_0
+  - first:
+      213: -8674031674142530475
+    second: Hp_up_potion_2_1
+  - first:
+      213: -7235527754514053830
+    second: Hp_up_potion_2_2
+  - first:
+      213: -9026630254516872073
+    second: Hp_up_potion_2_3
+  - first:
+      213: -1139076014116773107
+    second: Hp_up_potion_2_4
+  - first:
+      213: 2485441055080521453
+    second: Hp_up_potion_2_5
+  - first:
+      213: 8691769016236028584
+    second: Hp_up_potion_2_6
+  - first:
+      213: 7761255520303789360
+    second: Hp_up_potion_2_7
+  - first:
+      213: 7302495635668214314
+    second: Hp_up_potion_2_8
+  - first:
+      213: -6076069925207300994
+    second: Hp_up_potion_2_9
+  - first:
+      213: 4321170934280867501
+    second: Hp_up_potion_2_10
+  - first:
+      213: 52229832188184463
+    second: Hp_up_potion_2_11
+  - first:
+      213: 7053757687385545391
+    second: Hp_up_potion_2_12
+  - first:
+      213: -5516663963039310265
+    second: Hp_up_potion_2_13
+  - first:
+      213: 5112824970508545853
+    second: Hp_up_potion_2_14
+  - first:
+      213: 2147665955092641954
+    second: Hp_up_potion_2_15
+  - first:
+      213: 2134236952623699319
+    second: Hp_up_potion_2_16
+  - first:
+      213: 6936470897722344375
+    second: Hp_up_potion_2_17
+  - first:
+      213: 9142962063604755987
+    second: Hp_up_potion_2_18
+  - first:
+      213: -1250571918795622487
+    second: Hp_up_potion_2_19
+  - first:
+      213: -2193783726107112266
+    second: Hp_up_potion_2_20
+  - first:
+      213: -8596146759547768440
+    second: Hp_up_potion_2_21
+  - first:
+      213: -205128689239874094
+    second: Hp_up_potion_2_22
+  - first:
+      213: 9187806441748061736
+    second: Hp_up_potion_2_23
+  - first:
+      213: 2277767838008107728
+    second: Hp_up_potion_2_24
+  - first:
+      213: 2261214289998223061
+    second: Hp_up_potion_2_25
+  - first:
+      213: 7619185222035807155
+    second: Hp_up_potion_2_26
+  - first:
+      213: -255065613843269522
+    second: Hp_up_potion_2_27
+  - first:
+      213: 4828240887921613252
+    second: Hp_up_potion_2_28
+  - first:
+      213: 946887416150875764
+    second: Hp_up_potion_2_29
+  - first:
+      213: 4661883391649263483
+    second: Hp_up_potion_2_30
+  - first:
+      213: -5660020867968957654
+    second: Hp_up_potion_2_31
+  - first:
+      213: 7770090342343945328
+    second: Hp_up_potion_2_32
+  - first:
+      213: 3075847025164590677
+    second: Hp_up_potion_2_33
+  - first:
+      213: 6424510543473476841
+    second: Hp_up_potion_2_34
+  - first:
+      213: 8480433743917950752
+    second: Hp_up_potion_2_35
+  - first:
+      213: -7867205877497560216
+    second: Hp_up_potion_2_36
+  - first:
+      213: -5856426471221141167
+    second: Hp_up_potion_2_37
+  - first:
+      213: 3946395927864062381
+    second: Hp_up_potion_2_38
+  - first:
+      213: -5661368394145944580
+    second: Hp_up_potion_2_39
+  - first:
+      213: 3308227645745102690
+    second: Hp_up_potion_2_40
+  - first:
+      213: -4421403923308406698
+    second: Hp_up_potion_2_41
+  - first:
+      213: -6348450526100805909
+    second: Hp_up_potion_2_42
+  - first:
+      213: 2386911188352134186
+    second: Hp_up_potion_2_43
+  - first:
+      213: 1617500694345036142
+    second: Hp_up_potion_2_44
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hp_up_potion_2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 615
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5ba9da4931a84310800000000000000
+      internalID: 1389537752484784986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_1
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 65
+        width: 31
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5546f3c3626af9780800000000000000
+      internalID: -8674031674142530475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_2
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 51
+        width: 28
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a35c5bdb7dd369b90800000000000000
+      internalID: -7235527754514053830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_3
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 52
+        width: 35
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77c5ab0db97fab280800000000000000
+      internalID: -9026630254516872073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_4
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 51
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d03e66676603130f0800000000000000
+      internalID: -1139076014116773107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_5
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 66
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dee1f3e987f0e7220800000000000000
+      internalID: 2485441055080521453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_6
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 51
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a2be7a8edd5f9870800000000000000
+      internalID: 8691769016236028584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_7
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 65
+        width: 12
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0353fba56c485bb60800000000000000
+      internalID: 7761255520303789360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_8
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 52
+        width: 35
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2228d1271da75560800000000000000
+      internalID: 7302495635668214314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e74a59d68967daba0800000000000000
+      internalID: -6076069925207300994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_10
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 9
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daecd87f112e7fb30800000000000000
+      internalID: 4321170934280867501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_11
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 5
+        width: 6
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f87414271ce89b000800000000000000
+      internalID: 52229832188184463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_12
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 10
+        width: 26
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faadb488e3bf3e160800000000000000
+      internalID: 7053757687385545391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_13
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 0
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74ed7d9aa5fd073b0800000000000000
+      internalID: -5516663963039310265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_14
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 0
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3fa8e5c83764f640800000000000000
+      internalID: 5112824970508545853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_15
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 0
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a83f7daeca0ecd10800000000000000
+      internalID: 2147665955092641954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_16
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 0
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 775d5a363355e9d10800000000000000
+      internalID: 2134236952623699319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_17
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 0
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b3439dc78b434060800000000000000
+      internalID: 6936470897722344375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_18
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 0
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31ea80c2e8352ee70800000000000000
+      internalID: 9142962063604755987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_19
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 10
+        width: 24
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a7bb16377315aee0800000000000000
+      internalID: -1250571918795622487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_20
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 2
+        width: 52
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bc4a53035d1e81e0800000000000000
+      internalID: -2193783726107112266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_21
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 9
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 881b708011a54b880800000000000000
+      internalID: -8596146759547768440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_22
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d5ad904b8c372df0800000000000000
+      internalID: -205128689239874094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_23
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 5
+        width: 6
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82e50799745a18f70800000000000000
+      internalID: 9187806441748061736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_24
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 3
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d26841d7c14c9f10800000000000000
+      internalID: 2277767838008107728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_25
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 0
+        width: 6
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d691649a62716f10800000000000000
+      internalID: 2261214289998223061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_26
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 0
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bb995d5798ccb960800000000000000
+      internalID: 7619185222035807155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_27
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 0
+        width: 51
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e687474fc23d57cf0800000000000000
+      internalID: -255065613843269522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_28
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 12
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c99596a18b510340800000000000000
+      internalID: 4828240887921613252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_29
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 14
+        width: 22
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47ed5f19615042d00800000000000000
+      internalID: 946887416150875764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_30
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 10
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7f2c87be3652b040800000000000000
+      internalID: 4661883391649263483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_31
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 0
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a23896732019371b0800000000000000
+      internalID: -5660020867968957654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_32
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 0
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07caa18aff7e4db60800000000000000
+      internalID: 7770090342343945328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_33
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 0
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55e9066a29a9faa20800000000000000
+      internalID: 3075847025164590677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_34
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 4
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e40d7ffc42782950800000000000000
+      internalID: 6424510543473476841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_35
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 0
+        width: 7
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 027277f0f8d80b570800000000000000
+      internalID: 8480433743917950752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_36
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 4
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86384e8cfe112d290800000000000000
+      internalID: -7867205877497560216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_37
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 0
+        width: 9
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1516ba1372bc9bea0800000000000000
+      internalID: -5856426471221141167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da1b26fff2a64c630800000000000000
+      internalID: 3946395927864062381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_39
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 0
+        width: 21
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfbae44d077ce61b0800000000000000
+      internalID: -5661368394145944580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_40
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 0
+        width: 22
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26f73cc148f29ed20800000000000000
+      internalID: 3308227645745102690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_41
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 0
+        width: 22
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6581faeae8404a2c0800000000000000
+      internalID: -4421403923308406698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_42
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 0
+        width: 22
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be6ae9dc1e5c5e7a0800000000000000
+      internalID: -6348450526100805909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_43
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 0
+        width: 22
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2c62245413002120800000000000000
+      internalID: 2386911188352134186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp_up_potion_2_44
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 2
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e613266cf44827610800000000000000
+      internalID: 1617500694345036142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 962bb9c981c18054d96af6123616c710
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Hp_up_potion_2_0: 1389537752484784986
+      Hp_up_potion_2_1: -8674031674142530475
+      Hp_up_potion_2_10: 4321170934280867501
+      Hp_up_potion_2_11: 52229832188184463
+      Hp_up_potion_2_12: 7053757687385545391
+      Hp_up_potion_2_13: -5516663963039310265
+      Hp_up_potion_2_14: 5112824970508545853
+      Hp_up_potion_2_15: 2147665955092641954
+      Hp_up_potion_2_16: 2134236952623699319
+      Hp_up_potion_2_17: 6936470897722344375
+      Hp_up_potion_2_18: 9142962063604755987
+      Hp_up_potion_2_19: -1250571918795622487
+      Hp_up_potion_2_2: -7235527754514053830
+      Hp_up_potion_2_20: -2193783726107112266
+      Hp_up_potion_2_21: -8596146759547768440
+      Hp_up_potion_2_22: -205128689239874094
+      Hp_up_potion_2_23: 9187806441748061736
+      Hp_up_potion_2_24: 2277767838008107728
+      Hp_up_potion_2_25: 2261214289998223061
+      Hp_up_potion_2_26: 7619185222035807155
+      Hp_up_potion_2_27: -255065613843269522
+      Hp_up_potion_2_28: 4828240887921613252
+      Hp_up_potion_2_29: 946887416150875764
+      Hp_up_potion_2_3: -9026630254516872073
+      Hp_up_potion_2_30: 4661883391649263483
+      Hp_up_potion_2_31: -5660020867968957654
+      Hp_up_potion_2_32: 7770090342343945328
+      Hp_up_potion_2_33: 3075847025164590677
+      Hp_up_potion_2_34: 6424510543473476841
+      Hp_up_potion_2_35: 8480433743917950752
+      Hp_up_potion_2_36: -7867205877497560216
+      Hp_up_potion_2_37: -5856426471221141167
+      Hp_up_potion_2_38: 3946395927864062381
+      Hp_up_potion_2_39: -5661368394145944580
+      Hp_up_potion_2_4: -1139076014116773107
+      Hp_up_potion_2_40: 3308227645745102690
+      Hp_up_potion_2_41: -4421403923308406698
+      Hp_up_potion_2_42: -6348450526100805909
+      Hp_up_potion_2_43: 2386911188352134186
+      Hp_up_potion_2_44: 1617500694345036142
+      Hp_up_potion_2_5: 2485441055080521453
+      Hp_up_potion_2_6: 8691769016236028584
+      Hp_up_potion_2_7: 7761255520303789360
+      Hp_up_potion_2_8: 7302495635668214314
+      Hp_up_potion_2_9: -6076069925207300994
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

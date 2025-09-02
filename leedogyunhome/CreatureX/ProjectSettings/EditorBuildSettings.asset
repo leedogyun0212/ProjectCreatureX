@@ -12,175 +12,178 @@ EditorBuildSettings:
     path: Assets/My Asset/Common Resource/Scenes/TestTitle.unity
     guid: b045142fc33388b47985d7471f5c9e47
   - enabled: 1
+    path: Assets/My Asset/Common Resource/Scenes/shopScene.unity
+    guid: ae35708fb5d70a54087ef5e6e83bdb18
+  - enabled: 1
+    path: Assets/My Asset/Common Resource/Scenes/TestStage.unity
+    guid: a9846bec90410d64ca727e39b0a2864c
+  - enabled: 1
     path: Assets/My Asset/Common Resource/Scenes/TestSelectScene.unity
     guid: 353742cb9a3c4844a9094f95f6980e7c
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage1-1.unity
-    guid: e69502cdf51fabf409ce5374c534a8e7
+    path: Assets/My Asset/Common Resource/Scenes/Stage 1/Stage1-1.unity
+    guid: a44cece75e9a15b48b2bca50561c1b85
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage1-2.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 1/Stage1-2.unity
     guid: 431aa265043eaee419126b266f26ace7
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage1-3.unity
-    guid: 6e4c0d635e04e474ab6f9adb512190f0
-  - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage1-4.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 1/Stage1-4.unity
     guid: 6b026d68404d3c04e9f0e28d199b06e8
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage1-5.unity
+    path: Assets/My Asset/Common Resource/Scenes/St1/TestStage1-5.unity
     guid: a1a6102ef81d57643a47b40e17a0a996
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage1-6.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 1/Stage1-6.unity
     guid: 32c2c4a5c04a5c440ab9d7d766d81b05
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage1-7.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 1/Stage1-7.unity
     guid: 89d4f68191e8d0345962701a38d28c6e
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage2-1.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 2/Stage2-1.unity
     guid: e504e135df0f17741a54f31f56547bb4
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage2-2.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 2/Stage2-2.unity
     guid: 6e2429aff854e054bbcb4a034109eb3c
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage2-3.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 2/Stage2-3.unity
     guid: 9f38d63b1858776459a0fc5b60e72aeb
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage2-4.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 2/Stage2-4.unity
     guid: e497f5244c1b41f469f306db55aadc84
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage2-5.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 2/Stage2-5.unity
     guid: c803486530ce8cc4e9f4cfd2fc90ee8b
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage2-6.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 2/Stage2-6.unity
     guid: aa44320baca0ea0479854674f88719d3
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage2-7.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 2/Stage2-7.unity
     guid: 82f987a3ec1785844a6238e2f5c7abdf
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage3-1.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 3/Stage3-1.unity
     guid: 16091051d2f7e694a9a1607687328507
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage3-2.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 3/Stage3-2.unity
     guid: 764285a54a27e5d43b43b819fdd9b0ae
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage3-3.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 3/Stage3-3.unity
     guid: 55e6706bc6a895b45b6b7d2f9decc60c
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage3-4.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 3/Stage3-4.unity
     guid: 3a274063629029b4a93168e075202009
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage3-5.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 3/Stage3-5.unity
     guid: abed60b5f8307d940bfca822a8f97e86
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage3-6.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 3/Stage3-6.unity
     guid: 9923bcad7b12a364783b8ddd578be571
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage3-7.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 3/Stage3-7.unity
     guid: 3b72affe05f3539419dd22ec6efae6e7
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage4-1.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 4/Stage4-1.unity
     guid: badff21cb3f891444b2a86202206e515
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage4-2.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 4/Stage4-2.unity
     guid: 61d60162ea2208d4e848143d061aee29
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage4-3.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 4/Stage4-3.unity
     guid: 6b2745e3a32f55645b84b7ebdce4e23c
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage4-4.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 4/Stage4-4.unity
     guid: e0ad83b93b0919648b8be1f4ba198fec
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage4-5.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 4/Stage4-5.unity
     guid: 7ed7fe5c896450a40bf4402d1cda2428
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage4-6.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 4/Stage4-6.unity
     guid: f2a83e6cf5c75b240b2e99bc7c2d5279
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage4-7.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 4/Stage4-7.unity
     guid: 3e2d6b3d2dfa0894887584260b35284d
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage5-1.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 5/Stage5-1.unity
     guid: 2535b286ab4e21f4e8fcf22f16f0ab75
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage5-2.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 5/Stage5-2.unity
     guid: 7d89f921868b0c24bbf0e96eaf404a82
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage5-3.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 5/Stage5-3.unity
     guid: 9b472f091ca6340479461c70f2dfe0df
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage5-4.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 5/Stage5-4.unity
     guid: 676552fad94c40947ba3acb4d42e30c3
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage5-5.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 5/Stage5-5.unity
     guid: b00d95e45d8775e44a6980da94b366af
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage5-6.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 5/Stage5-6.unity
     guid: 78415306c516bae43946c27d5804b1a7
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage5-7.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 5/Stage5-7.unity
     guid: d59556697f3fe724ea05ac6ed05a49b8
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage6-1.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 6/Stage6-1.unity
     guid: 2e8eea7a6622010438b26eb3c12f026d
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage6-2.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 6/Stage6-2.unity
     guid: bc9379b830bb18d439a317e4487d8742
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage6-3.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 6/Stage6-3.unity
     guid: af9ad253a40351f44a7406f19f5b4026
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage6-4.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 6/Stage6-4.unity
     guid: eb4c51ce86da4c34896268ac06e87a5c
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage6-5.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 6/Stage6-5.unity
     guid: 92680d9ec93098c4684cae69cf6180be
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage6-6.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 6/Stage6-6.unity
     guid: 573ee4bf36e70374cbe53ecb8c8bebec
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage6-7.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 6/Stage6-7.unity
     guid: 348c020cd76bf5d4cbc6abb2defcca52
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage7-1.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 7/Stage7-1.unity
     guid: e9aa7927b0b4aea46b1ccc936b485f82
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage7-2.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 7/Stage7-2.unity
     guid: 68a14d03732bc8d4f99696c6cfe97a14
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage7-3.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 7/Stage7-3.unity
     guid: e146f858d4d383f4d94d719e3877a58f
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage7-4.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 7/Stage7-4.unity
     guid: c9ed9dabd0f5fe84a9a48a9e6672365f
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage7-5.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 7/Stage7-5.unity
     guid: db1d15153f252f14db09b15f3b3d9c70
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage7-6.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 7/Stage7-6.unity
     guid: a1c181d6ee802c24e956bd6d142c9964
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage7-7.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 7/Stage7-7.unity
     guid: 452de77672ad9b44698660d0872df0c7
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage8-1.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 8/Stage8-1.unity
     guid: 8b1183c6f6dbba3408ebe070cad3a48d
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage8-2.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 8/Stage8-2.unity
     guid: a239e056169541b419b617ae67f5d72c
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage8-3.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 8/Stage8-3.unity
     guid: 48bd8474597f3b041ad554066f61bbf6
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage8-4.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 8/Stage8-4.unity
     guid: 6729fb5b510307e4a94d4854b316e4f8
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage8-5.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 8/Stage8-5.unity
     guid: bcbc7f835aee68249ac97e2000b30283
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage8-6.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 8/Stage8-6.unity
     guid: 9ca9441fe0e25eb4fa314d0922b1cb09
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage8-7.unity
+    path: Assets/My Asset/Common Resource/Scenes/Stage 8/Stage8-7.unity
     guid: 3fbce783e3a645147a943f7436a33297
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 3590b91b4603b465dbb4216d601bff33, type: 3}

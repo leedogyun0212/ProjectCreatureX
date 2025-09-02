@@ -1,0 +1,1339 @@
+fileFormatVersion: 2
+guid: f6c26fd585867cf43afb06f653dfeb06
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1123627304242769222
+    second: Pajamas2_0
+  - first:
+      213: -2503740547259751724
+    second: Pajamas2_1
+  - first:
+      213: 4177618039567320012
+    second: Pajamas2_2
+  - first:
+      213: 2720964497884462559
+    second: Pajamas2_3
+  - first:
+      213: 680046269222379841
+    second: Pajamas2_4
+  - first:
+      213: 1013509452731793326
+    second: Pajamas2_5
+  - first:
+      213: -2561898115849694999
+    second: Pajamas2_6
+  - first:
+      213: 932776870671396024
+    second: Pajamas2_7
+  - first:
+      213: -429139968719764218
+    second: Pajamas2_8
+  - first:
+      213: 4020756636071859695
+    second: Pajamas2_9
+  - first:
+      213: 3205433094728435604
+    second: Pajamas2_10
+  - first:
+      213: -7519239407311959991
+    second: Pajamas2_11
+  - first:
+      213: 5061543861467044624
+    second: Pajamas2_12
+  - first:
+      213: 5579669015561010014
+    second: Pajamas2_13
+  - first:
+      213: 6323859242529905869
+    second: Pajamas2_14
+  - first:
+      213: -6111408066937201752
+    second: Pajamas2_15
+  - first:
+      213: 6822990834366150928
+    second: Pajamas2_16
+  - first:
+      213: 2862196451052876799
+    second: Pajamas2_17
+  - first:
+      213: -2142721783553846928
+    second: Pajamas2_18
+  - first:
+      213: -2619792736312954100
+    second: Pajamas2_19
+  - first:
+      213: 2659630635128238539
+    second: Pajamas2_20
+  - first:
+      213: 74153092400977101
+    second: Pajamas2_21
+  - first:
+      213: -2416733892478799914
+    second: Pajamas2_22
+  - first:
+      213: 3343245596357438172
+    second: Pajamas2_23
+  - first:
+      213: 555912991869028224
+    second: Pajamas2_24
+  - first:
+      213: 7130915341247740340
+    second: Pajamas2_25
+  - first:
+      213: -2121051264875386657
+    second: Pajamas2_26
+  - first:
+      213: 5599570744797826433
+    second: Pajamas2_27
+  - first:
+      213: 8858847803503291017
+    second: Pajamas2_28
+  - first:
+      213: 7068583256397584833
+    second: Pajamas2_29
+  - first:
+      213: 7162305858165256637
+    second: Pajamas2_30
+  - first:
+      213: 6459692058458898873
+    second: Pajamas2_31
+  - first:
+      213: -3404542189167303563
+    second: Pajamas2_32
+  - first:
+      213: -4366102938815378320
+    second: Pajamas2_33
+  - first:
+      213: 8311425387741799097
+    second: Pajamas2_34
+  - first:
+      213: -5375173814039281543
+    second: Pajamas2_35
+  - first:
+      213: -1026633614925910038
+    second: Pajamas2_36
+  - first:
+      213: -8608524441889952829
+    second: Pajamas2_37
+  - first:
+      213: -6230201457458465522
+    second: Pajamas2_38
+  - first:
+      213: -8840048112380644386
+    second: Pajamas2_39
+  - first:
+      213: -4310390167015898041
+    second: Pajamas2_40
+  - first:
+      213: 4534446631274855837
+    second: Pajamas2_41
+  - first:
+      213: 6249661170324678546
+    second: Pajamas2_42
+  - first:
+      213: 3906812296007740659
+    second: Pajamas2_43
+  - first:
+      213: -8805020240589189685
+    second: Pajamas2_44
+  - first:
+      213: 3431490400903216587
+    second: Pajamas2_45
+  - first:
+      213: -4397826721941084742
+    second: Pajamas2_46
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pajamas2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 323
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab21ea68be21860f0800000000000000
+      internalID: -1123627304242769222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_1
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 91
+        width: 35
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d227d6dc3de04dd0800000000000000
+      internalID: -2503740547259751724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_2
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 78
+        width: 31
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc38ca71971e9f930800000000000000
+      internalID: 4177618039567320012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 36
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdd3ad66bcec2c520800000000000000
+      internalID: 2720964497884462559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_4
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 26
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14164d39a72007900800000000000000
+      internalID: 680046269222379841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_5
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 37
+        width: 25
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaf349a3a75b01e00800000000000000
+      internalID: 1013509452731793326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_6
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 39
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e05906bc3f427cd0800000000000000
+      internalID: -2561898115849694999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_7
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 36
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bca11f2f93e1fc00800000000000000
+      internalID: 932776870671396024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_8
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 32
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 605498dd8736b0af0800000000000000
+      internalID: -429139968719764218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_9
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 30
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe59b5d8bd89cc730800000000000000
+      internalID: 4020756636071859695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_10
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 26
+        width: 7
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 497c192aa6cfb7c20800000000000000
+      internalID: 3205433094728435604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_11
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 26
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9484d02099b46a790800000000000000
+      internalID: -7519239407311959991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_12
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 36
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01b5dc523573e3640800000000000000
+      internalID: 5061543861467044624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_13
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 32
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5b74c44867fe6d40800000000000000
+      internalID: 5579669015561010014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_14
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 30
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dccd090d97cd2c750800000000000000
+      internalID: 6323859242529905869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_15
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 26
+        width: 7
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ab50c42ebaef2ba0800000000000000
+      internalID: -6111408066937201752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_16
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 27
+        width: 26
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 019f32c930220be50800000000000000
+      internalID: 6822990834366150928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_17
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 41
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff3f366f18098b720800000000000000
+      internalID: 2862196451052876799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_18
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 26
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07118c6f3e58342e0800000000000000
+      internalID: -2142721783553846928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_19
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 26
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c03fae6f260a4abd0800000000000000
+      internalID: -2619792736312954100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_20
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 29
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc1b098a8f7e8e420800000000000000
+      internalID: 2659630635128238539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_21
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 26
+        width: 21
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc49e8b38d1770100800000000000000
+      internalID: 74153092400977101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_22
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 26
+        width: 26
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6df67264459067ed0800000000000000
+      internalID: -2416733892478799914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_23
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 27
+        width: 22
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cda26c71828956e20800000000000000
+      internalID: 3343245596357438172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_24
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 27
+        width: 22
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 087c066bbeff6b700800000000000000
+      internalID: 555912991869028224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_25
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 25
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b9747eb8b916f260800000000000000
+      internalID: 7130915341247740340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd8a5b6cc138092e0800000000000000
+      internalID: -2121051264875386657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_27
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 9
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18d0852bceba5bd40800000000000000
+      internalID: 5599570744797826433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_28
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 3
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98a201f1423f0fa70800000000000000
+      internalID: 8858847803503291017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_29
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 0
+        width: 6
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c91ade4507a81260800000000000000
+      internalID: 7068583256397584833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_30
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 2
+        width: 26
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db1b3a00b3f956360800000000000000
+      internalID: 7162305858165256637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_31
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 7
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b1cad6c3bf65a950800000000000000
+      internalID: 6459692058458898873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_32
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 0
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5742adfbae2a0c0d0800000000000000
+      internalID: -3404542189167303563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_33
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 10
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07cce1f728c7863c0800000000000000
+      internalID: -4366102938815378320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_34
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 9
+        width: 26
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b26385ba5d185370800000000000000
+      internalID: 8311425387741799097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_35
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 14
+        width: 22
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 970053025eb8765b0800000000000000
+      internalID: -5375173814039281543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_36
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 10
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aefadd3aa2aa0c1f0800000000000000
+      internalID: -1026633614925910038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_37
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 9
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cba1e841a0688880800000000000000
+      internalID: -8608524441889952829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_38
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 0
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e05311198c0e989a0800000000000000
+      internalID: -6230201457458465522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_39
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 4
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed370301417d15580800000000000000
+      internalID: -8840048112380644386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_40
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 0
+        width: 7
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7444ea30bfa6e24c0800000000000000
+      internalID: -4310390167015898041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_41
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 4
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9dba16cf279dee30800000000000000
+      internalID: 4534446631274855837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_42
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 0
+        width: 9
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29721c7e8b14bb650800000000000000
+      internalID: 6249661170324678546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_43
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 0
+        width: 22
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fc6ba38519c73630800000000000000
+      internalID: 3906812296007740659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_44
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 0
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcd8e8ffdb84ec580800000000000000
+      internalID: -8805020240589189685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_45
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 0
+        width: 24
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcdbffbb65a1f9f20800000000000000
+      internalID: 3431490400903216587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pajamas2_46
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 2
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab52bf6a5e7c7f2c0800000000000000
+      internalID: -4397826721941084742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a8dbd60f1e3a41846b93a7dc67e5d835
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Pajamas2_0: -1123627304242769222
+      Pajamas2_1: -2503740547259751724
+      Pajamas2_10: 3205433094728435604
+      Pajamas2_11: -7519239407311959991
+      Pajamas2_12: 5061543861467044624
+      Pajamas2_13: 5579669015561010014
+      Pajamas2_14: 6323859242529905869
+      Pajamas2_15: -6111408066937201752
+      Pajamas2_16: 6822990834366150928
+      Pajamas2_17: 2862196451052876799
+      Pajamas2_18: -2142721783553846928
+      Pajamas2_19: -2619792736312954100
+      Pajamas2_2: 4177618039567320012
+      Pajamas2_20: 2659630635128238539
+      Pajamas2_21: 74153092400977101
+      Pajamas2_22: -2416733892478799914
+      Pajamas2_23: 3343245596357438172
+      Pajamas2_24: 555912991869028224
+      Pajamas2_25: 7130915341247740340
+      Pajamas2_26: -2121051264875386657
+      Pajamas2_27: 5599570744797826433
+      Pajamas2_28: 8858847803503291017
+      Pajamas2_29: 7068583256397584833
+      Pajamas2_3: 2720964497884462559
+      Pajamas2_30: 7162305858165256637
+      Pajamas2_31: 6459692058458898873
+      Pajamas2_32: -3404542189167303563
+      Pajamas2_33: -4366102938815378320
+      Pajamas2_34: 8311425387741799097
+      Pajamas2_35: -5375173814039281543
+      Pajamas2_36: -1026633614925910038
+      Pajamas2_37: -8608524441889952829
+      Pajamas2_38: -6230201457458465522
+      Pajamas2_39: -8840048112380644386
+      Pajamas2_4: 680046269222379841
+      Pajamas2_40: -4310390167015898041
+      Pajamas2_41: 4534446631274855837
+      Pajamas2_42: 6249661170324678546
+      Pajamas2_43: 3906812296007740659
+      Pajamas2_44: -8805020240589189685
+      Pajamas2_45: 3431490400903216587
+      Pajamas2_46: -4397826721941084742
+      Pajamas2_5: 1013509452731793326
+      Pajamas2_6: -2561898115849694999
+      Pajamas2_7: 932776870671396024
+      Pajamas2_8: -429139968719764218
+      Pajamas2_9: 4020756636071859695
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

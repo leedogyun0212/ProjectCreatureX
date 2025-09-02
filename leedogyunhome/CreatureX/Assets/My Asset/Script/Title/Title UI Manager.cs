@@ -38,8 +38,6 @@ public class TitleUIManager : MonoBehaviour
 
     public void OnClickStartGame()
     {
-        // SceneManager.LoadScene("TestStage1-1");  // 씬 이름 정확히 입력!
-        // StageManager.Instance.LoadStage(StageManager.Instance.curMainStage, StageManager.Instance.curSubStage);
         SceneManager.LoadScene("TestSelectScene");
     }
 

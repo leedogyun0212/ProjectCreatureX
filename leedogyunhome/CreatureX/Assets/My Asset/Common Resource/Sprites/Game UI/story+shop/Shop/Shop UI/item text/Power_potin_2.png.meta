@@ -1,0 +1,1053 @@
+fileFormatVersion: 2
+guid: 363229cd9f9904644b4502503920d992
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8402148462352684973
+    second: Power_potin_2_0
+  - first:
+      213: -5771825800080606677
+    second: Power_potin_2_1
+  - first:
+      213: -2706004239668183256
+    second: Power_potin_2_2
+  - first:
+      213: -7845347522559903990
+    second: Power_potin_2_3
+  - first:
+      213: -9185513640176862636
+    second: Power_potin_2_4
+  - first:
+      213: -3374504530011489696
+    second: Power_potin_2_5
+  - first:
+      213: 3397815699158873383
+    second: Power_potin_2_6
+  - first:
+      213: -4980471630496987553
+    second: Power_potin_2_7
+  - first:
+      213: -3961905518920712714
+    second: Power_potin_2_8
+  - first:
+      213: 4294971211493978735
+    second: Power_potin_2_9
+  - first:
+      213: 5479049732175802905
+    second: Power_potin_2_10
+  - first:
+      213: 3267981359422689165
+    second: Power_potin_2_11
+  - first:
+      213: -6977438207031575415
+    second: Power_potin_2_12
+  - first:
+      213: -4792460068960761910
+    second: Power_potin_2_13
+  - first:
+      213: -5299001852353747586
+    second: Power_potin_2_14
+  - first:
+      213: -5758494972029646231
+    second: Power_potin_2_15
+  - first:
+      213: 2515057599495551157
+    second: Power_potin_2_16
+  - first:
+      213: -1650401212803648158
+    second: Power_potin_2_17
+  - first:
+      213: -7511334483642296351
+    second: Power_potin_2_18
+  - first:
+      213: 7770704431769953061
+    second: Power_potin_2_19
+  - first:
+      213: -4605340654547643840
+    second: Power_potin_2_20
+  - first:
+      213: 8083764837855977990
+    second: Power_potin_2_21
+  - first:
+      213: -6434160758464140998
+    second: Power_potin_2_22
+  - first:
+      213: -8064369855527516049
+    second: Power_potin_2_23
+  - first:
+      213: -9174667285851466266
+    second: Power_potin_2_24
+  - first:
+      213: -9186011626529280333
+    second: Power_potin_2_25
+  - first:
+      213: 5267359874266047654
+    second: Power_potin_2_26
+  - first:
+      213: 7041438561163217058
+    second: Power_potin_2_27
+  - first:
+      213: 982079659928628106
+    second: Power_potin_2_28
+  - first:
+      213: -5783254616036893267
+    second: Power_potin_2_29
+  - first:
+      213: -770570681906628821
+    second: Power_potin_2_30
+  - first:
+      213: -1823963329687130112
+    second: Power_potin_2_31
+  - first:
+      213: -7707920638458782335
+    second: Power_potin_2_32
+  - first:
+      213: 2540461017695683544
+    second: Power_potin_2_33
+  - first:
+      213: -2714232399952265568
+    second: Power_potin_2_34
+  - first:
+      213: 2203049111494410509
+    second: Power_potin_2_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Power_potin_2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 457
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da750a0928d6a9470800000000000000
+      internalID: 8402148462352684973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_potin_2_1
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 51
+        width: 29
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2ab2c8e30b56efa0800000000000000
+      internalID: -5771825800080606677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_potin_2_2
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 51
+        width: 31
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82f70e52b77527ad0800000000000000
+      internalID: -2706004239668183256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_potin_2_3
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 52
+        width: 35
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a077352aef9bf1390800000000000000
+      internalID: -7845347522559903990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_potin_2_4
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 51
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45ab0cdd200868080800000000000000
+      internalID: -9185513640176862636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_potin_2_5
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 66
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06af7b3420a5b21d0800000000000000
+      internalID: -3374504530011489696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_potin_2_6
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 51
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7253c904067772f20800000000000000
+      internalID: 3397815699158873383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_potin_2_7
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 65
+        width: 12
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f560152907fc1eab0800000000000000
+      internalID: -4980471630496987553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_potin_2_8
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 52
+        width: 35
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fd321febeb7409c0800000000000000
+      internalID: -3961905518920712714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_potin_2_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f62b0a5af8dca9b30800000000000000
+      internalID: 4294971211493978735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_potin_2_10
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 9
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 912b901c3be790c40800000000000000
+      internalID: 5479049732175802905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_potin_2_11
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 5
+        width: 6
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8fccfc5bb33a5d20800000000000000
+      internalID: 3267981359422689165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_potin_2_12
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 10
+        width: 26
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98cf4a33be82b2f90800000000000000
+      internalID: -6977438207031575415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_potin_2_13
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 0
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac7895575f2cd7db0800000000000000
+      internalID: -4792460068960761910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_potin_2_14
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 10
+        width: 26
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e75615ef3e92676b0800000000000000
+      internalID: -5299001852353747586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_potin_2_15
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 0
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96acc4f2557b510b0800000000000000
+      internalID: -5758494972029646231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_potin_2_16
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 0
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b83497bf8747e220800000000000000
+      internalID: 2515057599495551157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_potin_2_17
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 0
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 265f6f557d89819e0800000000000000
+      internalID: -1650401212803648158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_potin_2_18
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 0
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e7db59751162c790800000000000000
+      internalID: -7511334483642296351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_potin_2_19
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 0
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 523a33e728617db60800000000000000
+      internalID: 7770704431769953061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_potin_2_20
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 0
+        width: 52
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 042d508231b8610c0800000000000000
+      internalID: -4605340654547643840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_potin_2_21
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 12
+        width: 25
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 602e2385a4d4f2070800000000000000
+      internalID: 8083764837855977990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_potin_2_22
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 14
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a39acfb31e445b6a0800000000000000
+      internalID: -6434160758464140998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_potin_2_23
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 10
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f680aefd75a951090800000000000000
+      internalID: -8064369855527516049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_potin_2_24
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 0
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e51d6686b80da080800000000000000
+      internalID: -9174667285851466266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_potin_2_25
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 0
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3be2d12681bb48080800000000000000
+      internalID: -9186011626529280333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_potin_2_26
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 0
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a426c1e5eb691940800000000000000
+      internalID: 5267359874266047654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_potin_2_27
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 4
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a80fd1701738b160800000000000000
+      internalID: 7041438561163217058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_potin_2_28
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 0
+        width: 6
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8bae275f3c01ad00800000000000000
+      internalID: 982079659928628106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_potin_2_29
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 4
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dad9b755190cdbfa0800000000000000
+      internalID: -5783254616036893267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_potin_2_30
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 0
+        width: 9
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b27ff962c026e45f0800000000000000
+      internalID: -770570681906628821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_potin_2_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 000f8a2f30bffa6e0800000000000000
+      internalID: -1823963329687130112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_potin_2_32
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 0
+        width: 21
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18d13c38407f70590800000000000000
+      internalID: -7707920638458782335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_potin_2_33
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 0
+        width: 22
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d38a7de5d7814320800000000000000
+      internalID: 2540461017695683544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_potin_2_34
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 0
+        width: 22
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ae3dfa430c155ad0800000000000000
+      internalID: -2714232399952265568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_potin_2_35
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 2
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d014d51ae7dc29e10800000000000000
+      internalID: 2203049111494410509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: f36d332daa3d0a94686aa7c0db587581
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Power_potin_2_0: 8402148462352684973
+      Power_potin_2_1: -5771825800080606677
+      Power_potin_2_10: 5479049732175802905
+      Power_potin_2_11: 3267981359422689165
+      Power_potin_2_12: -6977438207031575415
+      Power_potin_2_13: -4792460068960761910
+      Power_potin_2_14: -5299001852353747586
+      Power_potin_2_15: -5758494972029646231
+      Power_potin_2_16: 2515057599495551157
+      Power_potin_2_17: -1650401212803648158
+      Power_potin_2_18: -7511334483642296351
+      Power_potin_2_19: 7770704431769953061
+      Power_potin_2_2: -2706004239668183256
+      Power_potin_2_20: -4605340654547643840
+      Power_potin_2_21: 8083764837855977990
+      Power_potin_2_22: -6434160758464140998
+      Power_potin_2_23: -8064369855527516049
+      Power_potin_2_24: -9174667285851466266
+      Power_potin_2_25: -9186011626529280333
+      Power_potin_2_26: 5267359874266047654
+      Power_potin_2_27: 7041438561163217058
+      Power_potin_2_28: 982079659928628106
+      Power_potin_2_29: -5783254616036893267
+      Power_potin_2_3: -7845347522559903990
+      Power_potin_2_30: -770570681906628821
+      Power_potin_2_31: -1823963329687130112
+      Power_potin_2_32: -7707920638458782335
+      Power_potin_2_33: 2540461017695683544
+      Power_potin_2_34: -2714232399952265568
+      Power_potin_2_35: 2203049111494410509
+      Power_potin_2_4: -9185513640176862636
+      Power_potin_2_5: -3374504530011489696
+      Power_potin_2_6: 3397815699158873383
+      Power_potin_2_7: -4980471630496987553
+      Power_potin_2_8: -3961905518920712714
+      Power_potin_2_9: 4294971211493978735
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -64,9 +64,9 @@ public class PlayerController : MonoBehaviour
 
         float dir;
 
-        if (leftPressed && !rightPressed) dir = -1; 
-        else if (!leftPressed && rightPressed) dir = 1; 
-        else dir = 0;                            
+        if (leftPressed && !rightPressed) dir = -1;
+        else if (!leftPressed && rightPressed) dir = 1;
+        else dir = 0;
 
         player.curTrans.Move(dir);
     }
@@ -101,26 +101,15 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(releaseKey))
         {
-            if (player.curRelease != null)
-            {
-                Debug.LogWarning($"{Time.deltaTime}: {player.curTrans.Name} 방출 시도!");
-                StartCoroutine(LateRealese());
-                player.curRelease.Realese();
-            }
-            else
-            {
-                Debug.LogWarning($"{Time.deltaTime}: {player.curTrans.Name}은 방출 불가!");
-            }
+            StartCoroutine(LateRealese());
+            player.curTrans.Realese();
         }
-
     }
 
     private void ControlAttack()
     {
         if (Input.GetKeyDown(attackKey))
         {
-            // Debug.LogWarning($"{Time.deltaTime}: {player.curTrans.Name} 공격 시도!");
-            // player.curTrans.Attack();
             Vector3 PlayerScale = player.transform.localScale;
             Vector3 Offset = new Vector3(1.95f, 0f, 0f);
             if (!player.isJump)

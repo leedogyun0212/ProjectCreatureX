@@ -27,7 +27,7 @@ public class KeyDoor : MonoBehaviour, IDoor
         if (keyDataAsset.Key && !Key)
         {
             Key = true;
-            animator.SetBool("Key",Key);
+            animator.SetBool("Key", Key);
         }
     }
 
@@ -46,7 +46,7 @@ public class KeyDoor : MonoBehaviour, IDoor
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player")&& keyDataAsset.Key)
+        if (collision.gameObject.CompareTag("Player") && keyDataAsset.Key)
         {
             DoorTouch = true;
             if (Camera != null)

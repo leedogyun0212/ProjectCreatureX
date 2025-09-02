@@ -2,13 +2,14 @@ using System.Collections;
 using Unity.Burst.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Robot : BaseEnemy, IAllyResponder
 {
     [SerializeField]
     private RobotBullet BulletPrefab;
 
-    [SerializeField] 
+    [SerializeField]
     private Transform BulletShotPoint = null;
 
     private ObjectPool<RobotBullet> BulletPool = null;
@@ -43,18 +44,18 @@ public class Robot : BaseEnemy, IAllyResponder
         }
         else if (monsterState == MonsterState.Move && helpTarget == null) // �þ� ����� �÷��̾� �߰� 
         {
-            if (audioSource.clip == GunClip&& audioSource.clip != MoveClip) audioSource.Stop();
+            if (audioSource.clip == GunClip && audioSource.clip != MoveClip) audioSource.Stop();
             Getdirection();
             EffectManager.Play("E_Dirt", this.gameObject, transform.localScale.x != -1, new Vector3(0.7f, -0.83f));
             Move();
         }
         else if (monsterState == MonsterState.Play && isAttacking && !isCoolingDown) // �þ� ������ ����
         {
-            if(audioSource.clip == MoveClip&& audioSource.clip != GunClip) audioSource.Stop();
+            if (audioSource.clip == MoveClip && audioSource.clip != GunClip) audioSource.Stop();
             Attack();
             StartCoroutine(AttackCooldown());
         }
-        else if (monsterState == MonsterState.Help&& helpTarget != null) // �������� ���� ��û�ϸ� ������������ �̵�
+        else if (monsterState == MonsterState.Help && helpTarget != null) // �������� ���� ��û�ϸ� ������������ �̵�
         {
             Getdirection();
             EffectManager.Play("E_Dirt", this.gameObject, transform.localScale.x != -1, new Vector3(0.7f, -0.83f));
@@ -132,10 +133,10 @@ public class Robot : BaseEnemy, IAllyResponder
 
         bullet.BulletMove.Initialize(lookdir);
     }
-    
+
     private void Test()
     {
-        if(transform.localScale.x == 1)
+        if (transform.localScale.x == 1)
         {
             lookdir = Vector2.right;
         }
@@ -158,7 +159,7 @@ public class Robot : BaseEnemy, IAllyResponder
 
     protected override void OnTriggerEnter2D(Collider2D collision) //�þ� �ݶ��̴�, �þ߿� ������ ����
     {
-        if (collision.gameObject.CompareTag("Player") && player.isAttack&& !HitOn)
+        if (collision.gameObject.CompareTag("Player") && player.isAttack && !HitOn)
         {
             monsterState = MonsterState.Hit;
             animHit = true;
@@ -168,7 +169,7 @@ public class Robot : BaseEnemy, IAllyResponder
             HitMove();
             StartCoroutine(HitRecover());
         }
-        if (collision.CompareTag("Player")&& !player.isAttack&&!EnemyFailed)
+        if (collision.CompareTag("Player") && !player.isAttack && !EnemyFailed)
         {
             helpTarget = null;
 
@@ -189,7 +190,7 @@ public class Robot : BaseEnemy, IAllyResponder
     protected override void OnCollisionEnter2D(Collision2D collision) // �κ� ���� ������ �߻��ϴ� �ݶ��̴�, ������ ������ ���� ���� 
     {
         //base.OnCollisionEnter2D(collision);
-        if(collision.gameObject.CompareTag("Researcher") && !EnemyFailed)
+        if (collision.gameObject.CompareTag("Researcher") && !EnemyFailed)
         {
             monsterState = MonsterState.idle;
             helpTarget = null;

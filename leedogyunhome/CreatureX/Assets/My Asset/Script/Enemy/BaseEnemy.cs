@@ -39,7 +39,7 @@ public class BaseEnemy : MonoBehaviour
 
     protected bool HitOn = false; // 피격 상태중 데미지 안받게 하기 위함
 
-    protected AudioSource audioSource;
+    protected AudioSource audioSource = null;
 
     protected enum MonsterState
     {

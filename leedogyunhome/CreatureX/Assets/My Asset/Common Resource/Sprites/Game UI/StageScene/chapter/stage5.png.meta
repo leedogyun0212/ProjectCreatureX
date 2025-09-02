@@ -1,0 +1,507 @@
+fileFormatVersion: 2
+guid: c1ac7644eefec974e9b189c01a94af19
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1384698669399603645
+    second: stage5_0
+  - first:
+      213: -8396441160028134295
+    second: stage5_1
+  - first:
+      213: 1050369160775216725
+    second: stage5_2
+  - first:
+      213: 1275306741406208506
+    second: stage5_3
+  - first:
+      213: 2424923002909488238
+    second: stage5_4
+  - first:
+      213: 7451753247197831956
+    second: stage5_5
+  - first:
+      213: 6771856529178588592
+    second: stage5_6
+  - first:
+      213: -1958142644532754710
+    second: stage5_7
+  - first:
+      213: -7411999602160963295
+    second: stage5_8
+  - first:
+      213: 6789231563158257613
+    second: stage5_9
+  - first:
+      213: 7959266487820531392
+    second: stage5_10
+  - first:
+      213: 4075235368209113436
+    second: stage5_11
+  - first:
+      213: 2539466036385388580
+    second: stage5_12
+  - first:
+      213: -7160767281495125977
+    second: stage5_13
+  - first:
+      213: -4148466097095858019
+    second: stage5_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: stage5_0
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 828
+        width: 134
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3460b7985ef88cce0800000000000000
+      internalID: -1384698669399603645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage5_1
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 904
+        width: 98
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 964ed0f4049d97b80800000000000000
+      internalID: -8396441160028134295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage5_2
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 828
+        width: 231
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55e2807cf29a39e00800000000000000
+      internalID: 1050369160775216725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage5_3
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 828
+        width: 132
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af19d2579bcc2b110800000000000000
+      internalID: 1275306741406208506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage5_4
+      rect:
+        serializedVersion: 2
+        x: 1444
+        y: 744
+        width: 9
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e64f7149f9e07a120800000000000000
+      internalID: 2424923002909488238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage5_5
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 506
+        width: 132
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4132715e812f96760800000000000000
+      internalID: 7451753247197831956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage5_6
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 657
+        width: 98
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b5799b62a77afd50800000000000000
+      internalID: 6771856529178588592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage5_7
+      rect:
+        serializedVersion: 2
+        x: 1138
+        y: 585
+        width: 132
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae6c415b3a743d4e0800000000000000
+      internalID: -1958142644532754710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage5_8
+      rect:
+        serializedVersion: 2
+        x: 1382
+        y: 585
+        width: 133
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 121fbddd1a9432990800000000000000
+      internalID: -7411999602160963295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage5_9
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 506
+        width: 9
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcffae3c222383e50800000000000000
+      internalID: 6789231563158257613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage5_10
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 347
+        width: 135
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c6b63f53bef47e60800000000000000
+      internalID: 7959266487820531392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage5_11
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 423
+        width: 98
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c516632d9f42e8830800000000000000
+      internalID: 4075235368209113436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage5_12
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 347
+        width: 134
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4289be9c7eefd3320800000000000000
+      internalID: 2539466036385388580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage5_13
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 423
+        width: 98
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7205e3bc818df9c90800000000000000
+      internalID: -7160767281495125977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage5_14
+      rect:
+        serializedVersion: 2
+        x: 1384
+        y: 347
+        width: 134
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d98a9df6010bd66c0800000000000000
+      internalID: -4148466097095858019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      stage5_0: -1384698669399603645
+      stage5_1: -8396441160028134295
+      stage5_10: 7959266487820531392
+      stage5_11: 4075235368209113436
+      stage5_12: 2539466036385388580
+      stage5_13: -7160767281495125977
+      stage5_14: -4148466097095858019
+      stage5_2: 1050369160775216725
+      stage5_3: 1275306741406208506
+      stage5_4: 2424923002909488238
+      stage5_5: 7451753247197831956
+      stage5_6: 6771856529178588592
+      stage5_7: -1958142644532754710
+      stage5_8: -7411999602160963295
+      stage5_9: 6789231563158257613
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -64,7 +64,7 @@ public class FakeStool : MonoBehaviour
                 // 플레이어가 위에서 밟았을 때만 인정 (거의 수직으로)
                 if (Vector2.Dot(normal, Vector2.up) < 0.9f && contact.point.y > transform.position.y)
                 {
-                    Debug.LogWarning($"{Time.deltaTime}: 플레이어가 발판에 올라감.");
+                    // Debug.LogWarning($"{Time.deltaTime}: 플레이어가 발판에 올라감.");
                     isPlayerOn = true;
                     isBroking = true;
                     curShakeTime = shakeTime;
@@ -77,7 +77,7 @@ public class FakeStool : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(0.8f);
 
-        Debug.LogWarning($"{Time.deltaTime}: 발판 부서짐");
+        // Debug.LogWarning($"{Time.deltaTime}: 발판 부서짐");
         visual.SetActive(false);
         col.enabled = false;
 

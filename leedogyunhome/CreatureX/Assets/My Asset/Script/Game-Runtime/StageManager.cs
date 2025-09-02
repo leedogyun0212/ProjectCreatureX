@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -9,8 +10,9 @@ public class StageManager : MonoBehaviour
 
     public int curMainStage = 1;
     public int curSubStage = 1;
-    public int ClearStageIndex = 10;
+    [NonSerialized] public int ClearIndex = 7;
 
+    private Dictionary<string, ChapterData> chapDict = new Dictionary<string, ChapterData>();
     private Dictionary<string, StageData> stageDict = new Dictionary<string, StageData>();
 
     private void Awake()
@@ -33,22 +35,25 @@ public class StageManager : MonoBehaviour
             stageDict.Add(key, stage);
     }
 
+    public void RegisterChapter(ChapterData chapter)
+    {
+        //string key = GetChapterKey(chpater.chapterIndex);
+        //if (!chapDict.ContainsKey(key))
+        //    chapDict.Add(key, chpater);
+
+        string key = GetChapterKey(chapter.chapterIndex);
+        chapDict[key] = chapter; // 있으면 덮어쓰기
+    }
+
     public void LoadStage(int main, int sub)
     {
         curMainStage = main;
         curSubStage = sub;
 
-        if (curMainStage >= ClearStageIndex)
-        {
-            Debug.Log("모든 스테이지 클리어!");
-        }
-        else
-        {
-            string sceneName = $"TestStage{main}-{sub}";
-            Debug.Log($"Loading scene: {sceneName}");
-            SceneManager.LoadScene(sceneName);
-            RuntimeGameManager.Instance.GameReset();
-        }
+        string sceneName = $"Stage{main}-{sub}";
+        // Debug.Log($"Loading scene: {sceneName}");
+        SceneManager.LoadScene(sceneName);
+        RuntimeGameManager.Instance.GameReset();
     }
 
     public void ReStartStage()
@@ -69,6 +74,7 @@ public class StageManager : MonoBehaviour
         MarkStageClear(curMainStage, curSubStage);
         curMainStage++;
         curSubStage = 1;
+        UnlockChapter(curMainStage);
         UnlockStage(curMainStage, curSubStage);
         Load_NextStage();
     }
@@ -88,12 +94,11 @@ public class StageManager : MonoBehaviour
     }
 
     // 스테이지 잠금 해제
-    public void UnlockStage(int main, int sub)
+    private void UnlockStage(int main, int sub)
     {
         string key = GetStageKey(main, sub);
         if (stageDict.TryGetValue(key, out var stage))
         {
-            Debug.Log($"Stage {main}-{sub} 스테이지가 잠금 해제!");
             stage.UnlockStage();
         }
         else
@@ -102,8 +107,27 @@ public class StageManager : MonoBehaviour
         }
     }
 
+    private void UnlockChapter(int chapindex)
+    { 
+        string key = GetChapterKey(chapindex);
+        if (chapDict.TryGetValue(key, out var chapter))
+        {
+            chapter.UnlockChapter();
+        }
+        else
+        {
+            Debug.LogWarning($"Stage {chapindex} 챕터 없음!!!");
+        }
+    }
+
+
     private string GetStageKey(int main, int sub)
     {
         return $"{main}-{sub}";
+    }
+
+    private string GetChapterKey(int chap)
+    {
+        return $"{chap}";
     }
 }

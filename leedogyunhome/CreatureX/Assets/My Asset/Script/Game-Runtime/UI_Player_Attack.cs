@@ -44,12 +44,6 @@ public class UI_Player_Attack : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    //void LateUpdate()
-    //{
-    //    Check_PlayerTrans();
-    //}
-
     void Update()
     {
         Check_PlayerTrans();
@@ -87,9 +81,12 @@ public class UI_Player_Attack : MonoBehaviour
         }
         else // 플레이어 기본 상태
         {
-            DeactivateUI_Rel();
             ShowUI_BasicAttack(attack_Basic);
             ShowUI_SkillUI(skill_Basic);
+            if (player.unableRel)
+                ActivateUI_Rel();
+            else
+                DeactivateUI_Rel();
         }
     }
 
@@ -113,7 +110,7 @@ public class UI_Player_Attack : MonoBehaviour
             Debug.LogError("공격 UI RectTransform이 연결되지 않았습니다!");
             return;
         }
-        Debug.Log("공격 UI 활성화: " + rect.name);
+        // Debug.Log("공격 UI 활성화: " + rect.name);
         rect.gameObject.SetActive(true);
     }
 

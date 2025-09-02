@@ -27,7 +27,7 @@ public class TestPlayer : MonoBehaviour
     private bool isReleasing = false;
     private bool isHiting = false;
     private bool isDie = false;
-
+    private bool isMove = false;
 
     // 흡수 가능 여부 변경 이벤트
     public event Action<bool> OnAbleAssChange;
@@ -41,7 +41,6 @@ public class TestPlayer : MonoBehaviour
             {
                 _ableAss = value;
                 OnAbleAssChange?.Invoke(_ableAss);
-                Debug.LogWarning($"AbleAss Changed: {_ableAss}");
                 UI_Player_Attack.Instance.HandleAbleAssChange(_ableAss);
             }
         }
@@ -104,14 +103,24 @@ public class TestPlayer : MonoBehaviour
 
 
     public IPlayerTrans curTrans { get; private set; }
-    public IPlayerRelease curRelease { get; private set; }
+    public bool unableRel
+    {
+        get
+        {
+            if (curForm != AssimilateForm.None) return true;
+            return curTrans == playerTransRes
+                || curTrans == playerTransRobot
+                || curTrans == playerTransDrone
+                || curTrans == playerTransCar;
+        }
+    }
 
     [Header("Test Data")]
     [SerializeField] private GameObject blackOrbPrefab;
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject TestHitboxPrefab;
     private GameObject dashHitbox;
-    [SerializeField] private GameObject testAssboxPre;   // 흡수 범위 프리팹
+    [SerializeField] private GameObject testAssboxPre;   // 흡수 프리팹
     private TestAssBox assBoxRange;  // 흡수 범위
     private BaseEnemy targetAssEnemy;
 
@@ -153,8 +162,6 @@ public class TestPlayer : MonoBehaviour
 
         playerCurHP = playerMaxHP;
         playerCurMoveSpeed = playerMoveSpeed;
-
-        // Create the TestAssBox prefab
         var obj = Instantiate(testAssboxPre, transform.position, Quaternion.identity, transform);
         TestAssBox assBox = obj.GetComponent<TestAssBox>();
 
@@ -170,13 +177,6 @@ public class TestPlayer : MonoBehaviour
             assBoxRange.transform.localPosition = offset;
         }
     }
-
-    //private void OnDrawGizmosSelected()
-    //{
-    //    Gizmos.color = Color.blue;
-    //    Gizmos.DrawWireSphere(transform.position, assRange);
-    //}
-
 
     private void Update()
     {
@@ -216,15 +216,6 @@ public class TestPlayer : MonoBehaviour
         curTrans = newTrans;
         curForm = AssimilateForm.None;
         curTrans.Enter();
-
-        if (newTrans != playerTransBasic && newTrans is IPlayerRelease releaseable)
-        {
-            curRelease = releaseable;
-        }
-        else
-        {
-            curRelease = null;
-        }
     }
 
 
@@ -288,9 +279,15 @@ public class TestPlayer : MonoBehaviour
     {
         if (unableMove)
         {
-            Debug.LogWarning($"현재 플레이어는 움직이지 못함!");
             return;
         }
+        if (direction == 0)
+        {
+            isMove = false;
+            animator.SetFloat("TryMove", 0f);
+            return;
+        }
+        isMove = true;
         curDirect = direction;
         if (direction < 0)
         {
@@ -306,24 +303,7 @@ public class TestPlayer : MonoBehaviour
     private void Move(float direction)
     {
         transform.Translate(Vector3.right * direction * playerCurMoveSpeed * Time.deltaTime);
-        if (curTrans == playerTransBasic)
-            animator.SetFloat("TryMove", Mathf.Abs(direction));
-        else if (curTrans == playerTransCar)
-        {
-            animator.SetFloat("TryMove", Mathf.Abs(direction));
-        }
-        else if (curTrans == playerTransDrone)
-        {
-            animator.SetFloat("TryMove", Mathf.Abs(direction));
-        }
-        else if (curTrans == playerTransRobot)
-        {
-            animator.SetFloat("TryMove", Mathf.Abs(direction));
-        }
-        else if (curTrans == playerTransRes)
-        {
-            animator.SetFloat("TryMove", Mathf.Abs(direction));
-        }
+        animator.SetFloat("TryMove", Mathf.Abs(direction));
     }
 
     #endregion 내용
@@ -363,21 +343,6 @@ public class TestPlayer : MonoBehaviour
 
     public void TryAssimilate()
     {
-        //if (isAssimilating || isAttack || isDie) return;
-        //BaseEnemy target = EnemyManager.Instance.GetAssimilateEnemy(transform.position, assRange);
-        //if (target != null)
-        //{
-        //    targetAssEnemy = target; // 나중에 참조하기 위해 저장
-        //    animator.SetTrigger("TryAssimilate");
-        //    isAssimilating = true;
-        //    unableAttack = true;
-        //    unableMove = true;
-        //}
-        //else
-        //{
-        //    Debug.LogWarning("흡수할 적이 범위 안에 없음");
-        //}
-
         if (isAssimilating || isAttack || isDie) return;
 
         if (assBoxRange == null)
@@ -385,10 +350,7 @@ public class TestPlayer : MonoBehaviour
             Debug.LogWarning("흡수 범위 assBoxRange가 설정되지 않음");
             return;
         }
-
-        // TestAssBox가 관리하는 리스트에서 첫 번째 흡수 가능 적 선택
         BaseEnemy target = assBoxRange.GetFirstAssEnemy();
-
         if (target != null)
         {
             targetAssEnemy = target;
@@ -466,14 +428,22 @@ public class TestPlayer : MonoBehaviour
     // 방출 명령
     public void OrderRealese()
     {
-        if (isReleasing || isDie) return;
+        if (isReleasing || isDie || !unableRel) return;
 
-        Realese();
+        if (curTrans != playerTransBasic)
+        {
+            TransChange(playerTransBasic);
+            Realese();
+        }
+        else
+        {
+            curForm = AssimilateForm.None;
+            Realese();
+        }
     }
 
     private void Realese()
     {
-        TransChange(playerTransBasic);  // 일단 기본상태로 되돌아가고
         animator.SetTrigger("TryRelease");
         isReleasing = true;
         unableAttack = true;
@@ -622,23 +592,21 @@ public class TestPlayer : MonoBehaviour
     {
         StartAttack();
         Vector3 spawnPos = firePoint.position;
-        float direction = transform.localScale.x > 0 ? 1 : -1;
-        float dashDistance = 0.85f; // 앞으로 이동할 거리
+        // float direction = transform.localScale.x > 0 ? 1 : -1;
+        // float dashDistance = 0.85f;
         // transform.Translate(Vector3.right * direction * dashDistance);
-        StartCoroutine(DashForward(direction * dashDistance));
+        // StartCoroutine(DashForward(direction * dashDistance));
 
         int rand = UnityEngine.Random.Range(0, 2);
         if (rand == 0) animator.SetTrigger("TryAttack1");
         else animator.SetTrigger("TryAttack2");
     }
 
-    // 애니메이션 이벤트로 실행
     public void BasicAttack()
     {
         float direction = transform.localScale.x > 0 ? 1 : -1;
         CreateHitBox(direction, new Vector3(2f, 0f, 0f), 1.75f);
     }
-
 
     private IEnumerator DashForward(float direction)
     {
@@ -669,8 +637,8 @@ public class TestPlayer : MonoBehaviour
     private void JumpUpperAttack()
     {
         float direction = transform.localScale.x > 0 ? 1 : -1;
-        Vector2 forceDir = new Vector2(direction, 1).normalized;
-        rigid.AddForce(forceDir * 15f, ForceMode2D.Impulse);
+        //Vector2 forceDir = new Vector2(direction, 1).normalized;
+        //rigid.AddForce(forceDir * 15f, ForceMode2D.Impulse);
 
         CreateHitBox(direction, new Vector3(2f, 0f, 0f), 1.5f);
         Invoke(nameof(EndJumpAttack), 0.35f);
