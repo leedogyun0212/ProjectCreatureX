@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using static TestPlayer;
@@ -63,9 +64,9 @@ public class PlayerController : MonoBehaviour
 
         float dir;
 
-        if (leftPressed && !rightPressed) dir = -1; 
-        else if (!leftPressed && rightPressed) dir = 1; 
-        else dir = 0;                            
+        if (leftPressed && !rightPressed) dir = -1;
+        else if (!leftPressed && rightPressed) dir = 1;
+        else dir = 0;
 
         player.curTrans.Move(dir);
     }
@@ -100,25 +101,21 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(releaseKey))
         {
-            if (player.curRelease != null)
-            {
-                Debug.LogWarning($"{Time.deltaTime}: {player.curTrans.Name} 방출 시도!");
-                player.curRelease.Realese();
-            }
-            else
-            {
-                Debug.LogWarning($"{Time.deltaTime}: {player.curTrans.Name}은 방출 불가!");
-            }
+            StartCoroutine(LateRealese());
+            player.curTrans.Realese();
         }
-
     }
 
     private void ControlAttack()
     {
         if (Input.GetKeyDown(attackKey))
         {
-            // Debug.LogWarning($"{Time.deltaTime}: {player.curTrans.Name} 공격 시도!");
-            // player.curTrans.Attack();
+            Vector3 PlayerScale = player.transform.localScale;
+            Vector3 Offset = new Vector3(1.95f, 0f, 0f);
+            if (!player.isJump)
+                EffectManager.Play("P_G_Attack", player.gameObject, PlayerScale.x < 0, Offset,-0.1f);
+            else if (player.isJump)
+                EffectManager.Play("P_J_Attack", player.gameObject, PlayerScale.x < 0,Vector3.zero,0f);
             player.OrderAttack();
         }
     }
@@ -147,5 +144,12 @@ public class PlayerController : MonoBehaviour
         {
             player.OrderTransSkill();
         }
+    }
+
+    private IEnumerator LateRealese()
+    {
+        yield return new WaitForSecondsRealtime(0.81f);
+
+        EffectManager.Play("P_Release", player.gameObject, player.transform.localScale.x < 0, new Vector3(1.40f, 1.1f, 0f));
     }
 }

@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,9 +16,12 @@ public class StageData : MonoBehaviour
 
     private void Start()
     {
-        // 1-1 스테이지는 항상 언락
         if (mainStageIndex == 1 && subStageIndex == 1)
             isStageUnlocked = true;
+
+        if (mainStageIndex == 1 && subStageIndex == 7)
+            isStageUnlocked = true;
+
 
         // StageManager에 등록
         if (StageManager.Instance != null)
@@ -51,10 +55,15 @@ public class StageData : MonoBehaviour
 
     private void UpdateStageVisual()
     {
-        if (stageButton == null) return;
+        if (stageButton == null) 
+        {
+            Debug.LogWarning($"{mainStageIndex}-{subStageIndex} 스테이지 UI 버튼이 없음!!");
+            return;
+        }
         var image = stageButton.GetComponent<Image>();
         if (image == null) return;
 
+        // Debug.LogWarning($"스테이지 UI 색깔 변경!");
         if (!isStageUnlocked)
         {
             image.color = lockColor;
@@ -70,7 +79,7 @@ public class StageData : MonoBehaviour
     public void ClearStage()
     {
         isStageCleared = true;
-        UpdateStageVisual();
+        // UpdateStageVisual();
 
         if (SaveManager.Instance != null)
             SaveManager.Instance.AddClearedStage(GetStageKey());
@@ -81,8 +90,6 @@ public class StageData : MonoBehaviour
         if (!isStageUnlocked)
         {
             isStageUnlocked = true;
-            UpdateStageVisual();
-
             if (SaveManager.Instance != null)
                 SaveManager.Instance.AddUnlockedStage(GetStageKey());
         }

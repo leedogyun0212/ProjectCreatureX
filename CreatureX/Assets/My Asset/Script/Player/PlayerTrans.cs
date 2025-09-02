@@ -4,36 +4,32 @@ public interface IPlayerTrans
 {
     string Name { get; }
 
-    void Enter(
-        // player.Collider.size = new Vector2(w, h);
-        // player.Collider.offset = new Vector2(x, y);
-        // ÀÌ·±½ÄÀ¸·Î ³ªÁß¿¡ ÇÇ°Ý ÆÇÁ¤ ¹Ù²ãÁà¾ß ÇÒµí?     
-
-        );   // º¯½Å ÇÒ ¶§
+    void Enter(); 
 
     void TransValueApply();
 
-    void Exit();    // º¯½Å ÇØÁ¦
+    void Realese();
 
-    void Move(float direction);    // ÀÌµ¿
-    void Jump(float vertical);    // Á¡ÇÁ
+    void Exit(); 
 
-    void Attack();  // ÀÏ´Ü °ø°Ý¸¸
+    void Move(float direction); 
+    void Jump(float vertical);  
+
+    void Attack(); 
 
     void TransSkill();
 
 }
 
-public interface IPlayerRelease
-{
-    void Realese();  // ¹æÃâ
-}
+//public interface IPlayerRelease
+//{
 
-// ±âº» »óÅÂ
-public class Player_Trans_Basic : IPlayerTrans 
+//}
+
+public class Player_Trans_Basic : IPlayerTrans
 { 
     private TestPlayer player;
-    public string Name => "ÀÏ¹ÝÇü";
+    public string Name => "PlayerBasic";
 
     public Player_Trans_Basic(TestPlayer player) 
     { 
@@ -42,21 +38,25 @@ public class Player_Trans_Basic : IPlayerTrans
 
     public void Enter()
     {
-        // Debug.Log($"{Time.deltaTime}: ±âº» »óÅÂ µ¹ÀÔ");
         player.TransApply(8, 25, player.BasicAnimController);
         player.collider.size = new Vector2(1f, 2.2f);
         player.collider.offset = new Vector2(0.03f, -0.4f);
     }
 
-    // º¯½ÅÀÌ ¸ðµÎ ³¡³­ µÚ¿¡ Àû¿ë
     public void TransValueApply()
     { 
     
     }
 
+    public void Realese()
+    {
+        Debug.Log($"{Time.deltaTime}: í”Œë ˆì´ì–´ ë°©ì¶œ ì‹œë„!");
+        player.OrderRealese();
+    }
+
     public void Exit()
     {
-        // Debug.Log($"{Time.deltaTime}: ±âº» »óÅÂ ÇØÁ¦!");
+
     }
 
     public void Jump(float vertical)
@@ -70,8 +70,7 @@ public class Player_Trans_Basic : IPlayerTrans
     }
 
     public void Attack() 
-    {
-        // player.OrderAttack();  
+    { 
         if (!player.isJump)
             player.BasicAttack_anim();
         else
@@ -80,15 +79,14 @@ public class Player_Trans_Basic : IPlayerTrans
 
     public void TransSkill()
     {
-        // ±âº»»óÅÂ º¯½Å ½ºÅ³ ¾øÀ½
+
     }
 }
 
-// ÀÚµ¿Â÷ »óÅÂ
-public class Player_Trans_Car : IPlayerTrans, IPlayerRelease
+public class Player_Trans_Car : IPlayerTrans
 {
     private TestPlayer player;
-    public string Name => "ÀÚµ¿Â÷";
+    public string Name => "PlayerCar";
 
     public Player_Trans_Car(TestPlayer player) { 
         this.player = player;
@@ -110,14 +108,13 @@ public class Player_Trans_Car : IPlayerTrans, IPlayerRelease
 
     public void Exit()
     {
-        // Debug.Log($"{Time.deltaTime}: {Name} º¯½Å ÇØÁ¦!");
         player.collider.offset = new Vector2(0, 0);
         player.collider.direction = CapsuleDirection2D.Vertical;
     }
 
     public void Jump(float vertical)
     {
-        // ÀÚµ¿Â÷´Â Á¡ÇÁ°¡ ¾øÀ½
+
     }
 
     public void Move(float direction)
@@ -127,14 +124,12 @@ public class Player_Trans_Car : IPlayerTrans, IPlayerRelease
 
     public void Realese()
     {
-        Debug.Log($"{Time.deltaTime}: {Name} ´É·Â ¹æÃâ!");
         player.OrderRealese();
     }
 
     public void Attack() 
     {
-        // ÃßÈÄ ÀÚµ¿Â÷¸¸ÀÇ °ø°Ý ±¸Çö
-        player.Trans_DashAttack(30f, 0.3f, new Vector3(2f, 0.5f, 0f), 2f);
+        player.Trans_DashAttack(60f, 0.15f, new Vector3(2f, 0.5f, 0f), 2f);
     }
 
     public void TransSkill()
@@ -143,11 +138,10 @@ public class Player_Trans_Car : IPlayerTrans, IPlayerRelease
     }
 }
 
-// µå·Ð »óÅÂ
-public class Player_Trans_Drone : IPlayerTrans, IPlayerRelease
+public class Player_Trans_Drone : IPlayerTrans
 {
     private TestPlayer player;
-    public string Name => "µå·Ð";
+    public string Name => "PlayerDrone";
 
     public Player_Trans_Drone(TestPlayer player)
     {
@@ -161,7 +155,8 @@ public class Player_Trans_Drone : IPlayerTrans, IPlayerRelease
     }
     public void TransValueApply()
     {
-        player.rigid.gravityScale = 0;  // Áß·Â ÇØÁ¦    
+        player.rigid.gravityScale = 0;   
+        player.rigid.linearVelocity = new Vector2(player.rigid.linearVelocity.x, 0f);
         player.collider.size = new Vector2(2.15f, 0.75f);
         player.collider.offset = new Vector2(0, -0.01f);
         player.collider.direction = CapsuleDirection2D.Horizontal;
@@ -169,15 +164,12 @@ public class Player_Trans_Drone : IPlayerTrans, IPlayerRelease
 
     public void Exit()
     {
-        //Debug.Log($"{Time.deltaTime}: {Name}  º¯½Å ÇØÁ¦!");
-
-        player.rigid.gravityScale = 8f;  // Áß·Â Àû¿ë
+        player.rigid.gravityScale = 8f;
         player.collider.direction = CapsuleDirection2D.Vertical;
     }
 
     public void Jump(float vertical)
     {
-        // µå·ÐÀº Á¡ÇÁ ´ë½Å ÀÚÀ¯ ºñÇàÀÌ °¡´ÉÇÏµµ·Ï
         player.OrderFly(vertical);
     }
 
@@ -188,13 +180,11 @@ public class Player_Trans_Drone : IPlayerTrans, IPlayerRelease
 
     public void Realese()
     {
-        Debug.Log($"{Time.deltaTime}: {Name} ´É·Â ¹æÃâ!");
         player.OrderRealese();
     }
 
-    public void Attack() {
-        // ÃßÈÄ µå·Ð¸¸ÀÇ °ø°Ý ÇÊ¿ä        
-        player.Trans_DashAttack(25f, 0.2f, new Vector3(2f, 0.5f, 0f), 1f);
+    public void Attack() {    
+        player.Trans_DashAttack(50f, 0.1f, new Vector3(2f, 0.5f, 0f), 1f);
     }
 
     public void TransSkill()
@@ -203,11 +193,10 @@ public class Player_Trans_Drone : IPlayerTrans, IPlayerRelease
     }
 }
 
-// ·Îº¿ »óÅÂ
-public class Player_Trans_Robot : IPlayerTrans, IPlayerRelease
+public class Player_Trans_Robot : IPlayerTrans
 {
     private TestPlayer player;
-    public string Name => "·Îº¿";
+    public string Name => "PlayerRobot";
 
     public Player_Trans_Robot(TestPlayer player)
     {
@@ -217,7 +206,6 @@ public class Player_Trans_Robot : IPlayerTrans, IPlayerRelease
     public void Enter()
     {
         if (player.isJump || player.isAttack) { return; }
-        //Debug.Log($"{Time.deltaTime}: {Name}·Î º¯½Å!");
         player.TransApply(8, 0, player.RobotAnimController);
     }
 
@@ -230,7 +218,6 @@ public class Player_Trans_Robot : IPlayerTrans, IPlayerRelease
 
     public void Exit()
     {
-        //Debug.Log($"{Time.deltaTime}: {Name} º¯½Å ÇØÁ¦!");
         player.collider.offset = new Vector2(0, 0);
         player.collider.direction = CapsuleDirection2D.Vertical;
     }
@@ -247,13 +234,11 @@ public class Player_Trans_Robot : IPlayerTrans, IPlayerRelease
 
     public void Realese()
     {
-        //Debug.Log($"{Time.deltaTime}: {Name} ´É·Â ¹æÃâ!");
         player.OrderRealese();
     }
 
     public void Attack()
     {
-        // player.TransForm_DashAttack(30f, 0.3f, new Vector3(2f, 0.5f, 0f), 2f);
         player.Trans_RobotAttack();
     }
 
@@ -263,11 +248,10 @@ public class Player_Trans_Robot : IPlayerTrans, IPlayerRelease
     }
 }
 
-// ¿¬±¸¿ø
-public class Player_Trans_Res : IPlayerTrans, IPlayerRelease
+public class Player_Trans_Res : IPlayerTrans
 {
     private TestPlayer player;
-    public string Name => "¿¬±¸¿ø";
+    public string Name => "PlayerRes";
 
     public Player_Trans_Res(TestPlayer player)
     {
@@ -293,7 +277,7 @@ public class Player_Trans_Res : IPlayerTrans, IPlayerRelease
         Vector3 scale = player.transform.localScale;
         scale.x = Mathf.Abs(scale.x) * 1f;
         player.transform.localScale = scale;
-        // player.rigid.gravityScale = 8f;  // Áß·Â Àû¿ë
+        // player.rigid.gravityScale = 8f;
         player.collider.direction = CapsuleDirection2D.Vertical;
     }
 
@@ -309,13 +293,11 @@ public class Player_Trans_Res : IPlayerTrans, IPlayerRelease
 
     public void Realese()
     {
-        Debug.Log($"{Time.deltaTime}: {Name} ´É·Â ¹æÃâ!");
         player.OrderRealese();
     }
 
     public void Attack()
-    {
-        // ¿¬±¸³ðÀº °ø°Ý x       
+    {     
 
     }
 

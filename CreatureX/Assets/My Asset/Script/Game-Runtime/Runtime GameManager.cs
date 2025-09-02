@@ -123,27 +123,29 @@ public class RuntimeGameManager : MonoBehaviour
         {
             StageGameClear();
             isGameCleared = true;
-            // 이 후 조건 판단은 나중에 더 추가 가능
         }
     }
 
     private void StageGameClear()
     {
-        // Debug.Log($"{Time.deltaTime}: 축하합니다 스테이지 클리어! \n 다음 스테이지로 이동");
-        // stageManager.StageClear();       // 이런식으로 나중에 스테이지 매니저가 관리
-        // StageManager.Instance.CurStageClear();
-        // StageManager.Instance.CurMainStageClear();
-        StageManager.Instance.CurSubStageClear();
+        if (StageManager.Instance.curSubStage >= StageManager.Instance.ClearIndex)
+        {
+            StageManager.Instance.CurMainStageClear();
+        }
+        else 
+        {
+            StageManager.Instance.CurSubStageClear();
+        }
     }
 
 
     private void ToggleChildren(GameObject parent, bool state)
     {
-        Debug.Log($"{Time.deltaTime}: UI 시도!");
+        // Debug.Log($"{Time.deltaTime}: UI 시도!");
         foreach (Transform child in parent.transform)
         {
             child.gameObject.SetActive(state);
-            Debug.Log($"{Time.deltaTime}: UI 호출!");
+            // Debug.Log($"{Time.deltaTime}: UI 호출!");
         }
     }   
 

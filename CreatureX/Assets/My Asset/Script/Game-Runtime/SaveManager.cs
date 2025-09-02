@@ -19,11 +19,12 @@ using System.Collections.Generic;
 [System.Serializable]
 public class SaveData
 {
-    [Header("스테이지 Data")]
+    [Header("스테이지 & 챕터 Data")]
     public int saveCurMainStageIndex;
     public int saveCurSubStageIndex;
 
     // 클리어한 스테이지 목록 (예: "1-1", "1-2" 등)
+    public List<string> unlockedChapter = new List<string>();
     public List<string> clearedStages = new List<string>();
     public List<string> unlockedStages = new List<string>();
 
@@ -100,6 +101,20 @@ public class SaveManager : MonoBehaviour
     public bool IsStageUnlocked(string stageKey)
     {
         return currentData.unlockedStages.Contains(stageKey);
+    }
+
+    public void AddUnlockedChapter(string capterKey)
+    {
+        if (!currentData.unlockedChapter.Contains(capterKey))
+        {
+            currentData.unlockedChapter.Add(capterKey);
+            SaveToFile();
+        }
+    }
+
+    public bool IsChapterUnlocked(string cahpterKey)
+    {
+        return currentData.unlockedChapter.Contains(cahpterKey);
     }
 
     public void LoadFromFile()

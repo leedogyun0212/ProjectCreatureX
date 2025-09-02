@@ -23,7 +23,7 @@ public class KeyDoor : MonoBehaviour, IDoor
 
     private void Update()
     {
-        Debug.Log(Key);
+        // Debug.Log(Key);
         if (keyDataAsset.Key && !Key)
         {
             Key = true;

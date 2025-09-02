@@ -1,0 +1,1027 @@
+fileFormatVersion: 2
+guid: cf2b8ce182a21c4479f1fa13a084ad19
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6606547904120539726
+    second: Experiment A_2_0
+  - first:
+      213: 5477525002528221702
+    second: Experiment A_2_1
+  - first:
+      213: 6733882121768860856
+    second: Experiment A_2_2
+  - first:
+      213: 6041056998973393257
+    second: Experiment A_2_3
+  - first:
+      213: -5943677350035581315
+    second: Experiment A_2_4
+  - first:
+      213: 2373552163659837351
+    second: Experiment A_2_5
+  - first:
+      213: 6314111357525186260
+    second: Experiment A_2_6
+  - first:
+      213: -1290787546874864718
+    second: Experiment A_2_7
+  - first:
+      213: 7408102554930760758
+    second: Experiment A_2_8
+  - first:
+      213: -5633379220080549658
+    second: Experiment A_2_9
+  - first:
+      213: -2620857260087539127
+    second: Experiment A_2_10
+  - first:
+      213: -8242880837270014135
+    second: Experiment A_2_11
+  - first:
+      213: -5628821830966175911
+    second: Experiment A_2_12
+  - first:
+      213: 7106919737871807530
+    second: Experiment A_2_13
+  - first:
+      213: -8212064968201028488
+    second: Experiment A_2_14
+  - first:
+      213: -5845060191154158436
+    second: Experiment A_2_15
+  - first:
+      213: 2259053645111398515
+    second: Experiment A_2_16
+  - first:
+      213: 3608336248767613087
+    second: Experiment A_2_17
+  - first:
+      213: -4736741301480219241
+    second: Experiment A_2_18
+  - first:
+      213: 8662662356293761404
+    second: Experiment A_2_19
+  - first:
+      213: 5566848323432857883
+    second: Experiment A_2_20
+  - first:
+      213: -8853359160855283584
+    second: Experiment A_2_21
+  - first:
+      213: 6352641332875059906
+    second: Experiment A_2_22
+  - first:
+      213: 6738514566338901312
+    second: Experiment A_2_23
+  - first:
+      213: 6035430136233426354
+    second: Experiment A_2_24
+  - first:
+      213: 2560438676319873153
+    second: Experiment A_2_25
+  - first:
+      213: -6671747324714109950
+    second: Experiment A_2_26
+  - first:
+      213: 2062484681369672638
+    second: Experiment A_2_27
+  - first:
+      213: 7453107972463791250
+    second: Experiment A_2_28
+  - first:
+      213: -3392027934551821221
+    second: Experiment A_2_29
+  - first:
+      213: 3802495207825958759
+    second: Experiment A_2_30
+  - first:
+      213: 8138658941348461158
+    second: Experiment A_2_31
+  - first:
+      213: -8468919963379790667
+    second: Experiment A_2_32
+  - first:
+      213: 7727781883152658094
+    second: Experiment A_2_33
+  - first:
+      213: -6540533970165527532
+    second: Experiment A_2_34
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Experiment A_2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 368
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b53b472fa3d054a0800000000000000
+      internalID: -6606547904120539726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Experiment A_2_1
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 78
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60ae308f7f3140c40800000000000000
+      internalID: 5477525002528221702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Experiment A_2_2
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 79
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bcf263bc1e837d50800000000000000
+      internalID: 6733882121768860856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Experiment A_2_3
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 78
+        width: 8
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96942bb655526d350800000000000000
+      internalID: 6041056998973393257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Experiment A_2_4
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 82
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d76189be0f0d38da0800000000000000
+      internalID: -5943677350035581315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Experiment A_2_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 26
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7afedc20e1d80f020800000000000000
+      internalID: 2373552163659837351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Experiment A_2_6
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 26
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d65c8973da30a750800000000000000
+      internalID: 6314111357525186260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Experiment A_2_7
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 26
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bb9604a093361ee0800000000000000
+      internalID: -1290787546874864718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Experiment A_2_8
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 29
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63ccf4e160edec660800000000000000
+      internalID: 7408102554930760758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Experiment A_2_9
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 29
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e0280e327732d1b0800000000000000
+      internalID: -5633379220080549658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Experiment A_2_10
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 29
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94a8a753538d0abd0800000000000000
+      internalID: -2620857260087539127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Experiment A_2_11
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 29
+        width: 7
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94775a81d876b9d80800000000000000
+      internalID: -8242880837270014135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Experiment A_2_12
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 29
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9571c451e5862e1b0800000000000000
+      internalID: -5628821830966175911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Experiment A_2_13
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 26
+        width: 9
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a24bf07f8d9d0a260800000000000000
+      internalID: 7106919737871807530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Experiment A_2_14
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 29
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87cb2f9bb62e80e80800000000000000
+      internalID: -8212064968201028488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Experiment A_2_15
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 31
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c94ca7f79bc22eea0800000000000000
+      internalID: -5845060191154158436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Experiment A_2_16
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 26
+        width: 7
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3709a6d3255c95f10800000000000000
+      internalID: 2259053645111398515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Experiment A_2_17
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 26
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9885f153b2631230800000000000000
+      internalID: 3608336248767613087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Experiment A_2_18
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 29
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79d9954f1e6b34eb0800000000000000
+      internalID: -4736741301480219241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Experiment A_2_19
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 26
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c79b90c2485f73870800000000000000
+      internalID: 8662662356293761404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Experiment A_2_20
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 27
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b11c1b44e0b614d40800000000000000
+      internalID: 5566848323432857883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Experiment A_2_21
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 26
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 088354410cc822580800000000000000
+      internalID: -8853359160855283584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Experiment A_2_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c26b7f62ad192850800000000000000
+      internalID: 6352641332875059906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Experiment A_2_23
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 9
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 045fc60cb43048d50800000000000000
+      internalID: 6738514566338901312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Experiment A_2_24
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bd71e85bb722c350800000000000000
+      internalID: 6035430136233426354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Experiment A_2_25
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 0
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 188a73b0961888320800000000000000
+      internalID: 2560438676319873153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Experiment A_2_26
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 0
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 204b04718213963a0800000000000000
+      internalID: -6671747324714109950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Experiment A_2_27
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 0
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebb59b3e3ea6f9c10800000000000000
+      internalID: 2062484681369672638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Experiment A_2_28
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 2
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29c06537632ce6760800000000000000
+      internalID: 7453107972463791250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Experiment A_2_29
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 0
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5436d4b0981de0d0800000000000000
+      internalID: -3392027934551821221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Experiment A_2_30
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 4
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 767679abe3d25c430800000000000000
+      internalID: 3802495207825958759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Experiment A_2_31
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 0
+        width: 7
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66ab12bcf2352f070800000000000000
+      internalID: 8138658941348461158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Experiment A_2_32
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 4
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bc888fd92a587a80800000000000000
+      internalID: -8468919963379790667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Experiment A_2_33
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 0
+        width: 9
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eae630fdda89e3b60800000000000000
+      internalID: 7727781883152658094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Experiment A_2_34
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 2
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41c88e2e10b5b35a0800000000000000
+      internalID: -6540533970165527532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 8a8f29e281cfd0a43825889d5de66ba3
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Experiment A_2_0: -6606547904120539726
+      Experiment A_2_1: 5477525002528221702
+      Experiment A_2_10: -2620857260087539127
+      Experiment A_2_11: -8242880837270014135
+      Experiment A_2_12: -5628821830966175911
+      Experiment A_2_13: 7106919737871807530
+      Experiment A_2_14: -8212064968201028488
+      Experiment A_2_15: -5845060191154158436
+      Experiment A_2_16: 2259053645111398515
+      Experiment A_2_17: 3608336248767613087
+      Experiment A_2_18: -4736741301480219241
+      Experiment A_2_19: 8662662356293761404
+      Experiment A_2_2: 6733882121768860856
+      Experiment A_2_20: 5566848323432857883
+      Experiment A_2_21: -8853359160855283584
+      Experiment A_2_22: 6352641332875059906
+      Experiment A_2_23: 6738514566338901312
+      Experiment A_2_24: 6035430136233426354
+      Experiment A_2_25: 2560438676319873153
+      Experiment A_2_26: -6671747324714109950
+      Experiment A_2_27: 2062484681369672638
+      Experiment A_2_28: 7453107972463791250
+      Experiment A_2_29: -3392027934551821221
+      Experiment A_2_3: 6041056998973393257
+      Experiment A_2_30: 3802495207825958759
+      Experiment A_2_31: 8138658941348461158
+      Experiment A_2_32: -8468919963379790667
+      Experiment A_2_33: 7727781883152658094
+      Experiment A_2_34: -6540533970165527532
+      Experiment A_2_4: -5943677350035581315
+      Experiment A_2_5: 2373552163659837351
+      Experiment A_2_6: 6314111357525186260
+      Experiment A_2_7: -1290787546874864718
+      Experiment A_2_8: 7408102554930760758
+      Experiment A_2_9: -5633379220080549658
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -14,7 +14,6 @@ public class UI_TitleButton : MonoBehaviour
 
     private void Start()
     {
-        // 버튼 이벤트 동적으로 등록
         if (btn_start != null)
         {
             btn_start.onClick.AddListener(() =>

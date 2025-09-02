@@ -40,8 +40,8 @@ public class Robot : BaseEnemy, IAllyResponder
         else if (monsterState == MonsterState.Move && helpTarget == null) // �þ� ����� �÷��̾� �߰� 
         {
             Getdirection();
-            if(Mathf.Abs(player.transform.position.x - transform.position.x)>15)
-                MoveSpeed +=6;
+            //if(Mathf.Abs(player.transform.position.x - transform.position.x)>15)
+            //    MoveSpeed +=6;
             EffectManager.Play("E_Dirt", this.gameObject, transform.localScale.x != -1, new Vector3(0.7f, -0.83f));
             Move();
         }

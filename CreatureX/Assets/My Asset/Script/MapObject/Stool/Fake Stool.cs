@@ -19,9 +19,6 @@ public class FakeStool : MonoBehaviour
     private bool isBroken = false;
     private bool isPlayerOn = false;
 
-    [SerializeField]
-    private bool Respawn = true;
-
     private void Start()
     {
         originalVisualPos = visual.transform.localPosition;
@@ -64,7 +61,7 @@ public class FakeStool : MonoBehaviour
                 // 플레이어가 위에서 밟았을 때만 인정 (거의 수직으로)
                 if (Vector2.Dot(normal, Vector2.up) < 0.9f && contact.point.y > transform.position.y)
                 {
-                    Debug.LogWarning($"{Time.deltaTime}: 플레이어가 발판에 올라감.");
+                    // Debug.LogWarning($"{Time.deltaTime}: 플레이어가 발판에 올라감.");
                     isPlayerOn = true;
                     isBroking = true;
                     curShakeTime = shakeTime;
@@ -77,7 +74,7 @@ public class FakeStool : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(0.8f);
 
-        Debug.LogWarning($"{Time.deltaTime}: 발판 부서짐");
+        // Debug.LogWarning($"{Time.deltaTime}: 발판 부서짐");
         visual.SetActive(false);
         col.enabled = false;
 
@@ -101,14 +98,11 @@ public class FakeStool : MonoBehaviour
 
     private void RespawnStool()
     {
-        if (Respawn)
-        {
-            Debug.LogWarning($"{Time.deltaTime}: 발판 복구됨");
-            isBroken = false;
-            isBroking = false;
-            visual.SetActive(true);
-            col.enabled = true;
-            visual.transform.localPosition = originalVisualPos;
-        }
+        // Debug.LogWarning($"{Time.deltaTime}: 발판 복구됨");
+        isBroken = false;
+        isBroking = false;
+        visual.SetActive(true);
+        col.enabled = true;
+        visual.transform.localPosition = originalVisualPos;
     }
 }

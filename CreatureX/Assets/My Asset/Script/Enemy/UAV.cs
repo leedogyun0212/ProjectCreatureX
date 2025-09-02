@@ -158,6 +158,7 @@ public class UAV : BaseEnemy, IAllyResponder
             helpTarget = null;
             UAVPos = transform.position;
         }
+        else { return; }
     }
 
     protected override void OnCollisionEnter2D(Collision2D collision) // isTrigger 꺼진 드론 본체와 닿을때 쓰는 코드

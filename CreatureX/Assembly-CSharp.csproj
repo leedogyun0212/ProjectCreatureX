@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\My Asset\Script\Enemy\UAV.cs" />
+    <Compile Include="Assets\My Asset\Script\Stage Select\Chapter Data.cs" />
     <Compile Include="Assets\My Asset\Script\Title\TitleStratButton.cs" />
     <Compile Include="Assets\My Asset\Script\MapObject\Stool\Moving Stool.cs" />
     <Compile Include="Assets\My Asset\Script\Game-Runtime\UI_GameRestart.cs" />
@@ -97,6 +98,7 @@
     <Compile Include="Assets\My Asset\Script\MapObject\Stool\Fall Zone.cs" />
     <Compile Include="Assets\My Asset\Script\MapObject\Door\Door.cs" />
     <Compile Include="Assets\My Asset\Script\Stage Select\Stage Data.cs" />
+    <Compile Include="Assets\My Asset\Script\Stage Select\ShopUI.cs" />
     <Compile Include="Assets\My Asset\Script\Title\UI_TitleButton.cs" />
     <Compile Include="Assets\My Asset\Script\MapObject\Stool\Fake Stool.cs" />
     <Compile Include="Assets\My Asset\Script\Game-Runtime\Game Over UI.cs" />
@@ -113,6 +115,7 @@
     <Compile Include="Assets\My Asset\Script\Player\Test Player.cs" />
     <Compile Include="Assets\My Asset\Script\Player\TestHitbox.cs" />
     <Compile Include="Assets\My Asset\Script\Enemy\CarObject.cs" />
+    <Compile Include="Assets\My Asset\Script\Stage Select\HomeIcon.cs" />
     <Compile Include="Assets\My Asset\Script\Player\Test Granade.cs" />
     <Compile Include="Assets\My Asset\Script\Player\TestAssBox.cs" />
     <Compile Include="Assets\My Asset\Script\MapObject\Object_Trab\Object_Trab.cs" />
@@ -122,6 +125,7 @@
     <Compile Include="Assets\My Asset\Script\Game-Runtime\EnemyManager.cs" />
     <Compile Include="Assets\My Asset\Script\Enemy\RobotGun\IRecyclableGameObject.cs" />
     <Compile Include="Assets\My Asset\Script\Enemy\BaseEnemy.cs" />
+    <Compile Include="Assets\My Asset\Script\Stage Select\ShopIcon.cs" />
     <Compile Include="Assets\My Asset\Script\Game-Runtime\FollowCamera.cs" />
     <Compile Include="Assets\My Asset\Script\MapObject\Door\KeyItem.cs" />
   </ItemGroup>
