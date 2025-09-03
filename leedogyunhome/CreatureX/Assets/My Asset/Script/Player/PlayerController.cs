@@ -112,9 +112,10 @@ public class PlayerController : MonoBehaviour
         {
             Vector3 PlayerScale = player.transform.localScale;
             Vector3 Offset = new Vector3(1.95f, 0f, 0f);
-            if (!player.isJump)
+            Debug.Log(player.curForm);
+            if (!player.isJump&&!player.unableRel)
                 EffectManager.Play("P_G_Attack", player.gameObject, PlayerScale.x < 0, Offset,-0.1f);
-            else if (player.isJump)
+            else if (player.isJump && !player.unableRel)
                 EffectManager.Play("P_J_Attack", player.gameObject, PlayerScale.x < 0,Vector3.zero,0f);
             player.OrderAttack();
         }

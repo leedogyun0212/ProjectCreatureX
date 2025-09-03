@@ -534,7 +534,6 @@ public class TestPlayer : MonoBehaviour
         float duration = 0.25f;       // 히트백 지속 시간
         HitBack();
         yield return new WaitForSeconds(duration);
-        // 히트백 이후 속도 서서히 감속 (정지)
         rigid.linearVelocity = Vector2.zero;
     }
 
@@ -577,7 +576,7 @@ public class TestPlayer : MonoBehaviour
         playerCurHP = playerMaxHP;
         isPlayerLive = true;
         isDie = false;
-        Debug.Log($"{Time.deltaTime}: 플레이어 부활! 체력: {playerCurHP}");
+        // Debug.Log($"{Time.deltaTime}: 플레이어 부활! 체력: {playerCurHP}");
     }
 
 
@@ -637,8 +636,8 @@ public class TestPlayer : MonoBehaviour
     private void JumpUpperAttack()
     {
         float direction = transform.localScale.x > 0 ? 1 : -1;
-        //Vector2 forceDir = new Vector2(direction, 1).normalized;
-        //rigid.AddForce(forceDir * 15f, ForceMode2D.Impulse);
+        Vector2 forceDir = new Vector2(direction, 1).normalized;
+        rigid.AddForce(forceDir * 10f, ForceMode2D.Impulse);
 
         CreateHitBox(direction, new Vector3(2f, 0f, 0f), 1.5f);
         Invoke(nameof(EndJumpAttack), 0.35f);
@@ -682,7 +681,7 @@ public class TestPlayer : MonoBehaviour
         dashHitbox.transform.localScale *= size;
 
         if (direction < 0)
-            dashHitbox.transform.rotation = Quaternion.Euler(0f, 180f, 0f); // 좌우 반전
+            dashHitbox.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
     }
 
     private void UpdateHitboxOffset()

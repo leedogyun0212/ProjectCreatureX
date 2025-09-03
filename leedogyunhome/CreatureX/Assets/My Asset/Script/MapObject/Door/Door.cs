@@ -13,6 +13,10 @@ public class Door : MonoBehaviour, IDoor
 
     private Animator animator;
 
+    // 카메라 클램프를 LateUpdate 타이밍에 일관되게 처리하기 위한 상태 보관
+    private bool _shouldClampCamera = false;
+    private Collider2D _cachedCameraCollider = null;
+
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -25,17 +29,31 @@ public class Door : MonoBehaviour, IDoor
         {
             DoorTouch = true;
             Camera.SetLockDirection(direction);
-            ClampCameraImmediately(collision); // [변경] 카메라 BoxCollider2D 기준으로 즉시 보정
+            // 즉시 1회 보정으로 초기 관통 방지
+            ClampCameraImmediately(collision);
+            // 이후 프레임에서는 LateUpdate에서 일관된 타이밍으로 보정
+            _cachedCameraCollider = collision;
+            _shouldClampCamera = true;
             StartCoroutine(DoorOpen()); // [변경] 한 번만 실행되도록 Enter 시점으로 이동
         }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        // [변경] 트리거 내부에 있는 동안 프레임마다 보정하여 문 너머로 튀지 않도록 함
-        if (collision.CompareTag("MainCamera")&&CameraTime>Time.deltaTime)
+        // 트리거 내부에 머무는 동안 LateUpdate에서만 보정하도록 플래그/콜라이더 유지
+        if (collision.CompareTag("MainCamera"))
         {
-            ClampCameraImmediately(collision);
+            _cachedCameraCollider = collision;
+            _shouldClampCamera = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("MainCamera"))
+        {
+            _shouldClampCamera = false;
+            _cachedCameraCollider = null;
         }
     }
 
@@ -82,5 +100,14 @@ public class Door : MonoBehaviour, IDoor
         }
 
         Camera.transform.position = camPos;
+    }
+
+    private void LateUpdate()
+    {
+        // 카메라 이동(추적)이 끝난 뒤 최종 타이밍에 1회 보정하여 흔들림 방지
+        if (_shouldClampCamera && _cachedCameraCollider != null)
+        {
+            ClampCameraImmediately(_cachedCameraCollider);
+        }
     }
 }

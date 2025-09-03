@@ -47,7 +47,7 @@ public static class EffectManager
         // 3. ¿Ã∆Â∆Æ Ω««‡
         if (!pools.TryGetValue(key, out var pool))
         {
-            Debug.LogWarning($"Effect {key} not found in pool.");
+            // Debug.LogWarning($"Effect {key} not found in pool.");
             return;
         }
 

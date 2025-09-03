@@ -16,6 +16,8 @@ public class Ladder : MonoBehaviour
 
     private bool isOnLadder = false;
 
+    private TestPlayer testPlayer = null;
+
     private void Start()
     {
         box = GetComponent<BoxCollider2D>();
@@ -24,7 +26,10 @@ public class Ladder : MonoBehaviour
     private void Update()
     {
         PlayerEnter();
-        Climb();
+        if (!testPlayer.unableRel)
+        {
+            Climb();
+        }
     }
 
     private void PlayerEnter()
@@ -38,8 +43,10 @@ public class Ladder : MonoBehaviour
         {
             if (playerRb == null)
                 playerRb = Hit.attachedRigidbody;
-
+            testPlayer = playerRb != null ? playerRb.gameObject.GetComponent<TestPlayer>() : null;
             LadderEnd();
+
+            if (testPlayer == null || testPlayer.unableRel) return;
 
             isOnLadder = true;
             // 중력 끄기
@@ -47,7 +54,7 @@ public class Ladder : MonoBehaviour
             // 속도 초기화 (중력에 의해 내려가지 않도록)
             playerRb.linearVelocity = new Vector2(playerRb.linearVelocity.x, 0);
         }
-        else
+        else if(!testPlayer.unableRel)
         {
             if (isOnLadder && playerRb != null)
             {

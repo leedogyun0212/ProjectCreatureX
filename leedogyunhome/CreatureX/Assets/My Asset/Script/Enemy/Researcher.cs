@@ -68,16 +68,6 @@ public class Researcher : BaseEnemy
 
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && player.isAttack&&!HitOn)
-        {
-            monsterState = MonsterState.Hit;
-            animHit = true;
-            animWalk = 0;
-            HitOn = true;
-            HpCheck();
-            HitMove();
-            StartCoroutine(HitRecover());
-        }
         if (collision.CompareTag("Player") && !player.isAttack&&isHelp && !EnemyFailed)
         {
             monsterState = MonsterState.Play;
@@ -86,6 +76,11 @@ public class Researcher : BaseEnemy
             isHelp = false;
 
         }
+    }
+
+    public override void GetHitByPlayer()
+    {
+        base.GetHitByPlayer();
     }
 
     protected override void OnCollisionEnter2D(Collision2D collision)

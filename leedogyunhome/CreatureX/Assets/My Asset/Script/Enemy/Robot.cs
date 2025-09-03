@@ -72,7 +72,7 @@ public class Robot : BaseEnemy, IAllyResponder
             EnemyDead();
     }
 
-    public void MovieAudio()
+    public void MoveAudio()
     {
         if (monsterState == MonsterState.Move)
         {
@@ -146,29 +146,29 @@ public class Robot : BaseEnemy, IAllyResponder
         }
     }
 
-    private IEnumerator AttackCooldown() // ���� ��ٿ�
+    private IEnumerator AttackCooldown()
     {
         isAttacking = false;
         isCoolingDown = true;
 
-        yield return new WaitForSeconds(0.5f); // �߻� ������ 0.5�ʷ� ����
+        yield return new WaitForSeconds(0.5f);
 
         isAttacking = true;
         isCoolingDown = false;
     }
 
-    protected override void OnTriggerEnter2D(Collider2D collision) //�þ� �ݶ��̴�, �þ߿� ������ ����
+    protected override void OnTriggerEnter2D(Collider2D collision) 
     {
-        if (collision.gameObject.CompareTag("Player") && player.isAttack && !HitOn)
-        {
-            monsterState = MonsterState.Hit;
-            animHit = true;
-            animWalk = 0;
-            HitOn = true;
-            HpCheck();
-            HitMove();
-            StartCoroutine(HitRecover());
-        }
+        //if (collision.gameObject.CompareTag("Player") && player.isAttack && !HitOn)
+        //{
+        //    monsterState = MonsterState.Hit;
+        //    animHit = true;
+        //    animWalk = 0;
+        //    HitOn = true;
+        //    HpCheck();
+        //    HitMove();
+        //    StartCoroutine(HitRecover());
+        //}
         if (collision.CompareTag("Player") && !player.isAttack && !EnemyFailed)
         {
             helpTarget = null;
@@ -177,6 +177,14 @@ public class Robot : BaseEnemy, IAllyResponder
             animWalk = 2;
         }
     }
+
+    public override void GetHitByPlayer()
+    {
+        base.GetHitByPlayer();
+    }
+
+            
+
 
     protected override void OnTriggerExit2D(Collider2D collision) // �þ� �ݶ��̴�, ����� �߰�
     {
