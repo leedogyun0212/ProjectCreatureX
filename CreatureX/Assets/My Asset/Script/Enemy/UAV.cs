@@ -163,7 +163,7 @@ public class UAV : BaseEnemy, IAllyResponder
 
     protected override void OnCollisionEnter2D(Collision2D collision) // isTrigger 꺼진 드론 본체와 닿을때 쓰는 코드
     {
-        base.OnCollisionEnter2D(collision);
+        // base.OnCollisionEnter2D(collision);
         if (collision.gameObject.CompareTag("Player") && !EnemyFailed)
         {
             StartCoroutine(PlayerAttack());
@@ -171,6 +171,12 @@ public class UAV : BaseEnemy, IAllyResponder
             MoveSpeed = 8.0f;
         }
     }
+
+    public override void GetHitByPlayer()
+    {
+        base.GetHitByPlayer();
+    }
+
 
     private IEnumerator PlayerAttack() // 플레이어에게 닿았을시 나오는 코드
     {

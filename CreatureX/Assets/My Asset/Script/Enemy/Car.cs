@@ -34,16 +34,6 @@ public class Car : BaseEnemy
 
     protected override void OnTriggerEnter2D(Collider2D collision) // 차의 시야에 닿으면 발동되는 콜라이더
     {
-        if (collision.gameObject.CompareTag("Player") && player.isAttack&&!HitOn)
-        {
-            monsterState = MonsterState.Hit;
-            animHit = true;
-            animWalk = 0;
-            HitOn = true;
-            HpCheck();
-            HitMove();
-            StartCoroutine(HitRecover());
-        }
         if (collision.CompareTag("Player") && isMove)
         {
             Getdirection();
@@ -51,6 +41,11 @@ public class Car : BaseEnemy
             isMove = false;
             monsterState = MonsterState.Move;
         }
+    }
+
+    public override void GetHitByPlayer()
+    {
+        base.GetHitByPlayer();
     }
 
     protected override void OnCollisionEnter2D(Collision2D collision) // 차에 닿으면 발동되는 콜라이더

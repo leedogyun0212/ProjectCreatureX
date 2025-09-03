@@ -2,13 +2,14 @@ using System.Collections;
 using Unity.Burst.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Robot : BaseEnemy, IAllyResponder
 {
     [SerializeField]
     private RobotBullet BulletPrefab;
 
-    [SerializeField] 
+    [SerializeField]
     private Transform BulletShotPoint = null;
 
     private ObjectPool<RobotBullet> BulletPool = null;
@@ -21,6 +22,10 @@ public class Robot : BaseEnemy, IAllyResponder
 
     private Transform currentMovingStool = null; // [변경] 이동식 발판 추적용 참조(부모 미사용)
     private Vector3 lastMovingStoolPos = Vector3.zero; // [변경] 발판 이동량 계산용
+
+    public AudioClip MoveClip;
+
+    public AudioClip GunClip;
 
     protected override void Start()
     {
@@ -39,18 +44,18 @@ public class Robot : BaseEnemy, IAllyResponder
         }
         else if (monsterState == MonsterState.Move && helpTarget == null) // �þ� ����� �÷��̾� �߰� 
         {
+            if (audioSource.clip == GunClip && audioSource.clip != MoveClip) audioSource.Stop();
             Getdirection();
-            //if(Mathf.Abs(player.transform.position.x - transform.position.x)>15)
-            //    MoveSpeed +=6;
             EffectManager.Play("E_Dirt", this.gameObject, transform.localScale.x != -1, new Vector3(0.7f, -0.83f));
             Move();
         }
         else if (monsterState == MonsterState.Play && isAttacking && !isCoolingDown) // �þ� ������ ����
         {
+            if (audioSource.clip == MoveClip && audioSource.clip != GunClip) audioSource.Stop();
             Attack();
             StartCoroutine(AttackCooldown());
         }
-        else if (monsterState == MonsterState.Help&& helpTarget != null) // �������� ���� ��û�ϸ� ������������ �̵�
+        else if (monsterState == MonsterState.Help && helpTarget != null) // �������� ���� ��û�ϸ� ������������ �̵�
         {
             Getdirection();
             EffectManager.Play("E_Dirt", this.gameObject, transform.localScale.x != -1, new Vector3(0.7f, -0.83f));
@@ -67,7 +72,28 @@ public class Robot : BaseEnemy, IAllyResponder
             EnemyDead();
     }
 
+    public void MovieAudio()
+    {
+        if (monsterState == MonsterState.Move)
+        {
+            audioSource.clip = MoveClip;
+            audioSource.Play();
+        }
+    }
 
+    public void GunAudio()
+    {
+        //Debug.Log($"GunAudio 호출됨 - monsterState: {monsterState}");
+        //Debug.Log($"현재 audioSource.clip: {(audioSource.clip != null ? audioSource.clip.name : "null")}");
+        //Debug.Log($"GunClip: {(GunClip != null ? GunClip.name : "null")}");
+        //Debug.Log($"audioSource.isPlaying: {audioSource.isPlaying}");
+        //if (monsterState == MonsterState.Play)
+        //{
+        //    audioSource.clip = GunClip;
+        //    audioSource.Play();
+        //    Debug.Log(monsterState);
+        //}
+    }
 
     public void OnHelpRequested(Transform targetResearcher) // �������� �߰��ϰ� �ϴ� ��ũ��Ʈ
     {
@@ -98,16 +124,19 @@ public class Robot : BaseEnemy, IAllyResponder
         //Test();
         bullet.SetBullet();
 
+        audioSource.clip = GunClip;
+        audioSource.Play();
+
         // �߻� ��ġ
         lookdir = ((Vector2)player.transform.position - (Vector2)transform.position).normalized;
         bullet.transform.position = BulletShotPoint.position;
 
         bullet.BulletMove.Initialize(lookdir);
     }
-    
+
     private void Test()
     {
-        if(transform.localScale.x == 1)
+        if (transform.localScale.x == 1)
         {
             lookdir = Vector2.right;
         }
@@ -117,39 +146,45 @@ public class Robot : BaseEnemy, IAllyResponder
         }
     }
 
-    private IEnumerator AttackCooldown() // ���� ��ٿ�
+    private IEnumerator AttackCooldown()
     {
         isAttacking = false;
         isCoolingDown = true;
 
-        yield return new WaitForSeconds(0.5f); // �߻� ������ 0.5�ʷ� ����
+        yield return new WaitForSeconds(0.5f);
 
         isAttacking = true;
         isCoolingDown = false;
     }
 
-    protected override void OnTriggerEnter2D(Collider2D collision) //�þ� �ݶ��̴�, �þ߿� ������ ����
+    protected override void OnTriggerEnter2D(Collider2D collision) 
     {
-        if (collision.gameObject.CompareTag("Player") && player.isAttack&& !HitOn)
-        {
-            monsterState = MonsterState.Hit;
-            animHit = true;
-            animWalk = 0;
-            HitOn = true;
-            HpCheck();
-            HitMove();
-            StartCoroutine(HitRecover());
-        }
-        if (collision.CompareTag("Player")&& !player.isAttack&&!EnemyFailed)
+        //if (collision.gameObject.CompareTag("Player") && player.isAttack && !HitOn)
+        //{
+        //    monsterState = MonsterState.Hit;
+        //    animHit = true;
+        //    animWalk = 0;
+        //    HitOn = true;
+        //    HpCheck();
+        //    HitMove();
+        //    StartCoroutine(HitRecover());
+        //}
+        if (collision.CompareTag("Player") && !player.isAttack && !EnemyFailed)
         {
             helpTarget = null;
 
             monsterState = MonsterState.Play;
-            if(MoveSpeed>5)
-                MoveSpeed -= 6;
             animWalk = 2;
         }
     }
+
+    public override void GetHitByPlayer()
+    {
+        base.GetHitByPlayer();
+    }
+
+            
+
 
     protected override void OnTriggerExit2D(Collider2D collision) // �þ� �ݶ��̴�, ����� �߰�
     {
@@ -163,7 +198,7 @@ public class Robot : BaseEnemy, IAllyResponder
     protected override void OnCollisionEnter2D(Collision2D collision) // �κ� ���� ������ �߻��ϴ� �ݶ��̴�, ������ ������ ���� ���� 
     {
         //base.OnCollisionEnter2D(collision);
-        if(collision.gameObject.CompareTag("Researcher") && !EnemyFailed)
+        if (collision.gameObject.CompareTag("Researcher") && !EnemyFailed)
         {
             monsterState = MonsterState.idle;
             helpTarget = null;

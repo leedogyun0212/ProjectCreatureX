@@ -33,7 +33,7 @@ public class Door : MonoBehaviour, IDoor
     private void OnTriggerStay2D(Collider2D collision)
     {
         // [변경] 트리거 내부에 있는 동안 프레임마다 보정하여 문 너머로 튀지 않도록 함
-        if (collision.CompareTag("MainCamera")&&CameraTime>Time.deltaTime)
+        if (collision.CompareTag("MainCamera") && CameraTime > Time.deltaTime)
         {
             ClampCameraImmediately(collision);
         }
@@ -80,7 +80,5 @@ public class Door : MonoBehaviour, IDoor
                 camPos.y = Mathf.Max(camPos.y, doorPos.y + half.y);
                 break;
         }
-
-        Camera.transform.position = camPos;
     }
 }

@@ -30,7 +30,7 @@ EditorBuildSettings:
     path: Assets/My Asset/Common Resource/Scenes/Stage 1/Stage1-4.unity
     guid: 6b026d68404d3c04e9f0e28d199b06e8
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/TestStage1-5.unity
+    path: Assets/My Asset/Common Resource/Scenes/St1/TestStage1-5.unity
     guid: a1a6102ef81d57643a47b40e17a0a996
   - enabled: 1
     path: Assets/My Asset/Common Resource/Scenes/Stage 1/Stage1-6.unity

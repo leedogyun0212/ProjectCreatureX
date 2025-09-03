@@ -2723,6 +2723,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1033244101929589270, guid: 910b28d4690209b4bb1abf2ac8bd0fee, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1033244101929589270, guid: 910b28d4690209b4bb1abf2ac8bd0fee, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2767786081818110736, guid: 910b28d4690209b4bb1abf2ac8bd0fee, type: 3}
       propertyPath: m_Name
       value: RunGame UI Canvas
@@ -2815,14 +2823,34 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 566920279}
+    - target: {fileID: 4146719396104108471, guid: 910b28d4690209b4bb1abf2ac8bd0fee, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4146719396104108471, guid: 910b28d4690209b4bb1abf2ac8bd0fee, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4146719396104108471, guid: 910b28d4690209b4bb1abf2ac8bd0fee, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4863105884797348546, guid: 910b28d4690209b4bb1abf2ac8bd0fee, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 566920279}
+    - target: {fileID: 6956750326499782708, guid: 910b28d4690209b4bb1abf2ac8bd0fee, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6976501317639424490, guid: 910b28d4690209b4bb1abf2ac8bd0fee, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 566920279}
+    - target: {fileID: 7135564991156367626, guid: 910b28d4690209b4bb1abf2ac8bd0fee, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12291,11 +12319,11 @@ SceneRoots:
   - {fileID: 1760823705}
   - {fileID: 536723951}
   - {fileID: 566920278}
+  - {fileID: 1165164588}
   - {fileID: 2139078553}
   - {fileID: 994557306}
   - {fileID: 584100239}
   - {fileID: 1473081108}
-  - {fileID: 1165164588}
   - {fileID: 884677557}
   - {fileID: 1650089323}
   - {fileID: 179273029}

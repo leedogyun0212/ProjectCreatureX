@@ -19,6 +19,9 @@ public class FakeStool : MonoBehaviour
     private bool isBroken = false;
     private bool isPlayerOn = false;
 
+    [SerializeField]
+    private bool Respawn = true;
+
     private void Start()
     {
         originalVisualPos = visual.transform.localPosition;
@@ -98,11 +101,14 @@ public class FakeStool : MonoBehaviour
 
     private void RespawnStool()
     {
-        // Debug.LogWarning($"{Time.deltaTime}: ¹ßÆÇ º¹±¸µÊ");
-        isBroken = false;
-        isBroking = false;
-        visual.SetActive(true);
-        col.enabled = true;
-        visual.transform.localPosition = originalVisualPos;
+        if (Respawn)
+        {
+            Debug.LogWarning($"{Time.deltaTime}: ¹ßÆÇ º¹±¸µÊ");
+            isBroken = false;
+            isBroking = false;
+            visual.SetActive(true);
+            col.enabled = true;
+            visual.transform.localPosition = originalVisualPos;
+        }
     }
 }

@@ -46,7 +46,7 @@ public class CarObject : BaseEnemy
         }
         else if (monsterState == MonsterState.Move) //항상 전진
         {
-            EffectManager.Play("E_Car_Dirt", this.gameObject, transform.localScale.x == -1, new Vector3(-3.0f, 0.0f));
+            EffectManager.Play("E_Car_Dirt", this.gameObject, transform.localScale.x == -1, new Vector3(-2.067f, -0.675f));
             Move();
         }
         else if (monsterState == MonsterState.Dead) // 차가 완전한 죽음
@@ -56,16 +56,16 @@ public class CarObject : BaseEnemy
 
     protected override void OnTriggerEnter2D(Collider2D collision) // 데미지를 입으면 발동됨
     {
-        if (collision.gameObject.CompareTag("Player") && player.isAttack&& !HitOn)
-        {
-            monsterState = MonsterState.Hit;
-            animHit = true;
-            animWalk = 0;
-            HitOn = true;
-            HpCheck();
-            HitMove();
-            StartCoroutine(HitRecover());
-        }
+        //if (collision.gameObject.CompareTag("Player") && player.isAttack && !HitOn)
+        //{
+        //    monsterState = MonsterState.Hit;
+        //    animHit = true;
+        //    animWalk = 0;
+        //    HitOn = true;
+        //    HpCheck();
+        //    HitMove();
+        //    StartCoroutine(HitRecover());
+        //}
         //벽/박스 충돌 시 리스폰 (충돌 무시 시간이 아닐 때만)
         if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Box")|| collision.gameObject.CompareTag("Ground"))
         {
@@ -75,6 +75,12 @@ public class CarObject : BaseEnemy
             animDead = 100;
         }
     }
+
+    public override void GetHitByPlayer()
+    {
+        base.GetHitByPlayer();
+    }
+
 
     protected override void OnCollisionEnter2D(Collision2D collision)  // 차에 닿으면 발동되는 콜라이더
     {
@@ -115,7 +121,7 @@ public class CarObject : BaseEnemy
     {
         EffectManager.Play("E_Asl", this.gameObject, transform.localScale.x != -1, new Vector3(0.05f, 0.7f));
         IsDead = false;
-        Debug.Log("실행"+ FailTime);
+        Debug.Log("실행"+ monsterState);
         yield return new WaitForSecondsRealtime(FailTime);
         // 시작 위치로 즉시 복귀합니다. (화면 밖으로 밀려나거나 멈추는 것을 방지) 멈추는 원인 가능성 높음
         transform.position = startPosition;

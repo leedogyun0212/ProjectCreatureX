@@ -162,8 +162,6 @@ public class TestPlayer : MonoBehaviour
 
         playerCurHP = playerMaxHP;
         playerCurMoveSpeed = playerMoveSpeed;
-
-        // Create the TestAssBox prefab
         var obj = Instantiate(testAssboxPre, transform.position, Quaternion.identity, transform);
         TestAssBox assBox = obj.GetComponent<TestAssBox>();
 
@@ -430,14 +428,22 @@ public class TestPlayer : MonoBehaviour
     // 방출 명령
     public void OrderRealese()
     {
-        if (isReleasing || isDie) return;
+        if (isReleasing || isDie || !unableRel) return;
 
-        Realese();
+        if (curTrans != playerTransBasic)
+        {
+            TransChange(playerTransBasic);
+            Realese();
+        }
+        else
+        {
+            curForm = AssimilateForm.None;
+            Realese();
+        }
     }
 
     private void Realese()
     {
-        TransChange(playerTransBasic);  // 일단 기본상태로 되돌아가고
         animator.SetTrigger("TryRelease");
         isReleasing = true;
         unableAttack = true;
@@ -528,7 +534,6 @@ public class TestPlayer : MonoBehaviour
         float duration = 0.25f;       // 히트백 지속 시간
         HitBack();
         yield return new WaitForSeconds(duration);
-        // 히트백 이후 속도 서서히 감속 (정지)
         rigid.linearVelocity = Vector2.zero;
     }
 
@@ -571,7 +576,7 @@ public class TestPlayer : MonoBehaviour
         playerCurHP = playerMaxHP;
         isPlayerLive = true;
         isDie = false;
-        Debug.Log($"{Time.deltaTime}: 플레이어 부활! 체력: {playerCurHP}");
+        // Debug.Log($"{Time.deltaTime}: 플레이어 부활! 체력: {playerCurHP}");
     }
 
 
@@ -596,13 +601,11 @@ public class TestPlayer : MonoBehaviour
         else animator.SetTrigger("TryAttack2");
     }
 
-    // 애니메이션 이벤트로 실행
     public void BasicAttack()
     {
         float direction = transform.localScale.x > 0 ? 1 : -1;
         CreateHitBox(direction, new Vector3(2f, 0f, 0f), 1.75f);
     }
-
 
     private IEnumerator DashForward(float direction)
     {
@@ -630,12 +633,11 @@ public class TestPlayer : MonoBehaviour
         // Invoke(nameof(JumpUpperAttack), 0.2f);
     }
 
-
     private void JumpUpperAttack()
     {
         float direction = transform.localScale.x > 0 ? 1 : -1;
         Vector2 forceDir = new Vector2(direction, 1).normalized;
-        rigid.AddForce(forceDir * 15f, ForceMode2D.Impulse);
+        rigid.AddForce(forceDir * 10f, ForceMode2D.Impulse);
 
         CreateHitBox(direction, new Vector3(2f, 0f, 0f), 1.5f);
         Invoke(nameof(EndJumpAttack), 0.35f);
@@ -679,7 +681,7 @@ public class TestPlayer : MonoBehaviour
         dashHitbox.transform.localScale *= size;
 
         if (direction < 0)
-            dashHitbox.transform.rotation = Quaternion.Euler(0f, 180f, 0f); // 좌우 반전
+            dashHitbox.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
     }
 
     private void UpdateHitboxOffset()

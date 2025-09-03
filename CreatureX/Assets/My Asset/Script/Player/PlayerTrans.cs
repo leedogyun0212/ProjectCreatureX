@@ -4,27 +4,21 @@ public interface IPlayerTrans
 {
     string Name { get; }
 
-    void Enter(); 
+    void Enter();
 
     void TransValueApply();
 
     void Realese();
 
-    void Exit(); 
+    void Exit();
 
-    void Move(float direction); 
-    void Jump(float vertical);  
+    void Move(float direction);
+    void Jump(float vertical);
 
-    void Attack(); 
+    void Attack();
 
     void TransSkill();
-
 }
-
-//public interface IPlayerRelease
-//{
-
-//}
 
 public class Player_Trans_Basic : IPlayerTrans
 { 

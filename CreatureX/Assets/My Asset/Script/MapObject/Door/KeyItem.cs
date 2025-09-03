@@ -25,7 +25,7 @@ public class KeyItem : MonoBehaviour, IDoorKey
 
     private void Update()
     {
-        EffectManager.Play("Key_Effect", this.gameObject, false, new Vector3(-0.35f, -0.4f, 0f),1.0f);
+        EffectManager.Play("Key_Effect", this.gameObject, false, new Vector3(-0.18f, 0.05f, 0f), 1.0f);
         if (keyDataAsset.Key)
             MoveKey();
     }
