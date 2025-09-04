@@ -98,7 +98,7 @@ public class LaserStool : MonoBehaviour
     private IEnumerator LaserReStart()
     {
         isRestarting = true;
-        yield return new WaitForSecondsRealtime(2.0f); // 꺼진 후 2초 대기
+        yield return new WaitForSecondsRealtime(3.0f); // 꺼진 후 2초 대기
         foreach (var laser in lasers)
         {
             if (laser != null)

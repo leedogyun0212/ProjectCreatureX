@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 577787082568331982}
-  - component: {fileID: 5334164420681832636}
-  m_Layer: 7
+  - component: {fileID: 3831297125551414624}
+  m_Layer: 12
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,8 +32,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1803384949630765537}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &5334164420681832636
-BoxCollider2D:
+--- !u!60 &3831297125551414624
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -66,7 +66,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.23666906, y: -0.0800498}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -76,8 +76,13 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.5266619, y: 0.7563702}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.09324944, y: 0.96891713}
+      - {x: -0.43300682, y: 0.95139927}
+      - {x: -0.43237013, y: -0.86082125}
+      - {x: 0.0992471, y: -0.85046035}
+  m_UseDelaunayMesh: 0
 --- !u!1 &6132442619594101637
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,6 +276,7 @@ MonoBehaviour:
   MoveSpeed: 3
   EnemyMaxHP: 40
   EnemyFailed: 0
+  FailedLayer: 11
   BulletPrefab: {fileID: 8713319157893725796, guid: 3cab453f045c9a4478a28a504571e662, type: 3}
   BulletShotPoint: {fileID: 2322002849654765551}
   MoveClip: {fileID: 8300000, guid: 63ef23c536912a54197f8177ff6c33b4, type: 3}

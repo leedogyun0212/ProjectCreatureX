@@ -7,7 +7,7 @@ public class Laser : MonoBehaviour
 
     public bool LaserDead = false;
 
-    private float LaserTime = 6.0f;
+    private float LaserTime = 3.0f;
 
     private Animator animator;
 

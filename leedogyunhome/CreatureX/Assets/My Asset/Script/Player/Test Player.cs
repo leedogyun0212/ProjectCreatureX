@@ -240,7 +240,7 @@ public class TestPlayer : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Box"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Box")|| collision.gameObject.CompareTag("Enemy"))
         {
             GroundCheck();
         }
