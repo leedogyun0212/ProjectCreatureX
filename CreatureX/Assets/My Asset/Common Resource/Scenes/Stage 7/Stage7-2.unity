@@ -11321,7 +11321,7 @@ MonoBehaviour:
   PlayerCollider: {fileID: 1831989446}
   CameraSpeed: 4
   BackNum: 1
-  verticalDeadZoneHeight: 3.2
+  verticalDeadZoneHeight: 1
   FollowYDirectly: 0
 --- !u!1001 &1022726562
 PrefabInstance:

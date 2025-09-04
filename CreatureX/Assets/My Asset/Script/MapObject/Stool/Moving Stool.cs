@@ -14,6 +14,8 @@ public class MovingStool : MonoBehaviour
     private Vector3 deltaPos;
     private HashSet<Transform> passengers = new HashSet<Transform>();
 
+    private AudioSource audioSource = null;
+
     private void Start()
     {
         startPos = transform.position;

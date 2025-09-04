@@ -1,6 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
+[RequireComponent(typeof(BoxCollider2D))]
 public class Ladder : MonoBehaviour
 {
     private Collider2D Hit;
@@ -26,7 +27,7 @@ public class Ladder : MonoBehaviour
     private void Update()
     {
         PlayerEnter();
-        if (!testPlayer.unableRel)
+        if (testPlayer != null && (!testPlayer.unableRel || testPlayer.curForm != TestPlayer.AssimilateForm.None))
         {
             Climb();
         }
@@ -46,23 +47,24 @@ public class Ladder : MonoBehaviour
             testPlayer = playerRb != null ? playerRb.gameObject.GetComponent<TestPlayer>() : null;
             LadderEnd();
 
-            if (testPlayer == null || testPlayer.unableRel) return;
+            if (testPlayer == null || testPlayer.unableRel || testPlayer.curForm == TestPlayer.AssimilateForm.None) return;
 
             isOnLadder = true;
-            // Áß·Â ²ô±â
+            // ï¿½ß·ï¿½ ï¿½ï¿½ï¿½ï¿½
             playerRb.gravityScale = 0f;
-            // ¼Óµµ ÃÊ±âÈ­ (Áß·Â¿¡ ÀÇÇØ ³»·Á°¡Áö ¾Êµµ·Ï)
+            // ï¿½Óµï¿½ ï¿½Ê±ï¿½È­ (ï¿½ß·Â¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Êµï¿½ï¿½ï¿½)
             playerRb.linearVelocity = new Vector2(playerRb.linearVelocity.x, 0);
         }
-        else if(!testPlayer.unableRel)
+        else
         {
             if (isOnLadder && playerRb != null)
             {
-                // »ç´Ù¸®¿¡¼­ ¶³¾îÁö¸é Áß·Â º¹±¸
+                // ï¿½ï¿½Ù¸ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß·ï¿½ ï¿½ï¿½ï¿½ï¿½
                 playerRb.gravityScale = 8f;
-                playerRb = null;
             }
             isOnLadder = false;
+            playerRb = null;
+            testPlayer = null;
         }
     }
 
@@ -79,16 +81,16 @@ public class Ladder : MonoBehaviour
             else
                 verticalInput = 0f;
 
-            // À§¾Æ·¡ ¿òÁ÷ÀÓ Àû¿ë
+            // ï¿½ï¿½ï¿½Æ·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             playerRb.linearVelocity = new Vector2(playerRb.linearVelocity.x, verticalInput * climbSpeed);
         }
     }
 
     private void LadderEnd()
     {
-        if (Mathf.Abs(box.bounds.max.y - playerRb.position.y) < 0.1f)
+        if (playerRb != null && Mathf.Abs(box.bounds.max.y - playerRb.position.y) < 0.1f)
         {
-            Debug.Log("Ä«¸Þ¶ó À§·Î!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            Debug.Log("Ä«ï¿½Þ¶ï¿½ ï¿½ï¿½ï¿½ï¿½!!!!!!!!!!!!!!!!!!!!!!!!!!!");
         }
     }
 }

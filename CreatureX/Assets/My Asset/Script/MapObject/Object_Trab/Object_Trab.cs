@@ -6,6 +6,8 @@ public class Object_Trab : MonoBehaviour
     [SerializeField]
     private BoxCollider2D box;
 
+    [SerializeField] private AudioSource audioSource;
+
     public bool isTrab = false;
 
     public Vector3 Player;
@@ -27,6 +29,7 @@ public class Object_Trab : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             Debug.Log("¿€µø??");
+            audioSource.Play();
             StartCoroutine(Trab());
         }
     }
@@ -36,6 +39,7 @@ public class Object_Trab : MonoBehaviour
         if (collision.gameObject.CompareTag("Trigger"))
         {
             StartCoroutine(Trab());
+            audioSource.Play();
         }
     }
 }

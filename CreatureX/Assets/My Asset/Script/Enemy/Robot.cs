@@ -72,7 +72,7 @@ public class Robot : BaseEnemy, IAllyResponder
             EnemyDead();
     }
 
-    public void MovieAudio()
+    public void MoveAudio()
     {
         if (monsterState == MonsterState.Move)
         {

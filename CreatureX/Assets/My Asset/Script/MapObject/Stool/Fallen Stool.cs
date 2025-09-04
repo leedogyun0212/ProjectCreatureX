@@ -10,6 +10,7 @@ public class FallenStool : MonoBehaviour
 
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip breakSFX;
+    [SerializeField] private AudioClip brokenSFX;
 
     [SerializeField]
     private Animator animator;
@@ -50,6 +51,7 @@ public class FallenStool : MonoBehaviour
                     curCnt--;
                     Debug.LogWarning($"{Time.deltaTime}: 플레이어가 발판에 올라감. 남은횟수: {curCnt}");
                     animator.SetInteger("Cnt", curCnt);
+                    audioSource.PlayOneShot(brokenSFX);
                     if (curCnt == 1 && spriteRenderer != null)
                     {
                         //animator.SetInteger("Cnt", curCnt);

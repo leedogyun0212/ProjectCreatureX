@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         PlayerBasicControl();
+        Debug.Log(player.curForm + "dffsdfs"+!player.unableRel);
     }
 
 
@@ -113,9 +114,9 @@ public class PlayerController : MonoBehaviour
             Vector3 PlayerScale = player.transform.localScale;
             Vector3 Offset = new Vector3(1.95f, 0f, 0f);
             Debug.Log(player.curForm);
-            if (!player.isJump&&!player.unableRel)
+            if (!player.isJump&&!player.unableRel||player.curForm != TestPlayer.AssimilateForm.None)
                 EffectManager.Play("P_G_Attack", player.gameObject, PlayerScale.x < 0, Offset,-0.1f);
-            else if (player.isJump && !player.unableRel)
+            else if (player.isJump && !player.unableRel|| player.curForm != TestPlayer.AssimilateForm.None)
                 EffectManager.Play("P_J_Attack", player.gameObject, PlayerScale.x < 0,Vector3.zero,0f);
             player.OrderAttack();
         }

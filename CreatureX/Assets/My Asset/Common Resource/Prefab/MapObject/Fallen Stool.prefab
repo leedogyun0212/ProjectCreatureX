@@ -76,7 +76,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -175,8 +175,9 @@ MonoBehaviour:
   respawnTime: 3
   visual: {fileID: 6966733035238756413}
   col: {fileID: 3228568162992407281}
-  audioSource: {fileID: 0}
-  breakSFX: {fileID: 0}
+  audioSource: {fileID: 1823186156281187404}
+  breakSFX: {fileID: 8300000, guid: 4d643e48ab625594b8908c1b50046906, type: 3}
+  brokenSFX: {fileID: 8300000, guid: 56eff1269a5cc7645879cf55ff3150ef, type: 3}
   animator: {fileID: 4853676283889422094}
   cnt: 3
 --- !u!1 &3738867991458415735

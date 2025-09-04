@@ -14,6 +14,10 @@ public class CarObject : BaseEnemy
 
     private bool IsDead = true;
 
+    public AudioClip explosionclip;
+    public AudioClip engineclip;
+    public AudioClip Hitclip;
+
     protected override void Start()
     {
         base.Start();
@@ -26,6 +30,9 @@ public class CarObject : BaseEnemy
         monsterState = MonsterState.Move;
         isMove = true;
         Getdirection();
+
+        audioSource.clip = engineclip;
+        audioSource.Play();
     }
 
     protected override void Update()
@@ -54,6 +61,11 @@ public class CarObject : BaseEnemy
         }
     }
 
+    public void explosionAudio()
+    {
+        audioSource.PlayOneShot(explosionclip, 0.8f);
+    }
+
     protected override void OnTriggerEnter2D(Collider2D collision) // 데미지를 입으면 발동됨
     {
         //if (collision.gameObject.CompareTag("Player") && player.isAttack && !HitOn)
@@ -78,6 +90,7 @@ public class CarObject : BaseEnemy
 
     public override void GetHitByPlayer()
     {
+        audioSource.PlayOneShot(Hitclip,0.35f);
         base.GetHitByPlayer();
     }
 

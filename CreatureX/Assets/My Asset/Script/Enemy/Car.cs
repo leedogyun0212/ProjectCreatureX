@@ -9,6 +9,9 @@ public class Car : BaseEnemy
     [SerializeField]
     private PolygonCollider2D capsule; // 차 겉의 콜라이더 플레이어 통과를 위함
 
+    public AudioClip explosionclip;
+    public AudioClip engineclip;
+    public AudioClip Hitclip;
 
     protected override void Update()
     {
@@ -32,6 +35,11 @@ public class Car : BaseEnemy
         }
     }
 
+    public void explosionAudio()
+    {
+        audioSource.PlayOneShot(explosionclip,0.8f);
+    }
+
     protected override void OnTriggerEnter2D(Collider2D collision) // 차의 시야에 닿으면 발동되는 콜라이더
     {
         if (collision.CompareTag("Player") && isMove)
@@ -40,11 +48,14 @@ public class Car : BaseEnemy
             MoveSpeed = 8.0f;
             isMove = false;
             monsterState = MonsterState.Move;
+            audioSource.clip = engineclip;
+            audioSource.Play();
         }
     }
 
     public override void GetHitByPlayer()
     {
+        audioSource.PlayOneShot(Hitclip);
         base.GetHitByPlayer();
     }
 
@@ -87,6 +98,7 @@ public class Car : BaseEnemy
     public void animDie() // 흡수 가능한 상태로 애니메이션을 바꾸는 스크립트
     {
         EnemyFailed = true;
+        audioSource.Stop();
         animDead = 150;
     }
 
