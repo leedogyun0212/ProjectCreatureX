@@ -237,6 +237,7 @@ MonoBehaviour:
   playerMoveSpeed: 8
   flySpeed: 5
   jumpForce: 25
+  isJump: 0
   checkGroundLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -252,6 +253,10 @@ MonoBehaviour:
   firePoint: {fileID: 3143246783913901490}
   TestHitboxPrefab: {fileID: 3797706447931544362, guid: cbafcb1d3947ffa4d9cf465cdeea2c94, type: 3}
   testAssboxPre: {fileID: 3797706447931544362, guid: 737ea5ed6c256d847b7c6aa22d1fa0e2, type: 3}
+  relCar: {fileID: 604765467006651229, guid: 0d962fb90a3f37147970dc0847a4525a, type: 3}
+  relDrone: {fileID: 604765467006651229, guid: f9a26367c28db2849a6ddf68969d4b8a, type: 3}
+  relRobot: {fileID: 604765467006651229, guid: 09d10366b1544cd4b8f11cfb4f4ff463, type: 3}
+  relRes: {fileID: 604765467006651229, guid: b4fd0eeab3219434e810152db4a44c44, type: 3}
   testCarSkill: {fileID: 604765467006651229, guid: 9123791ecff921f409357f5241a5236e, type: 3}
   testDroneSkill: {fileID: 6114834163115956123, guid: b034519ff59903147912e4679bc6b9b2, type: 3}
   testRobotSkill: {fileID: 5428959740539217792, guid: d298f157339a28a42b1a522e14fbc220, type: 3}

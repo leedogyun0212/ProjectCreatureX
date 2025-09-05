@@ -17,7 +17,8 @@ public class TestPlayer : MonoBehaviour
 
     [SerializeField] private float flySpeed = 5;
     [SerializeField] private float jumpForce;
-    [NonSerialized] public bool isJump;
+    public bool isJump;
+    [NonSerialized] public bool isGround;
     private bool isJumpAttack = false;
     [NonSerialized] public bool isTransDashing = false;
     [NonSerialized] public bool isAttack = false;
@@ -128,6 +129,13 @@ public class TestPlayer : MonoBehaviour
     private float nextJump;
     private RuntimeAnimatorController nextAnim;
 
+    [SerializeField] private GameObject relCar;
+    [SerializeField] private GameObject relDrone;
+    [SerializeField] private GameObject relRobot;
+    [SerializeField] private GameObject relRes;
+    private GameObject relObj;
+
+
     [SerializeField] private GameObject testCarSkill;
     [SerializeField] private GameObject testDroneSkill;
     [SerializeField] private GameObject testRobotSkill;
@@ -165,15 +173,12 @@ public class TestPlayer : MonoBehaviour
         var obj = Instantiate(testAssboxPre, transform.position, Quaternion.identity, transform);
         TestAssBox assBox = obj.GetComponent<TestAssBox>();
 
-        // Define the desired assimilation range
-        float desAssRange = 1.75f;
-        Vector3 offset = new Vector3(desAssRange, 0, 0);
+        float desAssPos = 1.25f;
+        Vector3 offset = new Vector3(desAssPos, 0, 0);
 
         if (assBox != null)
         {
-            Debug.Log("흡수 범위 등록 완료!");
-            assBox.SetRange(desAssRange);
-            assBoxRange = assBox;  // ★ 여기를 이렇게 수정
+            assBoxRange = assBox;
             assBoxRange.transform.localPosition = offset;
         }
     }
@@ -208,7 +213,12 @@ public class TestPlayer : MonoBehaviour
                 TakeHeal(5);
         }
 
+        animator.SetBool("TryJump", isJump);
     }
+
+    private float _pointTime = 1.0f; // 1초마다 실행
+    private float _nextTime = 0.0f;
+
 
     public void TransChange(IPlayerTrans newTrans)
     {
@@ -224,7 +234,7 @@ public class TestPlayer : MonoBehaviour
     public void OrderJump()
     {
         if (unableMove) return;
-        if (!isJump)
+        if (isGround)
         {
             Jump();
         }
@@ -233,18 +243,108 @@ public class TestPlayer : MonoBehaviour
     private void Jump()
     {
         isJump = true;
-        animator.SetBool("TryJump", true);
+        isGround = false; // 점프 시작 시 땅 상태 해제
+        // animator.SetBool("TryJump", true);
         if (rigid != null)
             rigid.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Box")|| collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Box"))
         {
-            GroundCheck();
+            isGround = true;
+            isJump = false;
+            // animator.SetBool("TryJump", isJump);
+        }
+        //else {
+        //    isJump = true;
+        //    isGround = false;
+        //}
+
+        //if ((collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Box"))
+        //&& rigid.linearVelocity.y <= 0.1f)
+        //{
+        //    GroundCheck();
+        //}
+    }
+
+    // 땅에 닿는 순간
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    // 충돌이 감지된 오브젝트가 땅 또는 박스 태그인지 확인
+    //    if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Box"))
+    //    {
+    //        // 충돌이 발생한 지점의 법선 벡터를 확인
+    //        // 점프하여 땅에 착지했을 경우, 충돌 법선은 위쪽(Vector2.up)을 향합니다.
+    //        // Dot product는 두 벡터의 방향 유사성을 측정합니다.
+    //        // 0.9f는 거의 완벽하게 위에서 충돌했음을 의미합니다.
+    //        if (Vector2.Dot(collision.contacts[0].normal, Vector2.up) > 0.9f)
+    //        {
+    //            isGround = true;
+    //            isJump = false;
+    //            animator.SetBool("TryJump", false);
+    //        }
+    //    }
+    //}
+
+    // 땅에서 떨어지는 순간
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (isGround && (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Box")))
+        {
+            // 플레이어 발 아래에 땅이 없음을 Raycast로 다시 확인
+            if (!IsGroundedWithRaycast())
+            {
+                isJump = true;
+                isGround = false;
+            }
         }
     }
+
+    // Raycast를 사용해 현재 발 아래에 땅이 있는지 확인
+    private bool IsGroundedWithRaycast()
+    {
+        Vector2 playerPos = transform.position;
+        Vector2 raycastStartPos = new Vector2(playerPos.x, playerPos.y - 1.0f);
+        float rayDistance = 0.5f;
+        Debug.DrawRay(raycastStartPos, Vector2.down * rayDistance, Color.green);
+
+        RaycastHit2D hit = Physics2D.Raycast(raycastStartPos, Vector2.down, rayDistance, checkGroundLayer);
+
+        if (hit.collider != null)
+        {
+            isJump = false;
+            isJumpAttack = false;
+            // animator.SetBool("TryJump", false);
+        }
+
+        return hit.collider != null;
+    }
+
+
+    //private void GroundCheck()
+    //{
+    //    //Vector2 playerPos = transform.position;
+    //    //playerPos.y -= 1.0f;
+    //    //RaycastHit2D hit = Physics2D.Raycast(playerPos, Vector2.down, 0.5f, checkGroundLayer);
+
+    //    Vector2 playerPos = transform.position;
+    //    Vector2 raycastStartPos = new Vector2(playerPos.x, playerPos.y - 1.0f);
+    //    float rayDistance = 0.5f;
+
+
+    //    Debug.DrawRay(raycastStartPos, Vector2.down * rayDistance, Color.red);
+
+    //    RaycastHit2D hit = Physics2D.Raycast(raycastStartPos, Vector2.down, rayDistance, checkGroundLayer);
+
+    //    if (hit.collider != null)
+    //    {
+    //        isJump = false;
+    //        isJumpAttack = false;
+    //        animator.SetBool("TryJump", false);
+    //    }
+    //}
 
     public void OrderFly(float vertical)
     {
@@ -254,20 +354,6 @@ public class TestPlayer : MonoBehaviour
     private void Fly(float vertical)
     {
         transform.Translate(Vector3.up * vertical * flySpeed * Time.deltaTime);
-    }
-
-    private void GroundCheck()
-    {
-        Vector2 playerPos = transform.position;
-        playerPos.y -= 1.0f;
-        RaycastHit2D hit = Physics2D.Raycast(playerPos, Vector2.down, 0.5f, checkGroundLayer);
-        if (hit.collider != null)
-        {
-            isJump = false;
-            isJumpAttack = false;
-
-            animator.SetBool("TryJump", false);
-        }
     }
 
     #endregion
@@ -313,7 +399,7 @@ public class TestPlayer : MonoBehaviour
     public void OrderAssmiliate(AssimilateForm form)
     {
         curForm = form;
-        Debug.Log($"[{Time.time}] {form} 를 흡수함.");
+        // Debug.Log($"[{Time.time}] {form} 를 흡수함.");
     }
 
     // 흡수 -> 변신
@@ -336,7 +422,7 @@ public class TestPlayer : MonoBehaviour
                 TransChange(playerTransRes);
                 break;
             default:
-                Debug.LogWarning($"{Time.deltaTime}: 변신 가능한 대상이 없습니다.");
+                // Debug.LogWarning($"{Time.deltaTime}: 변신 가능한 대상이 없습니다.");
                 break;
         }
     }
@@ -347,7 +433,6 @@ public class TestPlayer : MonoBehaviour
 
         if (assBoxRange == null)
         {
-            Debug.LogWarning("흡수 범위 assBoxRange가 설정되지 않음");
             return;
         }
         BaseEnemy target = assBoxRange.GetFirstAssEnemy();
@@ -358,10 +443,6 @@ public class TestPlayer : MonoBehaviour
             isAssimilating = true;
             unableAttack = true;
             unableMove = true;
-        }
-        else
-        {
-            Debug.LogWarning("흡수할 적이 범위 안에 없음");
         }
     }
 
@@ -432,46 +513,80 @@ public class TestPlayer : MonoBehaviour
 
         if (curTrans != playerTransBasic)
         {
+            if (curTrans == playerTransCar)
+                relObj = relCar;
+            else if (curTrans == playerTransDrone)
+                relObj = relDrone;
+            else if (curTrans == playerTransRobot)
+                relObj = relRobot;
+            else if (curTrans == playerTransRes)
+                relObj = relRes;
             TransChange(playerTransBasic);
-            Realese();
+            Release();
         }
         else
         {
+            if (curForm == AssimilateForm.Car)
+                relObj = relCar;
+            else if (curForm == AssimilateForm.Drone)
+                relObj = relDrone;
+            else if (curForm == AssimilateForm.Robot)
+                relObj = relRobot;
+            else if (curForm == AssimilateForm.Res)
+                relObj = relRes;
             curForm = AssimilateForm.None;
-            Realese();
+            Release();
         }
     }
 
-    private void Realese()
+    private void Release()
     {
+        StartAttack();
         animator.SetTrigger("TryRelease");
         isReleasing = true;
-        unableAttack = true;
-        unableMove = true;
+        StartCoroutine(LateRealese());
     }
 
-    public void OnRealeseAnimEnd()
+    private IEnumerator LateRealese()
     {
+        yield return new WaitForSecondsRealtime(0.81f);
+
+        EffectManager.Play("P_Release", this.gameObject, this.transform.localScale.x < 0, new Vector3(1.40f, 1.1f, 0f));
+    }
+
+    public void OnReleaseAnimEnd()
+    {
+        EndAttack();
         isReleasing = false;
-        unableAttack = false;
-        unableMove = false;
+    }
+    
+    public void RelObject()
+    {
+        GameObject orb = Instantiate(relObj, firePoint.position, Quaternion.identity);
+
+        SpriteRenderer sr = orb.GetComponent<SpriteRenderer>();
+        if (sr != null)
+        {
+            sr.color = Color.black;
+        }
+
+        Rigidbody2D orbRb = orb.GetComponent<Rigidbody2D>();
+        if (orbRb != null)
+        {
+            float direction = transform.localScale.x > 0 ? 1f : -1f;
+            orbRb.linearVelocity = new Vector2(direction * 45f, 0);
+        }
     }
 
     public void Test_FireBlackObj()
     {
-        if (blackOrbPrefab == null || firePoint == null)
-        {
-            Debug.LogError("BlackOrbPrefab 또는 FirePoint가 설정 x");
-            return;
-        }
-
         GameObject orb = Instantiate(blackOrbPrefab, firePoint.position, Quaternion.identity);
 
         Rigidbody2D orbRb = orb.GetComponent<Rigidbody2D>();
         if (orbRb != null)
         {
-            float direction = transform.localScale.x > 0 ? 1f : -1f; // 바라보는 방향
-            orbRb.linearVelocity = new Vector2(direction * 45f, 0);  // 속도 조절
+            float direction = transform.localScale.x > 0 ? 1f : -1f;
+            orbRb.linearVelocity = new Vector2(direction * 45f, 0);
         }
     }
 
@@ -487,7 +602,7 @@ public class TestPlayer : MonoBehaviour
             animator.SetTrigger("TryFailed");
         }
     }
-    
+
     public void TakeHit(int damage)
     {
         if (isDie) return;
@@ -539,13 +654,12 @@ public class TestPlayer : MonoBehaviour
 
     private void HitBack()
     {
-        float knockbackForce = 5f;   // 뒤로 밀리는 힘
-        // float knockbackUp = 2f;      // 살짝 위로 뜨는 힘
+        float knockbackForce = 5f;
+        // float knockbackUp = 2f;  
 
-        // 현재 바라보는 방향의 반대쪽으로
+        // 현재 바라보는 방향 반대 방향
         float direction = transform.localScale.x > 0 ? -1f : 1f;
 
-        // 기존 속도 초기화 후 넉백 적용
         rigid.linearVelocity = Vector2.zero;
         rigid.AddForce(new Vector2(direction * knockbackForce, 0), ForceMode2D.Impulse);
     }
@@ -576,7 +690,6 @@ public class TestPlayer : MonoBehaviour
         playerCurHP = playerMaxHP;
         isPlayerLive = true;
         isDie = false;
-        // Debug.Log($"{Time.deltaTime}: 플레이어 부활! 체력: {playerCurHP}");
     }
 
 
@@ -787,7 +900,6 @@ public class TestPlayer : MonoBehaviour
             rb.linearVelocity = launchVelocity;
         }
 
-        // 이후 폭발 처리 (grenade 프리팹 스크립트에서 OnCollisionEnter2D로)
         StartCoroutine(BasicReturnDelay(0.30f));
     }
 

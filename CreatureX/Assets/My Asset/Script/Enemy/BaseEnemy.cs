@@ -39,6 +39,9 @@ public class BaseEnemy : MonoBehaviour
 
     protected AudioSource audioSource = null;
 
+    [SerializeField]
+    protected int FailedLayer = 11;
+
     protected enum MonsterState
     {
         idle = 0, // 발견전에 움직이는 코드

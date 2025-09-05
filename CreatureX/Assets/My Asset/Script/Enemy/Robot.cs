@@ -40,6 +40,7 @@ public class Robot : BaseEnemy, IAllyResponder
         {
             animDead = 100;
             monsterState = MonsterState.failed;
+            gameObject.layer = FailedLayer;
             StartCoroutine(DeadOn());
         }
         else if (monsterState == MonsterState.Move && helpTarget == null) // �þ� ����� �÷��̾� �߰� 

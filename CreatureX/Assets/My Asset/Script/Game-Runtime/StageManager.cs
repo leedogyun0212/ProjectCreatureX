@@ -51,7 +51,7 @@ public class StageManager : MonoBehaviour
         curSubStage = sub;
 
         string sceneName = $"Stage{main}-{sub}";
-        // Debug.Log($"Loading scene: {sceneName}");
+        Debug.Log($"Loading scene: {sceneName}");
         SceneManager.LoadScene(sceneName);
         RuntimeGameManager.Instance.GameReset();
     }
@@ -65,6 +65,14 @@ public class StageManager : MonoBehaviour
     {
         MarkStageClear(curMainStage, curSubStage);
         curSubStage++;
+        UnlockStage(curMainStage, curSubStage);
+        Load_NextStage();
+    }
+
+    public void CurSubStageClear_Hidden()
+    {
+        MarkStageClear(curMainStage, curSubStage);
+        curSubStage = curSubStage + 2;
         UnlockStage(curMainStage, curSubStage);
         Load_NextStage();
     }
@@ -88,7 +96,10 @@ public class StageManager : MonoBehaviour
     {
         string key = GetStageKey(main, sub);
         if (stageDict.TryGetValue(key, out var stage))
+        {
+            Debug.Log($"Stage {main}-{sub} 스테이지 클리어!!");
             stage.ClearStage();
+        }
         else
             Debug.LogWarning($"Stage {main}-{sub} 스테이지가 없다?!!");
     }

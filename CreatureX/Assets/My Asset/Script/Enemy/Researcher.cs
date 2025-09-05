@@ -25,6 +25,7 @@ public class Researcher : BaseEnemy
             capsule.size = new Vector2(capsule.size.x, 1.3f);
             animDead = 100;
             monsterState = MonsterState.failed;
+            gameObject.layer = FailedLayer;
             StartCoroutine(DeadOn());
         }
         if (Mathf.Abs(player.transform.position.x - transform.position.x) > 10)

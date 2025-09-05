@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private KeyCode assimilateKey = KeyCode.R;
 
     [Header("System Keys")]
-    [SerializeField] private KeyCode pauseKey = KeyCode.Alpha9;
+    [SerializeField] private KeyCode pauseKey = KeyCode.Escape;
     // [SerializeField] private KeyCode reStartKey = KeyCode.Alpha8;
 
 
@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         PlayerBasicControl();
-        Debug.Log(player.curForm + "dffsdfs"+!player.unableRel);
+        // Debug.Log(player.curForm + "dffsdfs"+!player.unableRel);
     }
 
 
