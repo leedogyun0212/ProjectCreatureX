@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/My Asset/Common Resource/Scenes/GameStart.unity
+    guid: 1a4a890df15afda48841775a62ee2d71
+  - enabled: 1
     path: Assets/My Asset/Common Resource/Scenes/TestTitle.unity
     guid: b045142fc33388b47985d7471f5c9e47
   - enabled: 1
@@ -22,16 +25,19 @@ EditorBuildSettings:
     guid: 353742cb9a3c4844a9094f95f6980e7c
   - enabled: 1
     path: Assets/My Asset/Common Resource/Scenes/Stage 1/Stage1-1.unity
-    guid: a44cece75e9a15b48b2bca50561c1b85
+    guid: c696e14f26766854d8c498fb56b01d3b
   - enabled: 1
     path: Assets/My Asset/Common Resource/Scenes/Stage 1/Stage1-2.unity
     guid: 431aa265043eaee419126b266f26ace7
   - enabled: 1
+    path: Assets/My Asset/Common Resource/Scenes/Stage 1/Stage1-3.unity
+    guid: bf0453c4f5aba414695385884d729964
+  - enabled: 1
     path: Assets/My Asset/Common Resource/Scenes/Stage 1/Stage1-4.unity
     guid: 6b026d68404d3c04e9f0e28d199b06e8
   - enabled: 1
-    path: Assets/My Asset/Common Resource/Scenes/St1/TestStage1-5.unity
-    guid: a1a6102ef81d57643a47b40e17a0a996
+    path: Assets/My Asset/Common Resource/Scenes/Stage 1/Stage1-5.unity
+    guid: 737eafe4266cb7d4da8a94171be6fe92
   - enabled: 1
     path: Assets/My Asset/Common Resource/Scenes/Stage 1/Stage1-6.unity
     guid: 32c2c4a5c04a5c440ab9d7d766d81b05
@@ -184,7 +190,10 @@ EditorBuildSettings:
     guid: 9ca9441fe0e25eb4fa314d0922b1cb09
   - enabled: 1
     path: Assets/My Asset/Common Resource/Scenes/Stage 8/Stage8-7.unity
-    guid: 3fbce783e3a645147a943f7436a33297
+    guid: 2e153ad993bbb6042ab4c96f1424b8aa
+  - enabled: 1
+    path: Assets/My Asset/Common Resource/Scenes/GameEnd.unity
+    guid: 1a4c36d9cc7b0a744824a60edd6f38e1
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 3590b91b4603b465dbb4216d601bff33, type: 3}
   m_UseUCBPForAssetBundles: 0

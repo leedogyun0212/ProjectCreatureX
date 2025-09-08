@@ -14,6 +14,9 @@ public class StrikeStool : MonoBehaviour
     private Vector3 deltaPos;
     private HashSet<Transform> passengers = new HashSet<Transform>();
 
+    [SerializeField]
+    private int Damage = 5;
+
     private void Start()
     {
         startPos = transform.position;
@@ -69,6 +72,7 @@ public class StrikeStool : MonoBehaviour
             {
                 // 아래에서 닿음
                 Debug.LogWarning($"{Time.deltaTime}:플레이어가 위험한 방향(아래/옆)에서 충돌했습니다!");
+                player.TakeHit(Damage);
                 // TODO: PlayerHit() 또는 Player.TakeDamage() 호출
             }
         }
@@ -81,5 +85,4 @@ public class StrikeStool : MonoBehaviour
             passengers.Remove(collision.transform);
         }
     }
-
 }

@@ -4048,6 +4048,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offset: {x: 0, y: 0, z: 0}
   speed: 2
+  Damage: 5
 --- !u!483693784 &1217491597
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -12197,7 +12198,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5118192856831131851, guid: a7630183ef5153e41b55bad8077ef9ea, type: 3}
       propertyPath: effectList.Array.size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5118192856831131851, guid: a7630183ef5153e41b55bad8077ef9ea, type: 3}
       propertyPath: effectList.Array.data[0].prefab
@@ -12230,7 +12231,7 @@ PrefabInstance:
     - target: {fileID: 5118192856831131851, guid: a7630183ef5153e41b55bad8077ef9ea, type: 3}
       propertyPath: effectList.Array.data[7].prefab
       value: 
-      objectReference: {fileID: 3321387938942147793, guid: 2b534ec597ece78408617a1c64d01d61, type: 3}
+      objectReference: {fileID: 5106073466931822241, guid: 8c0a2b8a6dbda20498937f442f27a788, type: 3}
     - target: {fileID: 5118192856831131851, guid: a7630183ef5153e41b55bad8077ef9ea, type: 3}
       propertyPath: effectList.Array.data[8].prefab
       value: 
@@ -12265,7 +12266,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5118192856831131851, guid: a7630183ef5153e41b55bad8077ef9ea, type: 3}
       propertyPath: effectList.Array.data[7].effectName
-      value: E_Car_Dirt
+      value: P_Drone_Attack
       objectReference: {fileID: 0}
     - target: {fileID: 5118192856831131851, guid: a7630183ef5153e41b55bad8077ef9ea, type: 3}
       propertyPath: effectList.Array.data[8].effectName

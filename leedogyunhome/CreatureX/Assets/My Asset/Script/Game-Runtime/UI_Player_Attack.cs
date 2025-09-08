@@ -38,7 +38,6 @@ public class UI_Player_Attack : MonoBehaviour
     {
         if (player != null)
         {
-            Debug.Log("이벤트 등록 완료!");
             player.OnAbleAssChange += HandleAbleAssChange;
             HandleAbleAssChange(player.ableAss);
         }
@@ -54,23 +53,32 @@ public class UI_Player_Attack : MonoBehaviour
         if (player.curTrans == player.playerTransDrone)
         {
             DeactivateUI_Ab();
-            ActivateUI_Rel();
             ShowUI_BasicAttack(attack_Drone);
             ShowUI_SkillUI(skill_Drone);
+            if (player.isGround)
+                ActivateUI_Rel();
+            else
+                DeactivateUI_Rel();
         }
         else if (player.curTrans == player.playerTransCar)
         {
             DeactivateUI_Ab();
-            ActivateUI_Rel();
             ShowUI_BasicAttack(attack_Car);
             ShowUI_SkillUI(skill_Car);
+            if (player.isGround)
+                ActivateUI_Rel();
+            else
+                DeactivateUI_Rel();
         }
         else if (player.curTrans == player.playerTransRobot)
         {
             DeactivateUI_Ab();
-            ActivateUI_Rel();
             ShowUI_BasicAttack(attack_Robot);
             ShowUI_SkillUI(skill_Robot);
+            if (player.isGround)
+                ActivateUI_Rel();
+            else
+                DeactivateUI_Rel();
         }
         else if (player.curTrans == player.playerTransRes)
         {
@@ -78,12 +86,16 @@ public class UI_Player_Attack : MonoBehaviour
             ActivateUI_Rel();
             ShowUI_BasicAttack(attack_Res);
             ShowUI_SkillUI(skill_Res);
+            if (player.isGround)
+                ActivateUI_Rel();
+            else
+                DeactivateUI_Rel();
         }
         else // 플레이어 기본 상태
         {
             ShowUI_BasicAttack(attack_Basic);
             ShowUI_SkillUI(skill_Basic);
-            if (player.unableRel)
+            if (player.unableRel && player.isGround)
                 ActivateUI_Rel();
             else
                 DeactivateUI_Rel();
@@ -141,20 +153,16 @@ public class UI_Player_Attack : MonoBehaviour
 
     private void ActivateUI_Ab()
     {
-        // absorb.gameObject.SetActive(true);
         absorb.alpha = 1f;
     }
 
     private void DeactivateUI_Ab()
     {
-        // absorb.gameObject.SetActive(false);
-        absorb.alpha = 0.3f;     // 반투명
+        absorb.alpha = 0.3f;   
     }
 
     private void ActivateUI_Rel()
     {
-        //HideUI_Rel();
-        //rect.gameObject.SetActive(true);
         release.alpha = 1f;
     }
 

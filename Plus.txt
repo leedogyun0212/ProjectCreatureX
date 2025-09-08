@@ -1,13 +1,45 @@
+FakeKey key와 keyDoor사이에 추가 ㅇ
+
+적 플레이어 데미지 추가 
+
+차 오브젝트 카메라에 있을때만 소리 나오게
+
+플레이어가 적 머리위로 올라갔을때
+
 4,7 스테이지 제외 화면 크기 넓히기
 
 드론 움직임 문제
 
-플레이어가 적 머리위로 올라갔을때
-
-적 죽고 플레이어 통과(isTrigger 키면 안됨,플레이어가 사용)
-
-적 낙하로 빠졌을때 안보이게 -5
 
 소리 
 드론 떨어질때
 드론 전기
+
+플레이어 소리
+
+소리 추가,수정 ->
+
+연구원 하얀선 로봇 흡수가능 상태일때 중간에 사라지는것
+
+가능하면 세팅
+
+
+적,레이저,가시발판,가시,트랩 데미지 추가
+
+플레이어 드론 변신후 공격시 이펙트 추가
+
+Test Player 프리펩 자식에 WalkAudio 추가
+
+프리펩 폴더에 Test Player가 쓸 PlayerSound 추가
+
+Test Player  33~39줄 소리 관련 코드 추가
+
+PlayerController ControlMove(),LateRealese()에 소리 코드 추가
+Test Player
+밑에 소리 관련 내용 밑으로 소리 관련 코드 추가
+OrderAttack()에  AttackSound(); 공격 소리 추가o
+OrderRealese()에 releaseSound(); 방출 소리 추가o
+TryAssimilate()에  AssimilateSound(); 흡수 소리 추가o
+TryTransform()에 TransSound(); 변신 소리 추가o
+PlayerDie() DeadSound(); 사망 소리 추가o
+TakeHit(int damage) HitSound(); 맞는 소리 추가o

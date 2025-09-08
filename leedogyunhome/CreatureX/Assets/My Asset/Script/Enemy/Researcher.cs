@@ -12,6 +12,9 @@ public class Researcher : BaseEnemy
     [SerializeField]
     private CapsuleCollider2D capsule;
 
+    public AudioClip HelpClip;
+    public AudioClip MoveClip;
+
     protected override void Start()
     {
         base.Start();
@@ -25,13 +28,14 @@ public class Researcher : BaseEnemy
             capsule.size = new Vector2(capsule.size.x, 1.3f);
             animDead = 100;
             monsterState = MonsterState.failed;
+            gameObject.layer = FailedLayer;
             StartCoroutine(DeadOn());
         }
         if (Mathf.Abs(player.transform.position.x - transform.position.x) > 10)
         {
             animWalk = 0;
         }
-        else if (monsterState == MonsterState.Move&& Mathf.Abs(player.transform.position.x - transform.position.x) < 10)
+        else if (monsterState == MonsterState.Move && Mathf.Abs(player.transform.position.x - transform.position.x) < 10)
         {
             Getdirection();
             EffectManager.Play("E_Dirt", this.gameObject, transform.localScale.x == -1, new Vector3(0.45f, -0.78f));
@@ -39,6 +43,23 @@ public class Researcher : BaseEnemy
         }
         else if (monsterState == MonsterState.Dead)
             EnemyDead();
+    }
+
+    public void MoveSound()
+    {
+        audioSource.clip = MoveClip;
+        audioSource.Play();
+    }
+
+    public void HelpSound()
+    {
+        audioSource.clip = HelpClip;
+        audioSource.Play();
+    }
+
+    public void idleSound()
+    {
+        audioSource.Pause();
     }
 
     protected override void Getdirection() // 플레이어한테 벗어나는 시야를
@@ -68,7 +89,7 @@ public class Researcher : BaseEnemy
 
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && !player.isAttack&&isHelp && !EnemyFailed)
+        if (collision.CompareTag("Player") && !player.isAttack && isHelp && !EnemyFailed)
         {
             monsterState = MonsterState.Play;
             animWalk = 2;
@@ -80,6 +101,7 @@ public class Researcher : BaseEnemy
 
     public override void GetHitByPlayer()
     {
+        audioSource.PlayOneShot(player.soundData.HitBasic);
         base.GetHitByPlayer();
     }
 

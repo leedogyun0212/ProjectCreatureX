@@ -16,6 +16,15 @@ public class UAV : BaseEnemy, IAllyResponder
     [SerializeField]
     private LayerMask EnemyLayer;
 
+    public AudioClip MoveClip;
+
+    public AudioClip Death;
+
+    protected override void Start()
+    {
+        base.Start();
+        MoveSound();
+    }
     protected override void Update()
     {
         EffectManager.Play("E_Thunder", this.gameObject, transform.localScale.x != -1, new Vector3(0.0f, -0.0f));
@@ -25,6 +34,8 @@ public class UAV : BaseEnemy, IAllyResponder
             animDead = 100;
             rigidbody.bodyType = RigidbodyType2D.Dynamic;
             monsterState = MonsterState.failed;
+            gameObject.layer = FailedLayer;
+            DeathSound();
             StartCoroutine(DeadOn());
         }
         else if (monsterState == MonsterState.idle)
@@ -44,9 +55,21 @@ public class UAV : BaseEnemy, IAllyResponder
             EnemyDead();
     }
 
+    public void MoveSound()
+    {
+        audioSource.clip = MoveClip;
+        audioSource.Play();
+    }
+
+    public void DeathSound()
+    {
+        audioSource.clip = Death;
+        audioSource.Play();
+        Invoke(nameof(StopAllSound), Death.length);
+    }
+
     private void StateMove()// 포착시 드론이 가져갈 움직임
     {
-
         if (!isReturning)
             Getdirection();
         else if (isReturning)
@@ -96,11 +119,11 @@ public class UAV : BaseEnemy, IAllyResponder
 
     private void AttUAV() // 특정 지점 도착후 플레이어 공격후의 도착할 지점 지정하는 코드
     {
-        if(capsule.transform.position.x-player.transform.position.x>0)
+        if (capsule.transform.position.x - player.transform.position.x > 0)
         {
-            UAVPos = new Vector3(player.transform.position.x - 5.0f, player.transform.position.y+4.0f, 0);
+            UAVPos = new Vector3(player.transform.position.x - 5.0f, player.transform.position.y + 4.0f, 0);
         }
-        else if(capsule.transform.position.x - player.transform.position.x < 0)
+        else if (capsule.transform.position.x - player.transform.position.x < 0)
         {
             UAVPos = new Vector3(player.transform.position.x + 5.0f, player.transform.position.y + 4.0f, 0);
         }
@@ -174,6 +197,7 @@ public class UAV : BaseEnemy, IAllyResponder
 
     public override void GetHitByPlayer()
     {
+        audioSource.PlayOneShot(player.soundData.HitDrone);
         base.GetHitByPlayer();
     }
 
@@ -182,6 +206,7 @@ public class UAV : BaseEnemy, IAllyResponder
     {
         isReturning = true;
         AttUAV();
+        PlayerDamage();
         yield return new WaitForSeconds(0.2f);
         capsule.isTrigger = false;
         FlyUAV();
@@ -198,5 +223,10 @@ public class UAV : BaseEnemy, IAllyResponder
     {
         EffectManager.Play("E_Asl", this.gameObject, transform.localScale.x != -1, new Vector3(0.042f, 0.87f));
         return base.DeadOn();
+    }
+
+    private void StopAllSound()
+    {
+        audioSource.Stop();
     }
 }

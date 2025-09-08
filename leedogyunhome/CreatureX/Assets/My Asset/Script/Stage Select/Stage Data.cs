@@ -19,9 +19,7 @@ public class StageData : MonoBehaviour
         if (mainStageIndex == 1 && subStageIndex == 1)
             isStageUnlocked = true;
 
-        if (mainStageIndex == 1 && subStageIndex == 7)
-            isStageUnlocked = true;
-
+        isStageUnlocked = true;
 
         // StageManager¿¡ µî·Ï
         if (StageManager.Instance != null)

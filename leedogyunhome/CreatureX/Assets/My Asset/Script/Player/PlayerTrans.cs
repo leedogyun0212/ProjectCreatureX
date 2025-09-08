@@ -44,7 +44,6 @@ public class Player_Trans_Basic : IPlayerTrans
 
     public void Realese()
     {
-        Debug.Log($"{Time.deltaTime}: 플레이어 방출 시도!");
         player.OrderRealese();
     }
 

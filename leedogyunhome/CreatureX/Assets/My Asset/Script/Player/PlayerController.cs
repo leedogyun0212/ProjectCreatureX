@@ -25,15 +25,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private KeyCode assimilateKey = KeyCode.R;
 
     [Header("System Keys")]
-    [SerializeField] private KeyCode pauseKey = KeyCode.Alpha9;
-    // [SerializeField] private KeyCode reStartKey = KeyCode.Alpha8;
-
-
+    private KeyCode pauseKey = KeyCode.Escape;
 
     private void Update()
     {
         PlayerBasicControl();
-        Debug.Log(player.curForm + "dffsdfs"+!player.unableRel);
+        // Debug.Log(player.curForm + "dffsdfs"+!player.unableRel);
     }
 
 
@@ -65,6 +62,10 @@ public class PlayerController : MonoBehaviour
 
         float dir;
 
+        if (leftPressed || rightPressed) player.WalkSound();
+        else if (!Input.anyKey && !Input.GetKey(attackKey))
+            player.StopWalkSound();
+
         if (leftPressed && !rightPressed) dir = -1;
         else if (!leftPressed && rightPressed) dir = 1;
         else dir = 0;
@@ -76,6 +77,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(jumpKey))
         {
+            player.JumpSound();
             player.curTrans.Jump(0);
         }
     }
@@ -85,6 +87,9 @@ public class PlayerController : MonoBehaviour
         float dir = 0;
         if (Input.GetKey(flyUpKey)) dir = 1;
         if (Input.GetKey(flyDownKey)) dir = -1;
+
+        if (Input.GetKey(flyUpKey) || Input.GetKey(flyDownKey))
+            player.DroneFlySound();
 
         player.curTrans.Jump(dir);
     }
@@ -102,7 +107,6 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(releaseKey))
         {
-            StartCoroutine(LateRealese());
             player.curTrans.Realese();
         }
     }
@@ -118,6 +122,8 @@ public class PlayerController : MonoBehaviour
                 EffectManager.Play("P_G_Attack", player.gameObject, PlayerScale.x < 0, Offset,-0.1f);
             else if (player.isJump && !player.unableRel|| player.curForm != TestPlayer.AssimilateForm.None)
                 EffectManager.Play("P_J_Attack", player.gameObject, PlayerScale.x < 0,Vector3.zero,0f);
+            else if (player.curTrans == player.playerTransDrone)
+                EffectManager.Play("P_Drone_Attack", player.gameObject, PlayerScale.x < 0, new Vector3(0.17f, 0, 0), 0f);
             player.OrderAttack();
         }
     }
@@ -148,10 +154,4 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private IEnumerator LateRealese()
-    {
-        yield return new WaitForSecondsRealtime(0.81f);
-
-        EffectManager.Play("P_Release", player.gameObject, player.transform.localScale.x < 0, new Vector3(1.40f, 1.1f, 0f));
-    }
 }

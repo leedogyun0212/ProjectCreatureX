@@ -1536,6 +1536,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audio Source (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6040382776539875382, guid: d8ce1b3d06f4ea648acd46c3a231813a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2209,7 +2213,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5118192856831131851, guid: a7630183ef5153e41b55bad8077ef9ea, type: 3}
       propertyPath: effectList.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5118192856831131851, guid: a7630183ef5153e41b55bad8077ef9ea, type: 3}
       propertyPath: effectList.Array.data[0].prefab
@@ -2238,7 +2242,7 @@ PrefabInstance:
     - target: {fileID: 5118192856831131851, guid: a7630183ef5153e41b55bad8077ef9ea, type: 3}
       propertyPath: effectList.Array.data[6].prefab
       value: 
-      objectReference: {fileID: 3321387938942147793, guid: 2b534ec597ece78408617a1c64d01d61, type: 3}
+      objectReference: {fileID: 5106073466931822241, guid: 8c0a2b8a6dbda20498937f442f27a788, type: 3}
     - target: {fileID: 5118192856831131851, guid: a7630183ef5153e41b55bad8077ef9ea, type: 3}
       propertyPath: effectList.Array.data[0].effectName
       value: P_G_Attack
@@ -2265,7 +2269,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5118192856831131851, guid: a7630183ef5153e41b55bad8077ef9ea, type: 3}
       propertyPath: effectList.Array.data[6].effectName
-      value: E_Car_Dirt
+      value: P_Drone_Attack
       objectReference: {fileID: 0}
     - target: {fileID: 5118192856831131851, guid: a7630183ef5153e41b55bad8077ef9ea, type: 3}
       propertyPath: effectList.Array.data[0].effectCount

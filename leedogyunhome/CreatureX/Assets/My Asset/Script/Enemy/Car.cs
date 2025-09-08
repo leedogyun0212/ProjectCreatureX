@@ -20,13 +20,14 @@ public class Car : BaseEnemy
         {
             monsterState = MonsterState.failed;
             isMove = false;
+            gameObject.layer = FailedLayer;
             animWalk = 0;
             animDead = 100;
             StartCoroutine(DeadOn());
         }
         else if (monsterState == MonsterState.Move) // 차가 플레이어를 추격하는 상태,
         {
-            EffectManager.Play("E_Car_Dirt", this.gameObject, transform.localScale.x == -1, new Vector3(-2.067f,-0.675f));
+            EffectManager.Play("E_Car_Dirt", this.gameObject, transform.localScale.x == -1, new Vector3(-2.067f, -0.675f));
             Move();
         }
         else if (monsterState == MonsterState.Dead) // 차가 완전한 죽음
@@ -37,7 +38,7 @@ public class Car : BaseEnemy
 
     public void explosionAudio()
     {
-        audioSource.PlayOneShot(explosionclip,0.8f);
+        audioSource.PlayOneShot(explosionclip, 0.8f);
     }
 
     protected override void OnTriggerEnter2D(Collider2D collision) // 차의 시야에 닿으면 발동되는 콜라이더
@@ -68,6 +69,7 @@ public class Car : BaseEnemy
             if (capsule.isTrigger)
                 StartCoroutine(TriggerFalse());
             isMove = false;
+            PlayerDamage();
         }
         else if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Box")) // 벽에 닿으면 흡수 가능한 상태가 되는 콜라이더
         {
@@ -109,4 +111,5 @@ public class Car : BaseEnemy
     }
 
 }
+
 

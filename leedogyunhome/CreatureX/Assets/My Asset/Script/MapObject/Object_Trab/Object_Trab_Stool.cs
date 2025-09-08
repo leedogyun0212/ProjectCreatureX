@@ -39,6 +39,7 @@ public class Object_Trab_Stool : MonoBehaviour
             Vector3 spawnPos = center + new Vector3(offsetX, 0f, 0f);
 
             Object_Trab spawned = Instantiate(TrabPrefab, spawnPos, Quaternion.identity);
+            spawned.SetTrab();
             // currentTrab는 대표 참조로 중앙(또는 중앙에 가장 가까운) 개체를 기록
             if (i == centerIndex)
                 currentTrab = spawned;

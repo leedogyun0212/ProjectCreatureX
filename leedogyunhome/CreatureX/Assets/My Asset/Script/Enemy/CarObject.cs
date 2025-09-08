@@ -38,6 +38,7 @@ public class CarObject : BaseEnemy
     protected override void Update()
     {
         animEnemy();
+        AudioOn();
         if (EnemyFailed)  // 차의 흡수 가능한 상태
         {
             monsterState = MonsterState.failed;
@@ -45,6 +46,7 @@ public class CarObject : BaseEnemy
             animWalk = 0;
             animDead = 100;
             Debug.Log("죽음");
+            gameObject.layer = FailedLayer;
             EnemyFailed = false;
             if (IsDead)
             {
@@ -61,9 +63,18 @@ public class CarObject : BaseEnemy
         }
     }
 
+    private void AudioOn()
+    {
+        if (CameraOn)
+            audioSource.Play();
+        else if (!CameraOn)
+            audioSource.Stop();
+    }
+
     public void explosionAudio()
     {
-        audioSource.PlayOneShot(explosionclip, 0.8f);
+        if (CameraOn)
+            audioSource.PlayOneShot(explosionclip, 0.8f);
     }
 
     protected override void OnTriggerEnter2D(Collider2D collision) // 데미지를 입으면 발동됨
@@ -79,7 +90,7 @@ public class CarObject : BaseEnemy
         //    StartCoroutine(HitRecover());
         //}
         //벽/박스 충돌 시 리스폰 (충돌 무시 시간이 아닐 때만)
-        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Box")|| collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Box") || collision.gameObject.CompareTag("Ground"))
         {
             monsterState = MonsterState.idle;
             isMove = false;
@@ -90,7 +101,7 @@ public class CarObject : BaseEnemy
 
     public override void GetHitByPlayer()
     {
-        audioSource.PlayOneShot(Hitclip,0.35f);
+        audioSource.PlayOneShot(Hitclip, 0.35f);
         base.GetHitByPlayer();
     }
 
@@ -103,6 +114,7 @@ public class CarObject : BaseEnemy
             capsule.isTrigger = true;
             if (capsule.isTrigger)
                 StartCoroutine(TriggerFalse());
+            PlayerDamage();
         }
 
     }
@@ -134,7 +146,7 @@ public class CarObject : BaseEnemy
     {
         EffectManager.Play("E_Asl", this.gameObject, transform.localScale.x != -1, new Vector3(0.05f, 0.7f));
         IsDead = false;
-        Debug.Log("실행"+ monsterState);
+        Debug.Log("실행" + monsterState);
         yield return new WaitForSecondsRealtime(FailTime);
         // 시작 위치로 즉시 복귀합니다. (화면 밖으로 밀려나거나 멈추는 것을 방지) 멈추는 원인 가능성 높음
         transform.position = startPosition;
@@ -152,6 +164,7 @@ public class CarObject : BaseEnemy
         Getdirection();
         isMove = true;
         IsDead = true;
+        gameObject.layer = 7;
         animWalk = 1;
         animDead = 0;
     }
@@ -162,6 +175,14 @@ public class CarObject : BaseEnemy
         // 이동 벡터를 설정
         direction = new Vector3(moveDirX, 0, 0);
         animWalk = 1.0f;
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("MainCamera"))
+        {
+            CameraOn = true;
+        }
     }
 }
 

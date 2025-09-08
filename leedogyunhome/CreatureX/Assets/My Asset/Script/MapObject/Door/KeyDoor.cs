@@ -15,6 +15,9 @@ public class KeyDoor : MonoBehaviour, IDoor
 
     private Animator animator;
 
+    [SerializeField]
+    private AudioSource audioSource;
+
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -27,7 +30,6 @@ public class KeyDoor : MonoBehaviour, IDoor
         if (keyDataAsset.Key && !Key)
         {
             Key = true;
-            animator.SetBool("Key", Key);
         }
     }
 
@@ -36,6 +38,7 @@ public class KeyDoor : MonoBehaviour, IDoor
         if (collision.CompareTag("MainCamera"))
         {
             DoorTouch = true;
+            animator.SetBool("Key", Key);
             Camera.SetLockDirection(direction);
         }
     }
@@ -57,4 +60,15 @@ public class KeyDoor : MonoBehaviour, IDoor
         }
     }
 
+    public void DoorSound()
+    {
+        audioSource.Play();
+
+        Invoke(nameof(StopAllSound), audioSource.clip.length);
+    }
+
+    private void StopAllSound()
+    {
+        audioSource.Stop();
+    }
 }

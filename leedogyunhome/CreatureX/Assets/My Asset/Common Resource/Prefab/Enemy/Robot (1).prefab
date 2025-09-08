@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 577787082568331982}
   - component: {fileID: 3831297125551414624}
   m_Layer: 12
-  m_Name: GameObject
+  m_Name: FailTrigger
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

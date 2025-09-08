@@ -8,6 +8,7 @@ public class RuntimeGameManager : MonoBehaviour
 
     [SerializeField] private TestPlayer player;
     [SerializeField] private ClearDoor door;
+    [SerializeField] private HiddenDoor door_Hidden;
     private bool isGameCleared = false;
     private bool isGamePaused = false;
     private bool isGameOvered = false;
@@ -17,9 +18,10 @@ public class RuntimeGameManager : MonoBehaviour
     [SerializeField] private UI_GoTitle goToTitleUI;
     [SerializeField] private UI_GameRestart restartUI;
 
-    // Find 사용 안하면서 재등록 하는 방법 (게임 요소들이 생성될때 등록하기)
+    // 오브젝트 객체 재등록
     public void Regist_Player(TestPlayer p) => player = p;
     public void Regist_Door(ClearDoor d) => door = d;
+    public void Regist_Door(HiddenDoor d) => door_Hidden = d;
     public void Regist_PauseUI(GamePauseUI ui) => pauseUI = ui;
     public void Regist_OverUI(GameOverUI ui) => overUI = ui;
     public void Regist_TitleUI(UI_GoTitle ui) => goToTitleUI = ui;
@@ -49,27 +51,19 @@ public class RuntimeGameManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // 씬이 로드될 때마다 Player, Door, UI 다시 등록
-        //player = FindObjectOfType<TestPlayer>();
-        //door = FindObjectOfType<ClearDoor>();
-        //pauseUI = FindObjectOfType<GamePauseUI>();
-        //overUI = FindObjectOfType<GameOverUI>();
-
-        // 씬이 로드되면 한 프레임 기다렸다가 등록 확인
         StartCoroutine(WaitAndInitialize());
     }
 
     private IEnumerator WaitAndInitialize()
     {
-        // 한 프레임 대기 (모든 Awake/Start가 실행될 시간 확보)
         yield return null;
 
-        if (player == null)
-            Debug.LogWarning("플레이어가 등록 X");
-        if (pauseUI == null)
-            Debug.LogWarning("Pause UI가 등록 X");
-        if (overUI == null)
-            Debug.LogWarning("Over UI가 등록 X");
+        //if (player == null)
+        //    Debug.LogWarning("플레이어가 등록 X");
+        //if (pauseUI == null)
+        //    Debug.LogWarning("Pause UI가 등록 X");
+        //if (overUI == null)
+        //    Debug.LogWarning("Over UI가 등록 X");
     }
 
     // Update is called once per frame
@@ -85,7 +79,7 @@ public class RuntimeGameManager : MonoBehaviour
             return;
     }
 
-    private void GameSave() 
+    private void GameSave()
     {
         // 예시용 저장
         if (Input.GetKeyDown(KeyCode.P))
@@ -105,24 +99,31 @@ public class RuntimeGameManager : MonoBehaviour
 
     private bool CheckGameManager()
     {
-        if (player == null || door == null)
+        if (player == null)
         {
-            // Debug.LogError("게임매니저에 무언가가 설정되지 x");
             return false;
         }
-        else { 
+        else {
             return true;
         }
     }
 
 
-    private void Check_StageGameClear() 
+    private void Check_StageGameClear()
     {
         if (isGameCleared || isGamePaused) return;
         if (door.isInPlayer)
         {
-            StageGameClear();
             isGameCleared = true;
+            StageGameClear();
+            return;
+        }
+        else if (door_Hidden == null) return;
+        else if (door_Hidden.isInPlayer)
+        {
+            isGameCleared = true;
+            StageGameClear_Hidden();
+            return;
         }
     }
 
@@ -138,14 +139,24 @@ public class RuntimeGameManager : MonoBehaviour
         }
     }
 
+    private void StageGameClear_Hidden()
+    {
+        if (StageManager.Instance.curSubStage >= StageManager.Instance.ClearIndex)
+        {
+            StageManager.Instance.CurMainStageClear();
+        }
+        else
+        {
+            StageManager.Instance.CurSubStageClear_Hidden();
+        }
+    }
+
 
     private void ToggleChildren(GameObject parent, bool state)
     {
-        // Debug.Log($"{Time.deltaTime}: UI 시도!");
         foreach (Transform child in parent.transform)
         {
             child.gameObject.SetActive(state);
-            // Debug.Log($"{Time.deltaTime}: UI 호출!");
         }
     }   
 
@@ -218,7 +229,8 @@ public class RuntimeGameManager : MonoBehaviour
     public void GotoTitle()
     {
         GameReset();
-        SceneManager.LoadScene("TestTitle");
+        // SceneManager.LoadScene("TestTitle");
+        SceneManager.LoadScene("TestSelectScene");
     }
 
 
@@ -227,7 +239,6 @@ public class RuntimeGameManager : MonoBehaviour
         if (isGameOvered || isGamePaused) return;
         if (!player.isPlayerLive)
         {
-            // Debug.LogWarning("플레이어가 죽었습니다!!");
             isGameOvered = true;
             RunGameOver();
         }
@@ -238,7 +249,7 @@ public class RuntimeGameManager : MonoBehaviour
     {
         if (isGameOvered || isGamePaused) return;
         isGameOvered = true;
-        RunGameOver();
+        RunGameOver_Fall();
     }
 
     private void RunGameOver()
@@ -247,17 +258,22 @@ public class RuntimeGameManager : MonoBehaviour
         {
             ToggleChildren(overUI.gameObject, true);
         }
-        //if (player != null)
-        //    player.PlayerDie();
     }
+
+    private void RunGameOver_Fall()
+    {
+        if (overUI != null)
+        {
+            ToggleChildren(overUI.gameObject, true);
+        }
+    }
+
 
     public void Check_GamePause()
     {
-        Debug.Log($"{Time.deltaTime}: 게임 중지!");
         isGamePaused = !isGamePaused;
         if (pauseUI != null)
-        {
-            Debug.Log($"{Time.deltaTime}: 게임 종료 시도!");            
+        {          
             ToggleChildren(pauseUI.gameObject, isGamePaused);
         }
         if (isGamePaused)
