@@ -940,6 +940,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audio Source
       objectReference: {fileID: 0}
+    - target: {fileID: 6040382776539875382, guid: d8ce1b3d06f4ea648acd46c3a231813a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10077,7 +10081,7 @@ GameObject:
   - component: {fileID: 1720436545}
   m_Layer: 6
   m_Name: Box
-  m_TagString: Ground
+  m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11490,6 +11494,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clear Hidden Door
       objectReference: {fileID: 0}
+    - target: {fileID: 7891427615202955989, guid: 9c731dc1ebc1b284cb2e569e573f8274, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
     m_RemovedGameObjects: []
@@ -11669,7 +11677,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5118192856831131851, guid: a7630183ef5153e41b55bad8077ef9ea, type: 3}
       propertyPath: effectList.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5118192856831131851, guid: a7630183ef5153e41b55bad8077ef9ea, type: 3}
       propertyPath: effectList.Array.data[0].prefab
@@ -11698,7 +11706,7 @@ PrefabInstance:
     - target: {fileID: 5118192856831131851, guid: a7630183ef5153e41b55bad8077ef9ea, type: 3}
       propertyPath: effectList.Array.data[6].prefab
       value: 
-      objectReference: {fileID: 2269238540123538391, guid: 91c77f2725c41cd4ba2bcc62e69678b1, type: 3}
+      objectReference: {fileID: 5106073466931822241, guid: 8c0a2b8a6dbda20498937f442f27a788, type: 3}
     - target: {fileID: 5118192856831131851, guid: a7630183ef5153e41b55bad8077ef9ea, type: 3}
       propertyPath: effectList.Array.data[7].prefab
       value: 
@@ -11729,7 +11737,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5118192856831131851, guid: a7630183ef5153e41b55bad8077ef9ea, type: 3}
       propertyPath: effectList.Array.data[6].effectName
-      value: E_Thunder
+      value: P_Drone_Attack
       objectReference: {fileID: 0}
     - target: {fileID: 5118192856831131851, guid: a7630183ef5153e41b55bad8077ef9ea, type: 3}
       propertyPath: effectList.Array.data[7].effectName

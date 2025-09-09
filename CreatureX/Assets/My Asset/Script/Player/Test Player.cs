@@ -30,6 +30,15 @@ public class TestPlayer : MonoBehaviour
     private bool isDie = false;
     private bool isMove = false;
 
+
+    public AudioSource audioSource;
+
+    public AudioSource WalkaudioSource;
+
+    public PlayerSound soundData;
+
+    private AudioClip lastClip = null;
+
     // 흡수 가능 여부 변경 이벤트
     public event Action<bool> OnAbleAssChange;
     private bool _ableAss;
@@ -148,6 +157,10 @@ public class TestPlayer : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         collider = GetComponent<CapsuleCollider2D>();
 
+        // AudioSource 초기화
+        if (audioSource == null)
+            audioSource = GetComponent<AudioSource>();
+
         // 테스트용
         playerTransBasic = new Player_Trans_Basic(this);
         playerTransCar = new Player_Trans_Car(this);
@@ -195,8 +208,6 @@ public class TestPlayer : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Alpha4)) OrderAssmiliate(AssimilateForm.Robot);
             if (Input.GetKeyDown(KeyCode.Alpha5)) OrderAssmiliate(AssimilateForm.Res);
         }
-        //if (curTrans == playerTransDrone)
-        //    IdleDrone();
         UpdateHitboxOffset();
         Check_PlayerDie();
 
@@ -220,6 +231,7 @@ public class TestPlayer : MonoBehaviour
     private float _nextTime = 0.0f;
 
 
+    // 변신
     public void TransChange(IPlayerTrans newTrans)
     {
         curTrans.Exit();
@@ -406,19 +418,26 @@ public class TestPlayer : MonoBehaviour
     public void TryTransform()
     {
         if (isJump || isDie || isAttack || isHiting) return;
-
         switch (curForm)
         {
             case AssimilateForm.Drone:
+                PlayerPause();
+                TransSound();
                 TransChange(playerTransDrone);
                 break;
             case AssimilateForm.Car:
+                PlayerPause();
+                TransSound();
                 TransChange(playerTransCar);
                 break;
             case AssimilateForm.Robot:
+                PlayerPause();
+                TransSound();
                 TransChange(playerTransRobot);
                 break;
             case AssimilateForm.Res:
+                PlayerPause();
+                TransSound();
                 TransChange(playerTransRes);
                 break;
             default:
@@ -439,6 +458,10 @@ public class TestPlayer : MonoBehaviour
         if (target != null)
         {
             targetAssEnemy = target;
+
+            // 흡수 소리 재생
+            AssimilateSound();
+
             animator.SetTrigger("TryAssimilate");
             isAssimilating = true;
             unableAttack = true;
@@ -455,6 +478,7 @@ public class TestPlayer : MonoBehaviour
             EnemyManager.Instance.UnregisterEnemy(targetAssEnemy);
             Destroy(targetAssEnemy.gameObject);
             targetAssEnemy = null;
+            playerCurHP = playerMaxHP;
         }
         isAssimilating = false;
         unableAttack = false;
@@ -476,10 +500,18 @@ public class TestPlayer : MonoBehaviour
 
 
 
-    // 변신
+    // 변신 값 적용
     public void TransApply(float speed, float jump, RuntimeAnimatorController animController)
     {
-        if (isJump || isAttack) { return; }
+        //if (CurAnimator.runtimeAnimatorController != droneAnimController)
+        //{
+        //    if (isJump || isAttack) { return; }
+        //}
+        //else 
+        //{
+        //    if (isAttack) return;
+        //}
+        if (isAttack) return;
         if (curTrans == playerTransBasic)
         {
             playerCurMoveSpeed = speed;
@@ -489,7 +521,6 @@ public class TestPlayer : MonoBehaviour
         else
         {
             animator.SetTrigger("TryTrans");
-            unableMove = true;
             nextSpeed = speed;
             nextJump = jump;
             nextAnim = animController;
@@ -501,7 +532,7 @@ public class TestPlayer : MonoBehaviour
         playerCurMoveSpeed = nextSpeed;
         jumpForce = nextJump;
         CurAnimator.runtimeAnimatorController = nextAnim;
-        unableMove = false;
+        PlayerContinue();
 
         curTrans.TransValueApply();
     }
@@ -509,8 +540,9 @@ public class TestPlayer : MonoBehaviour
     // 방출 명령
     public void OrderRealese()
     {
+        // if (isJump) return;
         if (isReleasing || isDie || !unableRel) return;
-
+        releaseSound();
         if (curTrans != playerTransBasic)
         {
             if (curTrans == playerTransCar)
@@ -575,6 +607,10 @@ public class TestPlayer : MonoBehaviour
         {
             float direction = transform.localScale.x > 0 ? 1f : -1f;
             orbRb.linearVelocity = new Vector2(direction * 45f, 0);
+            if (direction < 0)
+            {
+                orb.transform.rotation = Quaternion.Euler(0, 180, 0); // 왼쪽 바라보게
+            }
         }
     }
 
@@ -606,6 +642,9 @@ public class TestPlayer : MonoBehaviour
     public void TakeHit(int damage)
     {
         if (isDie) return;
+
+        HitSound();
+
         if (!isAttack && !isHiting)
         {
             isHiting = true;
@@ -638,7 +677,6 @@ public class TestPlayer : MonoBehaviour
         playerCurHP -= damage;
     }
 
-    // 히트 백
     private void PlayerHitBack()
     {
         HitBack();
@@ -646,9 +684,9 @@ public class TestPlayer : MonoBehaviour
 
     private IEnumerator PlayerHitBack_Drone()
     {
-        float duration = 0.25f;       // 히트백 지속 시간
+        float hitBack = 0.25f;
         HitBack();
-        yield return new WaitForSeconds(duration);
+        yield return new WaitForSeconds(hitBack);
         rigid.linearVelocity = Vector2.zero;
     }
 
@@ -681,6 +719,7 @@ public class TestPlayer : MonoBehaviour
     public void PlayerDie()
     {
         isPlayerLive = false;
+        DeadSound();
         PlayerPause();
     }
     // 부활
@@ -696,9 +735,18 @@ public class TestPlayer : MonoBehaviour
     public void OrderAttack()
     {
         if (unableMove || unableAttack) return;
+
+        // 공격 소리 재생
+        AttackSound();
+
         curTrans.Attack();
     }
-    public void OrderTransSkill() => curTrans.TransSkill();
+    public void OrderTransSkill()
+    {
+        if (unableMove || unableAttack)
+            return;
+        curTrans.TransSkill();
+    }
 
     public void BasicAttack_anim()
     {
@@ -722,7 +770,7 @@ public class TestPlayer : MonoBehaviour
 
     private IEnumerator DashForward(float direction)
     {
-        float dashTime = 0.225f; // 이동 지속 시간
+        float dashTime = 0.225f;  // 이동 지속 시간
         float dashSpeed = 7.5f;   // 이동 속도
         float elapsed = 0.05f;
 
@@ -743,7 +791,6 @@ public class TestPlayer : MonoBehaviour
         rigid.linearVelocity = Vector2.zero;
         rigid.gravityScale = 3.5f;
         animator.SetBool("TryJumpAttack", true);
-        // Invoke(nameof(JumpUpperAttack), 0.2f);
     }
 
     private void JumpUpperAttack()
@@ -781,7 +828,6 @@ public class TestPlayer : MonoBehaviour
         float direction = transform.localScale.x > 0 ? 1f : -1f;
 
         rigid.linearVelocity = Vector2.zero;
-        // rigid.gravityScale = 0;
         rigid.AddForce(Vector2.right * direction * dashPower, ForceMode2D.Impulse);
         CreateHitBox(direction, HitPos, size);
         Invoke(nameof(EndDash), dashDuration);
@@ -828,62 +874,44 @@ public class TestPlayer : MonoBehaviour
         PlayerContinue();
     }
 
-
-    private IEnumerator BasicReturnDelay(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        TransChange(playerTransBasic);
-        curForm = AssimilateForm.None;
-    }
-
-
     public void TransSkill_Drone()
     {
-        float direction = transform.localScale.x > 0 ? 1f : -1f;
+        StartAttack();
         GameObject orb = Instantiate(testDroneSkill, firePoint.position, Quaternion.identity);
-
-        orb.GetComponent<TestCarSkill>().InitializeDirection(direction);
         Rigidbody2D orbRb = orb.GetComponent<Rigidbody2D>();
         if (orbRb != null)
         {
-            orbRb.linearVelocity = new Vector2(direction * 50f, 0);
+            float direction = transform.localScale.x > 0 ? 1f : -1f;
+            orbRb.linearVelocity = new Vector2(direction * 45f, 0);
+            if (direction < 0)
+            {
+                orb.transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
         }
-
-        // 끝난뒤에? (추후 애니메이션 연출 추가 = 원래대로 돌아가는 모션)
-        StartCoroutine(BasicReturnDelay(0.35f));
+        EndAttack();
     }
 
     public void TransSkill_Car()
     {
-        // 방출 이펙트 + 사운드
-        //if (carTransSkill_Effect != null)
-        //    Instantiate(carTransSkill_Effect, transform.position, Quaternion.identity);
-        //if (carTransSkill_Sound != null)
-        //    AudioSource.PlayClipAtPoint(carTransSkill_Sound, transform.position);
-
-        // 스킬 오브젝트 생성
-        float direction = transform.localScale.x > 0 ? 1f : -1f;
+        StartAttack();
         GameObject orb = Instantiate(testCarSkill, firePoint.position, Quaternion.identity);
-        orb.GetComponent<TestCarSkill>().InitializeDirection(direction);
         Rigidbody2D orbRb = orb.GetComponent<Rigidbody2D>();
         if (orbRb != null)
         {
-            orbRb.linearVelocity = new Vector2(direction * 50f, 0);
+            float direction = transform.localScale.x > 0 ? 1f : -1f;
+            orbRb.linearVelocity = new Vector2(direction * 45f, 0);
+            if (direction < 0)
+            {
+                orb.transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
         }
-
-        // 끝난뒤에? (추후 애니메이션 연출 추가 = 원래대로 돌아가는 모션)
-        StartCoroutine(BasicReturnDelay(0.35f));
+        EndAttack();
     }
 
     public void TransSkill_Robot()
     {
         StartAttack();
-        animator.SetTrigger("TryAttack");
-        // 방출 이펙트 + 사운드
-        //if (carTransSkill_Effect != null)
-        //    Instantiate(carTransSkill_Effect, transform.position, Quaternion.identity);
-        //if (carTransSkill_Sound != null)
-        //    AudioSource.PlayClipAtPoint(carTransSkill_Sound, transform.position);
+        // animator.SetTrigger("TryAttack");
 
         float direction = transform.localScale.x > 0 ? 1f : -1f;
 
@@ -899,14 +927,149 @@ public class TestPlayer : MonoBehaviour
                                                  Mathf.Sin(angle) * speed);
             rb.linearVelocity = launchVelocity;
         }
-
-        StartCoroutine(BasicReturnDelay(0.30f));
+        EndAttack();
     }
 
 
     public void TransSkill_Res()
     {
 
+    }
+
+    #endregion
+
+    #region 소리 관련 내용
+    public void WalkSound()
+    {
+        AudioClip Playclip = null;
+        if (curTrans == playerTransBasic || curTrans == playerTransRes)
+            Playclip = soundData.WalkBasic;
+        else if (curTrans == playerTransRobot)
+            Playclip = soundData.WalkRobot;
+        else if (curTrans == playerTransDrone)
+            Playclip = soundData.WalkDrone;
+        else if (curTrans == playerTransCar)
+            Playclip = soundData.WalkCar;
+
+
+        if (Playclip != lastClip && Playclip != null)
+        {
+            lastClip = Playclip;
+            WalkaudioSource.clip = Playclip;
+            WalkaudioSource.Play();
+        }
+        else if (Playclip != null && !WalkaudioSource.isPlaying)
+            WalkaudioSource.UnPause();
+    }
+
+    public void StopWalkSound()
+    {
+        if (WalkaudioSource.isPlaying)
+        {
+            WalkaudioSource.Pause();
+        }
+    }
+
+    public void DroneFlySound()
+    {
+        if (curTrans != playerTransDrone)
+            return;
+        WalkaudioSource.PlayOneShot(soundData.WalkDrone);
+    }
+
+    public void JumpSound()
+    {
+        if (isGround)
+            audioSource.PlayOneShot(soundData.Jump);
+    }
+
+    public void AttackSound()
+    {
+        if (audioSource == null || !audioSource.enabled)
+        {
+            Debug.LogWarning("AudioSource가 null이거나 비활성화되어 있습니다.");
+            return;
+        }
+
+        AudioClip PlayAttackclip = null;
+        if (curTrans == playerTransBasic)
+            PlayAttackclip = soundData.AttackBasic;
+        else if (curTrans == playerTransRobot)
+            PlayAttackclip = soundData.AttackRobot;
+        else if (curTrans == playerTransDrone)
+            PlayAttackclip = soundData.AttackDrone;
+        else if (curTrans == playerTransCar)
+            PlayAttackclip = soundData.AttackCar;
+
+        if (PlayAttackclip != null)
+        {
+            audioSource.PlayOneShot(PlayAttackclip);
+        }
+        else
+        {
+            Debug.LogWarning($"현재 변신 상태({curTrans?.Name})에 해당하는 공격 사운드가 없습니다.");
+        }
+    }
+
+    public void AssimilateSound()
+    {
+        // AudioSource가 null이거나 비활성화된 경우 리턴
+        if (audioSource == null || !audioSource.enabled)
+            return;
+
+        if (soundData.assimilate != null)
+            audioSource.PlayOneShot(soundData.assimilate);
+    }
+
+    public void releaseSound()
+    {
+        if (audioSource == null || !audioSource.enabled)
+            return;
+        if (soundData.assimilate != null)
+            audioSource.PlayOneShot(soundData.release);
+    }
+
+    public void TransSound()
+    {
+        if (audioSource == null || !audioSource.enabled)
+            return;
+        if (soundData.assimilate != null)
+            audioSource.PlayOneShot(soundData.trans);
+    }
+
+    public void HitSound()
+    {
+        AudioClip PlayHitclip = null;
+        if (curTrans == playerTransBasic || curTrans == playerTransRes)
+            PlayHitclip = soundData.HitBasic;
+        else if (curTrans == playerTransRobot || curTrans == playerTransCar)
+            PlayHitclip = soundData.HitRobot;
+        else if (curTrans == playerTransDrone)
+            PlayHitclip = soundData.HitDrone;
+
+        if (PlayHitclip != null)
+        {
+            audioSource.PlayOneShot(PlayHitclip);
+        }
+    }
+
+    public void DeadSound()
+    {
+        if (audioSource == null || !audioSource.enabled)
+            return;
+
+        if (soundData.Die != null)
+        {
+            audioSource.PlayOneShot(soundData.Die);
+            Debug.Log("재생???");
+        }
+
+        Invoke(nameof(StopAllSound), soundData.Die.length);
+    }
+
+    private void StopAllSound()
+    {
+        audioSource.Stop();
     }
 
     #endregion

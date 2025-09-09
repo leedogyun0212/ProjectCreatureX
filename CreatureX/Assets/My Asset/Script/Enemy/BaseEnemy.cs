@@ -23,9 +23,9 @@ public class BaseEnemy : MonoBehaviour
 
     protected TestPlayer player;  // 플레이어 상호작용을 위해
     protected Transform helpTarget = null; // Researcher 도움 요청 관련
-    
+
     protected float animWalk = 0.0f; // 애니메이션 전용
-    
+
     protected bool animHit = false; // 애니메이션 전용
 
     protected int animDead = 0; // 애니메이션 전용
@@ -41,6 +41,11 @@ public class BaseEnemy : MonoBehaviour
 
     [SerializeField]
     protected int FailedLayer = 11;
+
+    [SerializeField]
+    protected int Damage = 1;
+
+    protected bool CameraOn = false;
 
     protected enum MonsterState
     {
@@ -80,7 +85,7 @@ public class BaseEnemy : MonoBehaviour
             Getdirection();
             Move();
         }
-        else if (monsterState == MonsterState.Dead||Input.GetKey(KeyCode.A))
+        else if (monsterState == MonsterState.Dead || Input.GetKey(KeyCode.A))
             EnemyDead();
     }
 
@@ -206,6 +211,13 @@ public class BaseEnemy : MonoBehaviour
     public void FallDie()
     {
         monsterState = MonsterState.fall;
+        EnemyFailed = true;
+    }
+
+    protected void PlayerDamage()
+    {
+        player.HitSound();
+        player.playerCurHP -= Damage;
     }
 
 }

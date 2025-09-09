@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -13,9 +14,14 @@ public class RobotBullet : MonoBehaviour, IRecyclableGameObject
 
     public bool isAttacking { get; set; } = false;
 
+    private TestPlayer player = null;
+
+    [NonSerialized]
+    public int Damage;
+
     private IEnumerator CheckBullet()
     {
-        yield return new WaitUntil(() => 
+        yield return new WaitUntil(() =>
         Robot != null && Vector3.Distance(Robot.transform.position, transform.position) >= 12.0f);
         gameObject.SetActive(false);
     }
@@ -39,7 +45,10 @@ public class RobotBullet : MonoBehaviour, IRecyclableGameObject
     public void SetBullet()
     {
         BulletMove = BulletMove ?? GetComponent<BulletMovement>();
-        Robot = Robot??GameObject.Find("Robot");
+        Robot = Robot ?? GameObject.Find("Robot");
+        GameObject PlayerObj = GameObject.FindGameObjectWithTag("Player");
+        if (PlayerObj != null)
+            player = PlayerObj.GetComponent<TestPlayer>();
         //dir = direction;
 
         StopAllCoroutines(); // 혹시 남아있는 코루틴 방지
@@ -50,6 +59,8 @@ public class RobotBullet : MonoBehaviour, IRecyclableGameObject
     {
         if (collision.CompareTag("Player"))
         {
+            player.HitSound();
+            player.playerCurHP -= Damage;
             gameObject.SetActive(false);
         }
     }

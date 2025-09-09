@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3404953a2d04516428e605066415d14a, type: 3}
+  m_Name: PlayerSound
+  m_EditorClassIdentifier: 
+  WalkBasic: {fileID: 8300000, guid: 881757058b183ce43b0f8aaf2373b8f1, type: 3}
+  WalkRobot: {fileID: 8300000, guid: 63ef23c536912a54197f8177ff6c33b4, type: 3}
+  WalkDrone: {fileID: 8300000, guid: f763c3596f225894b95155f61e7f1f13, type: 3}
+  WalkCar: {fileID: 8300000, guid: 266ca767c0e85fd4493610f648eb76cc, type: 3}
+  AttackBasic: {fileID: 8300000, guid: 7be3c7a9a1cb3de4a84e16f4195da675, type: 3}
+  AttackRobot: {fileID: 8300000, guid: 27eab930c904f5544966b48565be6c77, type: 3}
+  AttackDrone: {fileID: 8300000, guid: 116af48bd1240d64081ad4be3d2ca6a5, type: 3}
+  AttackCar: {fileID: 8300000, guid: 5ca4e2385ca3d134c96a7a28b96bae3d, type: 3}
+  Jump: {fileID: 8300000, guid: f4619fae60f2c1649aad0302cab5dcc8, type: 3}
+  assimilate: {fileID: 8300000, guid: 7a79572118321df48ac68227e54d8075, type: 3}
+  trans: {fileID: 8300000, guid: b41b1dff0afbe2d4db103c8cabba6e4b, type: 3}
+  release: {fileID: 8300000, guid: abaa80058329da6459549ef9612bd412, type: 3}
+  Die: {fileID: 8300000, guid: b535490b3a294cc49927642caa783371, type: 3}
+  HitBasic: {fileID: 8300000, guid: 4406a36dcbd50b941ab76ad160d2c2c9, type: 3}
+  HitRobot: {fileID: 8300000, guid: c74cc301cddc46a489956dd8d65f322d, type: 3}
+  HitDrone: {fileID: 8300000, guid: 8d13d653622dbaa46ad0f93fafc9f1dc, type: 3}

@@ -61,6 +61,7 @@ public class LaserStool : MonoBehaviour
         for (int i = 0; i < LaserNum; i++)
         {
             Laser newlaser = Instantiate(LaserPrefab, LaserPos.position + Offset, Quaternion.Euler(0,0, LaserRo));
+            newlaser.SetLaser();
             lasers.Add(newlaser);
             if (LaserRo < 0)
                 Offset.x += LaserFloat;
@@ -98,7 +99,7 @@ public class LaserStool : MonoBehaviour
     private IEnumerator LaserReStart()
     {
         isRestarting = true;
-        yield return new WaitForSecondsRealtime(3.0f); // 꺼진 후 2초 대기
+        yield return new WaitForSecondsRealtime(5.5f); // 꺼진 후 2초 대기
         foreach (var laser in lasers)
         {
             if (laser != null)

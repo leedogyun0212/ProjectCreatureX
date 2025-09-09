@@ -41,6 +41,7 @@ public class Robot : BaseEnemy, IAllyResponder
             animDead = 100;
             monsterState = MonsterState.failed;
             gameObject.layer = FailedLayer;
+            audioSource.Stop();
             StartCoroutine(DeadOn());
         }
         else if (monsterState == MonsterState.Move && helpTarget == null) // �þ� ����� �÷��̾� �߰� 
@@ -124,6 +125,7 @@ public class Robot : BaseEnemy, IAllyResponder
             bullet.gameObject.SetActive(bullet.isActive = true);
         //Test();
         bullet.SetBullet();
+        bullet.Damage = Damage;
 
         audioSource.clip = GunClip;
         audioSource.Play();
@@ -158,7 +160,7 @@ public class Robot : BaseEnemy, IAllyResponder
         isCoolingDown = false;
     }
 
-    protected override void OnTriggerEnter2D(Collider2D collision) 
+    protected override void OnTriggerEnter2D(Collider2D collision)
     {
         //if (collision.gameObject.CompareTag("Player") && player.isAttack && !HitOn)
         //{
@@ -181,10 +183,11 @@ public class Robot : BaseEnemy, IAllyResponder
 
     public override void GetHitByPlayer()
     {
+        audioSource.PlayOneShot(player.soundData.HitRobot);
         base.GetHitByPlayer();
     }
 
-            
+
 
 
     protected override void OnTriggerExit2D(Collider2D collision) // �þ� �ݶ��̴�, ����� �߰�

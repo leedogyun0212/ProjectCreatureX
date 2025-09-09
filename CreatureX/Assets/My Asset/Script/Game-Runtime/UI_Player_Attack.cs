@@ -10,7 +10,6 @@ public class UI_Player_Attack : MonoBehaviour
         else Destroy(gameObject);
     }
 
-
     [SerializeField] private TestPlayer player;
 
     [Header("Basic Attack")]
@@ -38,7 +37,6 @@ public class UI_Player_Attack : MonoBehaviour
     {
         if (player != null)
         {
-            Debug.Log("이벤트 등록 완료!");
             player.OnAbleAssChange += HandleAbleAssChange;
             HandleAbleAssChange(player.ableAss);
         }
@@ -54,23 +52,23 @@ public class UI_Player_Attack : MonoBehaviour
         if (player.curTrans == player.playerTransDrone)
         {
             DeactivateUI_Ab();
-            ActivateUI_Rel();
             ShowUI_BasicAttack(attack_Drone);
             ShowUI_SkillUI(skill_Drone);
+            ActivateUI_Rel();
         }
         else if (player.curTrans == player.playerTransCar)
         {
             DeactivateUI_Ab();
-            ActivateUI_Rel();
             ShowUI_BasicAttack(attack_Car);
             ShowUI_SkillUI(skill_Car);
+            ActivateUI_Rel();
         }
         else if (player.curTrans == player.playerTransRobot)
         {
             DeactivateUI_Ab();
-            ActivateUI_Rel();
             ShowUI_BasicAttack(attack_Robot);
             ShowUI_SkillUI(skill_Robot);
+            ActivateUI_Rel();
         }
         else if (player.curTrans == player.playerTransRes)
         {
@@ -78,6 +76,7 @@ public class UI_Player_Attack : MonoBehaviour
             ActivateUI_Rel();
             ShowUI_BasicAttack(attack_Res);
             ShowUI_SkillUI(skill_Res);
+            ActivateUI_Rel();
         }
         else // 플레이어 기본 상태
         {
@@ -141,20 +140,16 @@ public class UI_Player_Attack : MonoBehaviour
 
     private void ActivateUI_Ab()
     {
-        // absorb.gameObject.SetActive(true);
         absorb.alpha = 1f;
     }
 
     private void DeactivateUI_Ab()
     {
-        // absorb.gameObject.SetActive(false);
-        absorb.alpha = 0.3f;     // 반투명
+        absorb.alpha = 0.3f;   
     }
 
     private void ActivateUI_Rel()
     {
-        //HideUI_Rel();
-        //rect.gameObject.SetActive(true);
         release.alpha = 1f;
     }
 

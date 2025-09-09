@@ -84,7 +84,8 @@ public class StageManager : MonoBehaviour
         curSubStage = 1;
         UnlockChapter(curMainStage);
         UnlockStage(curMainStage, curSubStage);
-        Load_NextStage();
+        SceneManager.LoadScene("TestSelectScene");
+        // Load_NextStage();
     }
 
     public void Load_NextStage()

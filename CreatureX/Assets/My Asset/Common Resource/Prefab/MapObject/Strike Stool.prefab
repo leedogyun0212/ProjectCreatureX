@@ -78,6 +78,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offset: {x: -5, y: 0, z: 0}
   speed: 2
+  Damage: 2
 --- !u!95 &2784348793574014893
 Animator:
   serializedVersion: 7
@@ -152,7 +153,7 @@ SpriteRenderer:
   m_Size: {x: 5.85, y: 1.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2300806714629175233
@@ -317,6 +318,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0

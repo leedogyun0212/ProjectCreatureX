@@ -27,7 +27,7 @@ public class Ladder : MonoBehaviour
     private void Update()
     {
         PlayerEnter();
-        if (testPlayer != null && (!testPlayer.unableRel || testPlayer.curForm != TestPlayer.AssimilateForm.None))
+        if (testPlayer != null && (!testPlayer.unableRel || testPlayer.curTrans == testPlayer.playerTransBasic))
         {
             Climb();
         }
@@ -47,7 +47,7 @@ public class Ladder : MonoBehaviour
             testPlayer = playerRb != null ? playerRb.gameObject.GetComponent<TestPlayer>() : null;
             LadderEnd();
 
-            if (testPlayer == null || testPlayer.unableRel || testPlayer.curForm == TestPlayer.AssimilateForm.None) return;
+            if (testPlayer == null || testPlayer.unableRel || testPlayer.curTrans == testPlayer.playerTransBasic) return;
 
             isOnLadder = true;
             // �߷� ����
@@ -57,7 +57,7 @@ public class Ladder : MonoBehaviour
         }
         else
         {
-            if (isOnLadder && playerRb != null)
+            if (isOnLadder && playerRb != null&&testPlayer.curTrans == testPlayer.playerTransBasic)
             {
                 // ��ٸ����� �������� �߷� ����
                 playerRb.gravityScale = 8f;

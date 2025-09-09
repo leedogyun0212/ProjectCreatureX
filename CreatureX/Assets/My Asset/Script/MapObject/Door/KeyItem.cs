@@ -15,6 +15,8 @@ public class KeyItem : MonoBehaviour, IDoorKey
 
     private BoxCollider2D Keycollider;
 
+    [SerializeField]
+    private AudioSource audioSource;
 
     private void Start()
     {
@@ -43,6 +45,7 @@ public class KeyItem : MonoBehaviour, IDoorKey
         if(collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("키 아이템을 획득!!!!!!!!!!!!!!!");
+            audioSource.Play();
             keyDataAsset.Key = true;
 
             //doorsToUnlock.Key = true;
@@ -55,5 +58,13 @@ public class KeyItem : MonoBehaviour, IDoorKey
     {
         yield return new WaitUntil(() => Mathf.Abs(transform.position.y - KeyPos.y) < 0.01);
         Destroy(gameObject);
+    }
+
+    private void StopWalkSound()
+    {
+        if (audioSource.isPlaying)
+        {
+            audioSource.Pause();
+        }
     }
 }

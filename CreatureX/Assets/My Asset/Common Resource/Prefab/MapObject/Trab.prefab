@@ -107,7 +107,8 @@ MonoBehaviour:
   box: {fileID: 6982193357876803169}
   audioSource: {fileID: 605500361927801667}
   isTrab: 0
-  Player: {x: 0, y: 0, z: 0}
+  PlayerPos: {x: 0, y: 0, z: 0}
+  Damage: 1
 --- !u!61 &6982193357876803169
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -14,7 +14,6 @@ public class HiddenDoor : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         TestPlayer player = other.GetComponent<TestPlayer>();
-        // if (other.CompareTag("Player"))
         if (player != null)
         {
             isInPlayer = true;
@@ -24,7 +23,6 @@ public class HiddenDoor : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         TestPlayer player = other.GetComponent<TestPlayer>();
-        // if (other.CompareTag("Player"))
         if (player != null)
         {
             isInPlayer = false;

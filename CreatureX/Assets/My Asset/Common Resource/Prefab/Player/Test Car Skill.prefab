@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1840417872064367106}
   - component: {fileID: 2289899358367526813}
   - component: {fileID: 5221490142071479240}
-  - component: {fileID: -1081169938965047527}
+  - component: {fileID: 970426294559623750}
   m_Layer: 0
   m_Name: Test Car Skill
   m_TagString: Untagged
@@ -120,12 +120,12 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.21}
-  m_Size: {x: 4.98, y: 1.89}
+  m_Offset: {x: 0, y: 0.01}
+  m_Size: {x: 3.72, y: 1.42}
   m_Direction: 1
 --- !u!50 &5221490142071479240
 Rigidbody2D:
@@ -154,7 +154,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-1081169938965047527
+--- !u!114 &970426294559623750
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 604765467006651229}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9da338168732d52499a15b6062f62699, type: 3}
+  m_Script: {fileID: 11500000, guid: ffa7ef72655fca54794551f8ae47213a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lifeTime: 0.5

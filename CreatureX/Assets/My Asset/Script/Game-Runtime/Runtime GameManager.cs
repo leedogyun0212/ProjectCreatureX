@@ -58,12 +58,12 @@ public class RuntimeGameManager : MonoBehaviour
     {
         yield return null;
 
-        if (player == null)
-            Debug.LogWarning("플레이어가 등록 X");
-        if (pauseUI == null)
-            Debug.LogWarning("Pause UI가 등록 X");
-        if (overUI == null)
-            Debug.LogWarning("Over UI가 등록 X");
+        //if (player == null)
+        //    Debug.LogWarning("플레이어가 등록 X");
+        //if (pauseUI == null)
+        //    Debug.LogWarning("Pause UI가 등록 X");
+        //if (overUI == null)
+        //    Debug.LogWarning("Over UI가 등록 X");
     }
 
     // Update is called once per frame
@@ -101,7 +101,6 @@ public class RuntimeGameManager : MonoBehaviour
     {
         if (player == null)
         {
-            // Debug.LogError("게임매니저에 무언가가 설정되지 x");
             return false;
         }
         else {
@@ -117,11 +116,14 @@ public class RuntimeGameManager : MonoBehaviour
         {
             isGameCleared = true;
             StageGameClear();
+            return;
         }
-        else if(door_Hidden.isInPlayer) 
+        else if (door_Hidden == null) return;
+        else if (door_Hidden.isInPlayer)
         {
             isGameCleared = true;
             StageGameClear_Hidden();
+            return;
         }
     }
 
@@ -227,7 +229,8 @@ public class RuntimeGameManager : MonoBehaviour
     public void GotoTitle()
     {
         GameReset();
-        SceneManager.LoadScene("TestTitle");
+        // SceneManager.LoadScene("TestTitle");
+        SceneManager.LoadScene("TestSelectScene");
     }
 
 

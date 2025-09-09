@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\assets\\my asset\\script\\enemy\\researcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|solutionrelative:assets\\my asset\\script\\enemy\\researcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|c:\\users\\sbs\\desktop\\github\\projectcreaturex\\creaturex\\assets\\my asset\\script\\player\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|solutionrelative:assets\\my asset\\script\\player\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\assets\\my asset\\script\\game-runtime\\stagemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|solutionrelative:assets\\my asset\\script\\game-runtime\\stagemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\assets\\my asset\\script\\enemy\\researcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|solutionrelative:assets\\my asset\\script\\enemy\\researcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\assets\\my asset\\script\\enemy\\robot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -541,7 +541,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
@@ -581,15 +581,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Researcher.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Enemy\\Researcher.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Enemy\\Researcher.cs",
               "ToolTip": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Enemy\\Researcher.cs",
               "RelativeToolTip": "Assets\\My Asset\\Script\\Enemy\\Researcher.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T07:23:03.275Z"
+              "WhenOpened": "2025-08-22T07:23:03.275Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -605,7 +606,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "StageManager.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Game-Runtime\\StageManager.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Game-Runtime\\StageManager.cs",
@@ -617,7 +618,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Fall Zone.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Stool\\Fall Zone.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\MapObject\\Stool\\Fall Zone.cs",
@@ -677,7 +678,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "C:\\Users\\sbs\\Desktop\\GitHub\\ProjectCreatureX\\CreatureX\\Assets\\My Asset\\Script\\Player\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Player\\PlayerController.cs",
@@ -794,8 +795,7 @@
               "RelativeToolTip": "..\\..\\..\\Assets\\My Asset\\Script\\Enemy\\Robot.cs",
               "ViewState": "AgIAAMYAAAAAAAAAAADwv8oAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T07:45:20.224Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-26T07:45:20.224Z"
             },
             {
               "$type": "Document",
@@ -903,8 +903,7 @@
               "RelativeToolTip": "..\\..\\..\\CreatureXLee\\Assets\\My Asset\\Script\\Camera\\Camera.cs",
               "ViewState": "AgIAAIcAAAAAAAAAAAAAAJ0AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T06:24:21.369Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-28T06:24:21.369Z"
             },
             {
               "$type": "Document",
@@ -928,8 +927,7 @@
               "RelativeToolTip": "..\\..\\..\\Assets\\My Asset\\Script\\Enemy\\Car.cs",
               "ViewState": "AgIAAEgAAAAAAAAAAADwv1wAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T07:46:03.308Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-26T07:46:03.308Z"
             },
             {
               "$type": "Document",
@@ -941,8 +939,7 @@
               "RelativeToolTip": "..\\..\\..\\Assets\\My Asset\\Script\\Enemy\\CarObject.cs",
               "ViewState": "AgIAAF0AAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T07:46:32.025Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-26T07:46:32.025Z"
             },
             {
               "$type": "Document",
@@ -954,8 +951,7 @@
               "RelativeToolTip": "..\\..\\..\\Assets\\My Asset\\Script\\Enemy\\Researcher.cs",
               "ViewState": "AgIAAFoAAAAAAAAAAADwv3kAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T07:46:45.899Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-26T07:46:45.899Z"
             },
             {
               "$type": "Document",
@@ -967,8 +963,7 @@
               "RelativeToolTip": "..\\..\\..\\Assets\\My Asset\\Script\\Enemy\\UAV.cs",
               "ViewState": "AgIAAKsAAAAAAAAAAADwv8IAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T07:47:31.353Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-26T07:47:31.353Z"
             },
             {
               "$type": "Document",
@@ -1921,8 +1916,7 @@
               "RelativeToolTip": "..\\..\\..\\LeeDogyun\\2024leedogyunproject (1)\\2024leedogyunproject\\202409leedogyunproject\\Assets\\Scripts\\Interface\\IRecyclableGameObject.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T06:57:48.035Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-27T06:57:48.035Z"
             },
             {
               "$type": "Document",
@@ -1946,8 +1940,7 @@
               "RelativeToolTip": "..\\..\\..\\LeeDogyun\\2024leedogyunproject (1)\\2024leedogyunproject\\202409leedogyunproject\\Assets\\Scripts\\Utils\\ObjectPool.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAAAADIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T06:26:46.089Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-25T06:26:46.089Z"
             },
             {
               "$type": "Document",
@@ -1959,8 +1952,7 @@
               "RelativeToolTip": "..\\..\\..\\LeeDogyun\\2024leedogyunproject (1)\\2024leedogyunproject\\202409leedogyunproject\\Assets\\Scripts\\Props\\ProjectileMovement.cs",
               "ViewState": "AgIAACEAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T06:14:55.103Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-25T06:14:55.103Z"
             },
             {
               "$type": "Document",
@@ -1972,8 +1964,7 @@
               "RelativeToolTip": "..\\..\\..\\LeeDogyun\\2024leedogyunproject (1)\\2024leedogyunproject\\202409leedogyunproject\\Assets\\Scripts\\Player\\Weapon\\CrossBow\\PlayerAttack.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T06:01:03.359Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-24T06:01:03.359Z"
             },
             {
               "$type": "Document",
@@ -2021,8 +2012,7 @@
               "RelativeToolTip": "..\\..\\..\\LeeDogyun\\2024leedogyunproject (1)\\2024leedogyunproject\\202409leedogyunproject\\Assets\\Scripts\\Player\\Weapon\\CrossBow\\PlayerThrow.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAAADYAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T05:59:09.831Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-24T05:59:09.831Z"
             },
             {
               "$type": "Document",
@@ -2092,8 +2082,7 @@
               "RelativeToolTip": "..\\..\\..\\LeeDogyun\\2024leedogyunproject (1)\\2024leedogyunproject\\202409leedogyunproject\\Assets\\Scripts\\Props\\MoveCamera.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T06:44:49.477Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-20T06:44:49.477Z"
             },
             {
               "$type": "Document",
@@ -2140,8 +2129,7 @@
               "RelativeToolTip": "..\\..\\..\\LeeDogyun\\2024leedogyunproject (1)\\2024leedogyunproject\\202409leedogyunproject\\Assets\\Scripts\\Player\\Weapon\\WeaponFollow.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAADwvyIAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T06:18:53.681Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-20T06:18:53.681Z"
             },
             {
               "$type": "Document",
@@ -2153,8 +2141,7 @@
               "RelativeToolTip": "..\\..\\..\\LeeDogyun\\2024leedogyunproject (1)\\2024leedogyunproject\\202409leedogyunproject\\Assets\\Scripts\\Player\\PlayerAnim.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAAACkAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T07:42:17.296Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-19T07:42:17.296Z"
             },
             {
               "$type": "Document",

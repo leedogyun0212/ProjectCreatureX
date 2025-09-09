@@ -38,13 +38,12 @@ public class Player_Trans_Basic : IPlayerTrans
     }
 
     public void TransValueApply()
-    { 
-    
+    {
+
     }
 
     public void Realese()
     {
-        Debug.Log($"{Time.deltaTime}: ÌîåÎ†àÏù¥Ïñ¥ Î∞©Ï∂ú ÏãúÎèÑ!");
         player.OrderRealese();
     }
 
@@ -88,7 +87,7 @@ public class Player_Trans_Car : IPlayerTrans
 
     public void Enter()
     {
-        if (player.isJump || player.isAttack) { return; }
+        //if (player.isJump || player.isAttack) { return; }
 
         player.TransApply(16, 0, player.CarAnimController);
     }
@@ -129,6 +128,7 @@ public class Player_Trans_Car : IPlayerTrans
     public void TransSkill()
     {
         player.TransSkill_Car();
+        player.TransChange(player.playerTransBasic);
     }
 }
 
@@ -144,7 +144,7 @@ public class Player_Trans_Drone : IPlayerTrans
 
     public void Enter()
     {
-        if (player.isJump || player.isAttack) { return; }
+        //if (player.isJump || player.isAttack) { return; }
         player.TransApply(6, 0, player.DroneAnimController);
     }
     public void TransValueApply()
@@ -158,6 +158,7 @@ public class Player_Trans_Drone : IPlayerTrans
 
     public void Exit()
     {
+        Debug.Log("¡ﬂ∑¬ ø¯∑°¥Î∑Œ!");
         player.rigid.gravityScale = 8f;
         player.collider.direction = CapsuleDirection2D.Vertical;
     }
@@ -184,6 +185,7 @@ public class Player_Trans_Drone : IPlayerTrans
     public void TransSkill()
     {
         player.TransSkill_Drone();
+        player.TransChange(player.playerTransBasic);
     }
 }
 
@@ -199,7 +201,7 @@ public class Player_Trans_Robot : IPlayerTrans
 
     public void Enter()
     {
-        if (player.isJump || player.isAttack) { return; }
+        //if (player.isJump || player.isAttack) { return; }
         player.TransApply(8, 0, player.RobotAnimController);
     }
 
@@ -239,6 +241,7 @@ public class Player_Trans_Robot : IPlayerTrans
     public void TransSkill()
     {
         player.TransSkill_Robot();
+        player.TransChange(player.playerTransBasic);
     }
 }
 
@@ -254,7 +257,7 @@ public class Player_Trans_Res : IPlayerTrans
 
     public void Enter()
     {
-        if (player.isJump || player.isAttack) { return; }
+        //if (player.isJump || player.isAttack) { return; }
         player.TransApply(6, 0, player.ResAnimController);
     }
 
@@ -297,7 +300,7 @@ public class Player_Trans_Res : IPlayerTrans
 
     public void TransSkill()
     {
-
+        player.TransChange(player.playerTransBasic);
     }
 }
 

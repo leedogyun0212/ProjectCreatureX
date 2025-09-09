@@ -18,10 +18,9 @@ public class StageData : MonoBehaviour
     {
         if (mainStageIndex == 1 && subStageIndex == 1)
             isStageUnlocked = true;
-
-        if (mainStageIndex == 1 && subStageIndex == 7)
-            isStageUnlocked = true;
-
+        //if (mainStageIndex == 1 && subStageIndex == 7)
+        //    isStageUnlocked = true;
+        // isStageUnlocked = true;
 
         // StageManager에 등록
         if (StageManager.Instance != null)
@@ -63,7 +62,6 @@ public class StageData : MonoBehaviour
         var image = stageButton.GetComponent<Image>();
         if (image == null) return;
 
-        // Debug.LogWarning($"스테이지 UI 색깔 변경!");
         if (!isStageUnlocked)
         {
             image.color = lockColor;
@@ -79,8 +77,6 @@ public class StageData : MonoBehaviour
     public void ClearStage()
     {
         isStageCleared = true;
-        // UpdateStageVisual();
-
         if (SaveManager.Instance != null)
             SaveManager.Instance.AddClearedStage(GetStageKey());
     }

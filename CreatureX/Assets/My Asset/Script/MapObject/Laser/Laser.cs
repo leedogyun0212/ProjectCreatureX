@@ -7,13 +7,20 @@ public class Laser : MonoBehaviour
 
     public bool LaserDead = false;
 
-    private float LaserTime = 3.0f;
+    private float LaserTime = 2.5f;
 
     private Animator animator;
 
+    private TestPlayer player = null;
 
-    private void Start()
+    [SerializeField]
+    private int Damage = 5;
+
+    public void SetLaser()
     {
+        GameObject PlayerObj = GameObject.FindGameObjectWithTag("Player");
+        if (PlayerObj != null)
+            player = PlayerObj.GetComponent<TestPlayer>();
         animator = GetComponent<Animator>();
     }
 
@@ -49,4 +56,12 @@ public class Laser : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            player.TakeHit(Damage);
+            Debug.Log("공격 성공");
+        }
+    }
 }
