@@ -25,7 +25,6 @@ public class Researcher : BaseEnemy
         animEnemy();
         if (EnemyFailed)
         {
-            capsule.size = new Vector2(capsule.size.x, 1.3f);
             animDead = 100;
             monsterState = MonsterState.failed;
             gameObject.layer = FailedLayer;

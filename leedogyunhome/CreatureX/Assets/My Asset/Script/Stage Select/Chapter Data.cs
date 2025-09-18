@@ -33,22 +33,22 @@ public class ChapterData : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
-        if (chapterIndex == 1)
-            isChapterUnlocked = true;
-        if (chapterIndex == 2)
-            isChapterUnlocked = true;
-        if (chapterIndex == 3)
-            isChapterUnlocked = true;
-        if (chapterIndex == 4)
-            isChapterUnlocked = true;
-        if (chapterIndex == 5)
-            isChapterUnlocked = true;
-        if (chapterIndex == 6)
-            isChapterUnlocked = true;
-        if (chapterIndex == 7)
-            isChapterUnlocked = true;
-        if (chapterIndex == 8)
-            isChapterUnlocked = true;
+        //if (chapterIndex == 1)
+        //    isChapterUnlocked = true;
+        //if (chapterIndex == 2)
+        //    isChapterUnlocked = true;
+        //if (chapterIndex == 3)
+        //    isChapterUnlocked = true;
+        //if (chapterIndex == 4)
+        //    isChapterUnlocked = true;
+        //if (chapterIndex == 5)
+        //    isChapterUnlocked = true;
+        //if (chapterIndex == 6)
+        //    isChapterUnlocked = true;
+        //if (chapterIndex == 7)
+        //    isChapterUnlocked = true;
+        //if (chapterIndex == 8)
+        isChapterUnlocked = true;
 
 
         // StageManager에 등록
@@ -64,7 +64,6 @@ public class ChapterData : MonoBehaviour
                 oriColor = image.color;
         }
 
-        // 세이브 데이터에서 클리어/언락 정보 로드
         if (SaveManager.Instance != null)
         {
             string key = GetChapterKey();
@@ -72,6 +71,16 @@ public class ChapterData : MonoBehaviour
         }
 
         UpdateChapterVisual();
+        LoadChapterScene(1);
+    }
+
+
+    public void LoadChapterScene(int index)
+    { 
+        if (chapterIndex == index)
+            chapterCanvas.gameObject.SetActive(true);
+        else
+            chapterCanvas.gameObject.SetActive(false);
     }
 
 

@@ -10,7 +10,6 @@ public class UI_Player_Attack : MonoBehaviour
         else Destroy(gameObject);
     }
 
-
     [SerializeField] private TestPlayer player;
 
     [Header("Basic Attack")]
@@ -55,30 +54,21 @@ public class UI_Player_Attack : MonoBehaviour
             DeactivateUI_Ab();
             ShowUI_BasicAttack(attack_Drone);
             ShowUI_SkillUI(skill_Drone);
-            if (player.isGround)
-                ActivateUI_Rel();
-            else
-                DeactivateUI_Rel();
+            ActivateUI_Rel();
         }
         else if (player.curTrans == player.playerTransCar)
         {
             DeactivateUI_Ab();
             ShowUI_BasicAttack(attack_Car);
             ShowUI_SkillUI(skill_Car);
-            if (player.isGround)
-                ActivateUI_Rel();
-            else
-                DeactivateUI_Rel();
+            ActivateUI_Rel();
         }
         else if (player.curTrans == player.playerTransRobot)
         {
             DeactivateUI_Ab();
             ShowUI_BasicAttack(attack_Robot);
             ShowUI_SkillUI(skill_Robot);
-            if (player.isGround)
-                ActivateUI_Rel();
-            else
-                DeactivateUI_Rel();
+            ActivateUI_Rel();
         }
         else if (player.curTrans == player.playerTransRes)
         {
@@ -86,16 +76,13 @@ public class UI_Player_Attack : MonoBehaviour
             ActivateUI_Rel();
             ShowUI_BasicAttack(attack_Res);
             ShowUI_SkillUI(skill_Res);
-            if (player.isGround)
-                ActivateUI_Rel();
-            else
-                DeactivateUI_Rel();
+            ActivateUI_Rel();
         }
         else // 플레이어 기본 상태
         {
             ShowUI_BasicAttack(attack_Basic);
             ShowUI_SkillUI(skill_Basic);
-            if (player.unableRel && player.isGround)
+            if (player.unableRel)
                 ActivateUI_Rel();
             else
                 DeactivateUI_Rel();

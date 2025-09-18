@@ -27,10 +27,22 @@ public class Robot : BaseEnemy, IAllyResponder
 
     public AudioClip GunClip;
 
+    [SerializeField] private Vector3 offset;
+
+    private Vector3 startPos;
+
+    private Vector3 endPos;
+
+    private Vector3 targetPos;
+
     protected override void Start()
     {
         base.Start();
         BulletPool = new ObjectPool<RobotBullet>();
+        startPos = transform.position;
+        startPos.y = 0;
+        endPos = startPos + offset;
+        targetPos = endPos;
     }
 
     protected override void Update()
@@ -43,6 +55,10 @@ public class Robot : BaseEnemy, IAllyResponder
             gameObject.layer = FailedLayer;
             audioSource.Stop();
             StartCoroutine(DeadOn());
+        }
+        else if (monsterState == MonsterState.idle && helpTarget == null)
+        {
+            reconnaissance();
         }
         else if (monsterState == MonsterState.Move && helpTarget == null) // �þ� ����� �÷��̾� �߰� 
         {
@@ -83,18 +99,33 @@ public class Robot : BaseEnemy, IAllyResponder
         }
     }
 
-    public void GunAudio()
+    private void reconnaissanceScale()
     {
-        //Debug.Log($"GunAudio 호출됨 - monsterState: {monsterState}");
-        //Debug.Log($"현재 audioSource.clip: {(audioSource.clip != null ? audioSource.clip.name : "null")}");
-        //Debug.Log($"GunClip: {(GunClip != null ? GunClip.name : "null")}");
-        //Debug.Log($"audioSource.isPlaying: {audioSource.isPlaying}");
-        //if (monsterState == MonsterState.Play)
-        //{
-        //    audioSource.clip = GunClip;
-        //    audioSource.Play();
-        //    Debug.Log(monsterState);
-        //}
+        if (targetPos == endPos)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else if (targetPos != endPos)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+    }
+
+    private void reconnaissance()
+    {
+        reconnaissanceScale();
+        Vector3 currentPos = transform.position;
+        Vector3 targetOnlyX = new Vector3(targetPos.x, currentPos.y, currentPos.z);
+        transform.position = Vector3.MoveTowards(currentPos, targetOnlyX, MoveSpeed * Time.deltaTime);
+        if(offset.x != 0)
+            animWalk = 1.0f;
+
+        if (Vector3.Distance(transform.position, targetOnlyX) < 0.01f)
+        {
+            // 반대로 전환
+            targetPos = (targetPos == endPos) ? startPos : endPos;
+        }
+
     }
 
     public void OnHelpRequested(Transform targetResearcher) // �������� �߰��ϰ� �ϴ� ��ũ��Ʈ

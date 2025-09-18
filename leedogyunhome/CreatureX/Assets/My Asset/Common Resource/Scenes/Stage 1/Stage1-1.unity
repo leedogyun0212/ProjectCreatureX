@@ -172,6 +172,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4392998505314213539, guid: 0b9f8d116bed67d44b4993f2971e79b8, type: 3}
+      propertyPath: offset.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392998505314213539, guid: 0b9f8d116bed67d44b4993f2971e79b8, type: 3}
       propertyPath: monsterHP
       value: 10
       objectReference: {fileID: 0}
@@ -478,7 +482,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2767786081818110736, guid: 910b28d4690209b4bb1abf2ac8bd0fee, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3186702712067005807, guid: 910b28d4690209b4bb1abf2ac8bd0fee, type: 3}
       propertyPath: m_Pivot.x
@@ -11494,6 +11498,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clear Hidden Door
       objectReference: {fileID: 0}
+    - target: {fileID: 7891427615202955989, guid: 9c731dc1ebc1b284cb2e569e573f8274, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
     m_RemovedGameObjects: []
@@ -11577,7 +11585,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -32768
   m_Sprite: {fileID: 2120875110103840126, guid: ffe13a8d648eb914c87cb504935d2ae7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.874482, g: 0.874482, b: 0.9924528, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

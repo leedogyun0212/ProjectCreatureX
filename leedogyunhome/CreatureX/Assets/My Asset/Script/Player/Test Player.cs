@@ -208,8 +208,6 @@ public class TestPlayer : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Alpha4)) OrderAssmiliate(AssimilateForm.Robot);
             if (Input.GetKeyDown(KeyCode.Alpha5)) OrderAssmiliate(AssimilateForm.Res);
         }
-        //if (curTrans == playerTransDrone)
-        //    IdleDrone();
         UpdateHitboxOffset();
         Check_PlayerDie();
 
@@ -233,6 +231,7 @@ public class TestPlayer : MonoBehaviour
     private float _nextTime = 0.0f;
 
 
+    // 변신
     public void TransChange(IPlayerTrans newTrans)
     {
         curTrans.Exit();
@@ -419,21 +418,26 @@ public class TestPlayer : MonoBehaviour
     public void TryTransform()
     {
         if (isJump || isDie || isAttack || isHiting) return;
-
-        TransSound();
-
         switch (curForm)
         {
             case AssimilateForm.Drone:
+                PlayerPause();
+                TransSound();
                 TransChange(playerTransDrone);
                 break;
             case AssimilateForm.Car:
+                PlayerPause();
+                TransSound();
                 TransChange(playerTransCar);
                 break;
             case AssimilateForm.Robot:
+                PlayerPause();
+                TransSound();
                 TransChange(playerTransRobot);
                 break;
             case AssimilateForm.Res:
+                PlayerPause();
+                TransSound();
                 TransChange(playerTransRes);
                 break;
             default:
@@ -496,10 +500,18 @@ public class TestPlayer : MonoBehaviour
 
 
 
-    // 변신
+    // 변신 값 적용
     public void TransApply(float speed, float jump, RuntimeAnimatorController animController)
     {
-        if (isJump || isAttack) { return; }
+        //if (CurAnimator.runtimeAnimatorController != droneAnimController)
+        //{
+        //    if (isJump || isAttack) { return; }
+        //}
+        //else 
+        //{
+        //    if (isAttack) return;
+        //}
+        if (isAttack) return;
         if (curTrans == playerTransBasic)
         {
             playerCurMoveSpeed = speed;
@@ -509,7 +521,6 @@ public class TestPlayer : MonoBehaviour
         else
         {
             animator.SetTrigger("TryTrans");
-            unableMove = true;
             nextSpeed = speed;
             nextJump = jump;
             nextAnim = animController;
@@ -521,7 +532,7 @@ public class TestPlayer : MonoBehaviour
         playerCurMoveSpeed = nextSpeed;
         jumpForce = nextJump;
         CurAnimator.runtimeAnimatorController = nextAnim;
-        unableMove = false;
+        PlayerContinue();
 
         curTrans.TransValueApply();
     }
@@ -529,11 +540,9 @@ public class TestPlayer : MonoBehaviour
     // 방출 명령
     public void OrderRealese()
     {
-        if (isJump) return;
+        // if (isJump) return;
         if (isReleasing || isDie || !unableRel) return;
-
         releaseSound();
-
         if (curTrans != playerTransBasic)
         {
             if (curTrans == playerTransCar)
@@ -598,6 +607,10 @@ public class TestPlayer : MonoBehaviour
         {
             float direction = transform.localScale.x > 0 ? 1f : -1f;
             orbRb.linearVelocity = new Vector2(direction * 45f, 0);
+            if (direction < 0)
+            {
+                orb.transform.rotation = Quaternion.Euler(0, 180, 0); // 왼쪽 바라보게
+            }
         }
     }
 
@@ -664,7 +677,6 @@ public class TestPlayer : MonoBehaviour
         playerCurHP -= damage;
     }
 
-    // 히트 백
     private void PlayerHitBack()
     {
         HitBack();
@@ -729,7 +741,12 @@ public class TestPlayer : MonoBehaviour
 
         curTrans.Attack();
     }
-    public void OrderTransSkill() => curTrans.TransSkill();
+    public void OrderTransSkill()
+    {
+        if (unableMove || unableAttack)
+            return;
+        curTrans.TransSkill();
+    }
 
     public void BasicAttack_anim()
     {
@@ -811,7 +828,6 @@ public class TestPlayer : MonoBehaviour
         float direction = transform.localScale.x > 0 ? 1f : -1f;
 
         rigid.linearVelocity = Vector2.zero;
-        // rigid.gravityScale = 0;
         rigid.AddForce(Vector2.right * direction * dashPower, ForceMode2D.Impulse);
         CreateHitBox(direction, HitPos, size);
         Invoke(nameof(EndDash), dashDuration);
@@ -858,48 +874,44 @@ public class TestPlayer : MonoBehaviour
         PlayerContinue();
     }
 
-
-    private IEnumerator BasicReturnDelay(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        TransChange(playerTransBasic);
-        curForm = AssimilateForm.None;
-    }
-
-
     public void TransSkill_Drone()
     {
-        float direction = transform.localScale.x > 0 ? 1f : -1f;
+        StartAttack();
         GameObject orb = Instantiate(testDroneSkill, firePoint.position, Quaternion.identity);
-
-        orb.GetComponent<TestCarSkill>().InitializeDirection(direction);
         Rigidbody2D orbRb = orb.GetComponent<Rigidbody2D>();
         if (orbRb != null)
         {
-            orbRb.linearVelocity = new Vector2(direction * 50f, 0);
+            float direction = transform.localScale.x > 0 ? 1f : -1f;
+            orbRb.linearVelocity = new Vector2(direction * 45f, 0);
+            if (direction < 0)
+            {
+                orb.transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
         }
-
-        StartCoroutine(BasicReturnDelay(0.35f));
+        EndAttack();
     }
 
     public void TransSkill_Car()
     {
-        float direction = transform.localScale.x > 0 ? 1f : -1f;
+        StartAttack();
         GameObject orb = Instantiate(testCarSkill, firePoint.position, Quaternion.identity);
-        orb.GetComponent<TestCarSkill>().InitializeDirection(direction);
-
         Rigidbody2D orbRb = orb.GetComponent<Rigidbody2D>();
         if (orbRb != null)
         {
-            orbRb.linearVelocity = new Vector2(direction * 50f, 0);
+            float direction = transform.localScale.x > 0 ? 1f : -1f;
+            orbRb.linearVelocity = new Vector2(direction * 45f, 0);
+            if (direction < 0)
+            {
+                orb.transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
         }
-        StartCoroutine(BasicReturnDelay(0.35f));
+        EndAttack();
     }
 
     public void TransSkill_Robot()
     {
         StartAttack();
-        animator.SetTrigger("TryAttack");
+        // animator.SetTrigger("TryAttack");
 
         float direction = transform.localScale.x > 0 ? 1f : -1f;
 
@@ -915,8 +927,7 @@ public class TestPlayer : MonoBehaviour
                                                  Mathf.Sin(angle) * speed);
             rb.linearVelocity = launchVelocity;
         }
-
-        StartCoroutine(BasicReturnDelay(0.30f));
+        EndAttack();
     }
 
 
@@ -961,6 +972,8 @@ public class TestPlayer : MonoBehaviour
 
     public void DroneFlySound()
     {
+        if (curTrans != playerTransDrone)
+            return;
         WalkaudioSource.PlayOneShot(soundData.WalkDrone);
     }
 
@@ -972,7 +985,6 @@ public class TestPlayer : MonoBehaviour
 
     public void AttackSound()
     {
-        // AudioSource가 null이거나 비활성화된 경우 리턴
         if (audioSource == null || !audioSource.enabled)
         {
             Debug.LogWarning("AudioSource가 null이거나 비활성화되어 있습니다.");
