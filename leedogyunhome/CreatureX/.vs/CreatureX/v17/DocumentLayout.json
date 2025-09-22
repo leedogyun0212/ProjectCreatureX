@@ -3,7 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\assets\\my asset\\script\\mapobject\\ladder\\ladder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|c:\\users\\leedogyun\\desktop\\github\\projectcreaturex\\leedogyunhome\\creaturex\\assets\\my asset\\script\\mapobject\\map\\screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|solutionrelative:assets\\my asset\\script\\mapobject\\map\\screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|c:\\users\\leedogyun\\desktop\\github\\projectcreaturex\\leedogyunhome\\creaturex\\assets\\my asset\\script\\mapobject\\ladder\\ladder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|solutionrelative:assets\\my asset\\script\\mapobject\\ladder\\ladder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -19,7 +23,7 @@
       "RelativeMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|solutionrelative:assets\\my asset\\script\\player\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|c:\\users\\leedogyun\\desktop\\github\\projectcreaturex\\leedogyunhome\\creaturex\\assets\\my asset\\script\\mapobject\\door\\keyitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\assets\\my asset\\script\\mapobject\\door\\keyitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{27A8C138-870B-135A-7C4F-C131DEAFA072}|Assembly-CSharp.csproj|solutionrelative:assets\\my asset\\script\\mapobject\\door\\keyitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -157,11 +161,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 0,
+              "Title": "Screen.cs",
+              "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Map\\Screen.cs",
+              "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\MapObject\\Map\\Screen.cs",
+              "ToolTip": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Map\\Screen.cs",
+              "RelativeToolTip": "Assets\\My Asset\\Script\\MapObject\\Map\\Screen.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAADwvwYAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T10:47:16.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "Object_Trab.cs",
               "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Object_Trab\\Object_Trab.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\MapObject\\Object_Trab\\Object_Trab.cs",
@@ -173,7 +190,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Test Granade.cs",
               "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\Player\\Test Granade.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Player\\Test Granade.cs",
@@ -185,7 +202,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "PlayerTrans.cs",
               "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\Player\\PlayerTrans.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Player\\PlayerTrans.cs",
@@ -197,7 +214,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "KeyItem.cs",
               "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Door\\KeyItem.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\MapObject\\Door\\KeyItem.cs",
@@ -205,12 +222,11 @@
               "RelativeToolTip": "Assets\\My Asset\\Script\\MapObject\\Door\\KeyItem.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAABAwC8AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T10:24:55.644Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-02T10:24:55.644Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "BaseEnemy.cs",
               "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\Enemy\\BaseEnemy.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Enemy\\BaseEnemy.cs",
@@ -222,7 +238,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\Player\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Player\\PlayerController.cs",
@@ -230,12 +246,11 @@
               "RelativeToolTip": "Assets\\My Asset\\Script\\Player\\PlayerController.cs",
               "ViewState": "AgIAADMAAAAAAAAAAAAAAHwAAAB5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-05T10:23:49.991Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-05T10:23:49.991Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "PlayerSound.cs",
               "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\Player\\PlayerSound.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Player\\PlayerSound.cs",
@@ -243,12 +258,11 @@
               "RelativeToolTip": "Assets\\My Asset\\Script\\Player\\PlayerSound.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAADwvxoAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-06T15:26:34.423Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-06T15:26:34.423Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Robot.cs",
               "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\Enemy\\Robot.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Enemy\\Robot.cs",
@@ -260,7 +274,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Laser.cs",
               "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Laser\\Laser.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\MapObject\\Laser\\Laser.cs",
@@ -268,12 +282,11 @@
               "RelativeToolTip": "Assets\\My Asset\\Script\\MapObject\\Laser\\Laser.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-05T10:25:24.13Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-05T10:25:24.13Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Ladder.cs",
               "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Ladder\\Ladder.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\MapObject\\Ladder\\Ladder.cs",
@@ -286,7 +299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "TestAssBox.cs",
               "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\Player\\TestAssBox.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Player\\TestAssBox.cs",
@@ -298,7 +311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Researcher.cs",
               "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\Enemy\\Researcher.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Enemy\\Researcher.cs",
@@ -310,7 +323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "RobotBullet.cs",
               "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\Enemy\\RobotGun\\RobotBullet.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Enemy\\RobotGun\\RobotBullet.cs",
@@ -322,7 +335,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Car.cs",
               "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\Enemy\\Car.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Enemy\\Car.cs",
@@ -334,7 +347,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "UAV.cs",
               "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\Enemy\\UAV.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Enemy\\UAV.cs",
@@ -346,7 +359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Test Player.cs",
               "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\Player\\Test Player.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Player\\Test Player.cs",
@@ -358,7 +371,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "Moving Stool.cs",
               "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Stool\\Moving Stool.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\MapObject\\Stool\\Moving Stool.cs",
@@ -370,7 +383,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "Fallen Stool.cs",
               "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Stool\\Fallen Stool.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\MapObject\\Stool\\Fallen Stool.cs",
@@ -382,7 +395,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "Fake Stool.cs",
               "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Stool\\Fake Stool.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\MapObject\\Stool\\Fake Stool.cs",
@@ -394,7 +407,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "KeyData.cs",
               "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Door\\KeyData.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\MapObject\\Door\\KeyData.cs",
@@ -406,7 +419,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "Runtime GameManager.cs",
               "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\Game-Runtime\\Runtime GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Game-Runtime\\Runtime GameManager.cs",
@@ -418,7 +431,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "Strike Stool.cs",
               "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Stool\\Strike Stool.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\MapObject\\Stool\\Strike Stool.cs",
@@ -430,7 +443,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "KeyDoor.cs",
               "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Door\\KeyDoor.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\MapObject\\Door\\KeyDoor.cs",
@@ -442,7 +455,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "Strike.cs",
               "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Stool\\Strike.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\MapObject\\Stool\\Strike.cs",
@@ -454,7 +467,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "CarObject.cs",
               "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\Enemy\\CarObject.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Enemy\\CarObject.cs",
@@ -466,7 +479,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "EffectManager.cs",
               "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\Effect\\EffectManager.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Effect\\EffectManager.cs",
@@ -478,7 +491,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "Door.cs",
               "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Door\\Door.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\MapObject\\Door\\Door.cs",
@@ -490,7 +503,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "FakeKeyData.cs",
               "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Door\\FakeKeyData.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\MapObject\\Door\\FakeKeyData.cs",
@@ -502,7 +515,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "FakeKeyData.cs",
               "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\CreatureX_0905_Lee\\Assets\\My Asset\\Script\\MapObject\\Door\\FakeKeyData.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\CreatureX_0905_Lee\\Assets\\My Asset\\Script\\MapObject\\Door\\FakeKeyData.cs",
@@ -514,7 +527,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "LaserStool.cs",
               "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Laser\\LaserStool.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\MapObject\\Laser\\LaserStool.cs",
@@ -526,7 +539,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "Fall Zone.cs",
               "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Stool\\Fall Zone.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\MapObject\\Stool\\Fall Zone.cs",
@@ -538,7 +551,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "Object_Trab_Stool.cs",
               "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Object_Trab\\Object_Trab_Stool.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\MapObject\\Object_Trab\\Object_Trab_Stool.cs",
@@ -550,7 +563,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "TestHitbox.cs",
               "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\Player\\TestHitbox.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Player\\TestHitbox.cs",
@@ -562,7 +575,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "TestRel.cs",
               "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\Player\\TestRel.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Player\\TestRel.cs",
@@ -574,7 +587,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "PlayerManager.cs",
               "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\Game-Runtime\\PlayerManager.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Game-Runtime\\PlayerManager.cs",
@@ -586,7 +599,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "CameraBackground.cs",
               "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\Camera\\CameraBackground.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\Camera\\CameraBackground.cs",
@@ -598,7 +611,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "DoorDirection.cs",
               "DocumentMoniker": "C:\\Users\\Leedogyun\\Desktop\\github\\ProjectCreatureX\\leedogyunhome\\CreatureX\\Assets\\My Asset\\Script\\MapObject\\Door\\DoorDirection.cs",
               "RelativeDocumentMoniker": "Assets\\My Asset\\Script\\MapObject\\Door\\DoorDirection.cs",

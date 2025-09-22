@@ -825,7 +825,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 5}
-  m_LocalScale: {x: 1.5, y: 1.5999999, z: 1}
+  m_LocalScale: {x: 1.6, y: 1.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1019030649}
@@ -4009,7 +4009,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8.562208
+  orthographic size: 9
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4034,7 +4034,7 @@ Transform:
   m_GameObject: {fileID: 1019030646}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -5, z: -39.1}
+  m_LocalPosition: {x: 0, y: -7, z: -39.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4102,7 +4102,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0862546, y: 0.08625221}
+  m_Offset: {x: 0.0038318634, y: 0.045042515}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4112,7 +4112,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 30.55489, y: 17.252216}
+  m_Size: {x: 32.03844, y: 17.993992}
   m_EdgeRadius: 0
 --- !u!114 &1019030652
 MonoBehaviour:
@@ -16320,6 +16320,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3203462963916225864, guid: 7166f74e00267fd439ed00e198847836, type: 3}
   m_PrefabInstance: {fileID: 242967843}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1989663491
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2617275315733392997, guid: 6abf465979041db45b786f86304f867a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2617275315733392997, guid: 6abf465979041db45b786f86304f867a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2617275315733392997, guid: 6abf465979041db45b786f86304f867a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2617275315733392997, guid: 6abf465979041db45b786f86304f867a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2617275315733392997, guid: 6abf465979041db45b786f86304f867a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2617275315733392997, guid: 6abf465979041db45b786f86304f867a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2617275315733392997, guid: 6abf465979041db45b786f86304f867a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2617275315733392997, guid: 6abf465979041db45b786f86304f867a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 2617275315733392997, guid: 6abf465979041db45b786f86304f867a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2617275315733392997, guid: 6abf465979041db45b786f86304f867a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2956104232006421631, guid: 6abf465979041db45b786f86304f867a, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 8482453764512178613, guid: 6abf465979041db45b786f86304f867a, type: 3}
+      propertyPath: m_Name
+      value: Particle System
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6abf465979041db45b786f86304f867a, type: 3}
 --- !u!1001 &2724335287846432020
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16396,3 +16457,4 @@ SceneRoots:
   - {fileID: 469256228}
   - {fileID: 810352235}
   - {fileID: 343529408}
+  - {fileID: 1989663491}
