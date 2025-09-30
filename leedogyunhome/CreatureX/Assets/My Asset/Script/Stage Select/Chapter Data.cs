@@ -8,8 +8,9 @@ public class ChapterData : MonoBehaviour
 
     [SerializeField] private Button chapterButton;
     public int chapterIndex;
+    private static int curChapIndex;
     [SerializeField] private RectTransform chapterCanvas;
-
+    public GearWheel gearWheel; 
 
     private bool isChapterUnlocked = false;
 
@@ -33,21 +34,6 @@ public class ChapterData : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
-        //if (chapterIndex == 1)
-        //    isChapterUnlocked = true;
-        //if (chapterIndex == 2)
-        //    isChapterUnlocked = true;
-        //if (chapterIndex == 3)
-        //    isChapterUnlocked = true;
-        //if (chapterIndex == 4)
-        //    isChapterUnlocked = true;
-        //if (chapterIndex == 5)
-        //    isChapterUnlocked = true;
-        //if (chapterIndex == 6)
-        //    isChapterUnlocked = true;
-        //if (chapterIndex == 7)
-        //    isChapterUnlocked = true;
-        //if (chapterIndex == 8)
         isChapterUnlocked = true;
 
 
@@ -86,6 +72,7 @@ public class ChapterData : MonoBehaviour
 
     private void OnChapterButtonClicked()
     {
+        if (curChapIndex == chapterIndex) return;
         if (isChapterUnlocked)
         {
             foreach (var chapter in allChapters)
@@ -94,6 +81,11 @@ public class ChapterData : MonoBehaviour
                     chapter.chapterCanvas.gameObject.SetActive(false);
             }
             chapterCanvas.gameObject.SetActive(true);
+            curChapIndex = chapterIndex;
+            // Debug.Log($"ÇöÀç Ã©ÅÍ: {curChapIndex}");
+
+            if (gearWheel != null)
+                gearWheel.RotateGear();
         }
     }
 
@@ -103,8 +95,6 @@ public class ChapterData : MonoBehaviour
         if (!isChapterUnlocked)
         {
             isChapterUnlocked = true;
-            // UpdateChapterVisual();
-
             if (SaveManager.Instance != null)
                 SaveManager.Instance.AddUnlockedChapter(GetChapterKey());
         }

@@ -277,10 +277,13 @@ MonoBehaviour:
   EnemyMaxHP: 40
   EnemyFailed: 0
   FailedLayer: 11
+  Damage: 1
   BulletPrefab: {fileID: 8713319157893725796, guid: 3cab453f045c9a4478a28a504571e662, type: 3}
   BulletShotPoint: {fileID: 2322002849654765551}
   MoveClip: {fileID: 8300000, guid: 63ef23c536912a54197f8177ff6c33b4, type: 3}
   GunClip: {fileID: 8300000, guid: 27eab930c904f5544966b48565be6c77, type: 3}
+  offset: {x: -2, y: 0, z: 0}
+  SpeedIdle: 3
 --- !u!70 &3642267391479038505
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

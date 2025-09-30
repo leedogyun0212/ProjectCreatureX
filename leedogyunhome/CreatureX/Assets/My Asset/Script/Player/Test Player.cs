@@ -125,6 +125,7 @@ public class TestPlayer : MonoBehaviour
         }
     }
 
+
     [Header("Test Data")]
     [SerializeField] private GameObject blackOrbPrefab;
     [SerializeField] private Transform firePoint;
@@ -148,7 +149,8 @@ public class TestPlayer : MonoBehaviour
     [SerializeField] private GameObject testCarSkill;
     [SerializeField] private GameObject testDroneSkill;
     [SerializeField] private GameObject testRobotSkill;
-
+    public ParticleSystem transStart_EffectPre;
+    public ParticleSystem transEnd_EffectPre;
 
     private void Awake()
     {
@@ -229,16 +231,6 @@ public class TestPlayer : MonoBehaviour
 
     private float _pointTime = 1.0f; // 1초마다 실행
     private float _nextTime = 0.0f;
-
-
-    // 변신
-    public void TransChange(IPlayerTrans newTrans)
-    {
-        curTrans.Exit();
-        curTrans = newTrans;
-        curForm = AssimilateForm.None;
-        curTrans.Enter();
-    }
 
 
     #region 점프, 상승 하강 관련 내용
@@ -446,6 +438,61 @@ public class TestPlayer : MonoBehaviour
         }
     }
 
+    // 변신
+    public void TransChange(IPlayerTrans newTrans)
+    {
+        curTrans.Exit();
+        curTrans = newTrans;
+        curForm = AssimilateForm.None;
+        curTrans.Enter();
+    }
+
+    // 변신 값 적용
+    public void TransApply(float speed, float jump, RuntimeAnimatorController animController)
+    {
+        if (isAttack) return;
+        if (curTrans == playerTransBasic)
+        {
+            playerCurMoveSpeed = speed;
+            jumpForce = jump;
+            CurAnimator.runtimeAnimatorController = animController;
+        }
+        else
+        {
+            animator.SetTrigger("TryTrans");
+            Spawn_ParticleEffect(transStart_EffectPre);
+            nextSpeed = speed;
+            nextJump = jump;
+            nextAnim = animController;
+        }
+    }
+    public void OnTransAnimEnd()
+    {
+        playerCurMoveSpeed = nextSpeed;
+        jumpForce = nextJump;
+        CurAnimator.runtimeAnimatorController = nextAnim;
+        PlayerContinue();
+
+        Spawn_ParticleEffect(transEnd_EffectPre);
+        curTrans.TransValueApply();
+    }
+
+    private void Spawn_ParticleEffect(ParticleSystem effect)
+    {
+        if (effect == null) return;
+
+        // 플레이어 위치에 이펙트 생성
+        effect = Instantiate(
+            transEnd_EffectPre,
+            transform.position,
+            Quaternion.identity
+        );
+        effect.Play();
+        Destroy(effect.gameObject, effect.main.duration); // 끝나면 제거
+    }
+
+
+    // 흡수
     public void TryAssimilate()
     {
         if (isAssimilating || isAttack || isDie) return;
@@ -496,45 +543,6 @@ public class TestPlayer : MonoBehaviour
             case 004: return AssimilateForm.Res;
             default: return AssimilateForm.None;
         }
-    }
-
-
-
-    // 변신 값 적용
-    public void TransApply(float speed, float jump, RuntimeAnimatorController animController)
-    {
-        //if (CurAnimator.runtimeAnimatorController != droneAnimController)
-        //{
-        //    if (isJump || isAttack) { return; }
-        //}
-        //else 
-        //{
-        //    if (isAttack) return;
-        //}
-        if (isAttack) return;
-        if (curTrans == playerTransBasic)
-        {
-            playerCurMoveSpeed = speed;
-            jumpForce = jump;
-            CurAnimator.runtimeAnimatorController = animController;
-        }
-        else
-        {
-            animator.SetTrigger("TryTrans");
-            nextSpeed = speed;
-            nextJump = jump;
-            nextAnim = animController;
-        }
-    }
-
-    public void OnTransAnimEnd()
-    {
-        playerCurMoveSpeed = nextSpeed;
-        jumpForce = nextJump;
-        CurAnimator.runtimeAnimatorController = nextAnim;
-        PlayerContinue();
-
-        curTrans.TransValueApply();
     }
 
     // 방출 명령

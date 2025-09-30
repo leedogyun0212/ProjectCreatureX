@@ -11,11 +11,18 @@ public class StageData : MonoBehaviour
     private bool isStageUnlocked = false;
     private bool isStageCleared = false;
 
+    private Image stageImage;
+    private bool isHighlighting = false;
+    private float blinkSpeed = 2f;
+
     private Color oriColor;
     private Color lockColor = new Color(0.5f, 0.5f, 0.5f);
 
     private void Start()
     {
+        stageImage = stageButton.GetComponent<Image>();
+
+
         if (mainStageIndex == 1 && subStageIndex == 1)
             isStageUnlocked = true;
         //if (mainStageIndex == 1 && subStageIndex == 7)
@@ -46,6 +53,19 @@ public class StageData : MonoBehaviour
         UpdateStageVisual();
     }
 
+    private void Update()
+    {
+        if (isHighlighting && stageImage != null)
+        {
+            // float t = (Mathf.Sin(Time.time * blinkSpeed) + 1f) / 2f;
+            float t = Mathf.PingPong(Time.time, 0.5f);
+            Color targetColor = new Color(0.2f, 0.878f, 0.918f);
+            Color blinkColor = Color.Lerp(oriColor, targetColor, t);
+            stageImage.color = blinkColor;
+        }
+    }
+
+
     private void OnStageButtonClicked()
     {
         if (isStageUnlocked && StageManager.Instance != null)
@@ -67,10 +87,16 @@ public class StageData : MonoBehaviour
             image.color = lockColor;
             stageButton.interactable = false;
         }
+        else if (isStageUnlocked && isStageCleared)
+        {
+            image.color = isStageCleared ? Color.green : oriColor;
+            stageButton.interactable = true;
+        }
         else
         {
             image.color = isStageCleared ? Color.green : oriColor;
             stageButton.interactable = true;
+            isHighlighting = true;
         }
     }
 

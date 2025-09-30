@@ -13,6 +13,7 @@ public class GamePauseUI : MonoBehaviour
     [SerializeField] private Button pauseButton;
     [SerializeField] private Button restartButton;
     [SerializeField] private Button titleButton;
+    [SerializeField] private Text StageText;
 
     private void Start()
     {
@@ -47,6 +48,11 @@ public class GamePauseUI : MonoBehaviour
                     RuntimeGameManager.Instance.Check_GamePause();
             });
         }
+    }
+
+    private void Update()
+    {
+        StageText.text = $"Stage: {StageManager.Instance.curMainStage}-{StageManager.Instance.curSubStage}";
     }
 
 }

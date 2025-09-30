@@ -66,7 +66,6 @@ public class FallenStool : MonoBehaviour
             }
         }
     }
-
     private IEnumerator BreakEnd()
     {
         yield return new WaitForSecondsRealtime(0.8f);

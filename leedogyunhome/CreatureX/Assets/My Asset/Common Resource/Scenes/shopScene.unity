@@ -913,6 +913,8 @@ GameObject:
   - component: {fileID: 822502074}
   - component: {fileID: 822502076}
   - component: {fileID: 822502075}
+  - component: {fileID: 822502077}
+  - component: {fileID: 822502078}
   m_Layer: 5
   m_Name: BackGround
   m_TagString: Untagged
@@ -959,7 +961,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -330653472472239666, guid: 61f0f0cfd73e16448ba4466d73384949, type: 3}
+  m_Sprite: {fileID: -7396212609765500252, guid: 7128d299b7f37d44e8d7f186ac5328fa, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -977,6 +979,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 822502073}
   m_CullTransparentMesh: 1
+--- !u!95 &822502077
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822502073}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d55de58d8c641da42aee3bc28a6b08f5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &822502078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822502073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cf4ba89c538b694e8a6da87a68ab3a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeIntervalSeconds: 3
+  stateCount: 3
 --- !u!1 &839679178
 GameObject:
   m_ObjectHideFlags: 0
@@ -1114,7 +1152,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &870156127
 RectTransform:
   m_ObjectHideFlags: 0

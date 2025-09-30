@@ -1,6 +1,4 @@
 using System.Collections;
-using Unity.Burst.CompilerServices;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -28,12 +26,15 @@ public class Robot : BaseEnemy, IAllyResponder
     public AudioClip GunClip;
 
     [SerializeField] private Vector3 offset;
+    [SerializeField] private float SpeedIdle; 
 
     private Vector3 startPos;
 
     private Vector3 endPos;
 
     private Vector3 targetPos;
+
+    private bool MoveStool = false;
 
     protected override void Start()
     {
@@ -43,6 +44,7 @@ public class Robot : BaseEnemy, IAllyResponder
         startPos.y = 0;
         endPos = startPos + offset;
         targetPos = endPos;
+        SpeedIdle = MoveSpeed * 0.25f;
     }
 
     protected override void Update()
@@ -58,6 +60,7 @@ public class Robot : BaseEnemy, IAllyResponder
         }
         else if (monsterState == MonsterState.idle && helpTarget == null)
         {
+            if (MoveStool) return;
             reconnaissance();
         }
         else if (monsterState == MonsterState.Move && helpTarget == null) // �þ� ����� �÷��̾� �߰� 
@@ -113,10 +116,11 @@ public class Robot : BaseEnemy, IAllyResponder
 
     private void reconnaissance()
     {
-        reconnaissanceScale();
+        if (offset.x != 0)
+            reconnaissanceScale();
         Vector3 currentPos = transform.position;
         Vector3 targetOnlyX = new Vector3(targetPos.x, currentPos.y, currentPos.z);
-        transform.position = Vector3.MoveTowards(currentPos, targetOnlyX, MoveSpeed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(currentPos, targetOnlyX, SpeedIdle * Time.deltaTime);
         if(offset.x != 0)
             animWalk = 1.0f;
 
@@ -244,6 +248,7 @@ public class Robot : BaseEnemy, IAllyResponder
         var movingStool = collision.gameObject.GetComponent<MovingStool>();
         if (movingStool != null)
         {
+            MoveStool = true;
             bool onTop = false;
             foreach (var contact in collision.contacts)
             {
@@ -267,6 +272,7 @@ public class Robot : BaseEnemy, IAllyResponder
     {
         if (currentMovingStool != null && collision.transform == currentMovingStool)
         {
+            MoveStool = false;
             currentMovingStool = null;
             lastMovingStoolPos = Vector3.zero;
         }
